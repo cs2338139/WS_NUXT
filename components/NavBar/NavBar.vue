@@ -18,7 +18,6 @@ const { locale, setLocale } = useI18n();
 export default {
   data() {
     return {
-      lang: "EN",
     };
   },
   methods: {
@@ -26,20 +25,8 @@ export default {
       console.log(this.locale);
       if (this.locale === "en") {
         this.setLocale("zh");
-        this.lang = "EN";
-        useHead({
-          htmlAttrs: {
-            lang: "zh-TW"
-          },
-        })
       } else if (this.locale === "zh") {
         this.setLocale("en");
-        this.lang = "中文";
-        useHead({
-          htmlAttrs: {
-            lang: "en"
-          },
-        })
       }
     },
   }
@@ -53,21 +40,23 @@ export default {
         <Logo href="/" :img="homeImage" width="width:120px" />
       </template>
 
-      <NavMenuItem href="/about">關於計畫</NavMenuItem>
+      <NavMenuItem href="/about"> {{$t('nav.about')}}</NavMenuItem>
 
-      <NavMenuList menuListOffset="-translate-x-4">
-        <template #menuName>計畫成果</template>
-        <MenuListItem href="/projects/modelView">3D掃描<template #en>3D Scanning and Modeling</template></MenuListItem>
-        <MenuListItem href="/projects/islandOfBaku">夢獸之島<template #en>Island of Baku</template></MenuListItem>
-        <MenuListItem href="/projects/game1940">1940<template #en>1940</template></MenuListItem>
-        <MenuListItem href="/projects/birdOfLife">生命之鳥<template #en>Birds of Life－Wu Ying-tao</template></MenuListItem>
-        <MenuListItem href="/projects/hideWordMan">藏字人<template #en>Hide Word Man</template></MenuListItem>
+      <NavMenuList href="/achievement" menuListOffset="-translate-x-4">
+        <template #menuName> {{$t('nav.achievement.title')}}</template>
+        <MenuListItem href="/achievement/modelView">{{$t('nav.achievement.child.modelView')}}</MenuListItem>
+        <MenuListItem href="/achievement/islandOfBaku">{{$t('nav.achievement.child.islandOfBaku')}}</MenuListItem>
+        <MenuListItem href="/achievement/game1940">{{$t('nav.achievement.child.game1940')}}</MenuListItem>
+        <MenuListItem href="/achievement/birdsOfLife">{{$t('nav.achievement.child.birdsOfLife')}}</MenuListItem>
+        <MenuListItem href="/achievement/hideWordsMan">{{$t('nav.achievement.child.hideWordsMan')}}</MenuListItem>
       </NavMenuList>
+
+      <NavMenuItem href="/eventRecord"> {{$t('nav.eventRecord')}}</NavMenuItem>
 
       <li class=" text-center max-h-7">
         <button @click="ChangeLang()">
           <div class=" px-4 py-2 bg-white rounded-full font-bold">
-            {{lang}}
+            {{$t('nav.lang')}}
           </div>
         </button>
       </li>

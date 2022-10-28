@@ -1,0 +1,400 @@
+{
+  "nav": {
+    "about": "About",
+    "achievement": {
+      "title": "Achievement",
+      "child": {
+        "modelView": "3D scanning and modeling",
+        "islandOfBaku": "Island of Baku",
+        "game1940": "1940",
+        "birdsOfLife": "Birds of Life",
+        "hideWordsMan": "Hide Words Man"
+      }
+    },
+    "eventRecord": "Event Record",
+    "lang": "中文"
+  },
+  "pages": {
+    "home": {
+      "title": "A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+      "info": {},
+      "child": {
+        "about": {
+          "title": "About the Project｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+          "info": {
+            "title": "About the Project",
+            "content": [
+              "Digital game development with three-dimension scanning and modeling project is one of the main projects Taiwan Xing Juan -demonstration project of the museum.  This project focuses on promoting the collections in the various museums in Taiwan by  translating the collections into simple stories, making them more accessible to the public.",
+              "In this project, we scanned the collections into three-dimensional models as the foundation to raise the open calls to the public.  The agencies offer the collections as inspiration and elements, transforming them into different stories. Eventually, it takes the values of the National Museum of Taiwan Literature closer to the public through VR experience, online games, somatosensory interaction games. We hope the public will be familiarized with these Taiwan authors through such edutainment devices.",
+              "The project includes four sub-projects: The digital games “1940”, “Birds of Life” and “Island of Baku”, and the project of three-dimensional scanning and modeling."
+            ]
+          },
+          "achievement": {
+            "title": "Achievement",
+            "content": [
+              {
+                "title": "3D scanning and modeling",
+                "info": "",
+                "year": "2018-2021"
+              },
+              {
+                "title": "Island of Baku",
+                "info": "VR shooting game",
+                "year": "2018-2019"
+              },
+              {
+                "title": "1940",
+                "info": "puzzle-based quiz game",
+                "year": "2018-2020"
+              },
+              {
+                "title": "Birds of Life",
+                "info": "digital picture book with interactive game",
+                "year": "2018-2020"
+              },
+              {
+                "title": "Hide Words Man",
+                "info": "",
+                "year": "2020-2022"
+              }
+            ]
+          }
+        },
+        "achievement": {
+          "title": "Achievement｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+          "info": {},
+          "child": {
+            "modelView": {
+              "title": "3D Scanning and Modeling｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+              "info": {
+                "title": "3D Scanning and Modeling",
+                "about": {
+                  "title": "About the Project",
+                  "content": [
+                    "Through 3D scanning and modeling of cultural relics, we hope to promote Taiwanese literature. In accordance with the Ministry of Culture's “Principles of 3D Models of Cultural Relics in Museum Collections”, carried out the 3D scanning and modeling on important writer’s collections of NMTL. It will be implemented from 2018 for a total of three years. The project scanned 51 NMTL collections in the first year, 30 collections in the second year, and 20 collections in the third year, a total of 29 important Taiwan authors and 101 items."
+                  ]
+                },
+                "introduction": {
+                  "title": "Project Introduction",
+                  "content": [
+                    "The list of authors for the first year includes He Fan, Chou Ting-shan, Lin Hai-yin, Yao Yi-wei, Chang Shen-chieh, Hsu Ping-ting, Yeh Shih-tao, Liu Na-ou, Long Ying-zong. The picks for 3D scanning are the authors’ personal belongings and gifts from friends. Also, this year scanned forty elephant collections from Lin Hai-yin.",
+                    "The second year scanned the personal belongings of Echo Chan, Wang Kai-yun, Chu Hsi-ning, Ai Wen, Wu Ying-tao, Lee Kuei-shien, Lin Hai-yin, Cecelia Zhang, Chen Chi-mao, Yang Yun-ping, Ye Di, Zhan Zuo-zhou, Liu Mu-sha,Long Ying-zong, Long Ying-zong, Chûng Lî-fò, Wei Cing-de.",
+                    "And the third year scanned the personal belongings and the work tools of Echo Chan, Wang Kai-yun, Sima Zhongyuan, Chu Hsi-ning, Wu Yen-sheng, Chou Ting-shan, Huang Te-shih, Yang Yun-ping, Yeh Shih-tao, Chao Yun, Loā Hô, Wei Cing-de."
+                  ]
+                }
+              },
+              "literati": {
+                "title": "Introduction to literati",
+                "button": "View All Literatis"
+              },
+              "result": {
+                "title": "Result",
+                "button": "View All 3D Models"
+              }
+            },
+            "islandOfBaku": {
+              "title": "Island of Baku｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+              "info": {
+                "title": "Island of Baku",
+                "about": {
+                  "title": "About the Game",
+                  "content": [
+                    "This project bases on the concept of a fantasy island.  It draws inspiration from five authors- Yeh Shih-tao, Jhang Shen-Chieh, Long Ying-zong, Lin Hai-yin, and Yao Yi-wei.   Meanwhile, it produces the 3D  scanning from the collections of NMTL.  Those collections are designed as the key props to unlocked different chapters.   The collections include ’Rattan chair’ from Yeh Shih-tao, The ’Celebrity Inscriptions’ from Jhang Shen-Chieh's hiking trip, Long Ying-zong’s wheelchair,  the treasured elephant collections of Lin Hai-yin, and Yao Yiwei’s suitcase.",
+                    "Island of Baku is a VR game."
+                  ]
+                },
+                "introduction": {
+                  "title": "Game Introduction",
+                  "content": [
+                    "The ‘Galactic dream’ has begun to lose control.",
+                    "The dream trainers who live on the island of Baku have lived in peace with humans for thousands of years.  The issue comes that the Baku on the island have become violent because of the excessive gluttony of human nightmares, which makes the Galactic dream begin to collapse.",
+                    "The player will serve as a young dream trainer, tracing back to the past to seek all kinds of intelligence to restore the world.  Along the way, the player will meet many well-known literati in Taiwan's literary field.  As long as the player helps them solve difficulties, the player can get intelligence.  Now enter the Island of Baku, collect the energy to calm the dream beasts, and restore the world of Baku back to peace!"
+                  ]
+                },
+                "writer": {
+                  "title": "Game writer",
+                  "content": [
+                    {
+                      "name": "Pan Chiou-ru/current elementary school teacher",
+                      "info": ["Master of Drama Creation and Application department, National Tainan University", "Bachelor of Taiwan Literature department, National Cheng Cheng University", "Won the Tainan Research Master Thesis Award"]
+                    },
+                    {
+                      "name": "Pan Ying-jhen/Artist in culture and art",
+                      "info": ["Bachelor of Social Education, National Taiwan Normal University", "The script and lyrics author of ’Unreliable Club-The Distance Between Us and Love’ by the Taiwanese Artists Symphony", "Orchestra production of 2020."]
+                    }
+                  ]
+                },
+                "download": {
+                  "title": "Game Download"
+                }
+              },
+              "literati": {
+                "title": "Introduction to literati",
+                "content": [
+                  {
+                    "name": "Lin Hai-yin（1918-2001）",
+                    "info": [
+                      "Pseudonym of Lin Han-yin, was from the Hakkas in Miaoli County, Taiwan.  When she was young, her family moved to Beijing. Beijing became a significant background source for Lin Hai-yin's novel Memories of Peking: South Side Stories. In 1948, Lin and her family returned to Taiwan.  She was an editor, writer, and publisher of newspapers and magazines, and supported many writers. She is an important figure in facilitating modern Taiwan literature."
+                    ]
+                  },
+                  {
+                    "name": "Yeh Shih-tao（1925-2008）",
+                    "info": [
+                      "His novels had a strong local consciousness, focusing on local spirit and historical experience.  The theme of his work lights on the difficulty of human existence, pursuing atonement or liberation.  His work Outline of Taiwan Literary History is Taiwan's first contemporary literary history.  Ye could be considered as the witness and founder of Taiwan literary research."
+                    ]
+                  },
+                  {
+                    "name": "Yao Yi-wei（1922-1997）",
+                    "info": [
+                      "Pseudonym of Yao Gong-wei.  He graduated from the Banking Department of Xiamen University.  After moving to Taiwan, he worked for the Bank of Taiwan and participated in the establishment of the National College of Arts.  He served as the director of the theater department, a professor in the Master course for theatre and research institute.  Also, he participated in the editing of Bi Hui, Modern Literature, Wen Ji, and other publications.  He published some literary reviews.  Yao focused on drama throughout his life and contributed to Taiwan's theatre drama theories and drama movements."
+                    ]
+                  },
+                  {
+                    "name": "Long Ying-zong（1911-1999）",
+                    "info": [
+                      "Pseudonym of  Liu Rong-zong, was one of the most important writers in Taiwan during the Japanese rule and the early postwar period.  In 1937, his debut work “The Town with Papaya Trees” was selected as the ‘Recommended Works’ of the famous Japanese comprehensive magazine Reconstruction and became famous.  It reflects the cultural conflicts, frustrations, and grief of the Taiwanese during the Japanese rule.  In the 1980s, the Mandarine work “Du Fu in Changan” attracted the attention and recognition of the literary world once again."
+                    ]
+                  },
+                  {
+                    "name": "Chang Shen-Chieh（1904-1965）",
+                    "info": [
+                      "He organized the “Taiwan Theatre Research Association”, “Taiwan Literature and Art League”, and published Taiwan Literature and Art.  His publication includes critiques, essays, novels, scripts, etc.  Using naturalistic techniques to dramatically expose the deceit and foolishness of Japanese imperialism is characteristic of his works.  Meanwhile, his works explore the reasons for the tragedy that Taiwan society became a colony of Japan."
+                    ]
+                  }
+                ]
+              },
+              "screen": {
+                "title": "Screen Shots"
+              }
+            },
+            "game1940": {
+              "title": "1940｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+              "info": {
+                "title": "1940",
+                "about": {
+                  "title": "About the Game",
+                  "content": [
+                    "This project bases on the life of Liu Na-ou, a film producer and novelist during Japanese colonial period of Taiwan.   The inspiration for the game is the Mahjong of Liu Na-ou, one of NMTL’s collections.  The game stretches from Shanghai Paramount, Tianjin Wanguo Bridge, Da Hinggan Range, Heilong Jiang, Dingling (Ming), Beijing, and finally to Tainan Hall, Taiwan. With the fictional setup, the players would begin a puzzle quiz-based game."
+                  ]
+                },
+                "introduction": {
+                  "title": "Game Introduction",
+                  "content": [
+                    "Reports show that collections around the world, both the public museums and the private ones, have been missing since 2079.  In 2080, a powerful cultural relic in NMTL is stolen.  It is Mahjong of Liu Na-ou, which owns the power to change history. INTERPOL suspects the cases are orchestrated by global terror network RISS.",
+                    "RISS declares they can time travel.  There is reliable proof showing RISS attempts to change the history of WWII by the secret agent using Mahjong’s power.",
+                    "The player would play an international secret agent with the codename ‘predator 1940’, then spying into the network of RISS.  By travelling back to 1940, the player is to stop RISS’s evil plan and bring back the Mahjong."
+                  ]
+                },
+                "writer": {
+                  "title": "Game writer",
+                  "content": [
+                    {
+                      "name": "Lu Ru-shu",
+                      "info": [
+                        "I like to keep a low profile and rather be anonymous. But I do keep a Maltese named LeLe.  I don’t talk much, love to read. The most joyful hobby is sleeping and writing for self-entertainment.  Never inquire about my age and weight."
+                      ]
+                    }
+                  ]
+                },
+                "music": {
+                  "title": "Music"
+                },
+                "download": {
+                  "title": "Game Download"
+                }
+              },
+              "characters": {
+                "title": "Characters",
+                "content": [
+                  {
+                    "name": "Liu Na-ou（1905-1940）",
+                    "info": [
+                      "Pseudonym of Liou Tsan-po. He was born to a wealthy family in Tainan, and spent most of his life in Shanghai.  He is Multilingual in many languages including English, Japanese, French, Mandarin, Cantonese, and Taiwanese.  He translated many literary works and film-theory books. Besides writing, he also ran a bookstore, published magazines, and produced films. “New Feeling” (Shinkankakuha) is his main thoughts and literary style. It was a significant movement both in literature and film.",
+                      "In 1940, He was assassinated in Shanghai."
+                    ]
+                  },
+                  {
+                    "name": "Yoshio Ichibangase(1883-1964)",
+                    "info": [
+                      "Original from Tokyo, Japan, graduated from Tokyo Imperial University with a degree in English and French.  He was active in Taiwan‘s high-level Bureaucracy during the  Japanese colonial period (late Taisho period and early Showa period). His official rank is five senior officials and the second-class Xun's fourth-class Le appointed official.",
+                      "He served as an official of the Government of Taiwan, Secretary of State for the Army, Governor of Hsinchu Prefecture, and Governor of Tainan Prefecture.  His daughter is the well-known Japanese social welfare scholar Anbang Yasuko (formerly known as Ichibanase Yasuko)."
+                    ]
+                  },
+                  {
+                    "name": "Li Hsiang-lan",
+                    "info": [
+                      "She was active in Man empire as a popular singer, formerly known as Yamaguchi Yoshiko(1920-2014).  She was born in a Japanese family in Northeast China, adopted as a goddaughter by the Chinese, then renamed Li Hsiang-lan.  Because of the film partnership, she acquainted with Liu Na-ou."
+                    ]
+                  }
+                ]
+              },
+              "event": {
+                "title": "Historical Events and Sites",
+                "content": [
+                  {
+                    "name": "Assassination of Chen Man-Li",
+                    "info": "It is one of the criminal pending cases in Shanghai.  Chen Man-li, the most popular dancer in Shanghai Paramount Ballroom, was shot and killed on February 25, 1940.  There were different views about this incident.  Some suggested she was murdered by secret agents or traitors, and some regarded it as a passion crime."
+                  },
+                  {
+                    "name": "Assassination of Liu Na-ou case",
+                    "info": "One month after Liu Na-ou took over as the president of the National News Agency, he was assassinated outside “Jinghua Restaurant”."
+                  },
+                  {
+                    "name": "Paramount (Shanghai)",
+                    "info": "In the 1930s, Paramount was one of the most prestigious and glamorous ballrooms. Also known as the ‘Top music hall in the East’."
+                  },
+                  {
+                    "name": "Xinchang Barn",
+                    "info": "It was located at the old wharf of Shanghai’s South Bund.   It was the private barn of Huang Jin-Rong, who was one of Shanghai’s three millionaires."
+                  },
+                  {
+                    "name": "Wanguo Bridge",
+                    "info": "It is the bridge connecting Heping District and Hebei District in Tianjin, China.  It is one of the significant buildings that remained in the period of Concessions in Tianjin."
+                  },
+                  {
+                    "name": "Thirteen Tombs of the Ming Dynasty",
+                    "info": "The tomb of the Ming emperor of China contains 13 Ming emperors, 23 Ming empresses, 2 Ming princes, more than 30 concubines, and 1 eunuch.  It is one of the most preserved imperial tombs in the world."
+                  },
+                  {
+                    "name": "Tainan Hall",
+                    "info": "It was Tainan’s highest administrative center during the Japanese colonial period in Taiwan.  It was designed by Moriyama Matsunosuke, the technician of the Governor-General's Office .  It was one of the representative buildings in Taiwan at that time.  It was built in Taisho era (1916).  It is now the National Museum of Taiwan Literature."
+                  }
+                ]
+              },
+              "screen": {
+                "title": "Screen Shots"
+              }
+            },
+            "birdsOfLife": {
+              "title": "Birds of Life－Wu Ying-tao｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+              "info": {
+                "title": "Birds of Life－Wu Ying-tao",
+                "about": {
+                  "title": "About the Game",
+                  "content": [
+                    "This work takes the literary life of Wu Ying-tao as the main storyline.  He is a modern poet, folklore researcher, and co-founder of Li poetry during the Japanese colonial rule of Taiwan. With “Poetry is part of life” as the main concept, Wu Ying-tao speaks to children about his own childhood life, life experience in Kang San Lau, customs and stories collected from various places in Taiwan. The game also introduces Wu’s major works to the audience.  This work is designed as a digital picture book for the audience to experience.  It is suitable for an interactive somatosensory game that can be played by parent-child groups above the first grade of elementary school."
+                  ]
+                },
+                "introduction": {
+                  "title": "Game Introduction",
+                  "content": [
+                    "Wu Ying-tao is a vital Taiwanese poet and a researcher on Taiwan folklore.  As a Taiwanese poet active in the then mainstream poetry circle, he loves sea, poetry, and folk customs, and believes that poetry is inseparable from life. He and 11 other poets founded the Li Poetry and published the Li Poetry Magazine.  Everything about him revolves around the promotion of local literature and culture.  Welcome to  his literary world now."
+                  ]
+                },
+                "writer": {
+                  "title": "Game writer",
+                  "content": [
+                    {
+                      "name": "Guo Mong-Siou",
+                      "info": [
+                        "Born in 1997 at Pingtung.  Now studying for a master's course in the Institute of Physics, National Taiwan University.  He participated in the design and production of real-world games “Little Fengshen Treasure Map”, “Literary is dying” and “House of Light” at Taipei Legend Studio.  He is a Physics postgraduate student who is interested in translating literature and history into games."
+                      ]
+                    }
+                  ]
+                },
+                "exhibition": {
+                  "title": "Exhibition Information",
+                  "content": "At Literary Wonderland of  NMTL, B1."
+                }
+              },
+              "author": {
+                "title": "About the Author",
+                "content": [
+                  {
+                    "name": "Wu Ying-tao(1916-1971)",
+                    "info": [
+                      "Grandson of Wu Jiang-Shan who was a gentry of Taipei.  He was an important poet and folklore researcher in Taiwan.  He began to participate in literary and artistic activities when he was young.  At the age of 21, he joined the Taipei branch of the Taiwan Arts and Culture Association and started writing poetry in Japanese at the age of 24.  Because his family runs the most famous hotel in Dadaocheng, ‘Kang San Lau’, the novel Yi Da inspired by it was nominated for the “Taiwan Art” novel award.",
+                      "At the age of 28, while living in Hong Kong, he got to know the poet Dai Wang-shu and began to publish Chinese poetry.  Then, he published Chinese and Japanese poems and prose in the supplement of China Daily News.  At that time, when most Taiwanese writers stopped writing because of language switching, his works and poems were mostly published in Modern Poetry, Blue-Star Poetry Weekly, Genesis.",
+                      "As a poet, he believes that poetry cannot be separated from life.  In addition to poetry and prose, he also researched Taiwanese folklore and children's literature.  In addition to translating collections of Japanese fairy tales and rewriting children’s literature, Taiwan Folklore contains about one hundred folk tales and local legends, and Taiwan Proverbs includes 50 nursery rhymes and children's songs.",
+                      "In 1953, he proposed the “Atomic Poetry Theory”, arguing the view of writing poetry in the spirit of science and freedom.  In 1964, he co-founded the ’Li’ poetry with 11 Taiwanese poets and dedicated his life to promoting local literature and culture."
+                    ]
+                  }
+                ]
+              },
+              "works": {
+                "title": "Wu's Works",
+                "content": [
+                  {
+                    "name": "Yi Da",
+                    "info": "As the third generation of Kang San Lau, Wu Ying-tao has seen the story of the literati gentry and Taiwan geisha since childhood. Yi Da uses the most familiar life experience as the theme, to narrate the story between a college graduate Chun-sheng and geisha Ying-Hua.  Most of his proses have been published in Art of Taiwan and Art of Taiwan.  In 1942, Yi Da, which was nominated for Art of Taiwan, was awarded."
+                  },
+                  {
+                    "name": "Life Poems",
+                    "info": "In 1941, he graduated from the Taiwanese School of Commerce and Industry (now Taipei Kai-nan High School) Beijing Language Advanced Class. While living in Hong Kong, he published poems in Chinese and Japanese.  After the war, his proficiency in ‘Mandarin’ made him one of the translingual-generation-after-1945 authors.  This collection is Wus first collection of Chinese poems.  The book contains several Japanese poems written by him before the war, such as “Heng Meng” (“Youth”), “Twilight”, which had been translated into Chinese."
+                  },
+                  {
+                    "name": "Poems by Ying Tao",
+                    "info": "This poetry collection is the second one published by Wu, and it contains the poems created within the five-year span after published Life Poems.  The style of this collection is minimalistic, prose-style, and without any title."
+                  },
+                  {
+                    "name": "Meditation Poems",
+                    "info": "Wu’s poems are quite philosophical, and he often meditates on the subject of life and death.  The poet Li Kuei-sian described him as: “The clear cheeks are strengthened to the broad forehead, like a rock, with hidden power.  His eyes often hang down and fall into meditation.” This poem is the fifth of the ’Li ’ series and the third poetry collection by Wu.  This collection was created by Wu who was working in TTL during the daytime and constantly meditating at nighttime, turning his thoughts into poetry."
+                  },
+                  {
+                    "name": "The Sea",
+                    "info": "Taiwan is surrounded by the sea, therefore, in Wu’s poems he often wrote about the ocean.  The book is a prose work written on the blank sheets when he was touched by the magnificence of the sea on a ship.  This book contains 159  sea-related prose, including “Fog Flute”, “Sea Dream”, “Seascape”, “Mountain Light and Sea Color”, and “Sea Gull”."
+                  },
+                  {
+                    "name": "Li Poetry Magazine",
+                    "info": "The tomb of the Ming emperor of China contains 13 Ming emperors, 23 Ming empresses, 2 Ming princes, more than 30 concubines, and 1 eunuch.  It is one of the most preserved imperial tombs in the world."
+                  },
+                  {
+                    "name": "Taiwanese Folklore",
+                    "info": "Wu published Taiwanese Folklore in 1969 through years of collecting, researching, and categorizing, and finally published Taiwan Proverbs in 1973.  Because of his interest in Taiwanese folklore, he became friends with Wu Sin-rong, the author of Jhen Ying Interview.  This book is an important reference book for studying Taiwanese folklore.  The book has 583 pages, divided into 20 chapters.  There are nine chapters for Taiwanese folklore, including chapters on religious ceremonies, family system, childbirth, rites of passage, marriage, funeral, customs, clothing, food and housing, etc.; There are five chapters introducing Taiwan culture and art, including craftsmanship, music, drama, games, puzzles, etc.; the remaining six chapters are Taiwanese folk literature, including the name of the places, folklore talks, local legends, folk tales, jokes, and indigenous legends."
+                  }
+                ]
+              },
+              "screen": {
+                "title": "Screen Shots"
+              }
+            },
+            "hideWordsMan": {
+              "title": "Hide Words Man｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+              "info": {
+                "title": "Hide Words Man",
+                "about": {
+                  "title": "About the Game",
+                  "content": []
+                },
+                "introduction": {
+                  "title": "Game Introduction",
+                  "content": []
+                },
+                "writer": {
+                  "title": "Game writer",
+                  "content": [
+                    {
+                      "name": "",
+                      "info": []
+                    }
+                  ]
+                },
+                "exhibition": {
+                  "title": "Exhibition Information",
+                  "content": "At Literary Wonderland of  NMTL, B1."
+                }
+              },
+              "screen": {
+                "title": "Screen Shots"
+              }
+            }
+          }
+        },
+        "eventRecord": {
+          "title": "Event Record｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+          "info": {},
+          "child": {
+            "title": "A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+            "info": {}
+          }
+        }
+      }
+    }
+  },
+  "foot": {
+    "copyright": "National Museum of Taiwan Literature©2022 All Rights Reserved.",
+    "address": "ADD：No.1, Zhongzheng Rd.,West Central District,Tainan City 700, Taiwan (R.O.C.)",
+    "tel": "TEL：(+886) 6-221-7201",
+    "fax": "Fax：(+886) 6-222-6115"
+  }
+}

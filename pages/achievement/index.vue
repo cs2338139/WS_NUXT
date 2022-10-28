@@ -1,7 +1,7 @@
 <script setup>
-import axios from "axios";
+const { locale, setLocale, t } = useI18n();
 useHead({
-    title: "夢獸之島 | 數位遊戲開發暨藏品3D掃描、建模計畫 | 國立臺灣文學館",
+    title: t('pages.home.child.achievement.title'),
 })
 </script>
 

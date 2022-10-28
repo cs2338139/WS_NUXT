@@ -33,9 +33,6 @@ export default {
         <div>
           <slot></slot>
         </div>
-        <div class="text-xs font-bold">
-          <slot name="en"></slot>
-        </div>
       </div>
     </NuxtLink>
   </li>

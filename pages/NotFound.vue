@@ -1,6 +1,6 @@
 <script setup>
 useHead({
-    title: "NotFound | 數位遊戲開發暨藏品3D掃描、建模計畫 | 國立臺灣文學館",
+    title: "NotFound",
 })
 </script>
 

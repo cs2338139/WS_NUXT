@@ -1,6 +1,7 @@
 <script setup>
+const { locale, setLocale, t } = useI18n();
 useHead({
-    title: "首頁 | 數位遊戲開發暨藏品3D掃描、建模計畫 | 國立臺灣文學館",
+    title: t('pages.home.title'),
 })
 </script>
 

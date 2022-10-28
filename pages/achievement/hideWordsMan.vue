@@ -1,5 +1,8 @@
 <script setup>
-import axios from "axios";
+const { locale, setLocale, t } = useI18n();
+useHead({
+    title: t('pages.home.child.achievement.child.hideWordsMan.title'),
+})
 </script>
 
 <script>
@@ -28,7 +31,6 @@ export default {
 </script>
 
 <template>
-    <ElementPanel ref="element" />
     <div>
         <div class="wrap">
             <div class="mb-24 px-20 lg:mb-14 md:px-0">
@@ -39,7 +41,7 @@ export default {
         </div>
     </div>
 
-    <div class="absolute w-full bottom-0 -z-50">
+    <div class="absolute w-full bottom-0">
         <div class="bg-bg-1-image h-8"></div>
         <div class="bg-bg-1-Color h-96" ref="bg"></div>
     </div>
@@ -50,13 +52,5 @@ export default {
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    .h-480px {
-        height: 480px;
-    }
-
-    .h-300px {
-        height: 300px;
-    }
-}
+@layer utilities {}
 </style>
