@@ -28,7 +28,7 @@ export default {
 <template>
   <li class=" text-center max-h-7">
     <NuxtLink :to="hrefLink">
-      <div class="px-4 py-2 bg-white rounded-full font-bold"
+      <div class="px-4 py-2 bg-gray-300 font-bold"
         :class="{ IsDisabled: enable === false },{ IsEnabled: enable === true }">
         <slot> </slot>
       </div>
