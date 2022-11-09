@@ -48,11 +48,5 @@ export default {
 </template>
 
 <style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@layer utilities {
-
-}
 </style>

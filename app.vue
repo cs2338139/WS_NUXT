@@ -6,7 +6,7 @@ import { gsap } from "gsap";
 
 
 <template>
-    <div class="relative z-10">
+    <div class="devss relative z-10">
         <NavBar />
     </div>
 
@@ -20,7 +20,5 @@ import { gsap } from "gsap";
 </template>
 
 <style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 </style>

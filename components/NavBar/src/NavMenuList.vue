@@ -21,20 +21,9 @@ defineProps({
   </li>
 </template>
 
-<style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+<style scoped>
 
-@layer components {
-  .dev-border-view {
-    @apply border border-solid box-border;
-  }
-}
-
-@layer utilities {
-  .min-w-32 {
-    min-width: 128px;
-  }
+.min-w-32 {
+  min-width: 128px;
 }
 </style>

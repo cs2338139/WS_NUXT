@@ -61,28 +61,14 @@ export default {
         </button>
       </li>
 
-
-
     </NavMenu>
     <div class="h-10 bg-nav-image mt-28"></div>
   </nav>
 </template>
 
 <style scoped>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer component {
-  .text-item {
-    font-size: 18px;
-    line-height: 28px;
-  }
+.text-item {
+  font-size: 18px;
+  line-height: 28px;
 }
-</style>
-
-<style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 </style>
