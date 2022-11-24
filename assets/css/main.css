@@ -13,8 +13,26 @@
 }
 
 @layer components {
-  .dev {
+  .dev-red {
     @apply border border-solid box-border border-red-700;
+  }
+  .dev-pink {
+    @apply border border-solid box-border border-pink-300;
+  }
+  .dev-blue {
+    @apply border border-solid box-border border-blue-700;
+  }
+  .dev-black {
+    @apply border border-solid box-border border-black;
+  }
+  .dev-green {
+    @apply border border-solid box-border border-green-600;
+  }
+  .dev-brown {
+    @apply border border-solid box-border border-yellow-700;
+  }
+  .dev-slate {
+    @apply border border-solid box-border border-slate-800;
   }
 
   .wrap {

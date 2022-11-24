@@ -1,14 +1,13 @@
 <script setup>
 defineProps({
-  _class: String,
 });
 </script>
 
 <template>
-  <div class="w-full bg-custom-0 top-0 absolute" :class="_class">
-    <div class="relative my-0 mx-auto max-w-8xl h-32 flex justify-between items-center">
+  <div class="top-0 w-full">
+    <div class="dev-pink relative flex items-center justify-between w-11/12 h-32 mx-auto my-0">
       <slot name="logo"></slot>
-      <ul class="inline-flex align-middle w-22/25 justify-between">
+      <ul class="dev-green inline-flex justify-between w-2/5 align-middle">
         <slot> </slot>
       </ul>
     </div>

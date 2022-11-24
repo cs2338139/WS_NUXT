@@ -1,7 +1,6 @@
 <script setup>
 defineProps({
   href: String,
-  enable: { type: Boolean, default: true },
 });
 </script>
 <script>
@@ -30,16 +29,15 @@ export default {
   <li class="mx-0 my-2">
     <NuxtLink :to="hrefLink" class="">
       <div class="px-4 font-bold" :class="{ IsDisabled: enable === false }, { IsEnabled: enable === true }">
-        <div>
-          <slot></slot>
-        </div>
+        <slot></slot>
       </div>
     </NuxtLink>
   </li>
-  <li class="last:hidden"><hr class="mx-5" :class="{ SlateBorder: enable === false }, { BlueBorder: enable === true }" /></li>
+  <li class="last:hidden">
+    <hr class="mx-5 border-black" />
+  </li>
 </template>
 
 <style scoped>
-
 
 </style>

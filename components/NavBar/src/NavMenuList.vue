@@ -6,15 +6,15 @@ defineProps({
 </script>
 
 <template>
-  <li class=" text-center max-h-7 group">
+  <li class="group text-center">
     <NuxtLink :to="href">
-      <div class="px-4 py-2 bg-white rounded-full cursor-pointer Menu-span-border-bottom text-text-0-Color font-bold">
+      <div class="px-4 py-2 font-bold bg-gray-300 border border-black">
         <slot name="menuName"> </slot>
       </div>
     </NuxtLink>
-    <div class="absolute hidden h-40 p-0 mx-0 min-w-32 text-center group-hover:block hover:block"
+    <div class="min-w-32 group-hover:block hover:block absolute hidden h-40 p-0 mx-0 text-center"
       :class="menuListOffset">
-      <ul class="p-0 mx-0 mt-5 text-center bg-white border-2 rounded-4xl hover:block">
+      <ul class="hover:block border p-0 mx-0 mt-5 text-center bg-gray-300 border-black">
         <slot></slot>
       </ul>
     </div>
@@ -22,7 +22,6 @@ defineProps({
 </template>
 
 <style scoped>
-
 .min-w-32 {
   min-width: 128px;
 }

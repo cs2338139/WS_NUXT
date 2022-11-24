@@ -26,14 +26,12 @@ export default {
 };
 </script>
 <template>
-  <li class=" text-center max-h-7">
-    <NuxtLink :to="hrefLink">
-      <div class="px-4 py-2 bg-white rounded-full font-bold"
-        :class="{ IsDisabled: enable === false },{ IsEnabled: enable === true }">
-        <slot> </slot>
-      </div>
-    </NuxtLink>
-  </li>
+  <NuxtLink :to="hrefLink">
+    <li class="px-4 py-2 font-bold text-center bg-gray-300 border border-black"
+      :class="{ IsDisabled: enable === false }, { IsEnabled: enable === true }">
+      <slot> </slot>
+    </li>
+  </NuxtLink>
 </template>
 
 <style scoped>

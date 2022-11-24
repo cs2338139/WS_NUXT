@@ -6,15 +6,15 @@ import { gsap } from "gsap";
 
 
 <template>
-    <div class="devss relative z-10">
+    <div class="dev-red relative z-10 h-40">
         <NavBar />
     </div>
 
-    <div class="relative min-h-screen pt-56 pb-40">
+    <div class="dev-green relative min-h-screen pb-40">
         <NuxtPage />
     </div>
 
-    <!-- <div class="relative z-20 -mt-56 xl:-mt-72 sm:-mt-80" id="foot">
+    <!-- <div class="xl:-mt-72 sm:-mt-80 relative z-20 -mt-56" id="foot">
         <FootBar />
     </div> -->
 </template>
