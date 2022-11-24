@@ -7,7 +7,6 @@ import NavMenuItem from "./src/NavMenuItem.vue";
 import NavMenu from "./src/NavMenu.vue";
 
 const { locale, setLocale } = useI18n();
-
 </script>
 
 <script>
@@ -27,7 +26,7 @@ export default {
       }
     },
   }
-}; 1
+};
 </script>
 
 <template>
@@ -47,12 +46,11 @@ export default {
         <MenuListItem href="/achievement/birdsOfLife">{{ $t('nav.achievement.child.birdsOfLife') }}</MenuListItem>
         <MenuListItem href="/achievement/hideWordsMan">{{ $t('nav.achievement.child.hideWordsMan') }}</MenuListItem>
       </NavMenuList>
-
       <NavMenuItem href="/eventRecord"> {{ $t('nav.eventRecord') }}</NavMenuItem>
 
       <button @click="ChangeLang()">
         <li class=" px-4 py-2 font-bold text-center bg-gray-300 border border-black">
-            {{ $t('nav.lang') }}
+          {{ $t('nav.lang') }}
         </li>
       </button>
 
@@ -61,8 +59,11 @@ export default {
 </template>
 
 <style scoped>
-.text-item {
-  font-size: 18px;
-  line-height: 28px;
+.nav-h {
+  height: 230px;
+}
+
+.max-w-nav {
+  max-width: 88%
 }
 </style>
