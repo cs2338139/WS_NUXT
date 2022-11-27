@@ -2,6 +2,7 @@
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     'GraphQL': typeof import("../components/GraphQL.vue")['default']
+    'ImageBox': typeof import("../components/ImageBox/ImageBox.vue")['default']
     'NavBar': typeof import("../components/NavBar/NavBar.vue")['default']
     'NavBarSrcLogo': typeof import("../components/NavBar/src/Logo.vue")['default']
     'NavBarSrcMenuListItem': typeof import("../components/NavBar/src/MenuListItem.vue")['default']
@@ -16,6 +17,7 @@ declare module '@vue/runtime-core' {
     'NuxtLink': typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
     'NuxtLoadingIndicator': typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
     'LazyGraphQL': typeof import("../components/GraphQL.vue")['default']
+    'LazyImageBox': typeof import("../components/ImageBox/ImageBox.vue")['default']
     'LazyNavBar': typeof import("../components/NavBar/NavBar.vue")['default']
     'LazyNavBarSrcLogo': typeof import("../components/NavBar/src/Logo.vue")['default']
     'LazyNavBarSrcMenuListItem': typeof import("../components/NavBar/src/MenuListItem.vue")['default']
@@ -33,6 +35,7 @@ declare module '@vue/runtime-core' {
 }
 
 export const GraphQL: typeof import("../components/GraphQL.vue")['default']
+export const ImageBox: typeof import("../components/ImageBox/ImageBox.vue")['default']
 export const NavBar: typeof import("../components/NavBar/NavBar.vue")['default']
 export const NavBarSrcLogo: typeof import("../components/NavBar/src/Logo.vue")['default']
 export const NavBarSrcMenuListItem: typeof import("../components/NavBar/src/MenuListItem.vue")['default']
@@ -47,6 +50,7 @@ export const ServerPlaceholder: typeof import("../node_modules/nuxt/dist/app/com
 export const NuxtLink: typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
 export const NuxtLoadingIndicator: typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
 export const LazyGraphQL: typeof import("../components/GraphQL.vue")['default']
+export const LazyImageBox: typeof import("../components/ImageBox/ImageBox.vue")['default']
 export const LazyNavBar: typeof import("../components/NavBar/NavBar.vue")['default']
 export const LazyNavBarSrcLogo: typeof import("../components/NavBar/src/Logo.vue")['default']
 export const LazyNavBarSrcMenuListItem: typeof import("../components/NavBar/src/MenuListItem.vue")['default']

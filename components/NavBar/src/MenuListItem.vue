@@ -10,25 +10,13 @@ export default {
       hrefLink: "",
     };
   },
-  methods: {
-    IsEnable() {
-      if (this.enable) {
-        this.hrefLink = this.href;
-      } else {
-        this.hrefLink = "";
-      }
-    },
-  },
-  created() {
-    this.IsEnable();
-  },
 };
 </script>
 
 <template>
   <li class="mx-0 my-2">
     <NuxtLink :to="hrefLink" class="">
-      <div class="px-4 font-bold" :class="{ IsDisabled: enable === false }, { IsEnabled: enable === true }">
+      <div class="px-4 font-bold text-black">
         <slot></slot>
       </div>
     </NuxtLink>

@@ -1,8 +1,8 @@
 export const localeCodes = ["zh","en"]
 
 export const localeMessages = {
-  "en": () => import("D:/Work/HTML/Project/WS_NUXTWordPress/lang/en.json" /* webpackChunkName: "lang-en" */),
-  "zh": () => import("D:/Work/HTML/Project/WS_NUXTWordPress/lang/zh.json" /* webpackChunkName: "lang-zh" */),
+  "en": () => import("/Users/jincheng/Projects/HTML/WS_NUXTWordPress/lang/en.json" /* webpackChunkName: "lang-en" */),
+  "zh": () => import("/Users/jincheng/Projects/HTML/WS_NUXTWordPress/lang/zh.json" /* webpackChunkName: "lang-zh" */),
 }
 
 export const additionalMessages = Object({"zh":[],"en":[],})
