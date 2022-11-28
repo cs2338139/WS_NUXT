@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 
 
 <template>
-    <div class="dev-red relative z-10 h-40">
+    <div class="dev-black relative z-10 h-40">
         <NavBar />
     </div>
 
