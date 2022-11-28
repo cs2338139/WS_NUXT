@@ -1,4 +1,5 @@
 <script setup>
+import ProjectItem_2 from '~~/components/ProjectItem_2/ProjectItem_2.vue';
 const { locale, setLocale, t } = useI18n();
 useHead({
     title: t('pages.home.child.achievement.title'),
@@ -31,20 +32,19 @@ export default {
 </script>
 
 <template>
-    <div>
-        <div class="wrap">
-            <div class="mb-24 px-20 lg:mb-14 md:px-0">
-            </div>
-
-            <div class="flex flex-row h-300px md:h-480px md:flex-col px-20 md:px-10" ref="target">
-            </div>
-        </div>
+    <div class="wrap-6 flex flex-col justify-between  mx-auto mb-10">
+        <ProjectItem_2 href="" name="生命之鳥" info="電子繪本互動遊戲"
+            word="一兩行的簡短介紹一兩行的簡短介紹，一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹。" year="2020-2022"></ProjectItem_2>
+        <ProjectItem_2 href="" name="生命之鳥" info="電子繪本互動遊戲"
+            word="一兩行的簡短介紹一兩行的簡短介紹，一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹。" year="2020-2022"></ProjectItem_2>
+        <ProjectItem_2 href="" name="生命之鳥" info="電子繪本互動遊戲"
+            word="一兩行的簡短介紹一兩行的簡短介紹，一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹。" year="2020-2022"></ProjectItem_2>
+        <ProjectItem_2 href="" name="生命之鳥" info="電子繪本互動遊戲"
+            word="一兩行的簡短介紹一兩行的簡短介紹，一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹。" year="2020-2022"></ProjectItem_2>
+        <ProjectItem_2 href="" name="生命之鳥" info="電子繪本互動遊戲"
+            word="一兩行的簡短介紹一兩行的簡短介紹，一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹一兩行的簡短介紹。" year="2020-2022"></ProjectItem_2>
     </div>
 
-    <div class="absolute w-full bottom-0">
-        <div class="bg-bg-1-image h-8"></div>
-        <div class="bg-bg-1-Color h-96" ref="bg"></div>
-    </div>
 </template>
 
 <style>
