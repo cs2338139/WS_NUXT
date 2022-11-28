@@ -16,5 +16,8 @@
         "**/package-lock.json": false,
         "**/package.json": false
     },
-    "explorerExclude.backup": {}
+    "explorerExclude.backup": {},
+    "i18n-ally.localesPaths": [
+        "lang"
+    ]
 }
