@@ -17,6 +17,8 @@ export default {
     <div class="h-40 bg-gray-300">
       <div class="w-full relative h-24 ">
         <ul class="flex flex-row items-center justify-between h-full mx-auto my-0 max-w-8xl ">
+          <img :src="logoImage" style="width:120px" />
+
           <div class="flex flex-col h-1/2 justify-between">
             <FootMenuItem href="">承辦單位：可睿創意</FootMenuItem>
             <FootMenuItem href="">備註：本網站不支援IE</FootMenuItem>
