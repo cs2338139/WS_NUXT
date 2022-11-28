@@ -2,11 +2,9 @@
 </script>
 
 <template>
-  <li class=" text-black">
-    <span>
+  <div class=" text-black">
       <slot> </slot>
-    </span>
-  </li>
+  </div>
 </template>
 
 <style>
