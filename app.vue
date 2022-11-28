@@ -1,22 +1,23 @@
 <script setup>
 import NavBar from "./components/NavBar/NavBar.vue"
+import FootBar from "./components/FootBar/FootBar.vue"
 
 import { gsap } from "gsap";
 </script>
 
 
 <template>
-    <div class="dev-red relative z-10 h-40">
+    <div class="dev-black relative z-10 h-40">
         <NavBar />
     </div>
 
-    <div class="dev-green relative min-h-screen pb-40">
+    <div class="relative min-h-screen pb-56">
         <NuxtPage />
     </div>
 
-    <!-- <div class="xl:-mt-72 sm:-mt-80 relative z-20 -mt-56" id="foot">
+    <div class="relative z-10 -mt-40">
         <FootBar />
-    </div> -->
+    </div>
 </template>
 
 <style>

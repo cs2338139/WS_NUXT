@@ -1,5 +1,5 @@
 import type { ExportedGlobalComposer } from 'vue-i18n'
-import type { NuxtI18nRoutingCustomProperties } from '/Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/@nuxtjs/i18n/dist/runtime/types'
+import type { NuxtI18nRoutingCustomProperties } from 'D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/@nuxtjs/i18n/dist/runtime/types'
 import type { I18nRoutingCustomProperties } from 'vue-i18n-routing/dist/vue-i18n'
 
 declare module '#app' {
