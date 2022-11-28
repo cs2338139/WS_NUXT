@@ -31,7 +31,7 @@ export default {
 
 <template>
   <nav class="top-0 w-full">
-    <NavMenu class="dev-black top-0 h-32">
+    <NavMenu class="top-0 h-32">
       <template #logo>
         <Logo href="/" :img="logoImage" width="width:120px" />
       </template>

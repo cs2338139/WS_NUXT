@@ -7,7 +7,6 @@ defineProps({
 export default {
   data() {
     return {
-      hrefLink: "",
     };
   },
 };
@@ -15,7 +14,7 @@ export default {
 
 <template>
   <li class="mx-0 my-2">
-    <NuxtLink :to="hrefLink" class="">
+    <NuxtLink :to="href" class="">
       <div class="px-4 font-bold text-black">
         <slot></slot>
       </div>

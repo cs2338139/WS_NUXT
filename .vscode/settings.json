@@ -2,19 +2,22 @@
     "nuxt.isNuxtApp": false,
     "npm-scripts.showStartNotification": false,
     "files.exclude": {
-        "**/.git": false,
-        "**/.svn": false,
-        "**/.hg": false,
-        "**/CVS": false,
-        "**/.DS_Store": false,
-        "**/Thumbs.db": false,
-        ".history/": false,
-        ".vs/": false,
-        ".vscode/": false,
-        "**/.nuxt": false,
-        "**/node_modules": false,
-        "**/package-lock.json": false,
-        "**/package.json": false
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".history/": true,
+        ".vs/": true,
+        ".vscode/": true,
+        "**/.nuxt": true,
+        "**/node_modules": true,
+        "**/package-lock.json": true,
+        "**/package.json": true
     },
-    "explorerExclude.backup": {}
+    "explorerExclude.backup": {},
+    "i18n-ally.localesPaths": [
+        "lang"
+    ]
 }
