@@ -1,7 +1,6 @@
 <script setup>
 import ProjectItem from '.././components/ProjectItem/ProjectItem.vue'
 import EventItem from '.././components/EventItem/EventItem.vue'
-import { NuxtLink } from '~~/.nuxt/components';
 const { locale, setLocale, t } = useI18n();
 useHead({
     title: t('pages.home.title'),
@@ -14,6 +13,7 @@ export default {
     data() {
         return {
             homeImage: ""
+
         };
     },
     methods: {
@@ -32,7 +32,6 @@ export default {
     },
     unmounted() {
     },
-    components: { NuxtLink }
 };
 </script>
 
@@ -61,7 +60,7 @@ export default {
                 將臺灣文學內容轉化成社會大眾更容易親近的對象，拉近民眾與文學的距離。
             </div>
             <div class="text-right">
-                <NuxtLink to="/about" class="p-1 mr-16 text-sm bg-gray-300 border border-black">Read More</NuxtLink>
+                <button class="p-1 mr-16 text-sm bg-gray-300 border border-black">Read More</button>
             </div>
         </div>
     </div>
@@ -78,8 +77,7 @@ export default {
             <ProjectItem href="/achievement/modelView" name="生命之鳥" info="電子繪本體感互動遊戲" year="2018-2022"></ProjectItem>
         </div>
         <div class="text-center">
-            <NuxtLink to="/achievement" class="p-1 mr-16 text-sm bg-gray-300 border border-black">Explore All Projects
-            </NuxtLink>
+            <button class="p-1 mr-16 text-sm bg-gray-300 border border-black">Explore All Projects</button>
         </div>
     </div>
 
