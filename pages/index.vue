@@ -37,7 +37,7 @@ export default {
 
 <template>
 
-    <div class="aspect-video bg-gray-300 wrap-8 w-full mb-3"> </div>
+    <div class="aspect-video wrap-8 w-full mb-3 bg-gray-300"> </div>
 
     <div class="wrap-6 mb-10">
         <div class="mt-0 mb-5 ml-0">
