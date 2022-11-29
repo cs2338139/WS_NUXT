@@ -11,8 +11,7 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/nuxt/dist/head/runtime/plugin").default> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/pages/runtime/router").default> &
   InjectionType<typeof import("../../node_modules/@nuxtjs/i18n/dist/runtime/plugin").default> &
-  InjectionType<typeof import("../../node_modules/@nuxtjs/apollo/dist/runtime/plugin").default> &
-  InjectionType<typeof import("../../../../../.vscode/extensions/vue.volar-1.0.9-darwin-x64/dist/preview-bin/nuxi/plugin").default>
+  InjectionType<typeof import("../../node_modules/@nuxtjs/apollo/dist/runtime/plugin").default>
 
 declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }
