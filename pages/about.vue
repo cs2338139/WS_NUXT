@@ -50,8 +50,6 @@ export default {
         </div>
 
         <div class="aspect-square  w-5/12 bg-gray-300"> </div>
-
-
     </div>
 </template>
 

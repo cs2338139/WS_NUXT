@@ -1,21 +1,13 @@
-globalThis._importMeta_={url:import.meta.url,env:process.env};import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/node-fetch-native/dist/polyfill.mjs';
-import { Server } from 'http';
-import { tmpdir } from 'os';
-import { join } from 'path';
-import { mkdirSync } from 'fs';
-import { parentPort, threadId } from 'worker_threads';
-import { provider, isWindows } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/std-env/dist/index.mjs';
-import { createRenderer } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { eventHandler, defineEventHandler, handleCacheHeaders, createEvent, createApp, createRouter, lazyEventHandler, getQuery } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/h3/dist/index.mjs';
-import devalue from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/@nuxt/devalue/dist/devalue.mjs';
-import { parseURL, withQuery, joinURL } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/ufo/dist/index.mjs';
-import destr from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/destr/dist/index.mjs';
-import { snakeCase } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/scule/dist/index.mjs';
+import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/node-fetch-native/dist/polyfill.mjs';
+import { defineEventHandler, handleCacheHeaders, createEvent, createApp, createRouter, lazyEventHandler } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/h3/dist/index.mjs';
 import { createFetch as createFetch$1, Headers } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/ohmyfetch/dist/node.mjs';
+import destr from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/destr/dist/index.mjs';
 import { createRouter as createRouter$1 } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/radix3/dist/index.mjs';
 import { createCall, createFetch } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/unenv/runtime/fetch/index.mjs';
 import { createHooks } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/hookable/dist/index.mjs';
+import { snakeCase } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/scule/dist/index.mjs';
 import { hash } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/ohash/dist/index.mjs';
+import { parseURL, withQuery } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/ufo/dist/index.mjs';
 import { createStorage } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/unstorage/dist/index.mjs';
 import unstorage_47drivers_47fs from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/unstorage/dist/drivers/fs.mjs';
 
@@ -94,40 +86,6 @@ storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","base":"D:\\Work\\
 storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","base":"D:\\Work\\HTML\\Project\\WS_NUXTWordPress\\server","ignore":["**/node_modules/**","**/.git/**"]}));
 storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","base":"D:\\Work\\HTML\\Project\\WS_NUXTWordPress\\.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
 storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","base":"D:\\Work\\HTML\\Project\\WS_NUXTWordPress\\.nuxt\\cache","ignore":["**/node_modules/**","**/.git/**"]}));
-
-function defineRenderHandler(handler) {
-  return eventHandler(async (event) => {
-    if (event.req.url.endsWith("/favicon.ico")) {
-      event.res.setHeader("Content-Type", "image/x-icon");
-      event.res.end("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
-      return;
-    }
-    const response = await handler(event);
-    if (!response) {
-      if (!event.res.writableEnded) {
-        event.res.statusCode = event.res.statusCode === 200 ? 500 : event.res.statusCode;
-        event.res.end("No response returned from render handler: " + event.req.url);
-      }
-      return;
-    }
-    const nitroApp = useNitroApp();
-    await nitroApp.hooks.callHook("render:response", response, { event });
-    if (!event.res.headersSent && response.headers) {
-      for (const header in response.headers) {
-        event.res.setHeader(header, response.headers[header]);
-      }
-      if (response.statusCode) {
-        event.res.statusCode = response.statusCode;
-      }
-      if (response.statusMessage) {
-        event.res.statusMessage = response.statusMessage;
-      }
-    }
-    if (!event.res.writableEnded) {
-      event.res.end(typeof response.body === "string" ? response.body : JSON.stringify(response.body));
-    }
-  });
-}
 
 const defaultCacheOptions = {
   name: "_",
@@ -329,7 +287,7 @@ const errorHandler = (async function errorhandler(error, event) {
     statusCode,
     statusMessage,
     message,
-    stack: statusCode !== 404 ? `<pre>${stack.map((i) => `<span class="stack${i.internal ? " internal" : ""}">${i.text}</span>`).join("\n")}</pre>` : "",
+    stack: "",
     data: error.data
   };
   event.res.statusCode = errorObject.statusCode;
@@ -352,20 +310,16 @@ const errorHandler = (async function errorhandler(error, event) {
   const isErrorPage = event.req.url?.startsWith("/__nuxt_error");
   let html = !isErrorPage ? await $fetch(withQuery("/__nuxt_error", errorObject)).catch(() => null) : null;
   if (!html) {
-    const { template } = await import('file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/@nuxt/ui-templates/dist/templates/error-dev.mjs') ;
-    {
-      errorObject.description = errorObject.message;
-    }
+    const { template } = await import('./error-500.mjs');
     html = template(errorObject);
   }
   event.res.setHeader("Content-Type", "text/html;charset=UTF-8");
   event.res.end(html);
 });
 
-const _lazy_wohY56 = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_wohY56 = () => import('./renderer.mjs');
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_wohY56, lazy: true, middleware: false, method: undefined },
   { route: '/**', handler: _lazy_wohY56, lazy: true, middleware: false, method: undefined }
 ];
 
@@ -373,7 +327,7 @@ function createNitroApp() {
   const config = useRuntimeConfig();
   const hooks = createHooks();
   const h3App = createApp({
-    debug: destr(true),
+    debug: destr(false),
     onError: errorHandler
   });
   h3App.use(config.app.baseURL, timingMiddleware);
@@ -415,193 +369,11 @@ function createNitroApp() {
 const nitroApp = createNitroApp();
 const useNitroApp = () => nitroApp;
 
-const server = new Server(nitroApp.h3App.nodeHandler);
-function getAddress() {
-  if (provider === "stackblitz" || process.env.NITRO_NO_UNIX_SOCKET) {
-    return "0";
-  }
-  const socketName = `worker-${process.pid}-${threadId}.sock`;
-  if (isWindows) {
-    return join("\\\\.\\pipe\\nitro", socketName);
-  } else {
-    const socketDir = join(tmpdir(), "nitro");
-    mkdirSync(socketDir, { recursive: true });
-    return join(socketDir, socketName);
-  }
-}
-const listenAddress = getAddress();
-server.listen(listenAddress, () => {
-  const _address = server.address();
-  parentPort.postMessage({
-    event: "listen",
-    address: typeof _address === "string" ? { socketPath: _address } : { host: "localhost", port: _address.port }
-  });
-});
+const localFetch = nitroApp.localFetch;
 {
-  process.on("unhandledRejection", (err) => console.error("[nitro] [dev] [unhandledRejection]", err));
-  process.on("uncaughtException", (err) => console.error("[nitro] [dev] [uncaughtException]", err));
+  process.on("unhandledRejection", (err) => console.error("[nitro] [dev] [unhandledRejection] " + err));
+  process.on("uncaughtException", (err) => console.error("[nitro] [dev] [uncaughtException] " + err));
 }
 
-function buildAssetsURL(...path) {
-  return joinURL(publicAssetsURL(), useRuntimeConfig().app.buildAssetsDir, ...path);
-}
-function publicAssetsURL(...path) {
-  const publicBase = useRuntimeConfig().app.cdnURL || useRuntimeConfig().app.baseURL;
-  return path.length ? joinURL(publicBase, ...path) : publicBase;
-}
-
-const getClientManifest = () => import('file://D:/Work/HTML/Project/WS_NUXTWordPress/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getSPARenderer = lazyCachedFunction(async () => {
-  const manifest = await getClientManifest();
-  const options = {
-    manifest,
-    renderToString: () => '<div id="__nuxt"></div>',
-    buildAssetsURL
-  };
-  const renderer = createRenderer(() => () => {
-  }, options);
-  const result = await renderer.renderToString({});
-  const renderToString = (ssrContext) => {
-    const config = useRuntimeConfig();
-    ssrContext.payload = {
-      serverRendered: false,
-      config: {
-        public: config.public,
-        app: config.app
-      },
-      data: {},
-      state: {}
-    };
-    ssrContext.renderMeta = ssrContext.renderMeta ?? (() => ({}));
-    return Promise.resolve(result);
-  };
-  return { renderToString };
-});
-const PAYLOAD_URL_RE = /\/_payload(\.[a-zA-Z0-9]+)?.js(\?.*)?$/;
-const renderer = defineRenderHandler(async (event) => {
-  const ssrError = event.req.url?.startsWith("/__nuxt_error") ? getQuery(event) : null;
-  let url = ssrError?.url || event.req.url;
-  const isRenderingPayload = PAYLOAD_URL_RE.test(url);
-  if (isRenderingPayload) {
-    url = url.substring(0, url.lastIndexOf("/")) || "/";
-    event.req.url = url;
-  }
-  const ssrContext = {
-    url,
-    event,
-    req: event.req,
-    res: event.res,
-    runtimeConfig: useRuntimeConfig(),
-    noSSR: !!true  ,
-    error: !!ssrError,
-    nuxt: void 0,
-    payload: ssrError ? { error: ssrError } : {}
-  };
-  const renderer = await getSPARenderer() ;
-  const _rendered = await renderer.renderToString(ssrContext).catch((err) => {
-    if (!ssrError) {
-      throw ssrContext.payload?.error || err;
-    }
-  });
-  await ssrContext.nuxt?.hooks.callHook("app:rendered", { ssrContext });
-  if (!_rendered) {
-    return void 0;
-  }
-  if (ssrContext.payload?.error && !ssrError) {
-    throw ssrContext.payload.error;
-  }
-  if (isRenderingPayload) {
-    const response2 = renderPayloadResponse(ssrContext);
-    return response2;
-  }
-  const renderedMeta = await ssrContext.renderMeta?.() ?? {};
-  const inlinedStyles = "";
-  const htmlContext = {
-    htmlAttrs: normalizeChunks([renderedMeta.htmlAttrs]),
-    head: normalizeChunks([
-      renderedMeta.headTags,
-      null,
-      _rendered.renderResourceHints(),
-      _rendered.renderStyles(),
-      inlinedStyles,
-      ssrContext.styles
-    ]),
-    bodyAttrs: normalizeChunks([renderedMeta.bodyAttrs]),
-    bodyPreprend: normalizeChunks([
-      renderedMeta.bodyScriptsPrepend,
-      ssrContext.teleports?.body
-    ]),
-    body: [
-      _rendered.html
-    ],
-    bodyAppend: normalizeChunks([
-      `<script>window.__NUXT__=${devalue(ssrContext.payload)}<\/script>`,
-      _rendered.renderScripts(),
-      renderedMeta.bodyScripts
-    ])
-  };
-  const nitroApp = useNitroApp();
-  await nitroApp.hooks.callHook("render:html", htmlContext, { event });
-  const response = {
-    body: renderHTMLDocument(htmlContext),
-    statusCode: event.res.statusCode,
-    statusMessage: event.res.statusMessage,
-    headers: {
-      "Content-Type": "text/html;charset=UTF-8",
-      "X-Powered-By": "Nuxt"
-    }
-  };
-  return response;
-});
-function lazyCachedFunction(fn) {
-  let res = null;
-  return () => {
-    if (res === null) {
-      res = fn().catch((err) => {
-        res = null;
-        throw err;
-      });
-    }
-    return res;
-  };
-}
-function normalizeChunks(chunks) {
-  return chunks.filter(Boolean).map((i) => i.trim());
-}
-function joinTags(tags) {
-  return tags.join("");
-}
-function joinAttrs(chunks) {
-  return chunks.join(" ");
-}
-function renderHTMLDocument(html) {
-  return `<!DOCTYPE html>
-<html ${joinAttrs(html.htmlAttrs)}>
-<head>${joinTags(html.head)}</head>
-<body ${joinAttrs(html.bodyAttrs)}>${joinTags(html.bodyPreprend)}${joinTags(html.body)}${joinTags(html.bodyAppend)}</body>
-</html>`;
-}
-function renderPayloadResponse(ssrContext) {
-  return {
-    body: `export default ${devalue(splitPayload(ssrContext).payload)}`,
-    statusCode: ssrContext.event.res.statusCode,
-    statusMessage: ssrContext.event.res.statusMessage,
-    headers: {
-      "content-type": "text/javascript;charset=UTF-8",
-      "x-powered-by": "Nuxt"
-    }
-  };
-}
-function splitPayload(ssrContext) {
-  const { data, prerenderedAt, ...initial } = ssrContext.payload;
-  return {
-    initial: { ...initial, prerenderedAt },
-    payload: { data, prerenderedAt }
-  };
-}
-
-const renderer$1 = /*#__PURE__*/Object.freeze({
-  __proto__: null,
-  'default': renderer
-});
-//# sourceMappingURL=index.mjs.map
+export { useRuntimeConfig as a, localFetch as l, useNitroApp as u };
+//# sourceMappingURL=nitro-prerenderer.mjs.map

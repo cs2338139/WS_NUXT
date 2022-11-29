@@ -1,6 +1,5 @@
 <script setup>
 import PartItem from '~~/components/ProjectLayoutItem/PartItem.vue'
-import GameCreatorItem from '~~/components/ProjectLayoutItem/GameCreatorItem.vue'
 
 defineProps({
     img: String,
@@ -40,12 +39,12 @@ export default {
                 重視臺灣現實狀況的他與另外11為詩人成立笠詩社，發行《笠詩刊》。 他的一切都環繞在推動本土文學與文化上，現在就來認識他的文學世界吧。</template>
         </PartItem>
 
-        <GameCreatorItem>
+        <PartItem>
             <template #title>遊戲原作者</template>
             <template #name>郭孟修</template>
             <template #word>1997年生，屏東人。現就讀臺灣大學物理所碩士班。
                 曾於臺北地方異聞工作室參與設計製作實境遊戲《小封神藏寶圖》、《文學將死》及《光之屋》。對文史轉化有興趣而迷途的物理研究生。</template>
-        </GameCreatorItem>
+        </PartItem>
 
     </div>
 
