@@ -1,5 +1,6 @@
 <script setup>
 import PartItem from '~~/components/ProjectLayoutItem/PartItem.vue'
+import PartItem2 from '~~/components/ProjectLayoutItem/PartItem2.vue'
 
 defineProps({
     img: String,
@@ -45,6 +46,14 @@ export default {
             <template #word>1997年生，屏東人。現就讀臺灣大學物理所碩士班。
                 曾於臺北地方異聞工作室參與設計製作實境遊戲《小封神藏寶圖》、《文學將死》及《光之屋》。對文史轉化有興趣而迷途的物理研究生。</template>
         </PartItem>
+
+        <PartItem2 img="">
+            <template #title>文學家介紹</template>
+            <template #name>吳瀛濤</template>
+            <template #year>1916-1971</template>
+            <template
+                #word>台北士紳吳江山之孫，臺灣重要詩人、民俗研究者。求學期間就開始參加文藝活動，投稿詩作在公學校的校刊上。21歲時加入臺灣文藝聯盟臺北支部，24歲時開始日文詩的創作。由於家族經營大稻埕最著名的酒樓「江山樓」，以為靈感的小說〈藝妲〉入選了《臺灣藝術》小說懸賞。</template>
+        </PartItem2>
 
     </div>
 
