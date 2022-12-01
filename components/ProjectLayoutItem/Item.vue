@@ -6,7 +6,7 @@ defineProps({
 </script>
 
 <template>
-        <button class="w-60">
+        <button @click="$emit('open')" class="w-60">
             <img :v-if="img != ''" :src="img" />
             <div :v-if="img === ''" class="aspect-square w-full bg-gray-300 border-2 border-black"> </div>
             <div class="text-center mt-2">

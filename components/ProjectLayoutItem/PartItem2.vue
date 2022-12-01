@@ -21,7 +21,7 @@ defineProps({
                 <slot name="word" />
             </div>
             <div class="text-right">
-                <button class="border-2 bg-gray-300 border-black  px-2 py-0.5">
+                <button @click="$emit('open')" class="border-2 bg-gray-300 border-black  px-2 py-0.5">
                     Read More
                 </button>
             </div>

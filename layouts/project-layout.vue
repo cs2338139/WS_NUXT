@@ -9,8 +9,16 @@ defineProps({
     img: String,
 });
 
-function OpenPopupPanel(i) {
+const popupEnable = ref(false);
+
+function OpenPopupPanel() {
+    popupEnable.value = true;
     document.body.style.overflow = "hidden";
+}
+
+function ClosePopupPanel() {
+    popupEnable.value = false;
+    document.body.style.overflow = "scroll";
 }
 
 </script>
@@ -29,7 +37,6 @@ export default {
         <div class="mb-14 mt-0 ml-0 text-5xl">
             生命之鳥
         </div>
-
         <PartItem class="rounded-xl p-3 mb-10 bg-gray-100">
             <template #title>展出資訊</template>
             <template #word>本位於國立臺灣文學館B1文學樂園，於開館時常態展示。</template>
@@ -55,7 +62,7 @@ export default {
                 曾於臺北地方異聞工作室參與設計製作實境遊戲《小封神藏寶圖》、《文學將死》及《光之屋》。對文史轉化有興趣而迷途的物理研究生。</template>
         </PartItem>
 
-        <PartItem2 img="">
+        <PartItem2 img="" @open="OpenPopupPanel()">
             <template #title>文學家介紹</template>
             <template #name>吳瀛濤</template>
             <template #year>1916-1971</template>
@@ -66,20 +73,18 @@ export default {
         <PartItemNull>
             <template #title>著作介紹</template>
             <div class="flex flex-wrap justify-between">
-                <Item>〈藝妲〉</Item>
-                <Item>〈藝妲〉</Item>
-                <Item>〈藝妲〉</Item>
-                <Item>〈藝妲〉</Item>
-                <Item>〈藝妲〉</Item>
-                <Item>〈藝妲〉</Item>
-                <Item>〈藝妲〉</Item>
-                <Item>〈藝妲〉</Item>
+                <Item @open="OpenPopupPanel()">〈藝妲〉</Item>
+                <Item @open="OpenPopupPanel()">〈藝妲〉</Item>
+                <Item @open="OpenPopupPanel()">〈藝妲〉</Item>
+                <Item @open="OpenPopupPanel()">〈藝妲〉</Item>
+                <Item @open="OpenPopupPanel()">〈藝妲〉</Item>
+                <Item @open="OpenPopupPanel()">〈藝妲〉</Item>
             </div>
         </PartItemNull>
 
         <PartItemNull>
             <template #title>精彩畫面</template>
-            <iframe src="https://www.youtube.com/embed/6kkuhbDiyOw" class="aspect-video dev-pink relative w-full mb-14"
+            <iframe src="https://www.youtube.com/embed/6kkuhbDiyOw" class="aspect-video mb-14 relative w-full"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
@@ -90,7 +95,14 @@ export default {
         </PartItemNull>
     </div>
 
-    <!-- <Popup></Popup> -->
+    <Popup @close="ClosePopupPanel" img="" v-if="popupEnable">
+        <template #name>吳瀛濤</template>
+        <template #word>
+            台北士紳吳江山之孫，臺灣重要詩人、民俗研究者。求學期間就開始參加文藝活動，投稿詩作在公學校的校刊上。21歲時加入臺灣文藝聯盟臺北支部，24歲時開始日文詩的創作。由於家族經營大稻埕最著名的酒樓「江山樓」，以為靈感的小說〈藝妲〉入選了《臺灣藝術》小說懸賞。
+            28歲時旅居香港期間，與詩人戴望舒有交往，同時開始發表中文詩作。臺後在《中華日報》副刊發表中文與日文詩作與隨筆。在當時臺灣多數作家因為語言轉換而輟筆時，他的作品其詩作多在《現代詩》、《藍星週刊》、《創世紀》上發表，在當時的主流詩刊極為活躍的臺灣詩人。
+            從事詩創作的他認為詩離不開生活，除了詩、散文外，也對台灣民俗與兒童文學所有探究。曾翻譯日本童話集，改寫兒童文學作品外，《臺灣民俗》收錄了近百篇的民間故事與地方傳說，而《臺灣諺語》一書中更收了50首的「童謠」與「兒戲歌」。
+            1953年他提出「原子詩論」，主張以科學與自由的精神寫詩。1964年時他與11位臺灣詩人合作創立「笠」詩社，一生熱心推動本土文學與文化。</template>
+    </Popup>
 
 </template>
 

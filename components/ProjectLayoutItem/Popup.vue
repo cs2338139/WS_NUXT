@@ -2,34 +2,28 @@
 defineProps({
     img: String,
 })
+
 </script>
 
 <template>
     <div class="fixed bottom-0 left-0 z-50 w-full h-screen bg-gray-300">
         <div class="text-right">
-            <button class="top-5 w-16 aspect-square">X</button>
+            <button @click="$emit('close')" class="top-5 aspect-square w-16 text-4xl">X</button>
         </div>
-        <div class="flex justify-between">
-        <img :v-if="img != ''" :src="img" />
-        <div :v-if="img === ''" class="aspect-square  h-40 bg-gray-300 rounded-full border-2 border-black"> </div>
-        <div class="mb-14 w-4/5">
-            <div class="mb-3 text-xl">
-                <slot name="title" />
-            </div>
-            <div class="mb-1">
-                <slot name="name" /> (
-                <slot name="year" />)
-            </div>
-            <div class="">
-                <slot name="word" />
-            </div>
-            <div class="text-right">
-                <button class="border-2 bg-gray-300 border-black  px-2 py-0.5">
-                    Read More
-                </button>
-            </div>
+
+        <div class="wrap-6 h-full flex flex-col items-center justify-center">
+                <img :v-if="img != ''" :src="img" />
+                <div :v-if="img === ''" class="aspect-square h-60 bg-gray-300 border-2 border-black rounded-full">
+                </div>
+                <div class="mb-14 w-4/5 mt-14">
+                    <div class="mb-1">
+                        <slot name="name" />
+                    </div>
+                    <div class="">
+                        <slot name="word" />
+                    </div>
+                </div>
         </div>
-    </div>
 
     </div>
 </template>
