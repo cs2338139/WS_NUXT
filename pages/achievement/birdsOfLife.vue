@@ -31,9 +31,11 @@ export default {
 </script>
 
 <template>
-    <NuxtLayout name="project-layout">
+    <div>
+        <NuxtLayout name="project-layout">
 
-    </NuxtLayout>
+        </NuxtLayout>
+    </div>
 
 </template>
 

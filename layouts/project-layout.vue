@@ -1,15 +1,23 @@
 <script setup>
 import PartItem from '~~/components/ProjectLayoutItem/PartItem.vue'
 import PartItem2 from '~~/components/ProjectLayoutItem/PartItem2.vue'
+import PartItemNull from '~~/components/ProjectLayoutItem/PartItemNull.vue';
+import Item from '~~/components/ProjectLayoutItem/Item.vue';
+import Popup from '~~/components/ProjectLayoutItem/Popup.vue';
 
 defineProps({
     img: String,
 });
+
+function OpenPopupPanel(i) {
+    document.body.style.overflow = "hidden";
+}
+
 </script>
 
 <script>
 export default {
-
+    components: { PartItemNull }
 };
 </script>
 
@@ -22,7 +30,7 @@ export default {
             生命之鳥
         </div>
 
-        <PartItem class="p-3 bg-gray-100 rounded-xl mb-10">
+        <PartItem class="rounded-xl p-3 mb-10 bg-gray-100">
             <template #title>展出資訊</template>
             <template #word>本位於國立臺灣文學館B1文學樂園，於開館時常態展示。</template>
         </PartItem>
@@ -55,8 +63,34 @@ export default {
                 #word>台北士紳吳江山之孫，臺灣重要詩人、民俗研究者。求學期間就開始參加文藝活動，投稿詩作在公學校的校刊上。21歲時加入臺灣文藝聯盟臺北支部，24歲時開始日文詩的創作。由於家族經營大稻埕最著名的酒樓「江山樓」，以為靈感的小說〈藝妲〉入選了《臺灣藝術》小說懸賞。</template>
         </PartItem2>
 
+        <PartItemNull>
+            <template #title>著作介紹</template>
+            <div class="flex flex-wrap justify-between">
+                <Item>〈藝妲〉</Item>
+                <Item>〈藝妲〉</Item>
+                <Item>〈藝妲〉</Item>
+                <Item>〈藝妲〉</Item>
+                <Item>〈藝妲〉</Item>
+                <Item>〈藝妲〉</Item>
+                <Item>〈藝妲〉</Item>
+                <Item>〈藝妲〉</Item>
+            </div>
+        </PartItemNull>
+
+        <PartItemNull>
+            <template #title>精彩畫面</template>
+            <iframe src="https://www.youtube.com/embed/6kkuhbDiyOw" class="aspect-video dev-pink relative w-full mb-14"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <div class="aspect-video mb-14 w-full bg-gray-300"> </div>
+            <div class="aspect-video mb-14 w-full bg-gray-300"> </div>
+            <div class="aspect-video mb-14 w-full bg-gray-300"> </div>
+        </PartItemNull>
     </div>
 
+    <!-- <Popup></Popup> -->
 
 </template>
 

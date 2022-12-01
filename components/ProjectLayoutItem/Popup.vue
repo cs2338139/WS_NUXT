@@ -2,11 +2,14 @@
 defineProps({
     img: String,
 })
-
 </script>
 
 <template>
-    <div class="flex justify-between">
+    <div class="fixed bottom-0 left-0 z-50 w-full h-screen bg-gray-300">
+        <div class="text-right">
+            <button class="top-5 w-16 aspect-square">X</button>
+        </div>
+        <div class="flex justify-between">
         <img :v-if="img != ''" :src="img" />
         <div :v-if="img === ''" class="aspect-square  h-40 bg-gray-300 rounded-full border-2 border-black"> </div>
         <div class="mb-14 w-4/5">
@@ -26,5 +29,7 @@ defineProps({
                 </button>
             </div>
         </div>
+    </div>
+
     </div>
 </template>
