@@ -20,10 +20,10 @@ export default {
           <img :src="logoImage" style="width:120px" />
 
           <div class="flex flex-col h-1/2 justify-between">
-            <FootMenuItem href="">國立臺灣文學館著作所有權©2020</FootMenuItem>
-            <FootMenuItem href="">地址：70041臺南市中西區中正路1號</FootMenuItem>
-            <FootMenuItem href="">電話：(06)221-7201</FootMenuItem>
-            <FootMenuItem href="">傳真：(06)222-6115</FootMenuItem>
+            <FootMenuItem href="">{{$t('foot.copyright')}}</FootMenuItem>
+            <FootMenuItem href="">{{$t('foot.address')}}</FootMenuItem>
+            <FootMenuItem href="">{{$t('foot.tel')}}</FootMenuItem>
+            <FootMenuItem href="">{{$t('foot.fax')}}</FootMenuItem>
           </div>
         </div>
       </div>
