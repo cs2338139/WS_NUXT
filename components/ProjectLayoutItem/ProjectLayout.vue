@@ -20,7 +20,11 @@ const popupEnable = ref(false);
 function OpenPopupPanel(img, name, word) {
     popupEnable.value = true;
     document.body.style.overflow = "hidden";
-    popupEnable
+    Object.assign(popupInfo, {
+        img: img,
+        name: name,
+        word: word
+    })
 }
 
 function ClosePopupPanel() {
