@@ -33,16 +33,16 @@ export default {
             <div class="w-5/12">
                 <PartTitle class="mt-0 mb-10 ml-0">
                     <template #en>About the project</template>
-                    <template #title>{{ $t('pages.home.child.about.about.title')
+                    <template #title>{{ $t('pages.home.child.about.info.title')
                     }}</template>
                 </PartTitle>
 
                 <div class="mb-10">
-                    {{ $t('pages.home.child.about.about.content.0') }}
+                    {{ $t('pages.home.child.about.info.content.0') }}
                     <br> <br>
-                    {{ $t('pages.home.child.about.about.content.1') }}
+                    {{ $t('pages.home.child.about.info.content.1') }}
                     <br> <br>
-                    {{ $t('pages.home.child.about.about.content.2') }}
+                    {{ $t('pages.home.child.about.info.content.2') }}
                 </div>
                 <div class="text-right">
                     <HrefBottom href="/achievement/">{{ $t('pages.home.achievement.button')

@@ -59,11 +59,11 @@ export default {
                 <ProjectItem class="transform translate-y-32" href="/achievement/modelView" color="background: #F3D344;"
                     :name="$t('pages.home.achievement.content.0.title')"
                     :year="$t('pages.home.achievement.content.0.year')"></ProjectItem>
-                <ProjectItem class="transform translate-y-16" href="/achievement/birdsOfLife"
+                <ProjectItem class="transform translate-y-16" href="/achievement/hideWordsMan"
                     color="background: #6395CE;" :name="$t('pages.home.achievement.content.4.title')"
                     :info="$t('pages.home.achievement.content.4.info')"
                     :year="$t('pages.home.achievement.content.4.year')"></ProjectItem>
-                <ProjectItem href="/achievement/hideWordsMan" color="background: #EC9D93;"
+                <ProjectItem href="/achievement/birdsOfLife" color="background: #EC9D93;"
                     :name="$t('pages.home.achievement.content.3.title')"
                     :info="$t('pages.home.achievement.content.3.info')"
                     :year="$t('pages.home.achievement.content.3.year')"></ProjectItem>
@@ -86,7 +86,7 @@ export default {
                 <EventItem href="" name="象偶奇遇記A" place="國立臺灣文學館 兒童樂園" year="2022.07.21"></EventItem>
             </div>
             <div class="text-center">
-                <HrefBottom href="">{{ $t('pages.home.Event.button') }}</HrefBottom>
+                <HrefBottom href="/eventRecord/">{{ $t('pages.home.Event.button') }}</HrefBottom>
             </div>
         </div>
     </div>

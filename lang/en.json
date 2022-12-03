@@ -69,7 +69,7 @@
       "child": {
         "about": {
           "title": "About the Project｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
-          "about": {
+          "info": {
             "title": "About the Project",
             "content": [
               "Digital game development with three-dimension scanning and modeling project is one of the main projects Taiwan Xing Juan -demonstration project of the museum.  This project focuses on promoting the collections in the various museums in Taiwan by translating the collections into simple stories, making them more accessible to the public.",
@@ -81,7 +81,48 @@
         },
         "achievement": {
           "title": "Achievement｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
-          "info": {},
+          "info": {
+            "title": "Achievement",
+            "content": [
+              {
+                "title": "3D scanning and modeling",
+                "info": "",
+                "year": "2018-2021",
+                "words": [
+                  "Through 3D scanning and modeling of cultural relics, we hope to promote Taiwanese literature. "
+                ]
+              },
+              {
+                "title": "Island of Baku",
+                "info": "VR shooting game",
+                "year": "2018-2019",
+                "words": [
+                  "This project bases on the concept of a fantasy island.  It draws inspiration from five authors- Yeh Shih-tao, Jhang Shen-Chieh, Long Ying-zong, Lin Hai-yin, and Yao Yi-wei.   Meanwhile, it produces the 3D  scanning from the collections of NMTL.  Those collections are designed as the key props to unlocked different chapters."
+                ]
+              },
+              {
+                "title": "1940",
+                "info": "puzzle-based quiz game",
+                "year": "2018-2020",
+                "words": [
+                  "This project bases on the life of Liu Na-ou.   The inspiration for the game is the Mahjong, one of NMTL’s collections. With the fictional setup, the players would begin a puzzle quiz-based game."
+                ]
+              },
+              {
+                "title": "Birds of Life",
+                "info": "digital picture book with interactive game",
+                "year": "2018-2020",
+                "words": [
+                  "This work takes the literary life of Wu Ying-tao as the main storyline.  He is a modern poet, folklore researcher. With “Poetry is part of life” as the main concept, Wu Ying-tao speaks to children about his own life experience, customs and stories collected from various places in Taiwan. The game also introduces Wu’s major works to the audience."
+                ]
+              },
+              {
+                "title": "Hide Words Man",
+                "info": "digital picture book with interactive game",
+                "year": "2018-2022"
+              }
+            ]
+          },
           "child": {
             "modelView": {
               "title": "3D Scanning and Modeling｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",

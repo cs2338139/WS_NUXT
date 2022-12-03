@@ -9,27 +9,27 @@ defineProps({
 </script>
 
 <template>
-    <NuxtLink :to="href" class="pb-16">
-        <div class="flex w-full h-64 border border-black">
-            <div class="w-2/5 h-full bg-gray-300"></div>
+    <div class="px-16 pb-16">
+        <NuxtLink :to="href" class="rounded-3xl h-80 flex w-full p-4 border border-black">
+            <div class="rounded-3xl w-1/3 h-full bg-gray-300"></div>
 
-            <div class="flex items-center justify-center w-3/5 h-full border-l border-black">
-                <div class="flex flex-col w-4/5">
+            <div class="flex items-start justify-center w-2/3 h-full px-16 py-10">
+                <div class="flex flex-col">
 
-                    <div class="text-2xl">{{ name }}</div>
-                    <div class="text-xl">{{ info }}</div>
-                    <br>
-                    <div class="text-xl">{{ word }}</div>
+                    <div class="mb-2 text-2xl font-bold tracking-widest">{{ name }}</div>
 
-                    <div class="text-right">
-                        <span class="text-xl">{{ year }}</span>
+                    <div class="flex justify-between text-lg">
+                        <span>{{ info }}</span>
+                        <span>{{ year }}</span>
                     </div>
 
+                    <div class="mt-1 mb-4 border-b-2 border-black"></div>
+
+                    <div class="text-xl">{{ word }}</div>
                 </div>
             </div>
-
-        </div>
-    </NuxtLink>
+        </NuxtLink>
+    </div>
 </template>
 
 <style scoped>
