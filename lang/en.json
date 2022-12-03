@@ -69,11 +69,15 @@
       "child": {
         "about": {
           "title": "About the Project｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
-          "content": [
-            "Digital game development with three-dimension scanning and modeling project is one of the main projects Taiwan Xing Juan -demonstration project of the museum.  This project focuses on promoting the collections in the various museums in Taiwan by translating the collections into simple stories, making them more accessible to the public.",
-            "In this project, we scanned the collections into three-dimensional models as the foundation to raise the open calls to the public.  The agencies offer the collections as inspiration and elements, transforming them into different stories. Eventually, it takes the values of the National Museum of Taiwan Literature closer to the public through VR experience, online games, somatosensory interaction games. We hope the public will be familiarized with these Taiwan authors through such edutainment devices.",
-            "The project includes four sub-projects: The digital games “1940”, “Birds of Life” and “Island of Baku”, and the project of three-dimensional scanning and modeling"
-          ]
+          "about": {
+            "title": "About the Project",
+            "content": [
+              "Digital game development with three-dimension scanning and modeling project is one of the main projects Taiwan Xing Juan -demonstration project of the museum.  This project focuses on promoting the collections in the various museums in Taiwan by translating the collections into simple stories, making them more accessible to the public.",
+              "In this project, we scanned the collections into three-dimensional models as the foundation to raise the open calls to the public.  The agencies offer the collections as inspiration and elements, transforming them into different stories. Eventually, it takes the values of the National Museum of Taiwan Literature closer to the public through VR experience, online games, somatosensory interaction games. We hope the public will be familiarized with these Taiwan authors through such edutainment devices.",
+              "The project includes four sub-projects: The digital games “1940”, “Birds of Life” and “Island of Baku”, and the project of three-dimensional scanning and modeling"
+            ],
+            "button": "Explore All Project"
+          }
         },
         "achievement": {
           "title": "Achievement｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",

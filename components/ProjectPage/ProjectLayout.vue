@@ -1,9 +1,5 @@
 <script setup>
-import PartItem from '~~/components/ProjectLayoutItem/PartItem.vue'
-import PartItem2 from '~~/components/ProjectLayoutItem/PartItem2.vue'
-import PartItemNull from '~~/components/ProjectLayoutItem/PartItemNull.vue';
-import Item from '~~/components/ProjectLayoutItem/Item.vue';
-import Popup from '~~/components/ProjectLayoutItem/Popup.vue';
+import Popup from '~~/components/ProjectPage/src/Popup.vue';
 
 defineProps({
     img: String,

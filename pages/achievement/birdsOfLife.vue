@@ -1,10 +1,10 @@
 <script setup>
-import ProjectLayout from '~~/components/ProjectLayoutItem/projectLayout.vue';
-import PartItem from '~~/components/ProjectLayoutItem/PartItem.vue'
-import PartItem2 from '~~/components/ProjectLayoutItem/PartItem2.vue'
-import PartItemNull from '~~/components/ProjectLayoutItem/PartItemNull.vue';
-import Item from '~~/components/ProjectLayoutItem/Item.vue';
-import ScreenShots from '~~/components/ProjectLayoutItem/ScreenShots.vue';
+import ProjectLayout from '~~/components/ProjectPage/projectLayout.vue';
+import PartItem from '~~/components/ProjectPage/src/PartItem.vue'
+import PartItem2 from '~~/components/ProjectPage/src/PartItem2.vue'
+import PartItemNull from '~~/components/ProjectPage/src/PartItemNull.vue';
+import Item from '~~/components/ProjectPage/src/Item.vue';
+import ScreenShots from '~~/components/ProjectPage/src/ScreenShots.vue';
 
 const { locale, setLocale, t } = useI18n();
 useHead({

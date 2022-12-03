@@ -34,7 +34,7 @@ export default {
   </footer>
 </template>
 
-<style>
+<style scoped>
 .-parallel {
   @apply origin-top-right;
   transform: skew(0, 7deg);
@@ -45,7 +45,4 @@ export default {
   transform: skew(0, -7deg);
 }
 
-.h-540px {
-  height: 450px;
-}
 </style>
