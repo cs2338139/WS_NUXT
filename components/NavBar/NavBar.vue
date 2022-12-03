@@ -30,7 +30,7 @@ export default {
 </script>
 
 <template>
-  <nav class="top-0 w-full">
+  <nav class="top-0 w-full bg-custom-0">
     <NavMenu class="top-0 h-32">
       <template #logo>
         <Logo href="/" :img="logoImage" width="width:120px" />
@@ -38,7 +38,7 @@ export default {
 
       <NavMenuItem href="/about"> {{ $t('nav.about') }}</NavMenuItem>
 
-      <NavMenuList href="/achievement" menuListOffset="-translate-x-14">
+      <NavMenuList href="/achievement" menuListOffset="-translate-x-20">
         <template #menuName> {{ $t('nav.achievement.title') }}</template>
         <MenuListItem href="/achievement/modelView">{{ $t('nav.achievement.child.modelView') }}</MenuListItem>
         <MenuListItem href="/achievement/islandOfBaku">{{ $t('nav.achievement.child.islandOfBaku') }}</MenuListItem>
@@ -49,7 +49,7 @@ export default {
       <NavMenuItem href="/eventRecord"> {{ $t('nav.eventRecord') }}</NavMenuItem>
 
       <button @click="ChangeLang()">
-        <li class=" px-4 py-2 font-bold text-center bg-gray-300 border border-black">
+        <li class="px-4 py-3 text-2xl font-bold text-center bg-white border-2 border-black">
           {{ $t('nav.lang') }}
         </li>
       </button>

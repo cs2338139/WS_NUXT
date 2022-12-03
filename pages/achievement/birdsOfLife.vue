@@ -55,7 +55,11 @@ function GetData(img, name, word) {
                     }}</template>
                 </PartItem>
 
-                <PartItem2 img="" @open="GetData(null,$t('pages.home.child.achievement.child.birdsOfLife.author.content[0].name'),$t('pages.home.child.achievement.child.birdsOfLife.author.content[0].info.0'))">
+                <PartItem2 img="" @open="GetData(null, $t('pages.home.child.achievement.child.birdsOfLife.author.content[0].name'),
+             [$t('pages.home.child.achievement.child.birdsOfLife.author.content[0].info.0'),
+            $t('pages.home.child.achievement.child.birdsOfLife.author.content[0].info.1'),
+                $t('pages.home.child.achievement.child.birdsOfLife.author.content[0].info.2'),
+                $t('pages.home.child.achievement.child.birdsOfLife.author.content[0].info.3')])">
                     <template #title>{{ $t('pages.home.child.achievement.child.birdsOfLife.author.title') }}</template>
                     <template #name>{{ $t('pages.home.child.achievement.child.birdsOfLife.author.content[0].name')
                     }}</template>
@@ -68,17 +72,23 @@ function GetData(img, name, word) {
                 <PartItemNull>
                     <template #title>{{ $t('pages.home.child.achievement.child.birdsOfLife.works.title') }}</template>
                     <div class="flex flex-wrap justify-between">
-                        <Item @open="GetData(null,$t('pages.home.child.achievement.child.birdsOfLife.works.content[0].name'),$t('pages.home.child.achievement.child.birdsOfLife.works.content[0].info'))">
+                        <Item
+                            @open="GetData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[0].name'), [$t('pages.home.child.achievement.child.birdsOfLife.works.content[0].info.0')])">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[0].name') }}</Item>
-                        <Item @open="GetData(null,$t('pages.home.child.achievement.child.birdsOfLife.works.content[1].name'),$t('pages.home.child.achievement.child.birdsOfLife.works.content[1].info'))">
+                        <Item
+                            @open="GetData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[1].name'), [$t('pages.home.child.achievement.child.birdsOfLife.works.content[1].info.0')])">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[1].name') }}</Item>
-                        <Item @open="GetData(null,$t('pages.home.child.achievement.child.birdsOfLife.works.content[2].name'),$t('pages.home.child.achievement.child.birdsOfLife.works.content[2].info'))">
+                        <Item
+                            @open="GetData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[2].name'), [$t('pages.home.child.achievement.child.birdsOfLife.works.content[2].info.0')])">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[2].name') }}</Item>
-                        <Item @open="GetData(null,$t('pages.home.child.achievement.child.birdsOfLife.works.content[3].name'),$t('pages.home.child.achievement.child.birdsOfLife.works.content[3].info'))">
+                        <Item
+                            @open="GetData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[3].name'), [$t('pages.home.child.achievement.child.birdsOfLife.works.content[3].info.0')])">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[3].name') }}</Item>
-                        <Item @open="GetData(null,$t('pages.home.child.achievement.child.birdsOfLife.works.content[4].name'),$t('pages.home.child.achievement.child.birdsOfLife.works.content[4].info'))">
+                        <Item
+                            @open="GetData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[4].name'), $t('pages.home.child.achievement.child.birdsOfLife.works.content[4].info'))">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[4].name') }}</Item>
-                        <Item @open="GetData(null,$t('pages.home.child.achievement.child.birdsOfLife.works.content[5].name'),$t('pages.home.child.achievement.child.birdsOfLife.works.content[5].info'))">
+                        <Item
+                            @open="GetData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[5].name'), [$t('pages.home.child.achievement.child.birdsOfLife.works.content[5].info.0')])">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[5].name') }}</Item>
                     </div>
                 </PartItemNull>

@@ -13,9 +13,9 @@ export default {
 </script>
 
 <template>
-  <li class="mx-0 my-2">
+  <li class="mx-0 my-3">
     <NuxtLink :to="href" class="">
-      <div class="px-4 font-bold text-black">
+      <div class="px-4 text-2xl text-black">
         <slot></slot>
       </div>
     </NuxtLink>

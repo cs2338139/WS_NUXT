@@ -7,8 +7,20 @@
     font-family: "jf-openhuninn";
     src: url("/assets/font/jf-openhuninn-1.1.woff2") format("woff2");
   }
+  @font-face {
+    font-family: "DFLiHei";
+    src: url("/assets/font/DFLiHei.ttc") format('ttc');
+  }
+  @font-face {
+    font-family: "DFLiHei-300";
+    src: url("/assets/font/DFLiHei-300.ttc") format('ttc');
+  }
+  @font-face {
+    font-family: "DFLiHei-700";
+    src: url("/assets/font/DFLiHei-700.ttc") format('ttc');
+  }
   body {
-    @apply p-0 m-0;
+    @apply p-0 m-0 font-DFLiHei;
   }
 }
 
@@ -67,11 +79,10 @@
   .max-w-8xl {
     max-width: 1440px;
   }
-
 }
 
-@layer components{
-  .borderView{
-    @apply border
+@layer components {
+  .borderView {
+    @apply border;
   }
 }

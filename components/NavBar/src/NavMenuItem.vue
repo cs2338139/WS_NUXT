@@ -6,7 +6,7 @@ defineProps({
 
 <template>
   <NuxtLink :to="href">
-    <li class="px-4 py-2 font-bold text-center text-black bg-gray-300 border border-black">
+    <li class="text-2xl px-4 py-3 text-center text-black">
       <slot> </slot>
     </li>
   </NuxtLink>

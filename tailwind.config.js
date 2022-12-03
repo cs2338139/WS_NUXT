@@ -23,8 +23,16 @@ module.exports = {
       /* Extra small devices (phones, 600px) */
     },
     extend: {
+      spacing: {
+        footer: "450px",
+      },
+      fontFamily: { DFLiHei: ["DFLiHei", "DFLiHei-300", "DFLiHei-700"], jfOpenhuninn: ["jf-openhuninn"] },
       colors: {
-        "custom-0": "#FFDA1B",
+        "custom-0": "#F3D344",
+        "custom-1": "#EC9083",
+      },
+      letterSpacing: {
+        "custom-0": "0.7rem",
       },
       backgroundSize: {
         "w100%": "100% auto",

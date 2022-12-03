@@ -8,13 +8,13 @@ defineProps({
 <template>
   <li class="group text-center">
     <NuxtLink :to="href">
-      <div class="px-4 py-2 font-bold bg-gray-300 border border-black">
+      <div class="text-2xl px-4 py-3 text-center text-black">
         <slot name="menuName"> </slot>
       </div>
     </NuxtLink>
-    <div class="min-w-32 group-hover:block hover:block absolute hidden h-40 p-0 mx-0 text-center"
+    <div class="group-hover:block hover:block absolute hidden h-40 p-0 mx-0 text-center"
       :class="menuListOffset">
-      <ul class="hover:block border p-0 mx-0 mt-5 text-center bg-gray-300 border-black">
+      <ul class="hover:block p-3 mx-0 mt-5 text-center bg-custom-0 border border-black rounded-xl">
         <slot></slot>
       </ul>
     </div>

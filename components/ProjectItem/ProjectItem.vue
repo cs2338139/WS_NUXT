@@ -1,10 +1,12 @@
 <script setup>
 defineProps({
+    color: String,
     href: String,
     name: String,
     info: String,
     year: String,
 });
+
 </script>
 
 <script>
@@ -18,10 +20,11 @@ export default {
 </script>
 <template>
     <NuxtLink :to="href">
-        <div class="h-96 w-64 border border-black">
-            <div class="h-72 w-full bg-gray-300"></div>
-            <div class="h-24 border-t border-black">
-                <div class=" h-full flex-col justify-between flex p-3">
+        <div class="relative h-430px w-80 border border-black rounded-3xl">
+            <div class="absolute parallel right-6 -z-10 -top-8 border border-black" :style="color"></div>
+            <div class="h-3/4 w-full rounded-t-3xl bg-gray-300"></div>
+            <div class="h-1/4 border-t border-black">
+                <div class=" h-full flex-col justify-between flex p-3.5">
                     <div class="text-xl">{{ name }}</div>
                     <div class="text-sm">{{ info }}</div>
                     <div class="text-sm text-right">{{ year }}</div>
@@ -31,8 +34,15 @@ export default {
     </NuxtLink>
 </template>
 
-<style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+<style scoped>
+
+.h-430px {
+    height: 430px;
+}
+
+.parallel {
+    width: 40px;
+    height: 60px;
+    transform: skew(0, -20deg);
+}
 </style>

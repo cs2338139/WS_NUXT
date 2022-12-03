@@ -5,7 +5,6 @@ const { locale, setLocale, t } = useI18n();
 useHead({
     title: t('pages.home.title'),
 })
-
 </script>
 
 <script>
@@ -14,70 +13,86 @@ export default {
         return {
         };
     },
-};
+}; 345
 </script>
 
 <template>
 
     <div>
-        <div class="aspect-video wrap-8 w-full mb-3 bg-gray-300"> </div>
+        <div class="aspect-video wrap-8 w-full mb-10 bg-gray-300"> </div>
 
         <div class="wrap-6 mb-10">
-            <div class="mt-0 mb-5 ml-0">
-                <span class="text-lg">About</span>
-                <br>
-                <span class="text-xl">關於計畫</span>
+            <div class="mt-0 mb-10 ml-0">
+                <template v-if="locale === 'zh'">
+                    <span class="text-2xl text-custom-1 -tracking-wider">About the project</span>
+                    <br>
+                </template>
+                <span class="text-3xl tracking-custom-0">{{ $t('pages.home.info.title') }}</span>
             </div>
 
-            <div class="relative max-w-4xl mx-auto my-0">
-                <div class="mb-3 text-3xl text-blue-400">
-                    “透過專業研究詮釋故事，轉化成為通俗易懂之故事，<br>
-                    再嘗試與觀眾個人經驗連結，亦能活化文物。“
+            <div class="relative max-w-4xl mx-auto my-0 ">
+                <div class="mb-10 text-3xl text-blue-400 ">
+                    {{ $t('pages.home.info.title2') }}
                 </div>
-                <div class="mb-3">
-                    本計畫目的透過將典藏品以3D掃描與進行建模，<br>
-                    向公眾徵選遊戲腳本，<br>
-                    提供機關藏品作為發想、設計為必要元素，<br>
-                    將館內藏品轉譯成不同的故事文本。<br>
-                    最終透過VR互動、線上遊戲、體感互動遊戲的開發， <br>
-                    將臺灣文學內容轉化成社會大眾更容易親近的對象，拉近民眾與文學的距離。
+                <div class="mb-3 ">
+                    {{ $t('pages.home.info.content.0') }}<br>
+                    {{ $t('pages.home.info.content.1') }}<br>
+                    {{ $t('pages.home.info.content.2') }}<br>
+                    {{ $t('pages.home.info.content.3') }}<br>
+                    {{ $t('pages.home.info.content.4') }}<br>
+                    {{ $t('pages.home.info.content.5') }}<br>
+                    {{ $t('pages.home.info.content.4') }}<br>
+                    {{ $t('pages.home.info.content.6') }}<br>
                 </div>
                 <div class="text-right">
-                    <button class="p-1 mr-16 text-sm bg-gray-300 border border-black">Read More</button>
+                    <NuxtLink to="/about" class="border-b border-black">{{ $t('pages.home.info.button') }}</NuxtLink>
                 </div>
             </div>
         </div>
 
-        <div class="wrap-6 mb-10">
+        <div class="wrap-6 mb-32">
             <div class="mt-0 mb-5 ml-0">
-                <span class="text-lg">Project</span>
-                <br>
-                <span class="text-xl">計畫成果</span>
+                <template v-if="locale === 'zh'">
+                    <span class="text-2xl text-custom-1 -tracking-wider">Achievement</span>
+                    <br>
+                </template>
+                <span class="text-3xl tracking-custom-0">{{ $t('pages.home.achievement.title') }}</span>
             </div>
-            <div class="inline-flex justify-between w-full mb-10">
-                <ProjectItem href="/achievement/modelView" name="藏品3D掃描、建模計畫" year="2018-2022"></ProjectItem>
-                <ProjectItem href="/achievement/modelView" name="藏字人" info="電子繪本體感互動遊戲" year="2018-2022"></ProjectItem>
-                <ProjectItem href="/achievement/modelView" name="生命之鳥" info="電子繪本體感互動遊戲" year="2018-2022"></ProjectItem>
+            <div class="inline-flex justify-between w-full mb-28">
+                <ProjectItem class="transform translate-y-32" href="/achievement/modelView" color="background: #F3D344;"
+                    :name="$t('pages.home.achievement.content.0.title')"
+                    :year="$t('pages.home.achievement.content.0.year')"></ProjectItem>
+                <ProjectItem class="transform translate-y-16" href="/achievement/birdsOfLife"
+                    color="background: #6395CE;" :name="$t('pages.home.achievement.content.4.title')"
+                    :info="$t('pages.home.achievement.content.4.info')"
+                    :year="$t('pages.home.achievement.content.4.year')"></ProjectItem>
+                <ProjectItem href="/achievement/hideWordsMan" color="background: #EC9D93;"
+                    :name="$t('pages.home.achievement.content.3.title')"
+                    :info="$t('pages.home.achievement.content.3.info')"
+                    :year="$t('pages.home.achievement.content.3.year')"></ProjectItem>
             </div>
-            <div class="text-center">
-                <button class="p-1 mr-16 text-sm bg-gray-300 border border-black">Explore All Projects</button>
+            <div class="text-right max-w-4xl mx-auto">
+                <NuxtLink to="/achievement/" class="border-b border-black ">{{ $t('pages.home.achievement.button') }}
+                </NuxtLink>
             </div>
         </div>
 
         <div class="wrap-6 ">
             <div class=" mt-0 mb-5 ml-0">
-                <span class="text-lg">Events</span>
-                <br>
-                <span class="text-xl">系列活動</span>
+                <template v-if="locale === 'zh'">
+                    <span class="text-2xl text-custom-1 -tracking-wider">Events</span>
+                    <br>
+                </template>
+                <span class="text-3xl tracking-custom-0">{{ $t('pages.home.Event.title') }}</span>
             </div>
-            <div class="flex flex-col justify-between max-w-4xl mx-auto mb-10">
-                <EventItem href="" name="象偶奇遇記A" place="國立臺灣文學館 兒童樂園" year="2022.07.21"></EventItem>
+            <div class="flex flex-col justify-between max-w-4xl mx-auto mb-8">
+                <EventItem href="" name="象偶奇遇記A" place="國立臺灣文學館 兒童樂園" year="2022.07.21" isNew="true"></EventItem>
                 <EventItem href="" name="象偶奇遇記A" place="國立臺灣文學館 兒童樂園" year="2022.07.21"></EventItem>
                 <EventItem href="" name="象偶奇遇記A" place="國立臺灣文學館 兒童樂園" year="2022.07.21"></EventItem>
                 <EventItem href="" name="象偶奇遇記A" place="國立臺灣文學館 兒童樂園" year="2022.07.21"></EventItem>
             </div>
             <div class="text-center">
-                <button class="p-1 mr-16 text-sm bg-gray-300 border border-black">Explore All</button>
+                <button class="border-b border-black">{{ $t('pages.home.Event.button') }}</button>
             </div>
         </div>
     </div>

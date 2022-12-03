@@ -7,15 +7,15 @@ import { gsap } from "gsap";
 
 
 <template>
-    <div class="dev-black relative z-10 h-40">
+    <div class="relative z-10 h-40">
         <NavBar />
     </div>
 
-    <div class="relative min-h-screen pb-56">
+    <div class="relative min-h-screen pb-footer">
         <NuxtPage />
     </div>
 
-    <div class="relative z-10 -mt-40">
+    <div class="relative z-10 -mt-footer">
         <FootBar />
     </div>
 </template>

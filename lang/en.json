@@ -12,53 +12,68 @@
       }
     },
     "eventRecord": "Event Record",
-    "lang": "中文"
+    "lang": "中"
   },
   "pages": {
     "home": {
       "title": "A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
-      "info": {},
+      "info": {
+        "title": "About the Project",
+        "title2": "‘This project focuses on promoting the collections in the various museums in Taiwan by translating the collections into simple stories, making them more accessible to the public.’",
+        "content": [
+          "In this project, we scanned the collections into three-dimensional models as the foundation to raise the open calls to the public.",
+          "The agencies offer the collections as inspiration and elements,",
+          "transforming them into different stories. ",
+          "Eventually,",
+          " it takes the values of the National Museum of Taiwan Literature closer to the public through VR experience,",
+          "online games, somatosensory interaction games. ",
+          "We hope the public will be familiarized with these Taiwan authors through such edutainment devices."
+        ],
+        "button": "Read more"
+      },
+      "achievement": {
+        "title": "Achievement",
+        "content": [
+          {
+            "title": "3D scanning and modeling",
+            "info": "",
+            "year": "2018-2021"
+          },
+          {
+            "title": "Island of Baku",
+            "info": "VR shooting game",
+            "year": "2018-2019"
+          },
+          {
+            "title": "1940",
+            "info": "puzzle-based quiz game",
+            "year": "2018-2020"
+          },
+          {
+            "title": "Birds of Life",
+            "info": "digital picture book with interactive game",
+            "year": "2018-2020"
+          },
+          {
+            "title": "Hide Words Man",
+            "info": "digital picture book with interactive game",
+            "year": "2018-2022"
+          }
+        ],
+        "button": "Explore All Project"
+      },
+      "Event": {
+        "title": "Event",
+        "button": "Explore All"
+      },
       "child": {
         "about": {
           "title": "About the Project｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
-          "info": {
-            "title": "About the Project",
-            "content": [
-              "Digital game development with three-dimension scanning and modeling project is one of the main projects Taiwan Xing Juan -demonstration project of the museum.  This project focuses on promoting the collections in the various museums in Taiwan by  translating the collections into simple stories, making them more accessible to the public.",
-              "In this project, we scanned the collections into three-dimensional models as the foundation to raise the open calls to the public.  The agencies offer the collections as inspiration and elements, transforming them into different stories. Eventually, it takes the values of the National Museum of Taiwan Literature closer to the public through VR experience, online games, somatosensory interaction games. We hope the public will be familiarized with these Taiwan authors through such edutainment devices.",
-              "The project includes four sub-projects: The digital games “1940”, “Birds of Life” and “Island of Baku”, and the project of three-dimensional scanning and modeling."
-            ]
-          },
-          "achievement": {
-            "title": "Achievement",
-            "content": [
-              {
-                "title": "3D scanning and modeling",
-                "info": "",
-                "year": "2018-2021"
-              },
-              {
-                "title": "Island of Baku",
-                "info": "VR shooting game",
-                "year": "2018-2019"
-              },
-              {
-                "title": "1940",
-                "info": "puzzle-based quiz game",
-                "year": "2018-2020"
-              },
-              {
-                "title": "Birds of Life",
-                "info": "digital picture book with interactive game",
-                "year": "2018-2020"
-              },
-              {
-                "title": "Hide Words Man",
-                "info": "",
-                "year": "2020-2022"
-              }
-            ]
-          }
+          "content": [
+            "Digital game development with three-dimension scanning and modeling project is one of the main projects Taiwan Xing Juan -demonstration project of the museum.  This project focuses on promoting the collections in the various museums in Taiwan by translating the collections into simple stories, making them more accessible to the public.",
+            "In this project, we scanned the collections into three-dimensional models as the foundation to raise the open calls to the public.  The agencies offer the collections as inspiration and elements, transforming them into different stories. Eventually, it takes the values of the National Museum of Taiwan Literature closer to the public through VR experience, online games, somatosensory interaction games. We hope the public will be familiarized with these Taiwan authors through such edutainment devices.",
+            "The project includes four sub-projects: The digital games “1940”, “Birds of Life” and “Island of Baku”, and the project of three-dimensional scanning and modeling"
+          ]
         },
         "achievement": {
           "title": "Achievement｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
@@ -303,7 +318,7 @@
                   {
                     "name": "Wu Ying-tao",
                     "year": "1916-1971",
-                    "infoShort":"Grandson of Wu Jiang-Shan who was a gentry of Taipei.  He was an important poet and folklore researcher in Taiwan.  He began to participate in literary and artistic activities when he was young.  At the age of 21, he joined the Taipei branch of the Taiwan Arts and Culture Association and started writing poetry in Japanese at the age of 24.  Because his family runs the most famous hotel in Dadaocheng, ‘Kang San Lau’, the novel Yi Da inspired by it was nominated for the “Taiwan Art” novel award.",
+                    "infoShort": "Grandson of Wu Jiang-Shan who was a gentry of Taipei.  He was an important poet and folklore researcher in Taiwan.  He began to participate in literary and artistic activities when he was young.  At the age of 21, he joined the Taipei branch of the Taiwan Arts and Culture Association and started writing poetry in Japanese at the age of 24.  Because his family runs the most famous hotel in Dadaocheng, ‘Kang San Lau’, the novel Yi Da inspired by it was nominated for the “Taiwan Art” novel award.",
                     "info": [
                       "Grandson of Wu Jiang-Shan who was a gentry of Taipei.  He was an important poet and folklore researcher in Taiwan.  He began to participate in literary and artistic activities when he was young.  At the age of 21, he joined the Taipei branch of the Taiwan Arts and Culture Association and started writing poetry in Japanese at the age of 24.  Because his family runs the most famous hotel in Dadaocheng, ‘Kang San Lau’, the novel Yi Da inspired by it was nominated for the “Taiwan Art” novel award.",
                       "At the age of 28, while living in Hong Kong, he got to know the poet Dai Wang-shu and began to publish Chinese poetry.  Then, he published Chinese and Japanese poems and prose in the supplement of China Daily News.  At that time, when most Taiwanese writers stopped writing because of language switching, his works and poems were mostly published in Modern Poetry, Blue-Star Poetry Weekly, Genesis.",
@@ -318,31 +333,43 @@
                 "content": [
                   {
                     "name": "Yi Da",
-                    "info": "As the third generation of Kang San Lau, Wu Ying-tao has seen the story of the literati gentry and Taiwan geisha since childhood. Yi Da uses the most familiar life experience as the theme, to narrate the story between a college graduate Chun-sheng and geisha Ying-Hua.  Most of his proses have been published in Art of Taiwan and Art of Taiwan.  In 1942, Yi Da, which was nominated for Art of Taiwan, was awarded."
+                    "info": [
+                      "As the third generation of Kang San Lau, Wu Ying-tao has seen the story of the literati gentry and Taiwan geisha since childhood. Yi Da uses the most familiar life experience as the theme, to narrate the story between a college graduate Chun-sheng and geisha Ying-Hua.  Most of his proses have been published in Art of Taiwan and Art of Taiwan.  In 1942, Yi Da, which was nominated for Art of Taiwan, was awarded."
+                    ]
                   },
                   {
                     "name": "Life Poems",
-                    "info": "In 1941, he graduated from the Taiwanese School of Commerce and Industry (now Taipei Kai-nan High School) Beijing Language Advanced Class. While living in Hong Kong, he published poems in Chinese and Japanese.  After the war, his proficiency in ‘Mandarin’ made him one of the translingual-generation-after-1945 authors.  This collection is Wus first collection of Chinese poems.  The book contains several Japanese poems written by him before the war, such as “Heng Meng” (“Youth”), “Twilight”, which had been translated into Chinese."
+                    "info": [
+                      "In 1941, he graduated from the Taiwanese School of Commerce and Industry (now Taipei Kai-nan High School) Beijing Language Advanced Class. While living in Hong Kong, he published poems in Chinese and Japanese.  After the war, his proficiency in ‘Mandarin’ made him one of the translingual-generation-after-1945 authors.  This collection is Wus first collection of Chinese poems.  The book contains several Japanese poems written by him before the war, such as “Heng Meng” (“Youth”), “Twilight”, which had been translated into Chinese."
+                    ]
                   },
                   {
                     "name": "Poems by Ying Tao",
-                    "info": "This poetry collection is the second one published by Wu, and it contains the poems created within the five-year span after published Life Poems.  The style of this collection is minimalistic, prose-style, and without any title."
+                    "info": [
+                      "This poetry collection is the second one published by Wu, and it contains the poems created within the five-year span after published Life Poems.  The style of this collection is minimalistic, prose-style, and without any title."
+                    ]
                   },
                   {
                     "name": "Meditation Poems",
-                    "info": "Wu’s poems are quite philosophical, and he often meditates on the subject of life and death.  The poet Li Kuei-sian described him as: “The clear cheeks are strengthened to the broad forehead, like a rock, with hidden power.  His eyes often hang down and fall into meditation.” This poem is the fifth of the ’Li ’ series and the third poetry collection by Wu.  This collection was created by Wu who was working in TTL during the daytime and constantly meditating at nighttime, turning his thoughts into poetry."
+                    "info": [
+                      "Wu’s poems are quite philosophical, and he often meditates on the subject of life and death.  The poet Li Kuei-sian described him as: “The clear cheeks are strengthened to the broad forehead, like a rock, with hidden power.  His eyes often hang down and fall into meditation.” This poem is the fifth of the ’Li ’ series and the third poetry collection by Wu.  This collection was created by Wu who was working in TTL during the daytime and constantly meditating at nighttime, turning his thoughts into poetry."
+                    ]
                   },
                   {
                     "name": "The Sea",
-                    "info": "Taiwan is surrounded by the sea, therefore, in Wu’s poems he often wrote about the ocean.  The book is a prose work written on the blank sheets when he was touched by the magnificence of the sea on a ship.  This book contains 159  sea-related prose, including “Fog Flute”, “Sea Dream”, “Seascape”, “Mountain Light and Sea Color”, and “Sea Gull”."
+                    "info": [
+                      "Taiwan is surrounded by the sea, therefore, in Wu’s poems he often wrote about the ocean.  The book is a prose work written on the blank sheets when he was touched by the magnificence of the sea on a ship.  This book contains 159  sea-related prose, including “Fog Flute”, “Sea Dream”, “Seascape”, “Mountain Light and Sea Color”, and “Sea Gull”."
+                    ]
                   },
                   {
                     "name": "Li Poetry Magazine",
-                    "info": "The tomb of the Ming emperor of China contains 13 Ming emperors, 23 Ming empresses, 2 Ming princes, more than 30 concubines, and 1 eunuch.  It is one of the most preserved imperial tombs in the world."
+                    "info": ["The tomb of the Ming emperor of China contains 13 Ming emperors, 23 Ming empresses, 2 Ming princes, more than 30 concubines, and 1 eunuch.  It is one of the most preserved imperial tombs in the world."]
                   },
                   {
                     "name": "Taiwanese Folklore",
-                    "info": "Wu published Taiwanese Folklore in 1969 through years of collecting, researching, and categorizing, and finally published Taiwan Proverbs in 1973.  Because of his interest in Taiwanese folklore, he became friends with Wu Sin-rong, the author of Jhen Ying Interview.  This book is an important reference book for studying Taiwanese folklore.  The book has 583 pages, divided into 20 chapters.  There are nine chapters for Taiwanese folklore, including chapters on religious ceremonies, family system, childbirth, rites of passage, marriage, funeral, customs, clothing, food and housing, etc.; There are five chapters introducing Taiwan culture and art, including craftsmanship, music, drama, games, puzzles, etc.; the remaining six chapters are Taiwanese folk literature, including the name of the places, folklore talks, local legends, folk tales, jokes, and indigenous legends."
+                    "info": [
+                      "Wu published Taiwanese Folklore in 1969 through years of collecting, researching, and categorizing, and finally published Taiwan Proverbs in 1973.  Because of his interest in Taiwanese folklore, he became friends with Wu Sin-rong, the author of Jhen Ying Interview.  This book is an important reference book for studying Taiwanese folklore.  The book has 583 pages, divided into 20 chapters.  There are nine chapters for Taiwanese folklore, including chapters on religious ceremonies, family system, childbirth, rites of passage, marriage, funeral, customs, clothing, food and housing, etc.; There are five chapters introducing Taiwan culture and art, including craftsmanship, music, drama, games, puzzles, etc.; the remaining six chapters are Taiwanese folk literature, including the name of the places, folklore talks, local legends, folk tales, jokes, and indigenous legends."
+                    ]
                   }
                 ]
               },

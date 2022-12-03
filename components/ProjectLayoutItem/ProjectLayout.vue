@@ -12,7 +12,7 @@ defineProps({
 const popupInfo = reactive({
     img: '',
     name: '',
-    word: ''
+    words: []
 })
 
 const popupEnable = ref(false);
@@ -20,11 +20,16 @@ const popupEnable = ref(false);
 function OpenPopupPanel(img, name, word) {
     popupEnable.value = true;
     document.body.style.overflow = "hidden";
-    Object.assign(popupInfo, {
-        img: img,
-        name: name,
-        word: word
-    })
+    // Object.assign(popupInfo, {
+    //     img: img,
+    //     name: name,
+    //     word: word
+    // })
+    popupInfo.img = img;
+    popupInfo.name = name;
+    popupInfo.words = word;
+
+    console.log(popupInfo.word);
 }
 
 function ClosePopupPanel() {
@@ -53,7 +58,8 @@ defineExpose({
         <Popup @close="ClosePopupPanel" :img="popupInfo.img" v-if="popupEnable">
             <template #name>{{ popupInfo.name }}</template>
             <template #word>
-                {{ popupInfo.word }}</template>
+               <div v-for=" word in popupInfo.words"> {{ word }}</div>
+            </template>
         </Popup>
     </div>
 

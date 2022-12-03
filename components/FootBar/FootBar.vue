@@ -13,26 +13,39 @@ export default {
 </script>
 
 <template>
-  <footer>
-    <div class="h-40 bg-gray-300">
-      <div class="w-full relative h-24 ">
-        <div class="flex flex-row items-center justify-between h-full mx-auto my-0 max-w-8xl ">
-          <img :src="logoImage" style="width:120px" />
+  <footer class="h-footer relative w-full overflow-hidden">
+    <div class="bg-custom-0 parallel h-full">
+      <div class="-parallel border-3 relative h-full">
+        <div class="max-w-8xl flex flex-row justify-between h-full mx-auto my-0">
+          <img :src="logoImage" style="width:400px" class="self-end my-16" />
 
-          <div class="flex flex-col h-1/2 justify-between">
-            <FootMenuItem href="">{{$t('foot.copyright')}}</FootMenuItem>
-            <FootMenuItem href="">{{$t('foot.address')}}</FootMenuItem>
-            <FootMenuItem href="">{{$t('foot.tel')}}</FootMenuItem>
-            <FootMenuItem href="">{{$t('foot.fax')}}</FootMenuItem>
+          <div class="h-2/5 flex flex-col justify-between items-end self-center">
+            <FootMenuItem href="">{{ $t('foot.copyright') }}</FootMenuItem>
+            <FootMenuItem href="">{{ $t('foot.address') }}</FootMenuItem>
+            <FootMenuItem href="">{{ $t('foot.tel') }}</FootMenuItem>
+            <FootMenuItem href="">{{ $t('foot.fax') }}</FootMenuItem>
           </div>
         </div>
       </div>
     </div>
+    <!-- <div class="bg-custom-0  h-40">
+
+    </div> -->
   </footer>
 </template>
 
 <style>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.-parallel {
+  @apply origin-top-right;
+  transform: skew(0, 7deg);
+}
+
+.parallel {
+  @apply origin-top-right;
+  transform: skew(0, -7deg);
+}
+
+.h-540px {
+  height: 450px;
+}
 </style>
