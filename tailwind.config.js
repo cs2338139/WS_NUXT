@@ -134,6 +134,7 @@ module.exports = {
       colors: {
         "custom-0": "#F3D344",
         "custom-1": "#EC9083",
+        "custom-2": "#6395CE",
       },
       letterSpacing: {
         "custom-0": "0.7rem",

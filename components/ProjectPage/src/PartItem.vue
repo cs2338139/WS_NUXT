@@ -1,13 +1,21 @@
+<script setup>
+import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue"
+</script>
+
 <template>
-    <div class="mb-14">
-        <div class="text-xl mb-3">
+    <PartItemNull>
+        <template #title>
             <slot name="title" />
-        </div>
-        <div class="mb-1">
+        </template>
+        <div class="mb-1 font-bold">
             <slot name="name" />
         </div>
         <div class="">
             <slot name="word" />
         </div>
-    </div>
+    </PartItemNull>
 </template>
+
+<style scoped>
+
+</style>

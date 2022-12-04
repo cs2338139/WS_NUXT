@@ -2,9 +2,7 @@
 defineProps({
     isNew: Boolean,
     href: String,
-    name: String,
-    place: String,
-    year: String,
+    img: String
 });
 </script>
 
@@ -29,11 +27,16 @@ export default {
                 <div class="flex items-center justify-center w-3/5 h-full border-l border-black">
                     <div class="flex flex-col w-4/5">
 
-                        <div class="text-xl">{{ name }}</div>
-
+                        <div class="text-xl">
+                            <slot name="name" />
+                        </div>
                         <div class="">
-                            <span class="text-sm">{{ place }}</span> /
-                            <span class="text-sm">{{ year }}</span>
+                            <span class="text-sm">
+                                <slot name="place" />
+                            </span> /
+                            <span class="text-sm">
+                                <slot name='year' />
+                            </span>
                         </div>
 
                     </div>

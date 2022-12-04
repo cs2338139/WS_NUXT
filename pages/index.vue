@@ -56,17 +56,36 @@ export default {
             </PartTitle>
 
             <div class="inline-flex justify-between w-full mb-28">
-                <ProjectItem class="transform translate-y-32" href="/achievement/modelView" color="background: #F3D344;"
-                    :name="$t('pages.home.achievement.content.0.title')"
-                    :year="$t('pages.home.achievement.content.0.year')"></ProjectItem>
-                <ProjectItem class="transform translate-y-16" href="/achievement/hideWordsMan"
-                    color="background: #6395CE;" :name="$t('pages.home.achievement.content.4.title')"
-                    :info="$t('pages.home.achievement.content.4.info')"
-                    :year="$t('pages.home.achievement.content.4.year')"></ProjectItem>
-                <ProjectItem href="/achievement/birdsOfLife" color="background: #EC9D93;"
-                    :name="$t('pages.home.achievement.content.3.title')"
-                    :info="$t('pages.home.achievement.content.3.info')"
-                    :year="$t('pages.home.achievement.content.3.year')"></ProjectItem>
+                <ProjectItem class="transform translate-y-32" href="/achievement/modelView" color="yellow">
+                    <template #name>
+                        {{ $t('pages.home.achievement.content.0.title') }}
+                    </template>
+                    <template #year>
+                        {{ $t('pages.home.achievement.content.0.year') }}
+                    </template>
+                </ProjectItem>
+                <ProjectItem class="transform translate-y-16" href="/achievement/hideWordsMan" color="blue">
+                    <template #name>
+                        {{ $t('pages.home.achievement.content.4.title') }}
+                    </template>
+                    <template #info>
+                        {{ $t('pages.home.achievement.content.4.info') }}
+                    </template>
+                    <template #year>
+                        {{ $t('pages.home.achievement.content.4.year') }}
+                    </template>
+                </ProjectItem>
+                <ProjectItem href="/achievement/birdsOfLife" color="red">
+                    <template #name>
+                        {{ $t('pages.home.achievement.content.3.title') }}
+                    </template>
+                    <template #info>
+                        {{ $t('pages.home.achievement.content.3.info') }}
+                    </template>
+                    <template #year>
+                        {{ $t('pages.home.achievement.content.3.year') }}
+                    </template>
+                </ProjectItem>
             </div>
             <div class="text-right max-w-4xl mx-auto">
                 <HrefBottom href="/achievement/">{{ $t('pages.home.achievement.button') }}</HrefBottom>
@@ -80,10 +99,32 @@ export default {
             </PartTitle>
 
             <div class="flex flex-col justify-between max-w-4xl mx-auto mb-8">
-                <EventItem href="" name="象偶奇遇記A" place="國立臺灣文學館 兒童樂園" year="2022.07.21" isNew="true"></EventItem>
-                <EventItem href="" name="象偶奇遇記A" place="國立臺灣文學館 兒童樂園" year="2022.07.21"></EventItem>
-                <EventItem href="" name="象偶奇遇記A" place="國立臺灣文學館 兒童樂園" year="2022.07.21"></EventItem>
-                <EventItem href="" name="象偶奇遇記A" place="國立臺灣文學館 兒童樂園" year="2022.07.21"></EventItem>
+                <EventItem href="" img="" isNew="true">
+                    <template #name>象偶奇遇記A</template>
+                    <template #place>國立臺灣文學館 兒童樂園</template>
+                    <template #year>2022.07.21</template>
+                </EventItem>
+                <EventItem href="" img="" isNew="true">
+                    <template #name>象偶奇遇記A</template>
+                    <template #place>國立臺灣文學館 兒童樂園</template>
+                    <template #year>2022.07.21</template>
+                </EventItem>
+                <EventItem href="" img="" isNew="true">
+                    <template #name>象偶奇遇記A</template>
+                    <template #place>國立臺灣文學館 兒童樂園</template>
+                    <template #year>2022.07.21</template>
+                </EventItem>
+                <EventItem href="" img="" isNew="true">
+                    <template #name>象偶奇遇記A</template>
+                    <template #place>國立臺灣文學館 兒童樂園</template>
+                    <template #year>2022.07.21</template>
+                </EventItem>
+                <EventItem href="" img="" isNew="true">
+                    <template #name>象偶奇遇記A</template>
+                    <template #place>國立臺灣文學館 兒童樂園</template>
+                    <template #year>2022.07.21</template>
+                </EventItem>
+
             </div>
             <div class="text-center">
                 <HrefBottom href="/eventRecord/">{{ $t('pages.home.Event.button') }}</HrefBottom>

@@ -20,7 +20,7 @@
     src: url("/assets/font/DFLiHei-700.ttc") format('ttc');
   }
   body {
-    @apply p-0 m-0 font-DFLiHei;
+    @apply p-0 m-0 font-DFLiHei tracking-wider;
   }
 }
 

@@ -1,10 +1,12 @@
 <script setup>
 defineProps({
     href: String,
+    img: String,
+
     name: String,
     info: String,
-    word: String,
     year: String,
+    word: String,
 });
 </script>
 
@@ -16,16 +18,16 @@ defineProps({
             <div class="flex items-start justify-center w-2/3 h-full px-16 py-10">
                 <div class="flex flex-col">
 
-                    <div class="mb-2 text-2xl font-bold tracking-widest">{{ name }}</div>
+                    <div class="mb-2 text-2xl font-bold tracking-widest"><slot name='name' /></div>
 
                     <div class="flex justify-between text-lg">
-                        <span>{{ info }}</span>
-                        <span>{{ year }}</span>
+                        <span><slot name='info' /></span>
+                        <span><slot name='year' /></span>
                     </div>
 
                     <div class="mt-1 mb-4 border-b-2 border-black"></div>
 
-                    <div class="text-xl">{{ word }}</div>
+                    <div class="text-xl"><slot name='word' /></div>
                 </div>
             </div>
         </NuxtLink>
