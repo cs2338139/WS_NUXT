@@ -12,7 +12,6 @@ defineProps({
 
 <template>
     <div class="mt-10 mb-4 w-60 relative">
-        <div class="w-full" v-if="enabled"></div>
         <button @click="$emit('open')" class="w-full" v-if="enabled">
             <div>
                 <div class="absolute parallel right-6 -z-10 -top-6 border-2 border-black bg-custom-0"

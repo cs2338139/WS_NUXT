@@ -1,6 +1,6 @@
 <script setup>
 import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue"
-import FunctionBottom from "~~/components/ProjectPage/src/FunctionBottom.vue"
+import FunctionButton from "~~/components/ProjectPage/src/FunctionButton.vue"
 
 
 defineProps({
@@ -32,9 +32,9 @@ defineProps({
                     </div>
                     <div class="text-right">
 
-                        <FunctionBottom @function="$emit('function')">
+                        <FunctionButton @function="$emit('function')">
                             <slot name="bottom" />
-                        </FunctionBottom>
+                        </FunctionButton>
                     </div>
                 </div>
             </di>
