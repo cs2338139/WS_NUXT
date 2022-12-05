@@ -101,23 +101,23 @@ function SentData(datas, i) {
           <div class="flex flex-wrap justify-between">
             <Item2 @open="SentData(literatiData, 0)">
               <template #name>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.0.name") }}</template>
-              <template #year>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.0.year") }}</template>
+              <template #year>（{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.0.year") }}）</template>
             </Item2>
             <Item2 @open="SentData(literatiData, 1)">
               <template #name>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.1.name") }}</template>
-              <template #year>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.1.year") }}</template>
+              <template #year>（{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.1.year") }}）</template>
             </Item2>
             <Item2 @open="SentData(literatiData, 2)">
               <template #name>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.2.name") }}</template>
-              <template #year>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.2.year") }}</template>
+              <template #year>（{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.2.year") }}）</template>
             </Item2>
             <Item2 @open="SentData(literatiData, 3)">
               <template #name>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.3.name") }}</template>
-              <template #year>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.3.year") }}</template>
+              <template #year>（{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.3.year") }}）</template>
             </Item2>
             <Item2 @open="SentData(literatiData, 4)">
               <template #name>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.4.name") }}</template>
-              <template #year>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.4.year") }}</template>
+              <template #year>（{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.4.year") }}）</template>
             </Item2>
           </div>
         </PartItemNull>

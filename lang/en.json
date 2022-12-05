@@ -258,14 +258,16 @@
                 "title": "Characters",
                 "content": [
                   {
-                    "name": "Liu Na-ou（1905-1940）",
+                    "name": "Liu Na-ou",
+                    "year": "1905-1940",
                     "info": [
                       "Pseudonym of Liou Tsan-po. He was born to a wealthy family in Tainan, and spent most of his life in Shanghai.  He is Multilingual in many languages including English, Japanese, French, Mandarin, Cantonese, and Taiwanese.  He translated many literary works and film-theory books. Besides writing, he also ran a bookstore, published magazines, and produced films. “New Feeling” (Shinkankakuha) is his main thoughts and literary style. It was a significant movement both in literature and film.",
                       "In 1940, He was assassinated in Shanghai."
                     ]
                   },
                   {
-                    "name": "Yoshio Ichibangase(1883-1964)",
+                    "name": "Yoshio Ichibangase",
+                    "year": "1883-1964",
                     "info": [
                       "Original from Tokyo, Japan, graduated from Tokyo Imperial University with a degree in English and French.  He was active in Taiwan‘s high-level Bureaucracy during the  Japanese colonial period (late Taisho period and early Showa period). His official rank is five senior officials and the second-class Xun's fourth-class Le appointed official.",
                       "He served as an official of the Government of Taiwan, Secretary of State for the Army, Governor of Hsinchu Prefecture, and Governor of Tainan Prefecture.  His daughter is the well-known Japanese social welfare scholar Anbang Yasuko (formerly known as Ichibanase Yasuko)."
@@ -273,7 +275,8 @@
                   },
                   {
                     "name": "Li Hsiang-lan",
-                    "info": ["She was active in Man empire as a popular singer, formerly known as Yamaguchi Yoshiko(1920-2014).  She was born in a Japanese family in Northeast China, adopted as a goddaughter by the Chinese, then renamed Li Hsiang-lan.  Because of the film partnership, she acquainted with Liu Na-ou."]
+                    "year": "",
+                    "info": ["She was active in Man empire as a popular singer, formerly known as Yamaguchi Yoshiko(1920-2014).  She was born in a Japanese family in Northeast China, adopted as a goddaughter by the Chinese, then renamed Li Hsiang-lan.  Because of the film partnership, she acquainted with Liu Na-ou.",""]
                   }
                 ]
               },

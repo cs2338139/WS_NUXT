@@ -19,7 +19,7 @@ defineProps({
         <div class="mb-3 text-xl font-bold">
           <slot name="name" />
         </div>
-        <div>（<slot name="year" /> ）</div>
+        <div><slot name="year" /> </div>
       </div>
     </button>
   </div>

@@ -1,52 +1,135 @@
 <script setup>
+import ProjectLayout from "~~/components/ProjectPage/ProjectLayout.vue";
+import PartItem from "~~/components/ProjectPage/src/PartItem.vue";
+import DownloadButton from "~~/components/ProjectPage/src/DownloadButton.vue";
+import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue";
+import Item2 from "~~/components/ProjectPage/src/Item2.vue";
+import ScreenShots from "~~/components/ProjectPage/src/ScreenShots.vue";
+
 const { locale, setLocale, t } = useI18n();
 useHead({
-    title: t('pages.home.child.achievement.child.game1940.title'),
-})
-</script>
+  title: t("pages.home.child.achievement.child.game1940.title"),
+});
 
-<script>
-export default {
-    data() {
-        return {
-        };
-    },
-    methods: {
-        ToNotFound() {
-            this.$router.push({
-                name: "NotFound",
-                params: { pathMatch: this.$route.path.substring(1).split("/") },
-                query: this.$route.query,
-                hash: this.$route.hash,
-            });
-        },
-    },
-    created() {
-    },
-    mounted() {
-    },
-    unmounted() {
-    },
-};
+const projectLayout = ref(null);
+
+const charactersData = reactive([]);
+
+onMounted(() => {
+  GetDate();
+});
+
+function GetDate() {
+  for (let i = 0; i < 3; i++) {
+    let data = {
+      img: "",
+      name: "",
+      words: [],
+    };
+    data.img = null;
+    let name = t("pages.home.child.achievement.child.game1940.characters.content[" + i + "].name");
+    let year = t("pages.home.child.achievement.child.game1940.characters.content[" + i + "].year");
+
+    if (year === "") {
+      data.name = t("pages.home.child.achievement.child.game1940.characters.content[" + i + "].name");
+    } else {
+      data.name = t("pages.home.child.achievement.child.game1940.characters.content[" + i + "].name") + " (" + t("pages.home.child.achievement.child.game1940.characters.content[" + i + "].year") + ")";
+    }
+
+    for (let j = 0; j < 2; j++) {
+      let word = t("pages.home.child.achievement.child.game1940.characters.content[" + i + "].info." + j);
+      data.words.push(word);
+    }
+
+    charactersData.push(data);
+  }
+}
+
+function SentData(datas, i) {
+  projectLayout.value.OpenPopupPanel(datas, i);
+}
 </script>
 
 <template>
-    <div>
-        <div class="wrap">
-            <div class="mb-24 px-20 lg:mb-14 md:px-0">
-            </div>
+  <div>
+    <ProjectLayout ref="projectLayout">
+      <template #title>{{ $t("pages.home.child.achievement.child.game1940.info.title") }}</template>
+      <template #info>
+        <PartItem>
+          <template #title>{{ $t("pages.home.child.achievement.child.game1940.info.about.title") }}</template>
+          <template #word>{{ $t("pages.home.child.achievement.child.game1940.info.about.content.0") }}</template>
+        </PartItem>
 
-            <div class="flex flex-row h-300px md:h-480px md:flex-col px-20 md:px-10" ref="target">
-            </div>
-        </div>
-    </div>
+        <PartItem>
+          <template #title>{{ $t("pages.home.child.achievement.child.game1940.info.introduction.title") }}</template>
+          <template #word>
+            {{ $t("pages.home.child.achievement.child.game1940.info.introduction.content.0") }}
+            <br />
+            <br />
+            {{ $t("pages.home.child.achievement.child.game1940.info.introduction.content.1") }}
+            <br />
+            {{ $t("pages.home.child.achievement.child.game1940.info.introduction.content.2") }}
+          </template>
+        </PartItem>
 
-    <div class="absolute w-full bottom-0">
-        <div class="bg-bg-1-image h-8"></div>
-        <div class="bg-bg-1-Color h-96" ref="bg"></div>
-    </div>
+        <PartItem>
+          <template #title>
+            {{ $t("pages.home.child.achievement.child.game1940.info.writer.title") }}
+          </template>
+          <template #name>
+            {{ $t("pages.home.child.achievement.child.game1940.info.writer.content[0].name") }}
+          </template>
+          <template #word>
+            {{ $t("pages.home.child.achievement.child.game1940.info.writer.content[0].info[0]") }}
+          </template>
+        </PartItem>
+
+        <PartItemNull>
+          <template #title
+            >{{ $t("pages.home.child.achievement.child.game1940.info.music.title") }}
+            <div class="mt-5">
+              <audio src="" loop controls class="w-full"></audio>
+            </div>
+          </template>
+        </PartItemNull>
+
+        <PartItemNull>
+          <template #title
+            >{{ $t("pages.home.child.achievement.child.game1940.info.download.title") }}
+            <div class="mt-5 flex">
+              <DownloadButton href="https://store.steampowered.com/app/1798300/1940/">Windows </DownloadButton>
+              <DownloadButton href="https://apps.apple.com/tw/app/1940/id1546034482"> iOS</DownloadButton>
+              <DownloadButton href="https://play.google.com/store/apps/details?id=com.axis3d.ws_1940"> Android</DownloadButton>
+            </div>
+          </template>
+        </PartItemNull>
+
+        <PartItemNull>
+          <template #title>{{ $t("pages.home.child.achievement.child.game1940.characters.title") }}</template>
+          <div class="flex flex-wrap justify-start">
+            <Item2 @open="SentData(charactersData, 0)" class="mr-16">
+              <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.0.name") }}</template>
+              <template #year>（{{ $t("pages.home.child.achievement.child.game1940.characters.content.0.year") }}）</template>
+            </Item2>
+            <Item2 @open="SentData(charactersData, 1)" class="mr-16">
+              <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.1.name") }}</template>
+              <template #year>（{{ $t("pages.home.child.achievement.child.game1940.characters.content.1.year") }}）</template>
+            </Item2>
+            <Item2 @open="SentData(charactersData, 2)">
+              <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.2.name") }}</template>
+            </Item2>
+          </div>
+        </PartItemNull>
+
+        <ScreenShots url="https://www.youtube.com/embed/7iWcglHSEQ0">
+          <template #title>{{ $t("pages.home.child.achievement.child.game1940.screen.title") }}</template>
+          <div class="aspect-video mb-14 w-full bg-gray-300"></div>
+          <div class="aspect-video mb-14 w-full bg-gray-300"></div>
+          <div class="aspect-video mb-14 w-full bg-gray-300"></div>
+        </ScreenShots>
+      </template>
+    </ProjectLayout>
+  </div>
 </template>
 
-<style>
-
-</style>
+<style scoped></style>
