@@ -37,7 +37,7 @@
           {
             "title": "3D scanning and modeling",
             "info": "",
-            "year": "2018-2021"
+            "year": "2018-2022"
           },
           {
             "title": "Island of Baku",
@@ -94,7 +94,9 @@
                 "title": "Island of Baku",
                 "info": "VR shooting game",
                 "year": "2018-2019",
-                "words": ["This project bases on the concept of a fantasy island.  It draws inspiration from five authors- Yeh Shih-tao, Jhang Shen-Chieh, Long Ying-zong, Lin Hai-yin, and Yao Yi-wei.   Meanwhile, it produces the 3D  scanning from the collections of NMTL.  Those collections are designed as the key props to unlocked different chapters."]
+                "words": [
+                  "This project bases on the concept of a fantasy island.  It draws inspiration from five authors- Yeh Shih-tao, Jhang Shen-Chieh, Long Ying-zong, Lin Hai-yin, and Yao Yi-wei.   Meanwhile, it produces the 3D  scanning from the collections of NMTL.  Those collections are designed as the key props to unlocked different chapters."
+                ]
               },
               {
                 "title": "1940",
@@ -106,7 +108,9 @@
                 "title": "Birds of Life",
                 "info": "digital picture book with interactive game",
                 "year": "2018-2020",
-                "words": ["This work takes the literary life of Wu Ying-tao as the main storyline.  He is a modern poet, folklore researcher. With “Poetry is part of life” as the main concept, Wu Ying-tao speaks to children about his own life experience, customs and stories collected from various places in Taiwan. The game also introduces Wu’s major works to the audience."]
+                "words": [
+                  "This work takes the literary life of Wu Ying-tao as the main storyline.  He is a modern poet, folklore researcher. With “Poetry is part of life” as the main concept, Wu Ying-tao speaks to children about his own life experience, customs and stories collected from various places in Taiwan. The game also introduces Wu’s major works to the audience."
+                ]
               },
               {
                 "title": "Hide Words Man",
@@ -174,7 +178,10 @@
                     },
                     {
                       "nameDesktop": "Pan Ying-jhen",
-                      "infoDesktop": ["Artist in culture and art,Bachelor of Social Education, National Taiwan Normal University,", "The script and lyrics author of ’Unreliable Club-The Distance Between Us and Love’ by the Taiwanese Artists Symphony,Orchestra production of 2020."],
+                      "infoDesktop": [
+                        "Artist in culture and art,Bachelor of Social Education, National Taiwan Normal University,",
+                        "The script and lyrics author of ’Unreliable Club-The Distance Between Us and Love’ by the Taiwanese Artists Symphony,Orchestra production of 2020."
+                      ],
                       "name": "Pan Ying-jhen/Artist in culture and art",
                       "info": ["Bachelor of Social Education, National Taiwan Normal University", "The script and lyrics author of ’Unreliable Club-The Distance Between Us and Love’ by the Taiwanese Artists Symphony,Orchestra production of 2020."]
                     }
@@ -190,12 +197,16 @@
                   {
                     "name": "Lin Hai-yin",
                     "year": "1918-2001",
-                    "info": ["Pseudonym of Lin Han-yin, was from the Hakkas in Miaoli County, Taiwan.  When she was young, her family moved to Beijing. Beijing became a significant background source for Lin Hai-yin's novel Memories of Peking: South Side Stories. In 1948, Lin and her family returned to Taiwan.  She was an editor, writer, and publisher of newspapers and magazines, and supported many writers. She is an important figure in facilitating modern Taiwan literature."]
+                    "info": [
+                      "Pseudonym of Lin Han-yin, was from the Hakkas in Miaoli County, Taiwan.  When she was young, her family moved to Beijing. Beijing became a significant background source for Lin Hai-yin's novel Memories of Peking: South Side Stories. In 1948, Lin and her family returned to Taiwan.  She was an editor, writer, and publisher of newspapers and magazines, and supported many writers. She is an important figure in facilitating modern Taiwan literature."
+                    ]
                   },
                   {
                     "name": "Yeh Shih-tao",
                     "year": "1925-2008",
-                    "info": ["His novels had a strong local consciousness, focusing on local spirit and historical experience.  The theme of his work lights on the difficulty of human existence, pursuing atonement or liberation.  His work Outline of Taiwan Literary History is Taiwan's first contemporary literary history.  Ye could be considered as the witness and founder of Taiwan literary research."]
+                    "info": [
+                      "His novels had a strong local consciousness, focusing on local spirit and historical experience.  The theme of his work lights on the difficulty of human existence, pursuing atonement or liberation.  His work Outline of Taiwan Literary History is Taiwan's first contemporary literary history.  Ye could be considered as the witness and founder of Taiwan literary research."
+                    ]
                   },
                   {
                     "name": "Yao Yi-wei",
@@ -214,7 +225,9 @@
                   {
                     "name": "Chang Shen-Chieh",
                     "year": "1904-1965",
-                    "info": ["He organized the “Taiwan Theatre Research Association”, “Taiwan Literature and Art League”, and published Taiwan Literature and Art.  His publication includes critiques, essays, novels, scripts, etc.  Using naturalistic techniques to dramatically expose the deceit and foolishness of Japanese imperialism is characteristic of his works.  Meanwhile, his works explore the reasons for the tragedy that Taiwan society became a colony of Japan."]
+                    "info": [
+                      "He organized the “Taiwan Theatre Research Association”, “Taiwan Literature and Art League”, and published Taiwan Literature and Art.  His publication includes critiques, essays, novels, scripts, etc.  Using naturalistic techniques to dramatically expose the deceit and foolishness of Japanese imperialism is characteristic of his works.  Meanwhile, his works explore the reasons for the tragedy that Taiwan society became a colony of Japan."
+                    ]
                   }
                 ]
               },
@@ -228,7 +241,9 @@
                 "title": "1940",
                 "about": {
                   "title": "About the Game",
-                  "content": ["This project bases on the life of Liu Na-ou, a film producer and novelist during Japanese colonial period of Taiwan.   The inspiration for the game is the Mahjong of Liu Na-ou, one of NMTL’s collections.  The game stretches from Shanghai Paramount, Tianjin Wanguo Bridge, Da Hinggan Range, Heilong Jiang, Dingling (Ming), Beijing, and finally to Tainan Hall, Taiwan. With the fictional setup, the players would begin a puzzle quiz-based game."]
+                  "content": [
+                    "This project bases on the life of Liu Na-ou, a film producer and novelist during Japanese colonial period of Taiwan.   The inspiration for the game is the Mahjong of Liu Na-ou, one of NMTL’s collections.  The game stretches from Shanghai Paramount, Tianjin Wanguo Bridge, Da Hinggan Range, Heilong Jiang, Dingling (Ming), Beijing, and finally to Tainan Hall, Taiwan. With the fictional setup, the players would begin a puzzle quiz-based game."
+                  ]
                 },
                 "introduction": {
                   "title": "Game Introduction",
@@ -243,7 +258,9 @@
                   "content": [
                     {
                       "name": "Lu Ru-shu",
-                      "info": ["I like to keep a low profile and rather be anonymous. But I do keep a Maltese named LeLe.  I don’t talk much, love to read. The most joyful hobby is sleeping and writing for self-entertainment.  Never inquire about my age and weight."]
+                      "info": [
+                        "I like to keep a low profile and rather be anonymous. But I do keep a Maltese named LeLe.  I don’t talk much, love to read. The most joyful hobby is sleeping and writing for self-entertainment.  Never inquire about my age and weight."
+                      ]
                     }
                   ]
                 },
@@ -276,7 +293,10 @@
                   {
                     "name": "Li Hsiang-lan",
                     "year": "",
-                    "info": ["She was active in Man empire as a popular singer, formerly known as Yamaguchi Yoshiko(1920-2014).  She was born in a Japanese family in Northeast China, adopted as a goddaughter by the Chinese, then renamed Li Hsiang-lan.  Because of the film partnership, she acquainted with Liu Na-ou.",""]
+                    "info": [
+                      "She was active in Man empire as a popular singer, formerly known as Yamaguchi Yoshiko(1920-2014).  She was born in a Japanese family in Northeast China, adopted as a goddaughter by the Chinese, then renamed Li Hsiang-lan.  Because of the film partnership, she acquainted with Liu Na-ou.",
+                      ""
+                    ]
                   }
                 ]
               },
@@ -329,14 +349,18 @@
                 },
                 "introduction": {
                   "title": "Game Introduction",
-                  "content": ["Wu Ying-tao is a vital Taiwanese poet and a researcher on Taiwan folklore.  As a Taiwanese poet active in the then mainstream poetry circle, he loves sea, poetry, and folk customs, and believes that poetry is inseparable from life. He and 11 other poets founded the Li Poetry and published the Li Poetry Magazine.  Everything about him revolves around the promotion of local literature and culture.  Welcome to  his literary world now."]
+                  "content": [
+                    "Wu Ying-tao is a vital Taiwanese poet and a researcher on Taiwan folklore.  As a Taiwanese poet active in the then mainstream poetry circle, he loves sea, poetry, and folk customs, and believes that poetry is inseparable from life. He and 11 other poets founded the Li Poetry and published the Li Poetry Magazine.  Everything about him revolves around the promotion of local literature and culture.  Welcome to  his literary world now."
+                  ]
                 },
                 "writer": {
                   "title": "Game writer",
                   "content": [
                     {
                       "name": "Guo Mong-Siou",
-                      "info": ["Born in 1997 at Pingtung.  Now studying for a master's course in the Institute of Physics, National Taiwan University.  He participated in the design and production of real-world games “Little Fengshen Treasure Map”, “Literary is dying” and “House of Light” at Taipei Legend Studio.  He is a Physics postgraduate student who is interested in translating literature and history into games."]
+                      "info": [
+                        "Born in 1997 at Pingtung.  Now studying for a master's course in the Institute of Physics, National Taiwan University.  He participated in the design and production of real-world games “Little Fengshen Treasure Map”, “Literary is dying” and “House of Light” at Taipei Legend Studio.  He is a Physics postgraduate student who is interested in translating literature and history into games."
+                      ]
                     }
                   ]
                 },
@@ -367,7 +391,9 @@
                 "content": [
                   {
                     "name": "Yi Da",
-                    "info": ["As the third generation of Kang San Lau, Wu Ying-tao has seen the story of the literati gentry and Taiwan geisha since childhood. Yi Da uses the most familiar life experience as the theme, to narrate the story between a college graduate Chun-sheng and geisha Ying-Hua.  Most of his proses have been published in Art of Taiwan and Art of Taiwan.  In 1942, Yi Da, which was nominated for Art of Taiwan, was awarded."]
+                    "info": [
+                      "As the third generation of Kang San Lau, Wu Ying-tao has seen the story of the literati gentry and Taiwan geisha since childhood. Yi Da uses the most familiar life experience as the theme, to narrate the story between a college graduate Chun-sheng and geisha Ying-Hua.  Most of his proses have been published in Art of Taiwan and Art of Taiwan.  In 1942, Yi Da, which was nominated for Art of Taiwan, was awarded."
+                    ]
                   },
                   {
                     "name": "Life Poems",
@@ -377,7 +403,9 @@
                   },
                   {
                     "name": "Poems by Ying Tao",
-                    "info": ["This poetry collection is the second one published by Wu, and it contains the poems created within the five-year span after published Life Poems.  The style of this collection is minimalistic, prose-style, and without any title."]
+                    "info": [
+                      "This poetry collection is the second one published by Wu, and it contains the poems created within the five-year span after published Life Poems.  The style of this collection is minimalistic, prose-style, and without any title."
+                    ]
                   },
                   {
                     "name": "Meditation Poems",
@@ -387,7 +415,9 @@
                   },
                   {
                     "name": "The Sea",
-                    "info": ["Taiwan is surrounded by the sea, therefore, in Wu’s poems he often wrote about the ocean.  The book is a prose work written on the blank sheets when he was touched by the magnificence of the sea on a ship.  This book contains 159  sea-related prose, including “Fog Flute”, “Sea Dream”, “Seascape”, “Mountain Light and Sea Color”, and “Sea Gull”."]
+                    "info": [
+                      "Taiwan is surrounded by the sea, therefore, in Wu’s poems he often wrote about the ocean.  The book is a prose work written on the blank sheets when he was touched by the magnificence of the sea on a ship.  This book contains 159  sea-related prose, including “Fog Flute”, “Sea Dream”, “Seascape”, “Mountain Light and Sea Color”, and “Sea Gull”."
+                    ]
                   },
                   {
                     "name": "Li Poetry Magazine",
@@ -420,6 +450,10 @@
                 "writer": {
                   "title": "Game writer",
                   "content": [
+                    {
+                      "name": "",
+                      "info": []
+                    },
                     {
                       "name": "",
                       "info": []
