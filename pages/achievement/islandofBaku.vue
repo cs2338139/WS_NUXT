@@ -36,6 +36,7 @@ function GetDate() {
     }
 
     literatiData.push(data);
+    console.log(data);
   }
 }
 

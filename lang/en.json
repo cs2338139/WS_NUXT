@@ -141,11 +141,11 @@
               },
               "literati": {
                 "title": "Introduction to literati",
-                "button": "View All Literatis"
+                "button": ["View All Literatis", "show less"]
               },
               "result": {
                 "title": "Result",
-                "button": "View All 3D Models"
+                "button": ["View All 3D Models", "show less"]
               }
             },
             "islandOfBaku": {

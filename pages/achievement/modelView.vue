@@ -4,6 +4,7 @@ import PartItem from "~~/components/ProjectPage/src/PartItem.vue";
 import PartItem4 from "~~/components/ProjectPage/src/PartItem4.vue";
 import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue";
 import Item2 from "~~/components/ProjectPage/src/Item2.vue";
+import WriterPanel from "~~/components/ProjectPage/src/WriterPanel.vue";
 
 const { locale, setLocale, t } = useI18n();
 useHead({
@@ -16,41 +17,13 @@ const literatiData = reactive([]);
 const modellData = reactive([]);
 
 function SentData(datas, i) {
+  console.log(datas);
+  console.log(i);
   projectLayout.value.OpenPopupPanel(datas, i);
 }
-
-const query = gql`query getPost($limit: Int!) {
-  posts(where: {categoryName: "Literati"}, first: $limit) {
-      nodes {
-        literati {
-          about
-          enAbout
-          enName
-          name
-          writeryear
-          image {
-            sourceUrl
-          }
-        }
-      }
-    }
-  }
-`;
-
-
-const variables = { limit: 100 };
-const { data } = await useAsyncQuery(query, variables);
-const { posts } = data.value;
 </script>
 
 <template>
-
-  <div v-for="post in posts.nodes">
-    <h1>{{ post.literati.name }}</h1>
-    <h1>{{ post.literati.enName }}</h1>
-    <hr />
-  </div>
-
   <div>
     <ProjectLayout ref="projectLayout">
       <template #title>{{ $t("pages.home.child.achievement.child.modelView.info.title") }}</template>
@@ -73,7 +46,7 @@ const { posts } = data.value;
 
         <PartItemNull>
           <template #title>{{ $t("pages.home.child.achievement.child.modelView.literati.title") }}</template>
-          <div class="flex flex-wrap justify-between"></div>
+          <WriterPanel @open="SentData"></WriterPanel>
         </PartItemNull>
       </template>
     </ProjectLayout>
