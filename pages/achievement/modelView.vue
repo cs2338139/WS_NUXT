@@ -1,52 +1,83 @@
 <script setup>
+import ProjectLayout from "~~/components/ProjectPage/ProjectLayout.vue";
+import PartItem from "~~/components/ProjectPage/src/PartItem.vue";
+import PartItem4 from "~~/components/ProjectPage/src/PartItem4.vue";
+import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue";
+import Item2 from "~~/components/ProjectPage/src/Item2.vue";
+
 const { locale, setLocale, t } = useI18n();
 useHead({
-    title: t('pages.home.child.achievement.child.modelView.title'),
-})
-</script>
+  title: t("pages.home.child.achievement.child.modelView.title"),
+});
 
-<script>
-export default {
-    data() {
-        return {
-        };
-    },
-    methods: {
-        ToNotFound() {
-            this.$router.push({
-                name: "NotFound",
-                params: { pathMatch: this.$route.path.substring(1).split("/") },
-                query: this.$route.query,
-                hash: this.$route.hash,
-            });
-        },
-    },
-    created() {
-    },
-    mounted() {
-    },
-    unmounted() {
-    },
-};
+const projectLayout = ref(null);
+
+const literatiData = reactive([]);
+const modellData = reactive([]);
+
+function SentData(datas, i) {
+  projectLayout.value.OpenPopupPanel(datas, i);
+}
+
+const query = gql`query getPost($limit: Int!) {
+  posts(where: {categoryName: "Literati"}, first: $limit) {
+      nodes {
+        literati {
+          about
+          enAbout
+          enName
+          name
+          writeryear
+          image {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+`;
+
+
+const variables = { limit: 100 };
+const { data } = await useAsyncQuery(query, variables);
+const { posts } = data.value;
 </script>
 
 <template>
-    <div>
-        <div class="wrap">
-            <div class="mb-24 px-20 lg:mb-14 md:px-0">
-            </div>
 
-            <div class="flex flex-row h-300px md:h-480px md:flex-col px-20 md:px-10" ref="target">
-            </div>
-        </div>
-    </div>
+  <div v-for="post in posts.nodes">
+    <h1>{{ post.literati.name }}</h1>
+    <h1>{{ post.literati.enName }}</h1>
+    <hr />
+  </div>
 
-    <div class="absolute w-full bottom-0">
-        <div class="bg-bg-1-image h-8"></div>
-        <div class="bg-bg-1-Color h-96" ref="bg"></div>
-    </div>
+  <div>
+    <ProjectLayout ref="projectLayout">
+      <template #title>{{ $t("pages.home.child.achievement.child.modelView.info.title") }}</template>
+      <template #info>
+        <PartItem>
+          <template #title>{{ $t("pages.home.child.achievement.child.modelView.info.about.title") }}</template>
+          <template #word>{{ $t("pages.home.child.achievement.child.modelView.info.about.content.0") }}</template>
+        </PartItem>
+
+        <PartItem>
+          <template #title>{{ $t("pages.home.child.achievement.child.modelView.info.introduction.title") }}</template>
+          <template #word>
+            {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.0") }}
+            <br />
+            {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.1") }}
+            <br />
+            {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.2") }}
+          </template>
+        </PartItem>
+
+        <PartItemNull>
+          <template #title>{{ $t("pages.home.child.achievement.child.modelView.literati.title") }}</template>
+          <div class="flex flex-wrap justify-between"></div>
+        </PartItemNull>
+      </template>
+    </ProjectLayout>
+  </div>
 </template>
 
-<style>
-
-</style>
+<style scoped></style>

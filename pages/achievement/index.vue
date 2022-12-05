@@ -16,30 +16,30 @@ useHead({
         </PartTitle>
 
         <div class="flex flex-col justify-between mx-auto mb-10">
-            <ProjectItem_2 href="" img="">
+            <ProjectItem_2 href="/achievement/modelView" img="">
                 <template #name>{{ $t('pages.home.child.achievement.info.content.0.title') }}</template>
                 <template #year>{{ $t('pages.home.child.achievement.info.content.0.year') }}</template>
                 <template #word>{{ $t('pages.home.child.achievement.info.content.0.words.0') }}</template>
             </ProjectItem_2>
-            <ProjectItem_2 href="" img="">
+            <ProjectItem_2 href="/achievement/hideWordsMan" img="">
                 <template #name>{{ $t('pages.home.child.achievement.info.content.4.title') }}</template>
                 <template #info>{{ $t('pages.home.child.achievement.info.content.4.info') }}</template>
                 <template #year>{{ $t('pages.home.child.achievement.info.content.4.year') }}</template>
                 <template #word>{{ $t('pages.home.child.achievement.info.content.4.words.0') }}</template>
             </ProjectItem_2>
-            <ProjectItem_2 href="" img="">
+            <ProjectItem_2 href="/achievement/birdsOfLife" img="">
                 <template #name>{{ $t('pages.home.child.achievement.info.content.3.title') }}</template>
                 <template #info>{{ $t('pages.home.child.achievement.info.content.3.info') }}</template>
                 <template #year>{{ $t('pages.home.child.achievement.info.content.3.year') }}</template>
                 <template #word>{{ $t('pages.home.child.achievement.info.content.3.words.0') }}</template>
             </ProjectItem_2>
-            <ProjectItem_2 href="" img="">
+            <ProjectItem_2 href="/achievement/game1940" img="">
                 <template #name>{{ $t('pages.home.child.achievement.info.content.2.title') }}</template>
                 <template #info>{{ $t('pages.home.child.achievement.info.content.2.info') }}</template>
                 <template #year>{{ $t('pages.home.child.achievement.info.content.2.year') }}</template>
                 <template #word>{{ $t('pages.home.child.achievement.info.content.2.words.0') }}</template>
             </ProjectItem_2>
-            <ProjectItem_2 href="" img="">
+            <ProjectItem_2 href="/achievement/islandofBaku" img="">
                 <template #name>{{ $t('pages.home.child.achievement.info.content.1.title') }}</template>
                 <template #info>{{ $t('pages.home.child.achievement.info.content.1.info') }}</template>
                 <template #year>{{ $t('pages.home.child.achievement.info.content.1.year') }}</template>

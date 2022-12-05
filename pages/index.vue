@@ -109,17 +109,17 @@ export default {
                     <template #place>國立臺灣文學館 兒童樂園</template>
                     <template #year>2022.07.21</template>
                 </EventItem>
-                <EventItem href="" img="" isNew="true">
+                <EventItem href="" img="">
                     <template #name>象偶奇遇記A</template>
                     <template #place>國立臺灣文學館 兒童樂園</template>
                     <template #year>2022.07.21</template>
                 </EventItem>
-                <EventItem href="" img="" isNew="true">
+                <EventItem href="" img="" >
                     <template #name>象偶奇遇記A</template>
                     <template #place>國立臺灣文學館 兒童樂園</template>
                     <template #year>2022.07.21</template>
                 </EventItem>
-                <EventItem href="" img="" isNew="true">
+                <EventItem href="" img="" >
                     <template #name>象偶奇遇記A</template>
                     <template #place>國立臺灣文學館 兒童樂園</template>
                     <template #year>2022.07.21</template>
