@@ -1,10 +1,10 @@
 <script setup>
 import FunctionButton from "~~/components/ProjectPage/src/FunctionButton.vue";
-import Item2 from "~~/components/ProjectPage/src/Item2.vue";
+import Item4 from "~~/components/ProjectPage/src/Item4.vue";
 
 const { locale, setLocale, t } = useI18n();
 const emits = defineEmits(["open"]);
-const variables = { limit: 50 };
+const variables = { limit: 80 };
 const query = gql`
   query getWriter($limit: Int!) {
     posts(where: { categoryName: "Literati" }, first: $limit) {
@@ -84,7 +84,7 @@ function SentData(i) {
 const items = ref([]);
 const viewMode = reactive({
   data: {
-    buttonWord: t("pages.home.child.achievement.child.modelView.literati.button.1"),
+    buttonWord: t("pages.home.child.achievement.child.modelView.result.button.1"),
     viewMore: true,
   },
 });
@@ -97,13 +97,13 @@ function ViewSwitch() {
   console.log(items.value.length);
   if (viewMode.data.viewMore) {
     viewMode.data.viewMore = false;
-    viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.literati.button.0");
+    viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.result.button.0");
     for (let i = 5; i < items.value.length; i++) {
       items.value[i].View(false);
     }
   } else {
     viewMode.data.viewMore = true;
-    viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.literati.button.1");
+    viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.result.button.1");
     for (let i = 0; i < items.value.length; i++) {
       items.value[i].View(true);
     }
@@ -114,10 +114,10 @@ function ViewSwitch() {
 <template>
   <div>
     <div class="flex flex-wrap justify-between">
-      <Item2 v-for="(writer, index) in current" ref="items" :img="writer.img" @open="SentData(index)">
+      <Item4 v-for="(writer, index) in current" ref="items" :img="writer.img" @open="SentData(index)">
         <template #name>{{ writer.sName }}</template>
-        <template #year>（{{ writer.year }}）</template>
-      </Item2>
+        <template #owner>{{ writer.year }}</template>
+      </Item4>
     </div>
     <div class="text-right mt-16">
       <FunctionButton @function="ViewSwitch()">{{ viewMode.data.buttonWord }}</FunctionButton>

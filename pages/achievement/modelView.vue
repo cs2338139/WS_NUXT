@@ -1,10 +1,9 @@
 <script setup>
 import ProjectLayout from "~~/components/ProjectPage/ProjectLayout.vue";
 import PartItem from "~~/components/ProjectPage/src/PartItem.vue";
-import PartItem4 from "~~/components/ProjectPage/src/PartItem4.vue";
 import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue";
-import Item2 from "~~/components/ProjectPage/src/Item2.vue";
 import WriterPanel from "~~/components/ProjectPage/src/WriterPanel.vue";
+import ModelPanel from "~~/components/ProjectPage/src/ModelPanel.vue";
 
 const { locale, setLocale, t } = useI18n();
 useHead({
@@ -47,6 +46,11 @@ function SentData(datas, i) {
         <PartItemNull>
           <template #title>{{ $t("pages.home.child.achievement.child.modelView.literati.title") }}</template>
           <WriterPanel @open="SentData"></WriterPanel>
+        </PartItemNull>
+
+        <PartItemNull>
+          <template #title>{{ $t("pages.home.child.achievement.child.modelView.result.title") }}</template>
+          <ModelPanel @open="SentData"></ModelPanel>
         </PartItemNull>
       </template>
     </ProjectLayout>

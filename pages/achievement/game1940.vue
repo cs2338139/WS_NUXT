@@ -4,6 +4,7 @@ import PartItem from "~~/components/ProjectPage/src/PartItem.vue";
 import DownloadButton from "~~/components/ProjectPage/src/DownloadButton.vue";
 import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue";
 import Item2 from "~~/components/ProjectPage/src/Item2.vue";
+import Item3 from "~~/components/ProjectPage/src/Item3.vue";
 import ScreenShots from "~~/components/ProjectPage/src/ScreenShots.vue";
 
 const { locale, setLocale, t } = useI18n();
@@ -107,17 +108,59 @@ function SentData(datas, i) {
         <PartItemNull>
           <template #title>{{ $t("pages.home.child.achievement.child.game1940.characters.title") }}</template>
           <div class="flex flex-wrap justify-start">
-            <Item2 @open="SentData(charactersData, 0)" class="mr-16">
+            <Item2 @open="SentData(charactersData, 0)" class="mr-16" img="--">
               <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.0.name") }}</template>
               <template #year>（{{ $t("pages.home.child.achievement.child.game1940.characters.content.0.year") }}）</template>
             </Item2>
-            <Item2 @open="SentData(charactersData, 1)" class="mr-16">
+            <Item2 @open="SentData(charactersData, 1)" class="mr-16" img="--">
               <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.1.name") }}</template>
               <template #year>（{{ $t("pages.home.child.achievement.child.game1940.characters.content.1.year") }}）</template>
             </Item2>
-            <Item2 @open="SentData(charactersData, 2)">
+            <Item2 @open="SentData(charactersData, 2)" img="--">
               <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.2.name") }}</template>
             </Item2>
+          </div>
+        </PartItemNull>
+
+        <PartItemNull>
+          <template #title>{{ $t("pages.home.child.achievement.child.game1940.event.title") }}</template>
+          <div class="flex flex-col justify-start mt-8">
+            <hr class="border-black" />
+            <Item3>
+              <template #name>{{ $t("pages.home.child.achievement.child.game1940.event.content.0.name") }}</template>
+              <template #info>{{ $t("pages.home.child.achievement.child.game1940.event.content.0.info") }}</template>
+            </Item3>
+            <hr class="border-black" />
+            <Item3>
+              <template #name>{{ $t("pages.home.child.achievement.child.game1940.event.content.1.name") }}</template>
+              <template #info>{{ $t("pages.home.child.achievement.child.game1940.event.content.1.info") }}</template>
+            </Item3>
+            <hr class="border-black" />
+            <Item3>
+              <template #name>{{ $t("pages.home.child.achievement.child.game1940.event.content.2.name") }}</template>
+              <template #info>{{ $t("pages.home.child.achievement.child.game1940.event.content.2.info") }}</template>
+            </Item3>
+            <hr class="border-black" />
+            <Item3>
+              <template #name>{{ $t("pages.home.child.achievement.child.game1940.event.content.3.name") }}</template>
+              <template #info>{{ $t("pages.home.child.achievement.child.game1940.event.content.3.info") }}</template>
+            </Item3>
+            <hr class="border-black" />
+            <Item3>
+              <template #name>{{ $t("pages.home.child.achievement.child.game1940.event.content.4.name") }}</template>
+              <template #info>{{ $t("pages.home.child.achievement.child.game1940.event.content.4.info") }}</template>
+            </Item3>
+            <hr class="border-black" />
+            <Item3>
+              <template #name>{{ $t("pages.home.child.achievement.child.game1940.event.content.5.name") }}</template>
+              <template #info>{{ $t("pages.home.child.achievement.child.game1940.event.content.5.info") }}</template>
+            </Item3>
+            <hr class="border-black" />
+            <Item3>
+              <template #name>{{ $t("pages.home.child.achievement.child.game1940.event.content.6.name") }}</template>
+              <template #info>{{ $t("pages.home.child.achievement.child.game1940.event.content.6.info") }}</template>
+            </Item3>
+            <hr class="border-black" />
           </div>
         </PartItemNull>
 
