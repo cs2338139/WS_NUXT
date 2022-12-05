@@ -14,23 +14,47 @@ useHead({
 
 const projectLayout = ref(null);
 
-const data = reactive({
-    img: '',
-    name: '',
-    words: []
-})
-
+const AuthorData = reactive([]);
+const workData = reactive([]);
 
 onMounted(() => {
     GetDate();
 })
 
-function GetDate() {
 
+function GetDate() {
+    for (let i = 0; i < 1; i++) {
+        let data = {
+            img: '',
+            name: '',
+            words: []
+        };
+        data.img = null;
+        data.name = t('pages.home.child.achievement.child.birdsOfLife.author.content[' + i + '].name') + " (" + t('pages.home.child.achievement.child.birdsOfLife.author.content[' + i + '].year') + ")";
+
+        for (let j = 0; j < 4; j++) {
+            let word = t('pages.home.child.achievement.child.birdsOfLife.author.content[' + i + '].info.' + j)
+            data.words.push(word);
+        }
+
+        AuthorData.push(data);
+    }
+
+    for (let i = 0; i < 6; i++) {
+        let data = {
+            img: '',
+            name: '',
+            words: []
+        };
+        data.img = null;
+        data.name = t('pages.home.child.achievement.child.birdsOfLife.works.content[' + i + '].name');
+        data.words.push(t('pages.home.child.achievement.child.birdsOfLife.works.content[' + i + '].info.0'));
+        workData.push(data);
+    }
 }
 
-function SentData(img, name, word) {
-    projectLayout.value.OpenPopupPanel(img, name, word);
+function SentData(datas, i) {
+    projectLayout.value.OpenPopupPanel(datas, i);
 }
 
 </script>
@@ -71,11 +95,7 @@ function SentData(img, name, word) {
                     }}</template>
                 </PartItem>
 
-                <PartItem2 img="" @function="SentData(null, $t('pages.home.child.achievement.child.birdsOfLife.author.content[0].name'),
-                [$t('pages.home.child.achievement.child.birdsOfLife.author.content[0].info.0'),
-                $t('pages.home.child.achievement.child.birdsOfLife.author.content[0].info.1'),
-                $t('pages.home.child.achievement.child.birdsOfLife.author.content[0].info.2'),
-                $t('pages.home.child.achievement.child.birdsOfLife.author.content[0].info.3')])">
+                <PartItem2 img="" @function="SentData(AuthorData, 0)">
                     <template #title>{{ $t('pages.home.child.achievement.child.birdsOfLife.author.title') }}</template>
                     <template #name>{{ $t('pages.home.child.achievement.child.birdsOfLife.author.content[0].name')
                     }}</template>
@@ -90,23 +110,17 @@ function SentData(img, name, word) {
                 <PartItemNull>
                     <template #title>{{ $t('pages.home.child.achievement.child.birdsOfLife.works.title') }}</template>
                     <div class="flex flex-wrap justify-between">
-                        <Item color="yellow"
-                            @open="SentData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[0].name'), [$t('pages.home.child.achievement.child.birdsOfLife.works.content[0].info.0')])">
+                        <Item color="yellow" @open="SentData(workData, 0)">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[0].name') }}</Item>
-                        <Item color="blue"
-                            @open="SentData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[1].name'), [$t('pages.home.child.achievement.child.birdsOfLife.works.content[1].info.0')])">
+                        <Item color="blue" @open="SentData(workData, 1)">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[1].name') }}</Item>
-                        <Item color="red"
-                            @open="SentData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[2].name'), [$t('pages.home.child.achievement.child.birdsOfLife.works.content[2].info.0')])">
+                        <Item color="red" @open="SentData(workData, 2)">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[2].name') }}</Item>
-                        <Item color="yellow"
-                            @open="SentData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[3].name'), [$t('pages.home.child.achievement.child.birdsOfLife.works.content[3].info.0')])">
+                        <Item color="yellow" @open="SentData(workData, 3)">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[3].name') }}</Item>
-                        <Item color="red"
-                            @open="SentData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[4].name'), $t('pages.home.child.achievement.child.birdsOfLife.works.content[4].info'))">
+                        <Item color="red" @open="SentData(workData, 4)">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[4].name') }}</Item>
-                        <Item color="blue"
-                            @open="SentData(null, $t('pages.home.child.achievement.child.birdsOfLife.works.content[5].name'), [$t('pages.home.child.achievement.child.birdsOfLife.works.content[5].info.0')])">
+                        <Item color="blue" @open="SentData(workData, 5)">
                             {{ $t('pages.home.child.achievement.child.birdsOfLife.works.content[5].name') }}</Item>
                         <Item :enabled="false"></Item>
                         <Item :enabled="false"></Item>

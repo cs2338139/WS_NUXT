@@ -5,27 +5,61 @@ defineProps({
     img: String,
 });
 
-const popupInfo = reactive({
-    img: '',
-    name: '',
-    words: []
+// let popupDatas = reactive([]);
+const popupDatas = reactive({ list: [] });
+
+const currentPopupInfo = reactive({
+    data: {
+        index: "",
+        img: "",
+        name: "",
+        words: ""
+    }
 })
 
 const popupEnable = ref(false);
 
-function OpenPopupPanel(img, name, word) {
+function OpenPopupPanel(datas, i) {
     popupEnable.value = true;
     document.body.style.overflow = "hidden";
-    popupInfo.img = img;
-    popupInfo.name = name;
-    popupInfo.words = word;
+    popupDatas.list = datas;
+    SetData(i);
+}
 
-    console.log(popupInfo.word);
+function SetData(i) {
+    currentPopupInfo.data = {
+        index: i,
+        img: popupDatas.list[i].img,
+        name: popupDatas.list[i].name,
+        words: popupDatas.list[i].words
+    }
 }
 
 function ClosePopupPanel() {
     popupEnable.value = false;
     document.body.style.overflow = "scroll";
+}
+
+function NextData() {
+    let i = currentPopupInfo.data.index;
+    if ((i + 1) < popupDatas.list.length) {
+        i++;
+    } else {
+        i = 0;
+    }
+
+    SetData(i);
+}
+
+function PreviousData() {
+    let i = currentPopupInfo.data.index;
+    if ((i - 1) > -1) {
+        i--;
+    } else {
+        i = popupDatas.list.length - 1;
+    }
+
+    SetData(i);
 }
 
 defineExpose({
@@ -46,10 +80,11 @@ defineExpose({
             <slot name="info"></slot>
         </div>
 
-        <Popup @close="ClosePopupPanel" :img="popupInfo.img" v-if="popupEnable">
-            <template #name>{{ popupInfo.name }}</template>
+        <Popup @close="ClosePopupPanel" @previous="PreviousData" @next="NextData"
+            :moveEnable="(popupDatas.list.length>1)" :img="currentPopupInfo.data.img" v-if="popupEnable">
+            <template #name>{{ currentPopupInfo.data.name }}</template>
             <template #word>
-                <template v-for=" word in popupInfo.words">
+                <template v-for=" word in currentPopupInfo.data.words">
                     <div> {{ word }}</div>
                     <br>
                 </template>
