@@ -175,14 +175,11 @@ function ViewSwitch() {
   </div>
 
   <div>
-    <div class="flex flex-wrap justify-between">
-      <div v-for="(year, i) in currentLang.length" ref="year">
-        {{ currentLang.length }}
-        <Item4 v-for="(model, index) in currentLang.value[i]" ref="items" :img="model.img" @open="SentData(index)">
+    <div v-for="year in currentLang.length" ref="year" class="flex flex-wrap justify-between">
+        <Item4 v-for="(model, index) in year" ref="items" :img="model.img" @open="SentData(index)">
           <template #name>{{ model.name }}</template>
           <template #owner>{{ model.owner }}</template>
         </Item4>
-      </div>
     </div>
     <div class="text-right mt-16">
       <FunctionButton @function="ViewSwitch()">{{ viewMode.data.buttonWord }}</FunctionButton>
