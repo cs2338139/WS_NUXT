@@ -175,7 +175,7 @@ function ViewSwitch() {
   </div>
 
   <div>
-    <div v-for="year in currentLang.length" ref="year" class="flex flex-wrap justify-between">
+    <div v-for="year in currentLang" ref="year" class="flex flex-wrap justify-between dev-pink">
         <Item4 v-for="(model, index) in year" ref="items" :img="model.img" @open="SentData(index)">
           <template #name>{{ model.name }}</template>
           <template #owner>{{ model.owner }}</template>
