@@ -19,16 +19,16 @@ defineExpose({
 </script>
 
 <template>
-    <div class="mt-10 mb-4 w-48 relative">
+    <div class="mt-10 mb-4 w-48 relative" v-show="view">
         <button @click="$emit('function')" class="w-full" v-if="enabled">
             <div>
                 <div class="aspect-square w-full rounded-3xl overflow-hidden"><img :v-if="img != ''" :src="img" /></div>
             </div>
             <div class="text-center mt-2">
-                <div class="mb-3 text-xl">
+                <div class="text-xl font-bold">
                     <slot name="name"/>
                 </div>
-                <div class="mb-3 text-xl">
+                <div class="text-xl">
                     <slot name="owner"/>
                 </div>
             </div>

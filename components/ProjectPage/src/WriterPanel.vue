@@ -94,7 +94,6 @@ onMounted(() => {
 });
 
 function ViewSwitch() {
-  console.log(items.value.length);
   if (viewMode.data.viewMore) {
     viewMode.data.viewMore = false;
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.literati.button.0");

@@ -12,8 +12,6 @@ useHead({
 
 const projectLayout = ref(null);
 
-const literatiData = reactive([]);
-const modellData = reactive([]);
 
 function SentData(datas, i) {
   console.log(datas);
