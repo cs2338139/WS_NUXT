@@ -39,7 +39,7 @@ const { posts: models } = data.value;
 const categories = ref();
 const modelsCategories = ref([]);
 const currentLang = reactive([]);
-const current = reactive({ list: [] });
+// const current = reactive({ list: [] });
 
 if (data.value?.posts) {
   GetCategories();
@@ -135,10 +135,11 @@ if (locale.value === "en") {
 
 function SwitchYear(i) {
   // current.list = currentLang.value[i];
-  console.log(current.list);
+  // console.log(current.list);
 }
 
 const button = ref();
+const years = ref([]);
 const items = ref([]);
 const viewMode = reactive({
   data: {
@@ -175,7 +176,7 @@ function ViewSwitch() {
   </div>
 
   <div>
-    <div v-for="year in currentLang" ref="year" class="flex flex-wrap justify-between dev-pink">
+    <div v-for="year in currentLang" ref="years" class="flex flex-wrap justify-between dev-pink">
         <Item4 v-for="(model, index) in year" ref="items" :img="model.img" @open="SentData(index)">
           <template #name>{{ model.name }}</template>
           <template #owner>{{ model.owner }}</template>
