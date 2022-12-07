@@ -38,8 +38,7 @@ const { posts: models } = data.value;
 
 const categories = ref();
 const modelsCategories = ref([]);
-const currentLang = reactive([]);
-// const current = reactive({ list: [] });
+const current = reactive([]);
 
 if (data.value?.posts) {
   GetCategories();
@@ -125,22 +124,15 @@ function SetModelsCategories() {
 }
 
 if (locale.value === "en") {
-  // currentLang.value = modelsCategories.value[1];
-  Object.assign(currentLang, modelsCategories.value[1]);
+  Object.assign(current, modelsCategories.value[1]);
 } else if (locale.value === "zh") {
-  // currentLang.value = modelsCategories.value[0];
-
-  Object.assign(currentLang, modelsCategories.value[0]);
+  Object.assign(current, modelsCategories.value[0]);
 }
 
-function SwitchYear(i) {
-  // current.list = currentLang.value[i];
-  // console.log(current.list);
-}
-
-const button = ref();
+const yearButton = ref();
 const years = ref([]);
 const items = ref([]);
+const itemsOfYear = ref([]);
 const viewMode = reactive({
   data: {
     buttonWord: t("pages.home.child.achievement.child.modelView.result.button.1"),
@@ -148,39 +140,74 @@ const viewMode = reactive({
   },
 });
 
+function SwitchYear(i) {
+  for (let j = 0; j < years.value.length; j++) {
+    if (j != i) {
+      years.value[j].style.display = "none";
+    } else {
+      years.value[j].style.display = "block";
+    }
+  }
+}
+
 onMounted(() => {
-  button.value.click(0);
-  // ViewSwitch();
+  yearButton.value.click(0);
+  SetItemOfYear();
+  ViewSwitch();
 });
+
+function SetItemOfYear() {
+  let x = 0;
+  for (let i = 0; i < years.value.length; i++) {
+    itemsOfYear.value.push([]);
+    for (let j = 0; j < modelsCategories.value[1][i].length; j++) {
+      itemsOfYear.value[i].push(items.value[x]);
+      x++;
+    }
+  }
+}
 
 function ViewSwitch() {
   if (viewMode.data.viewMore) {
     viewMode.data.viewMore = false;
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.result.button.0");
-    for (let i = 10; i < items.value.length; i++) {
-      items.value[i].View(false);
+
+    for (let i = 0; i < itemsOfYear.value.length; i++) {
+      for (let j = 10; j < itemsOfYear.value[i].length; j++) {
+        itemsOfYear.value[i][j].View(false);
+      }
     }
   } else {
     viewMode.data.viewMore = true;
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.result.button.1");
-    for (let i = 0; i < items.value.length; i++) {
-      items.value[i].View(true);
+
+    for (let i = 0; i < itemsOfYear.value.length; i++) {
+      for (let j = 0; j < itemsOfYear.value[i].length; j++) {
+        itemsOfYear.value[i][j].View(true);
+      }
     }
   }
+}
+
+function SentData(i, index) {
+  console.log(i, index);
+  emits("open", current[i], index);
 }
 </script>
 
 <template>
   <div>
-    <modelPanelCategories :categories="categories" @function="SwitchYear" ref="button"> </modelPanelCategories>
+    <modelPanelCategories :categories="categories" @function="SwitchYear" ref="yearButton"> </modelPanelCategories>
   </div>
 
   <div>
-    <div v-for="year in currentLang" ref="years" class="flex flex-wrap justify-between dev-pink">
-        <Item4 v-for="(model, index) in year" ref="items" :img="model.img" @open="SentData(index)">
+    <div v-for="(year, i) in current" ref="years">
+      <div class="flex flex-wrap justify-between">
+        <Item4 v-for="(model, index) in year" ref="items" :img="model.img" @function="SentData(i, index)">
           <template #name>{{ model.name }}</template>
           <template #owner>{{ model.owner }}</template>
         </Item4>
+      </div>
     </div>
     <div class="text-right mt-16">
       <FunctionButton @function="ViewSwitch()">{{ viewMode.data.buttonWord }}</FunctionButton>

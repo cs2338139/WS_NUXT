@@ -12,12 +12,10 @@ useHead({
 
 const projectLayout = ref(null);
 
-
 function SentData(datas, i) {
-  console.log(datas);
-  console.log(i);
   projectLayout.value.OpenPopupPanel(datas, i);
 }
+
 </script>
 
 <template>

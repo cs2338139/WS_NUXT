@@ -7,16 +7,9 @@ const { locale, setLocale, t } = useI18n();
 useHead({
     title: t('pages.home.title'),
 })
+
 </script>
 
-<script>
-export default {
-    data() {
-        return {
-        };
-    },
-}; 345
-</script>
 
 <template>
 
@@ -99,12 +92,12 @@ export default {
             </PartTitle>
 
             <div class="flex flex-col justify-between max-w-4xl mx-auto mb-8">
-                <EventItem href="" img="" isNew="true">
+                <EventItem href="" img="" :isNew="true">
                     <template #name>象偶奇遇記A</template>
                     <template #place>國立臺灣文學館 兒童樂園</template>
                     <template #year>2022.07.21</template>
                 </EventItem>
-                <EventItem href="" img="" isNew="true">
+                <EventItem href="" img="" :isNew="true">
                     <template #name>象偶奇遇記A</template>
                     <template #place>國立臺灣文學館 兒童樂園</template>
                     <template #year>2022.07.21</template>
