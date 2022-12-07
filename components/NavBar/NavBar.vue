@@ -80,7 +80,7 @@ const popupEnable = ref(false);
         <hr class="border border-black" />
       </div>
     </button>
-    <NavPopup @close="ClosePopupPanel" v-if="popupEnable" @function="ChangeLang"> </NavPopup>
+    <NavPopup @close="ClosePopupPanel" v-if="popupEnable" @function="ChangeLang()"> </NavPopup>
   </div>
 </template>
 

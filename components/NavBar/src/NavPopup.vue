@@ -1,4 +1,5 @@
 <script setup>
+import HrefButton from "~~/components/ProjectPage/src/HrefButton.vue";
 
 </script>
 
@@ -11,6 +12,9 @@
       <div class="dev-black w-3/5 h-4/5 flex justify-between">
         <div class="bg-gray-300 h-72 w-96 border-2 border-black"></div>
         <div class=" h-142 w-120 border self-end">
+            <NavMenuItem href="/about"> {{ $t("nav.about") }}</NavMenuItem>
+            <NavMenuItem href="/achievement">  {{ $t("nav.achievement.title") }}</NavMenuItem>
+            <NavMenuItem href="/eventRecord">  {{ $t("nav.eventRecord") }}</NavMenuItem>
             <button @click="$emit('function')" class="px-4 py-3 text-2xl font-bold text-center bg-white border-2 border-black">
             {{ $t("nav.lang") }}
         </button>
