@@ -8,9 +8,7 @@ import NavMenu from "./src/NavMenu.vue";
 import NavPopup from "./src/NavPopup.vue";
 
 const { locale, setLocale } = useI18n();
-// const logoImage = ref("/public/Image/UI/LOGOsmall.svg");
 const logoImage = new URL('../../public/Image/UI/LOGOsmall.svg', import.meta.url).href;
-// const homeImage = new URL("../../assets/Image/UI/Home.png", import.meta.url).href;
 
 const navBar = ref();
 const narButton = ref();

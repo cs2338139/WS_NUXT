@@ -1,7 +1,5 @@
 <script setup>
 import FootMenuItem from "./src/FootMenuItem.vue";
-
-const logoImage = ref("~/public/Image/UI/LOGOlarge.svg");
 </script>
 
 <template>
@@ -9,7 +7,7 @@ const logoImage = ref("~/public/Image/UI/LOGOlarge.svg");
     <div class="bg-custom-0 parallel h-full">
       <div class="-parallel border-3 relative h-full">
         <div class="max-w-8xl flex flex-row justify-between h-full mx-auto my-0">
-          <img :src="logoImage" style="width:400px" class="self-end my-16" />
+          <img src="~/public/Image/UI/LOGOlarge.svg" style="width:400px" class="self-end my-16" />
 
           <div class="h-2/5 flex flex-col justify-between items-end self-center">
             <FootMenuItem href="">{{ $t('foot.copyright') }}</FootMenuItem>

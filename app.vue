@@ -14,7 +14,7 @@ import { gsap } from "gsap";
     <NuxtPage />
   </div>
 
-  <div class="relative z-10 -mt-footer">
+  <div class="relative -mt-footer">
     <FootBar />
   </div>
 </template>

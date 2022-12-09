@@ -4,6 +4,9 @@ import EventItem from ".././components/EventItem/EventItem.vue";
 import PartTitle from "~~/components/PartTitle/PartTitle.vue";
 import HrefBottom from "~~/components/HrefBottom/HrefBottom.vue";
 const { locale, setLocale, t } = useI18n();
+const ProjectItemImage1 = new URL("", import.meta.url).href;
+const ProjectItemImage2 = new URL("", import.meta.url).href;
+const ProjectItemImage3 = new URL("", import.meta.url).href;
 useHead({
   title: t("pages.home.title"),
 });
@@ -12,7 +15,7 @@ useHead({
 <template>
   <div>
     <!-- <div class="aspect-video wrap-8 w-full mb-10 bg-gray-300"> </div> -->
-    <img src="~/public/Image/Page_3D/Cover/3D_Cover.png" class="aspect-video wrap-8 w-full mb-10" />
+    <img src="~/public/Image/UI/KV_A.svg" class="aspect-video wrap-8 w-full mb-10" />
 
     <div class="wrap-6 mb-10">
       <PartTitle class="mt-0 mb-10 ml-0">
@@ -47,7 +50,7 @@ useHead({
       </PartTitle>
 
       <div class="inline-flex justify-between w-full mb-28">
-        <ProjectItem class="transform translate-y-32" href="/achievement/modelView" color="yellow" img="~/public/Image/Page_3D/Cover/3D_Cover.png">
+        <ProjectItem class="transform translate-y-32" href="/achievement/modelView" color="yellow" :img="ProjectItemImage1">
           <template #name>
             {{ $t("pages.home.achievement.content.0.title") }}
           </template>
@@ -55,7 +58,7 @@ useHead({
             {{ $t("pages.home.achievement.content.0.year") }}
           </template>
         </ProjectItem>
-        <ProjectItem class="transform translate-y-16" href="/achievement/hideWordsMan" color="blue">
+        <ProjectItem class="transform translate-y-16" href="/achievement/hideWordsMan" color="blue" :img="ProjectItemImage2">
           <template #name>
             {{ $t("pages.home.achievement.content.4.title") }}
           </template>
@@ -66,7 +69,7 @@ useHead({
             {{ $t("pages.home.achievement.content.4.year") }}
           </template>
         </ProjectItem>
-        <ProjectItem href="/achievement/birdsOfLife" color="red" img="~/public/Image/Page_bird/Cover/Bird_Cover.png">
+        <ProjectItem href="/achievement/birdsOfLife" color="red" :img="ProjectItemImage3">
           <template #name>
             {{ $t("pages.home.achievement.content.3.title") }}
           </template>
