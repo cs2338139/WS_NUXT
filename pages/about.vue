@@ -50,7 +50,7 @@ export default {
                 </div>
             </div>
 
-            <div class="w-5/12 bg-gray-300 h-162"> </div>
+            <img class="w-5/12 h-162" src="~/public/Image/UI/KV_B.svg">
         </div>
     </div>
 </template>

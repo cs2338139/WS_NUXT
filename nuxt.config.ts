@@ -29,6 +29,7 @@ export default defineNuxtConfig({
         },
       ],
     },
+    // baseURL: "/WS_NUXT/",
   },
   apollo: {
     clients: {
@@ -66,4 +67,7 @@ export default defineNuxtConfig({
     },
   },
   css: ["/assets/css/main.css"],
+  nitro: {
+    preset: "cloudflare",
+  },
 });

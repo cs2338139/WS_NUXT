@@ -1,15 +1,7 @@
 <script setup>
 import FootMenuItem from "./src/FootMenuItem.vue";
-</script>
 
-<script>
-export default {
-  data() {
-    return {
-      logoImage: "/assets/Image/UI/logo.png"
-    };
-  },
-};
+const logoImage = ref("~/public/Image/UI/LOGOlarge.svg");
 </script>
 
 <template>

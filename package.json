@@ -7,12 +7,16 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d .output/public",
+    "wrangler-dev":"npx wrangler dev .output/server/index.mjs --site .output/public --local",
+    "wrangler-publish":"npx wrangler publish"
+
   },
   "devDependencies": {
     "@nuxt/postcss8": "^1.1.3",
     "@nuxtjs/apollo": "^5.0.0-alpha.2",
     "@nuxtjs/i18n": "^8.0.0-beta.2",
+    "@nuxtjs/svg": "^0.4.0",
     "autoprefixer": "^10.4.12",
     "gh-pages": "^4.0.0",
     "nuxt": "3.0.0-rc.11",
