@@ -1,1 +1,0 @@
-import{v as o,o as n,e as r,f as s,r as a}from"./entry.d7e44dcd.js";const c={};function l(e,t){return n(),r("div",null,[s("button",{onClick:t[0]||(t[0]=d=>e.$emit("function")),class:"border-b border-black font-bold tracking-wider text-xl"},[a(e.$slots,"default")])])}const f=o(c,[["render",l]]);export{f as F};
