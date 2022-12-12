@@ -1,5 +1,5 @@
 <script setup>
-import FunctionButton from "~~/components/ProjectPage/src/FunctionButton.vue";
+import OpenButton from "~~/components/ProjectPage/src/OpenButton.vue";
 import Item4 from "~~/components/ProjectPage/src/Item4.vue";
 import modelPanelCategories from "~~/components/ProjectPage/src/modelPanelCategories.vue";
 
@@ -136,6 +136,7 @@ const itemsOfYear = ref([]);
 const viewMode = reactive({
   data: {
     buttonWord: t("pages.home.child.achievement.child.modelView.result.button.1"),
+    buttonIcon: "-",
     viewMore: true,
   },
 });
@@ -170,6 +171,7 @@ function SetItemOfYear() {
 function ViewSwitch() {
   if (viewMode.data.viewMore) {
     viewMode.data.viewMore = false;
+    viewMode.data.buttonIcon = "+";
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.result.button.0");
 
     for (let i = 0; i < itemsOfYear.value.length; i++) {
@@ -179,6 +181,7 @@ function ViewSwitch() {
     }
   } else {
     viewMode.data.viewMore = true;
+    viewMode.data.buttonIcon = "-";
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.result.button.1");
 
     for (let i = 0; i < itemsOfYear.value.length; i++) {
@@ -210,7 +213,9 @@ function SentData(i, index) {
       </div>
     </div>
     <div class="text-right mt-16">
-      <FunctionButton @function="ViewSwitch()">{{ viewMode.data.buttonWord }}</FunctionButton>
+      <OpenButton @function="ViewSwitch()"
+        >{{ viewMode.data.buttonWord }} <template #icon>{{ viewMode.data.buttonIcon }}</template></OpenButton
+      >
     </div>
   </div>
 </template>

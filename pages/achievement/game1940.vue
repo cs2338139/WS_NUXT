@@ -7,6 +7,13 @@ import Item2 from "~~/components/ProjectPage/src/Item2.vue";
 import Item3 from "~~/components/ProjectPage/src/Item3.vue";
 import ScreenShots from "~~/components/ProjectPage/src/ScreenShots.vue";
 
+const KV = new URL("../../public/Image/Page_1940/Cover/1940_Cover.jpg", import.meta.url).href;
+const p1 = new URL("../../public/Image/Page_1940/Portrait/1940_Portrait01.jpg", import.meta.url).href;
+const p2 = new URL("../../public/Image/Page_1940/Portrait/1940_Portrait03.png", import.meta.url).href;
+const p3 = new URL("../../public/Image/Page_1940/Portrait/1940_Portrait02.png", import.meta.url).href;
+
+const img = ref([]);
+
 const { locale, setLocale, t } = useI18n();
 useHead({
   title: t("pages.home.child.achievement.child.game1940.title"),
@@ -21,13 +28,16 @@ onMounted(() => {
 });
 
 function GetDate() {
+  img.value.push(p1);
+  img.value.push(p2);
+  img.value.push(p3);
   for (let i = 0; i < 3; i++) {
     let data = {
       img: "",
       name: "",
       words: [],
     };
-    data.img = null;
+    data.img = img.value[i];
     let name = t("pages.home.child.achievement.child.game1940.characters.content[" + i + "].name");
     let year = t("pages.home.child.achievement.child.game1940.characters.content[" + i + "].year");
 
@@ -53,7 +63,7 @@ function SentData(datas, i) {
 
 <template>
   <div>
-    <ProjectLayout ref="projectLayout">
+    <ProjectLayout ref="projectLayout" :img="KV">
       <template #title>{{ $t("pages.home.child.achievement.child.game1940.info.title") }}</template>
       <template #info>
         <PartItem>
@@ -108,15 +118,15 @@ function SentData(datas, i) {
         <PartItemNull>
           <template #title>{{ $t("pages.home.child.achievement.child.game1940.characters.title") }}</template>
           <div class="flex flex-wrap justify-start">
-            <Item2 @open="SentData(charactersData, 0)" class="mr-16" img="--">
+            <Item2 @open="SentData(charactersData, 0)" class="mr-16" :img="p1">
               <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.0.name") }}</template>
               <template #year>（{{ $t("pages.home.child.achievement.child.game1940.characters.content.0.year") }}）</template>
             </Item2>
-            <Item2 @open="SentData(charactersData, 1)" class="mr-16" img="--">
+            <Item2 @open="SentData(charactersData, 1)" class="mr-16" :img="p2">
               <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.1.name") }}</template>
               <template #year>（{{ $t("pages.home.child.achievement.child.game1940.characters.content.1.year") }}）</template>
             </Item2>
-            <Item2 @open="SentData(charactersData, 2)" img="--">
+            <Item2 @open="SentData(charactersData, 2)" :img="p3">
               <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.2.name") }}</template>
             </Item2>
           </div>
@@ -166,9 +176,15 @@ function SentData(datas, i) {
 
         <ScreenShots url="https://www.youtube.com/embed/7iWcglHSEQ0">
           <template #title>{{ $t("pages.home.child.achievement.child.game1940.screen.title") }}</template>
-          <div class="aspect-video mb-14 w-full bg-gray-300"></div>
-          <div class="aspect-video mb-14 w-full bg-gray-300"></div>
-          <div class="aspect-video mb-14 w-full bg-gray-300"></div>
+          <div class="mb-14 w-full bg-gray-300">
+            <img src="~/public/Image/Page_1940/Scene/1940_Scene01.png" alt="" />
+          </div>
+          <div class="mb-14 w-full bg-gray-300">
+            <img src="~/public/Image/Page_1940/Scene/1940_Scene03.png" alt="" />
+          </div>
+          <div class="mb-14 w-full bg-gray-300">
+            <img src="~/public/Image/Page_1940/Scene/1940_Scene06.png" alt="" />
+          </div>
         </ScreenShots>
       </template>
     </ProjectLayout>

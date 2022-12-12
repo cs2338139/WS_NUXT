@@ -5,9 +5,8 @@
     <button @click="$emit('function')">
      <div class="flex justify-center items-center ">
         <div class="text-xl font-bold tracking-wider border-b border-black mr-2"><slot /></div>
-        <div class="aspect-square w-12 bg-custom-0 rounded-full">
-          <!-- <ion-icon class="text-5xl flex justify-center items-center -rotate-45" name="arrow-forward-outline"></ion-icon> -->
-          <img class="" src="~/public/Image/UI/Arrow2.svg" alt="">
+        <div class="aspect-square w-12 bg-custom-0 rounded-full text-4xl ">
+            <slot name="icon"/>
         </div>
      </div>
     </button>

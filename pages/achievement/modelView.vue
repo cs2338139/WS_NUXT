@@ -5,6 +5,7 @@ import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue";
 import WriterPanel from "~~/components/ProjectPage/src/WriterPanel.vue";
 import ModelPanel from "~~/components/ProjectPage/src/ModelPanel.vue";
 
+const KV = new URL("../../public/Image/Page_3D/Cover/3D_Cover.png", import.meta.url).href;
 const { locale, setLocale, t } = useI18n();
 useHead({
   title: t("pages.home.child.achievement.child.modelView.title"),
@@ -20,7 +21,7 @@ function SentData(datas, i) {
 
 <template>
   <div>
-    <ProjectLayout ref="projectLayout">
+    <ProjectLayout ref="projectLayout" :img="KV">
       <template #title>{{ $t("pages.home.child.achievement.child.modelView.info.title") }}</template>
       <template #info>
         <PartItem>

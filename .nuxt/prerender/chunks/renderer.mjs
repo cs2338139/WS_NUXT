@@ -1,17 +1,17 @@
-import { createRenderer } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import { eventHandler, getQuery, appendHeader } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/h3/dist/index.mjs';
-import { joinURL } from 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/ufo/dist/index.mjs';
-import { u as useNitroApp, a as useRuntimeConfig } from './nitro-prerenderer.mjs';
-import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/node-fetch-native/dist/polyfill.mjs';
-import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/ohmyfetch/dist/node.mjs';
-import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/destr/dist/index.mjs';
-import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/radix3/dist/index.mjs';
-import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/unenv/runtime/fetch/index.mjs';
-import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/hookable/dist/index.mjs';
-import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/scule/dist/index.mjs';
-import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/ohash/dist/index.mjs';
-import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/unstorage/dist/index.mjs';
-import 'file://D:/Work/HTML/Project/WS_NUXTWordPress/node_modules/unstorage/dist/drivers/fs.mjs';
+import { createRenderer } from 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import { eventHandler, getQuery, appendHeader } from 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/h3/dist/index.mjs';
+import { joinURL } from 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/ufo/dist/index.mjs';
+import { u as useNitroApp, a as useRuntimeConfig } from './nitro/nitro-prerenderer.mjs';
+import 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/node-fetch-native/dist/polyfill.mjs';
+import 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/ohmyfetch/dist/node.mjs';
+import 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/destr/dist/index.mjs';
+import 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/radix3/dist/index.mjs';
+import 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/unenv/runtime/fetch/index.mjs';
+import 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/hookable/dist/index.mjs';
+import 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/scule/dist/index.mjs';
+import 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/ohash/dist/index.mjs';
+import 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/unstorage/dist/index.mjs';
+import 'file:///Users/jincheng/Projects/HTML/WS_NUXTWordPress/node_modules/unstorage/dist/drivers/fs.mjs';
 
 function defineRenderHandler(handler) {
   return eventHandler(async (event) => {
@@ -288,7 +288,7 @@ function publicAssetsURL(...path) {
   return path.length ? joinURL(publicBase, ...path) : publicBase;
 }
 
-const getClientManifest = () => import('./client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getClientManifest = () => import('./app/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
 const getSPARenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
   const options = {

@@ -1,5 +1,5 @@
 <script setup>
-import FunctionButton from "~~/components/ProjectPage/src/FunctionButton.vue";
+import OpenButton from "~~/components/ProjectPage/src/OpenButton.vue";
 import Item2 from "~~/components/ProjectPage/src/Item2.vue";
 
 const { locale, setLocale, t } = useI18n();
@@ -65,7 +65,6 @@ if (data.value?.posts) {
     en.push(dataEN);
   }
   for (let i = 0; i < 2; i++) {
-
     ch.push(data);
     en.push(data);
   }
@@ -85,6 +84,7 @@ const items = ref([]);
 const viewMode = reactive({
   data: {
     buttonWord: t("pages.home.child.achievement.child.modelView.literati.button.1"),
+    buttonIcon: "-",
     viewMore: true,
   },
 });
@@ -97,12 +97,14 @@ function ViewSwitch() {
   if (viewMode.data.viewMore) {
     viewMode.data.viewMore = false;
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.literati.button.0");
+    viewMode.data.buttonIcon = "+";
     for (let i = 5; i < items.value.length; i++) {
       items.value[i].View(false);
     }
   } else {
     viewMode.data.viewMore = true;
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.literati.button.1");
+    viewMode.data.buttonIcon = "-";
     for (let i = 0; i < items.value.length; i++) {
       items.value[i].View(true);
     }
@@ -119,7 +121,9 @@ function ViewSwitch() {
       </Item2>
     </div>
     <div class="text-right mt-16">
-      <FunctionButton @function="ViewSwitch()">{{ viewMode.data.buttonWord }}</FunctionButton>
+      <OpenButton @function="ViewSwitch()"
+        >{{ viewMode.data.buttonWord }} <template #icon>{{ viewMode.data.buttonIcon }}</template></OpenButton
+      >
     </div>
   </div>
 </template>

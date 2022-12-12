@@ -93,7 +93,9 @@ defineExpose({
 
 <template>
   <div>
-    <div class="aspect-video wrap-8 mb-14 w-full bg-gray-300"></div>
+    <div class="aspect-KV wrap-8 mb-14 w-full bg-gray-300">
+      <img :src="img" class="w-full">
+    </div>
 
     <div class="wrap-6 mb-10">
       <div class="mb-14 mt-0 ml-0 text-5xl font-bold">
@@ -116,4 +118,8 @@ defineExpose({
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.aspect-KV {
+    aspect-ratio: 1377 / 530;
+}
+</style>

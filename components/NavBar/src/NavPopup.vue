@@ -7,7 +7,9 @@ import HrefButton from "~~/components/NavBar/src/HrefButton.vue";
   <div class="bg-custom-0 fixed bottom-0 left-0 z-30 w-full h-screen">
     {{ imageUrl}}
     <div class="absolute right-0">
-      <button @click="$emit('close')" class="top-5 aspect-square w-12 m-4 text-4xl font-thin bg-white border border-black rounded-full">X</button>
+      <button @click="$emit('close')" class="top-5 aspect-square w-12 m-2 flex items-center justify-center bg-white border border-black rounded-full">
+        <ion-icon name="close-outline" class="text-4xl"></ion-icon>
+      </button>
     </div>
     <div class="flex items-center justify-center w-full h-full">
       <div class="h-4/5 flex justify-between w-3/5">

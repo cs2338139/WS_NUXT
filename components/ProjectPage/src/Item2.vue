@@ -22,7 +22,7 @@ defineExpose({
   <div class="mt-10 mb-4 w-40 mx-5 relative" v-show="view">
     <button @click="$emit('open')" class="w-full" v-if="enabled">
       <div>
-        <div class="aspect-square w-full rounded-full overflow-hidden border"><img :v-if="img != ''" :src="img" /></div>
+        <div class="aspect-square h-full rounded-full overflow-hidden border "><img :v-if="img != ''" :src="img" class="h-full" /></div>
       </div>
       <div class="text-center mt-2">
         <div class="mb-3 text-xl font-bold">

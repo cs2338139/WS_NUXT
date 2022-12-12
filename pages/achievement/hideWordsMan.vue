@@ -8,6 +8,8 @@ import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue";
 import Item from "~~/components/ProjectPage/src/Item.vue";
 import ScreenShots from "~~/components/ProjectPage/src/ScreenShots.vue";
 
+const KV = new URL("../../public/Image/", import.meta.url).href;
+
 const { locale, setLocale, t } = useI18n();
 useHead({
   title: t("pages.home.child.achievement.child.hideWordsMan.title"),
@@ -99,7 +101,7 @@ function SentData(datas, i) {
 
 <template>
   <div>
-    <ProjectLayout ref="projectLayout">
+    <ProjectLayout ref="projectLayout" :img="KV">
       <template #title>{{ $t("pages.home.child.achievement.child.hideWordsMan.info.title") }}</template>
       <template #info>
         <PartItem3>
