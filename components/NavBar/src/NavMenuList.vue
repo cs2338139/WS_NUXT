@@ -7,7 +7,7 @@ defineProps({
 
 <template>
   <li class="group text-center">
-    <NuxtLink :to="href">
+    <NuxtLink :to="localePath(href)">
       <div class="text-2xl px-4 py-3 text-center text-black">
         <slot name="menuName"> </slot>
       </div>

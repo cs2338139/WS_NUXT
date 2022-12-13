@@ -1,0 +1,24 @@
+{
+	"files": [
+		{
+			"path": "lang/zh.json",
+			"bookmarks": [
+				{
+					"line": 583,
+					"column": 24,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "lang/en.json",
+			"bookmarks": [
+				{
+					"line": 475,
+					"column": 24,
+					"label": ""
+				}
+			]
+		}
+	]
+}

@@ -474,8 +474,8 @@
           }
         },
         "eventRecord": {
-          "title": "Event Record｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
-          "info": {},
+          "title": "Event｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+          "info": { "title": "Event" , "button": "Next Page" },
           "child": {
             "title": "A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
             "info": {}

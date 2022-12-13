@@ -1,25 +1,27 @@
 <script setup>
-import { useI18n } from "vue-i18n";
 import Logo from "./src/Logo.vue";
 import MenuListItem from "./src/MenuListItem.vue";
 import NavMenuList from "./src/NavMenuList.vue";
 import NavMenuItem from "./src/NavMenuItem.vue";
 import NavMenu from "./src/NavMenu.vue";
 import NavPopup from "./src/NavPopup.vue";
+import { useI18n } from "vue-i18n";
 
 const { locale, setLocale } = useI18n();
-const logoImage = new URL('../../public/Image/UI/LOGOsmall.svg', import.meta.url).href;
+const logoImage = new URL("../../public/Image/UI/LOGOsmall.svg", import.meta.url).href;
 
 const navBar = ref();
 const narButton = ref();
 
 function ChangeLang() {
-  if (this.locale === "en") {
-    this.setLocale("zh");
-  } else if (this.locale === "zh") {
-    this.setLocale("en");
+  console.log(locale.value);
+  if (locale.value === "en") {
+    setLocale("zh");
+  } else if (locale.value === "zh") {
+    setLocale("en");
   }
 }
+
 
 function ClosePopupPanel() {
   popupEnable.value = false;
@@ -39,7 +41,6 @@ function onScroll() {
 }
 
 function OpenNavPopup() {
-  // console.log(navBar.value.clientHeight);
   popupEnable.value = true;
   document.body.style.overflow = "hidden";
 }

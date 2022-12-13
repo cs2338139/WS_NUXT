@@ -4,9 +4,10 @@ import EventItem from ".././components/EventItem/EventItem.vue";
 import PartTitle from "~~/components/PartTitle/PartTitle.vue";
 import HrefBottom from "~~/components/HrefBottom/HrefBottom.vue";
 const { locale, setLocale, t } = useI18n();
-const ProjectItemImage1 = new URL("", import.meta.url).href;
-const ProjectItemImage2 = new URL("", import.meta.url).href;
-const ProjectItemImage3 = new URL("", import.meta.url).href;
+const ProjectItemImage1 = new URL("../public/Image/Page_3D/Cover/3D_Cover2.png", import.meta.url).href;
+const ProjectItemImage2 = new URL("../public/Image/Page_hideWordsMan/Cover/KV1_1.png", import.meta.url).href;
+const ProjectItemImage3 = new URL("../public/Image/Page_bird/Cover/Bird_Cover2.png", import.meta.url).href;
+
 useHead({
   title: t("pages.home.title"),
 });

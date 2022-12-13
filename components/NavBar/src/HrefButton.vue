@@ -7,7 +7,7 @@ const props = defineProps({
 
 <template>
   <div>
-    <NuxtLink :to="href">
+    <NuxtLink :to="localePath(href)">
       <template v-if="locale === 'zh'">
         <span class="text-2xl text-custom-2 -tracking-wider">
           <slot name="en"></slot>

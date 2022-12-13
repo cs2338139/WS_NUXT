@@ -21,7 +21,10 @@ export default defineNuxtConfig({
         },
       ],
       viewport: "width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no",
-      meta: [{ charset: "utf-8" }, { "http-equiv": "Content-Security-Policy", content: "upgrade-insecure-requests" }],
+      meta: [
+        { charset: "utf-8" }
+        // , { "http-equiv": "Content-Security-Policy", content: "upgrade-insecure-requests" }
+      ],
       link: [
         {
           rel: "icon",
@@ -34,7 +37,7 @@ export default defineNuxtConfig({
   apollo: {
     clients: {
       default: {
-        httpEndpoint: "http://3.37.2.217/graphql",
+        httpEndpoint: "https://wp.nmtl-ws.com/graphql",
       },
     },
   },

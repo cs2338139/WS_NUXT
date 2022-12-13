@@ -13,7 +13,7 @@ defineProps({
             </div>
             <div class="border-2 border-pink-300 w-3 h-3 absolute right-0 top-0 origin-bottom-left rotate-45"></div>
         </div> -->
-        <NuxtLink :to="href" target="_blank" class="text-lg border-2  border-black py-1 px-6 ">
+        <NuxtLink :to="localePath(href)" target="_blank" class="text-lg border-2  border-black py-1 px-6 ">
             <slot />
         </NuxtLink>
     </div>

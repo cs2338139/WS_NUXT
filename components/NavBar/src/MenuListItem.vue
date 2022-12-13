@@ -14,7 +14,7 @@ export default {
 
 <template>
   <li class="mx-0 my-3">
-    <NuxtLink :to="href" class="">
+    <NuxtLink :to="localePath(href)" class="">
       <div class="px-4 text-2xl text-black">
         <slot></slot>
       </div>

@@ -8,11 +8,9 @@ defineProps({
 </script>
 
 <template>
-  <RouterLink :to="href" class="inline-block align-middle">
+  <NuxtLink :to="localePath(href)" class="inline-block align-middle">
     <img :src="img" :style="width" />
-  </RouterLink>
+  </NuxtLink>
 </template>
 
-<style>
-
-</style>
+<style></style>
