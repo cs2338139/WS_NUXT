@@ -1,12 +1,102 @@
 <script setup>
 import ProjectItem_3 from "~~/components/ProjectItem_3/ProjectItem_3.vue";
 import PartTitle from "~~/components/PartTitle/PartTitle.vue";
-import PageButton from "~~/components/PageButton/PageButton.vue";
+// import PageButton from "~~/components/PageButton/PageButton.vue";
 
 const { locale, setLocale, t } = useI18n();
 useHead({
   title: t("pages.home.child.eventRecord.title"),
 });
+
+const variables = { limit: 500 };
+const query = gql`
+  query getModel($limit: Int!) {
+    posts(where: { categoryName: "Events" }, first: $limit) {
+      nodes {
+        slug
+        eventRecord {
+          date
+          enTitle
+          info
+          place
+          enPlace
+          title
+          image1 {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+`;
+const { data: data } = await useAsyncQuery(query, variables);
+const { posts: events } = data.value;
+const ch = reactive([]);
+const en = reactive([]);
+const current = reactive([]);
+if (data.value?.posts) {
+  for (let i = 0; i < events.nodes.length; i++) {
+    let dataCH = {
+      img: "",
+      title: "",
+      date: "",
+      place: "",
+      slug: "",
+    };
+
+    dataCH.img = events.nodes[i].eventRecord.image1.sourceUrl;
+    dataCH.title = events.nodes[i].eventRecord.title;
+    dataCH.date = events.nodes[i].eventRecord.date;
+    dataCH.place = events.nodes[i].eventRecord.place;
+    dataCH.slug = events.nodes[i].slug;
+
+    ch.push(dataCH);
+
+    let dataEN = {
+      img: "",
+      title: "",
+      date: "",
+      place: "",
+      slug: "",
+    };
+
+    dataEN.img = events.nodes[i].eventRecord.image1.sourceUrl;
+    dataEN.title = events.nodes[i].eventRecord.enTitle;
+    dataEN.date = events.nodes[i].eventRecord.date;
+    dataEN.place = events.nodes[i].eventRecord.enPlace;
+    dataEN.slug = events.nodes[i].slug;
+
+    en.push(dataEN);
+  }
+}
+
+if (locale.value === "en") {
+  Object.assign(current, en);
+} else if (locale.value === "zh") {
+  Object.assign(current, ch);
+}
+
+// const items = ref([]);
+// const currentPage = ref(0);
+
+// onMounted(() => {
+//   ViewSwitch();
+// });
+
+// function ViewSwitch() {
+//   let start = currentPage.value * 5;
+//   let end = currentPage.value * 5 + 5;
+
+//   console.log(start);
+//   console.log(end);
+//   for (let i = 0; i < items.value.length; i++) {
+//     if (i >= start && i < end) {
+//       items.value[i].style.display = "block";
+//     } else {
+//       items.value[i].style.display = "none";
+//     }
+//   }
+// }
 </script>
 
 <template>
@@ -17,16 +107,18 @@ useHead({
     </PartTitle>
 
     <div class="flex flex-col justify-between mx-auto mb-10">
-      <ProjectItem_3 href="/achievement/modelView" :isNew="true" v-for="i in 5">
-        <template #name>{{ $t("pages.home.child.achievement.info.content.0.title") }}</template>
-        <template #date>{{ $t("pages.home.child.achievement.info.content.0.year") }}</template>
-        <template #place>國立台灣文學館 兒童樂園</template>
-      </ProjectItem_3>
+      <div ref="items" v-for="(event, index) in current">
+        <ProjectItem_3 :href="'/eventRecord/' + event.slug" :img="event.img" :index="index">
+          <template #name>{{ event.title }}</template>
+          <template #date>{{ event.date }}</template>
+          <template #place>{{ event.place }}</template>
+        </ProjectItem_3>
+      </div>
     </div>
 
-    <PageButton
+    <!-- <PageButton
       ><template #ButtonName>{{ t("pages.home.child.eventRecord.info.button") }}</template>
-    </PageButton>
+    </PageButton> -->
   </div>
 </template>
 

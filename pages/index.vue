@@ -89,7 +89,7 @@ useHead({
 
     <div class="wrap-6">
       <PartTitle class="mt-0 mb-5 ml-0">
-        <template #en>Events</template>
+        <template #en>Event</template>
         <template #title>{{ $t("pages.home.Event.title") }}</template>
       </PartTitle>
 

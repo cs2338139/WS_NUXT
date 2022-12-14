@@ -1,9 +1,12 @@
 <script setup>
+import { number } from "@intlify/core-base";
+
 defineProps({
   isNew: Boolean,
+  index: Number,
   href: String,
-  img: String,
 
+  img: String,
   name: String,
   date: String,
   place: String,
@@ -12,7 +15,7 @@ defineProps({
 
 <template>
   <div class="px-40 relative mb-12">
-    <div class="parallel right-52 -top-4 bg-custom-0 absolute p-1 text-lg text-center border border-black" v-if="isNew">NEW!</div>
+    <div class="parallel right-52 -top-4 bg-custom-0 absolute p-1 text-lg text-center border border-black" v-if="index <2">NEW!</div>
 
     <NuxtLink :to="localePath(href)" class="rounded-3xl h-52 flex w-full p-4 border border-black">
       <div class="rounded-3xl w-1/4 h-full overflow-hidden bg-gray-300">
