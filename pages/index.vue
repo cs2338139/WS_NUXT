@@ -11,6 +11,74 @@ const ProjectItemImage3 = new URL("../public/Image/Page_bird/Cover/Bird_Cover2.p
 useHead({
   title: t("pages.home.title"),
 });
+
+const variables = { limit: 500 };
+const query = gql`
+  query getModel($limit: Int!) {
+    posts(where: { categoryName: "Events" }, first: $limit) {
+      nodes {
+        slug
+        eventRecord {
+          date
+          enTitle
+          info
+          place
+          enPlace
+          title
+          image1 {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+`;
+const { data: data } = await useAsyncQuery(query, variables);
+const { posts: events } = data.value;
+const ch = reactive([]);
+const en = reactive([]);
+const current = reactive([]);
+if (data.value?.posts) {
+  for (let i = 0; i < events.nodes.length; i++) {
+    let dataCH = {
+      img: "",
+      title: "",
+      date: "",
+      place: "",
+      slug: "",
+    };
+
+    dataCH.img = events.nodes[i].eventRecord.image1.sourceUrl;
+    dataCH.title = events.nodes[i].eventRecord.title;
+    dataCH.date = events.nodes[i].eventRecord.date;
+    dataCH.place = events.nodes[i].eventRecord.place;
+    dataCH.slug = events.nodes[i].slug;
+
+    ch.push(dataCH);
+
+    let dataEN = {
+      img: "",
+      title: "",
+      date: "",
+      place: "",
+      slug: "",
+    };
+
+    dataEN.img = events.nodes[i].eventRecord.image1.sourceUrl;
+    dataEN.title = events.nodes[i].eventRecord.enTitle;
+    dataEN.date = events.nodes[i].eventRecord.date;
+    dataEN.place = events.nodes[i].eventRecord.enPlace;
+    dataEN.slug = events.nodes[i].slug;
+
+    en.push(dataEN);
+  }
+}
+
+if (locale.value === "en") {
+  Object.assign(current, en);
+} else if (locale.value === "zh") {
+  Object.assign(current, ch);
+}
 </script>
 
 <template>
@@ -94,31 +162,13 @@ useHead({
       </PartTitle>
 
       <div class="flex flex-col justify-between max-w-4xl mx-auto mb-8">
-        <EventItem href="" img="" :isNew="true">
-          <template #name>象偶奇遇記A</template>
-          <template #place>國立臺灣文學館 兒童樂園</template>
-          <template #year>2022.07.21</template>
-        </EventItem>
-        <EventItem href="" img="" :isNew="true">
-          <template #name>象偶奇遇記A</template>
-          <template #place>國立臺灣文學館 兒童樂園</template>
-          <template #year>2022.07.21</template>
-        </EventItem>
-        <EventItem href="" img="">
-          <template #name>象偶奇遇記A</template>
-          <template #place>國立臺灣文學館 兒童樂園</template>
-          <template #year>2022.07.21</template>
-        </EventItem>
-        <EventItem href="" img="">
-          <template #name>象偶奇遇記A</template>
-          <template #place>國立臺灣文學館 兒童樂園</template>
-          <template #year>2022.07.21</template>
-        </EventItem>
-        <EventItem href="" img="">
-          <template #name>象偶奇遇記A</template>
-          <template #place>國立臺灣文學館 兒童樂園</template>
-          <template #year>2022.07.21</template>
-        </EventItem>
+        <div ref="items" class="mb-8" v-for="(event, index) in current">
+          <EventItem :href="'/eventRecord/' + event.slug" :img="event.img" :index="index">
+            <template #name>{{ event.title }}</template>
+            <template #date>{{ event.date }}</template>
+            <template #place>{{ event.place }}</template>
+          </EventItem>
+        </div>
       </div>
       <div class="text-center">
         <HrefBottom href="/eventRecord/">{{ $t("pages.home.Event.button") }}</HrefBottom>

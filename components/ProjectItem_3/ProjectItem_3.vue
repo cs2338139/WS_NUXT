@@ -2,14 +2,9 @@
 import { number } from "@intlify/core-base";
 
 defineProps({
-  isNew: Boolean,
   index: Number,
   href: String,
-
   img: String,
-  name: String,
-  date: String,
-  place: String,
 });
 </script>
 
