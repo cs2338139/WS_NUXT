@@ -21,8 +21,6 @@ function ChangeLang() {
     setLocale("en");
   }
 }
-
-
 function ClosePopupPanel() {
   popupEnable.value = false;
   document.body.style.overflow = "scroll";

@@ -19,6 +19,16 @@
 					"label": ""
 				}
 			]
+		},
+		{
+			"path": "components/ProjectItem_4/ProjectItem_4.vue",
+			"bookmarks": [
+				{
+					"line": 8,
+					"column": 15,
+					"label": ""
+				}
+			]
 		}
 	]
 }

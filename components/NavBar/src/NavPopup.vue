@@ -1,6 +1,7 @@
 <script setup>
 import HrefButton from "~~/components/NavBar/src/HrefButton.vue";
-
+import { useI18n } from "vue-i18n";
+const { locale, setLocale } = useI18n();
 </script>
 
 <template>
@@ -14,7 +15,8 @@ import HrefButton from "~~/components/NavBar/src/HrefButton.vue";
     <div class="flex items-center justify-center w-full h-full">
       <div class="h-4/5 flex justify-between w-3/5">
         <!-- <div class="h-72 w-96 bg-gray-300 border-2 border-black"></div> -->
-        <img src="~/public/Image/UI/LOGOlarge.svg" style="width:400px" class="h-72 w-full" />
+        <img src="~/public/Image/UI/LOGOlargeCH.svg" style="width:400px" class="h-72 w-full" v-if="locale === 'zh'" />
+        <img src="~/public/Image/UI/LOGOlargeEN.svg" style="width:400px" class="h-72 w-full" v-if="locale === 'en'" />
         <div class="h-142 w-120 self-end">
           <div class="h-100 flex flex-col items-start justify-between">
             <HrefButton href="/about" @click="$emit('close')">

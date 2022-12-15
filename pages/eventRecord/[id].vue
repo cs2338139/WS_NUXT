@@ -2,6 +2,7 @@
 import PartItem from "~~/components/ProjectPage/src/PartItem.vue";
 import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue";
 import ProjectItem_4 from "~~/components/ProjectItem_4/ProjectItem_4.vue";
+import HrefBottom from "~~/components/HrefBottom/HrefBottom.vue";
 const route = useRoute();
 const { id } = route.params;
 const { locale, setLocale, t } = useI18n();
@@ -51,8 +52,10 @@ const ch = ref();
 const en = ref();
 const current = ref();
 if (data.value?.posts) {
+  let found = false;
   for (let i = 0; i < events.nodes.length; i++) {
     if (id === events.nodes[i].slug) {
+      found = true;
       let dataCH = {
         img: [],
         title: "",
@@ -107,9 +110,10 @@ if (data.value?.posts) {
       ch.value = dataCH;
       en.value = dataEN;
       break;
-    } else {
-      await navigateTo('/404');
     }
+  }
+  if (found === false) {
+    await navigateTo("/404");
   }
 }
 
@@ -117,6 +121,16 @@ if (locale.value === "en") {
   Object.assign(current, en);
 } else if (locale.value === "zh") {
   Object.assign(current, ch);
+}
+
+function CheckAbout(name) {
+  for (let i = 0; i < current.value.about.length; i++) {
+    if (current.value.about[i] === name) {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 const img = ref();
@@ -128,7 +142,7 @@ onMounted(() => {
 });
 function MoveImage(move) {
   if (move === "next") {
-    if (currentImgIndex.value + 1 <= img.value.length) {
+    if (currentImgIndex.value + 1 >= img.value.length) {
       currentImgIndex.value = 0;
     } else {
       currentImgIndex.value++;
@@ -144,6 +158,8 @@ function MoveImage(move) {
 }
 
 function ViewImage(j) {
+  if (currentImgIndex.value != j) currentImgIndex.value = j;
+
   for (let i = 0; i < img.value.length; i++) {
     if (i === j) {
       img.value[i].style.display = "block";
@@ -157,12 +173,24 @@ function ViewImage(j) {
 </script>
 
 <template>
-  <div class="wrap-8">
-    <div class="aspect-KV w-full bg-black mb-5 flex justify-center items-center">
-      <img v-for="img in current.img" :src="img" class="h-full" ref="img" />
-    </div>
-    <div class="flex mb-14 justify-center">
-      <button class="w-3 border aspect-square border-black rounded-full mx-1" ref="imgButton" @click="ViewImage(index)" v-for="(img, index) in current.img"></button>
+  <div class="wrap-6">
+    <div>
+      <div class="aspect-video w-full bg-black mb-5 flex justify-center items-center">
+        <div class="absolute flex items-center justify-between w-full" v-if="current.img.length > 1">
+          <button @click="MoveImage('prev')" class="aspect-square flex items-center justify-center w-12 m-2 bg-white border border-black">
+            <ion-icon name="arrow-back-outline" class="text-4xl"></ion-icon>
+          </button>
+          <button @click="MoveImage('next')" class="aspect-square flex items-center justify-center w-12 m-2 bg-white border border-black">
+            <ion-icon name="arrow-forward-outline" class="text-4xl"></ion-icon>
+          </button>
+        </div>
+
+        <img v-for="img in current.img" :src="img" class="h-full" ref="img" />
+      </div>
+
+      <div class="flex mb-14 justify-center" v-if="current.img.length > 1">
+        <button class="w-3 border aspect-square border-black rounded-full mx-1" ref="imgButton" @click="ViewImage(index)" v-for="(img, index) in current.img"></button>
+      </div>
     </div>
 
     <PartItem>
@@ -175,43 +203,32 @@ function ViewImage(j) {
 
     <PartItemNull>
       <template #title>相關專案</template>
-      <div class="flex flex-col justify-between mx-auto mb-10">
+      <div class="flex flex-col justify-between mx-auto mb-10" v-if="CheckAbout('3D掃描藏品與建模計畫')">
         <ProjectItem_4 href="/achievement/modelView" :img="p1">
           <template #name>{{ $t("pages.home.child.achievement.info.content.0.title") }}</template>
-          <template #year>{{ $t("pages.home.child.achievement.info.content.0.year") }}</template>
-          <template #word>{{ $t("pages.home.child.achievement.info.content.0.words.0") }}</template>
         </ProjectItem_4>
-        <ProjectItem_4 href="/achievement/hideWordsMan" :img="p2">
+        <ProjectItem_4 href="/achievement/hideWordsMan" :img="p2" v-if="CheckAbout('藏字人')">
           <template #name>{{ $t("pages.home.child.achievement.info.content.4.title") }}</template>
           <template #info>{{ $t("pages.home.child.achievement.info.content.4.info") }}</template>
-          <template #year>{{ $t("pages.home.child.achievement.info.content.4.year") }}</template>
-          <template #word>{{ $t("pages.home.child.achievement.info.content.4.words.0") }}</template>
         </ProjectItem_4>
-        <ProjectItem_4 href="/achievement/birdsOfLife" :img="p3">
+        <ProjectItem_4 href="/achievement/birdsOfLife" :img="p3" v-if="CheckAbout('生命之鳥')">
           <template #name>{{ $t("pages.home.child.achievement.info.content.3.title") }}</template>
           <template #info>{{ $t("pages.home.child.achievement.info.content.3.info") }}</template>
-          <template #year>{{ $t("pages.home.child.achievement.info.content.3.year") }}</template>
-          <template #word>{{ $t("pages.home.child.achievement.info.content.3.words.0") }}</template>
         </ProjectItem_4>
-        <ProjectItem_4 href="/achievement/game1940" :img="p4">
+        <ProjectItem_4 href="/achievement/game1940" :img="p4" v-if="CheckAbout('1940')">
           <template #name>{{ $t("pages.home.child.achievement.info.content.2.title") }}</template>
           <template #info>{{ $t("pages.home.child.achievement.info.content.2.info") }}</template>
-          <template #year>{{ $t("pages.home.child.achievement.info.content.2.year") }}</template>
-          <template #word>{{ $t("pages.home.child.achievement.info.content.2.words.0") }}</template>
         </ProjectItem_4>
-        <ProjectItem_4 href="/achievement/islandofBaku" :img="p5">
+        <ProjectItem_4 href="/achievement/islandofBaku" :img="p5" v-if="CheckAbout('夢獸之島')">
           <template #name>{{ $t("pages.home.child.achievement.info.content.1.title") }}</template>
           <template #info>{{ $t("pages.home.child.achievement.info.content.1.info") }}</template>
-          <template #year>{{ $t("pages.home.child.achievement.info.content.1.year") }}</template>
-          <template #word>{{ $t("pages.home.child.achievement.info.content.1.words.0") }}</template>
         </ProjectItem_4>
+      </div>
+      <div class="text-center">
+        <HrefBottom href="/achievement/">{{ $t("pages.home.achievement.button") }}</HrefBottom>
       </div>
     </PartItemNull>
   </div>
 </template>
 
-<style scoped>
-.aspect-KV {
-  aspect-ratio: 1377 / 530;
-}
-</style>
+<style scoped></style>

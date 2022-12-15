@@ -200,11 +200,17 @@ function SentData(datas, i) {
           </div>
         </PartItemNull>
 
-        <ScreenShots url="">
+        <ScreenShots url="https://www.youtube.com/embed/7iWcglHSEQ0">
           <template #title>{{ $t("pages.home.child.achievement.child.hideWordsMan.screen.title") }}</template>
-          <div class="aspect-video mb-14 w-full bg-gray-300"></div>
-          <div class="aspect-video mb-14 w-full bg-gray-300"></div>
-          <div class="aspect-video mb-14 w-full bg-gray-300"></div>
+          <div class="mb-14 w-full bg-gray-300">
+            <img src="~/public/Image/Page_hideWordsMan/Scene/game_image_01.png" alt="" />
+          </div>
+          <div class="mb-14 w-full bg-gray-300">
+            <img src="~/public/Image/Page_hideWordsMan/Scene/game_image_02.png" alt="" />
+          </div>
+          <div class="mb-14 w-full bg-gray-300">
+            <img src="~/public/Image/Page_hideWordsMan/Scene/game_image_03.png" alt="" />
+          </div>
         </ScreenShots>
       </template>
     </ProjectLayout>

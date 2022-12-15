@@ -84,7 +84,8 @@ if (locale.value === "en") {
 <template>
   <div>
     <!-- <div class="aspect-video wrap-8 w-full mb-10 bg-gray-300"> </div> -->
-    <img src="~/public/Image/UI/KV_A.svg" class="aspect-video wrap-8 w-full mb-10" />
+    <img src="~/public/Image/UI/KV_A.svg" class="aspect-video wrap-8 w-full mb-10" v-if="locale === 'zh'" />
+    <img src="~/public/Image/UI/KV_Aen.svg" class="aspect-video wrap-8 w-full mb-10" v-if="locale === 'en'" />
 
     <div class="wrap-6 mb-10">
       <PartTitle class="mt-0 mb-10 ml-0">
