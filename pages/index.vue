@@ -98,14 +98,8 @@ if (locale.value === "en") {
           {{ $t("pages.home.info.title2") }}
         </div>
         <div class="mb-3">
-          {{ $t("pages.home.info.content.0") }}<br />
+          {{ $t("pages.home.info.content.0") }}<br /><br />
           {{ $t("pages.home.info.content.1") }}<br />
-          {{ $t("pages.home.info.content.2") }}<br />
-          {{ $t("pages.home.info.content.3") }}<br />
-          {{ $t("pages.home.info.content.4") }}<br />
-          {{ $t("pages.home.info.content.5") }}<br />
-          {{ $t("pages.home.info.content.4") }}<br />
-          {{ $t("pages.home.info.content.6") }}<br />
         </div>
         <div class="text-right">
           <HrefBottom href="/about">{{ $t("pages.home.info.button") }}</HrefBottom>

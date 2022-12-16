@@ -41,8 +41,6 @@ export default {
                     {{ $t('pages.home.child.about.info.content.0') }}
                     <br> <br>
                     {{ $t('pages.home.child.about.info.content.1') }}
-                    <br> <br>
-                    {{ $t('pages.home.child.about.info.content.2') }}
                 </div>
                 <div class="text-right">
                     <HrefBottom href="/achievement/">{{ $t('pages.home.achievement.button')

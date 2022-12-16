@@ -8,7 +8,7 @@
         "islandOfBaku": "Island of Baku",
         "game1940": "1940",
         "birdsOfLife": "Birds of Life",
-        "hideWordsMan": "Hide Words Man"
+        "hideWordsMan": "Introduction of Demon-Hunting Character Capturers"
       }
     },
     "eventRecord": "Event Record",
@@ -21,13 +21,8 @@
         "title": "About the Project",
         "title2": "‘This project focuses on promoting the collections in the various museums in Taiwan by translating the collections into simple stories, making them more accessible to the public.’",
         "content": [
-          "In this project, we scanned the collections into three-dimensional models as the foundation to raise the open calls to the public.",
-          "The agencies offer the collections as inspiration and elements,",
-          "transforming them into different stories. ",
-          "Eventually,",
-          " it takes the values of the National Museum of Taiwan Literature closer to the public through VR experience,",
-          "online games, somatosensory interaction games. ",
-          "We hope the public will be familiarized with these Taiwan authors through such edutainment devices."
+          "The purpose of this project, hosted by the National Museum of Taiwan Literature in response to the Culture and Technology Program by the Ministry of Culture, is to make literature more accessible to Taiwanese people through the interdisciplinary integration of literary collections with digital technology.",
+          "This project features the following five digital works: “3D Scanning and Modeling Project,” digital game “1940,” “Bird of Life,” “Island of Dreaming Beasts,” and “Demon-Hunting Character Capturers.”"
         ],
         "button": "Read more"
       },
@@ -55,9 +50,9 @@
             "year": "2018-2020"
           },
           {
-            "title": "Hide Words Man",
-            "info": "digital picture book with interactive game",
-            "year": "2018-2022"
+            "title": "Demon-Hunting Character Capturers",
+            "info": "A somatosensory interactive game",
+            "year": "2021-2022"
           }
         ],
         "button": "Explore All Project"
@@ -72,9 +67,8 @@
           "info": {
             "title": "About the Project",
             "content": [
-              "Digital game development with three-dimension scanning and modeling project is one of the main projects Taiwan Xing Juan -demonstration project of the museum.  This project focuses on promoting the collections in the various museums in Taiwan by translating the collections into simple stories, making them more accessible to the public.",
-              "In this project, we scanned the collections into three-dimensional models as the foundation to raise the open calls to the public.  The agencies offer the collections as inspiration and elements, transforming them into different stories. Eventually, it takes the values of the National Museum of Taiwan Literature closer to the public through VR experience, online games, somatosensory interaction games. We hope the public will be familiarized with these Taiwan authors through such edutainment devices.",
-              "The project includes four sub-projects: The digital games “1940”, “Birds of Life” and “Island of Baku”, and the project of three-dimensional scanning and modeling"
+              "The purpose of this project, hosted by the National Museum of Taiwan Literature in response to the Culture and Technology Program by the Ministry of Culture, is to make literature more accessible to Taiwanese people through the interdisciplinary integration of literary collections with digital technology.",
+              "This project features the following five digital works: “3D Scanning and Modeling Project,” digital game “1940,” “Bird of Life,” “Island of Dreaming Beasts,” and “Demon-Hunting Character Capturers.”"
             ],
             "button": "Explore All Project"
           }
@@ -113,9 +107,10 @@
                 ]
               },
               {
-                "title": "Hide Words Man",
-                "info": "digital picture book with interactive game",
-                "year": "2018-2022"
+                "title": "Introduction of Demon-Hunting Character Capturers",
+                "info": "體感互動遊戲",
+                "year": "2021-2022",
+                "words": ["This game is inspired by the wooden statue of Mazu created by Li Hsian-chang and uses Taiwanese Folk Literature Collection for the game context. "]
               }
             ]
           },
@@ -127,15 +122,18 @@
                 "about": {
                   "title": "About the Project",
                   "content": [
-                    "Through 3D scanning and modeling of cultural relics, we hope to promote Taiwanese literature. In accordance with the Ministry of Culture's “Principles of 3D Models of Cultural Relics in Museum Collections”, carried out the 3D scanning and modeling on important writer’s collections of NMTL. It will be implemented from 2018 for a total of three years. The project scanned 51 NMTL collections in the first year, 30 collections in the second year, and 20 collections in the third year, a total of 29 important Taiwan authors and 101 items."
+                    "To digitally enliven the museum collections and promote Taiwanese literature, 3D scanning and modeling were employed. This project, which started in 2018, involves the 3D scanning and modeling of major Taiwanese writers’ collections in National Museum of Taiwan Literature in accordance with the Ministry of Culture’s Principles for Making 3D Models of Cultural Relics in Museum Collections.",
+                    "In the first (2018), second (2019), third (2020), fourth (2021), and fifth (2022) years of the project, 51, 30, 20, 12, and 12 historical texts, respectively, from 37 major Taiwanese writers were scanned."
                   ]
                 },
                 "introduction": {
                   "title": "Project Introduction",
                   "content": [
-                    "The list of authors for the first year includes He Fan, Chou Ting-shan, Lin Hai-yin, Yao Yi-wei, Chang Shen-chieh, Hsu Ping-ting, Yeh Shih-tao, Liu Na-ou, Long Ying-zong. The picks for 3D scanning are the authors’ personal belongings and gifts from friends. Also, this year scanned forty elephant collections from Lin Hai-yin.",
-                    "The second year scanned the personal belongings of Echo Chan, Wang Kai-yun, Chu Hsi-ning, Ai Wen, Wu Ying-tao, Lee Kuei-shien, Lin Hai-yin, Cecelia Zhang, Chen Chi-mao, Yang Yun-ping, Ye Di, Zhan Zuo-zhou, Liu Mu-sha,Long Ying-zong, Long Ying-zong, Chûng Lî-fò, Wei Cing-de.",
-                    "And the third year scanned the personal belongings and the work tools of Echo Chan, Wang Kai-yun, Sima Zhongyuan, Chu Hsi-ning, Wu Yen-sheng, Chou Ting-shan, Huang Te-shih, Yang Yun-ping, Yeh Shih-tao, Chao Yun, Loā Hô, Wei Cing-de."
+                    "The list of authors for the first year (2018) includes He Fan, Chou Ting-shan, Lin Hai-yin, Yao Yi-wei, Chang Shen-chieh, Hsu Ping-ting, Yeh Shih-tao, Liu Na-ou, Long Ying-zong. The picks for 3D scanning are the authors’ personal belongings and gifts from friends. Also, this year scanned forty elephant collections from Lin Hai-yin.",
+                    "The second year (2019) scanned the personal belongings of Echo Chan, Wang Kai-yun, Chu Hsi-ning, Ai Wen, Wu Ying-tao, Lee Kuei-shien, Lin Hai-yin, Cecelia Zhang, Chen Chi-mao, Yang Yun-ping, Ye Di, Zhan Zuo-zhou, Liu Mu-sha,Long Ying-zong, Long Ying-zong, Chûng Lî-fò, Wei Cing-de.",
+                    "And the third year (2020) scanned the personal belongings and the work tools of Echo Chan, Wang Kai-yun, Sima Zhongyuan, Chu Hsi-ning, Wu Yen-sheng, Chou Ting-shan, Huang Te-shih, Yang Yun-ping, Yeh Shih-tao, Chao Yun, Loā Hô, Wei Cing-de.",
+                    "In the fourth year (2021), personal items and clothing of Wu Chien-cheng, Yao Yi-wei, Wei Ching-te, Chou Ting-shan, Lin Hai-yin, Ai Wen, Lin Chin-jen, Hung Yen-chiu, Chu Hsi-ning, Yang Yun-ping, and Li Hsian-chang were collected.",
+                    "In the fifth year (2022), private collections, clothing, and artworks of Lin Shih-hao, Chang Hsiu-ya, Queeny Chang, Li Tung, Hsu Ping-ting, Husluman Vava, and Yang Yun-ping were collected, along with advertising matchboxes from the 1960s to the 1980s."
                   ]
                 }
               },
@@ -438,27 +436,38 @@
               }
             },
             "hideWordsMan": {
-              "title": "Hide Words Man｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+              "title": "Introduction of Demon-Hunting Character Capturers｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
               "info": {
-                "title": "Hide Words Man",
+                "title": "Introduction of Demon-Hunting Character Capturers",
                 "about": {
                   "title": "About the Game",
-                  "content": []
+                  "content": [
+                    "This game is inspired by the wooden statue of Mazu created by Li Hsian-chang and uses Taiwanese Folk Literature Collection for the game context. ",
+                    "The player assumes the role of the Character Capturers, led by the Magic Brush to search and hunt demons scattered across the Taiwan. The goal is to seal them back into the Taiwanese Folk Literature Collection. The gameplay imitates the fieldwork of Li Hsian-chang, who collected folktales, songs, and riddles across Taiwan, and enables players to learn about Li and the history of Taiwan literature.",
+                    "Children’s song Lullaby and Fireflies, which were collected by Li Hsian-chang, are rearranged and sung by the Song Spirits in this game for children to learn about the local features portrayed in these songs."
+                  ]
                 },
                 "introduction": {
                   "title": "Game Introduction",
-                  "content": []
+                  "content": [
+                    "“Curses! We’ve been forgotten by the people! We must teach them a lesson,” said Stone Turtle Demon, the head demon in the Book of Demons, to the other demons.",
+                    "These demons are not mere minions. They are versed in Taiwanese stories, folk songs, nursery rhymes, and riddles. They were sealed in the Book of Demons by Character Capturers, but fewer and fewer people know about them today. The demons have escaped the Book together on a night when the Magic Brush was not on watch at the special collections room and when Mazu’s magic was weak. They are now freely roaming across Taiwan. ",
+                    "Start your demon-hunting journey using the Magic Brush. Use your parkour, riddle-solving, puzzle-solving, and musical rhythm skills to seal the Stone Turtle Demon, the Riddlers, the Song Spirits, and the Page Goblins back into the Book of Demons!"
+                  ]
                 },
                 "writer": {
                   "title": "Game writer",
                   "content": [
                     {
-                      "name": "",
-                      "info": []
+                      "name": "Chen Shih-hua",
+                      "info": ["born in Changhua; master’s degree from the Graduate Institute of Taiwan Literature, National Taiwan University."]
                     },
                     {
-                      "name": "",
-                      "info": []
+                      "name": "Tsai Meng-ju",
+                      "info": [
+                        "born in Sanchong, New Taipei City; master’s degree from the Graduate Institute of Taiwan Literature, National Taiwan University.",
+                        "Tsai contributed to the Taiwanese mining memory novel Excavation and recently fell in love with the manga series Chainsaw Man."
+                      ]
                     }
                   ]
                 },
@@ -466,6 +475,128 @@
                   "title": "Exhibition Information",
                   "content": "At Literary Wonderland of  NMTL, B1."
                 }
+              },
+              "author": {
+                "title": "About the Author ",
+                "content": [
+                  {
+                    "name": "Li Hsian-chang",
+                    "year": "1914-1999",
+                    "infoShort": "Li Hsian-chang was a Taiwanese folklorist, linguist, and writer who wrote Anthology of Taiwanese Novels, A Grammar of the Ho-Lo Dialect of the Chinese Language, and Studies on the Belief of Mazu. His collated work Taiwanese Folk Literature Collection was the first pre-World War II literary collection produced by a Taiwanese researcher. When it was published by the Taiwan Literature and Art Association in 1936, it bore a cover illustration by Chen Cheng-po.",
+                    "info": [
+                      "Li Hsian-chang was a Taiwanese folklorist, linguist, and writer who wrote Anthology of Taiwanese Novels, A Grammar of the Ho-Lo Dialect of the Chinese Language, and Studies on the Belief of Mazu. His collated work Taiwanese Folk Literature Collection was the first pre-World War II literary collection produced by a Taiwanese researcher. When it was published by the Taiwan Literature and Art Association in 1936, it bore a cover illustration by Chen Cheng-po.",
+                      "In his self-introduction in the book, Li Hsian-chang mentioned that amidst the efforts of collating Taiwanese folk literature, Taiwan New People Newspaper started collecting songs from all over Taiwan by in 1931, leading to the establishment of the column “Songs and Ballads.” Li’s serialized compilation of Taiwanese riddles in the newspaper began in 1934, and the literary magazine First Line started a Taiwanese folktale column in 1935. With the exception of the folktales collected in these columns, Taiwanese folk literature was unappreciated and disparaged by intellectuals. Li spent 2 to 3 years collecting and collating folk literature.",
+                      "Taiwanese Folk Literature Collection consists of two parts, namely songs and stories. It contains a total of 582 folk songs, 142 nursery rhymes, 273 riddles, 10 Taiwanese bamboo poems, and 23 stories. The folk songs and nursery rhymes were collected by Li himself and excerpted from newspapers and magazines. All the stories are Taiwanese stories except “Ku Bonsia”, which is both a Taiwanese and Chinese story."
+                    ]
+                  }
+                ],
+                "bottom": "Read More"
+              },
+              "works": {
+                "title": "Introduction of Taiwanese Folk Literature Collection",
+                "content": [
+                  {
+                    "name": "Songs",
+                    "info": [
+                      "The work includes three song types, namely folk songs, nursery rhymes, and riddles. Associate Prof. Chen Long-ting of the Department of Taiwan Culture, Languages and Literature at National Taiwan Normal University pointed out in his research Modernity and Southern Taiwan: Characteristics of the Praise Songs Collected by Li Hsian-chang in the 1930s that most of the Taiwanese songs recorded under Japanese colonial rule were Hoklo songs or rhymes. Li Hsian-chang collected 142 nursery rhymes. Li left Daxi Township in Taoyuan to pursue his career in Kaohsiung from 1932 to 1934, and the songs he collected reflect the landscape of southern Taiwan in the 1930s.",
+                      "The folk songs are divided into two categories and one appendix. The first category refers to the daily life of Taiwanese people, and the second refers to the expression of yearning and love between couples. The appendix presents Liang Qichao’s Taiwanese bamboo poems, which were created by adapting or quoting the lyrics of Taiwanese mountain songs he extracted from newspapers and were thus distinct from the other Taiwanese songs Li collected.",
+                      "The nursery rhymes collected in this book are natural nursery rhymes, that is, rhymes not written by a particular composer and sung according to the natural sound of words. Included are 10 versions of Lullaby with different names and 7 versions of Fireflies, which was known as Fiery Golden Stars in southern Taiwan. All the songs are related to food, contrasting with Chinese nursery rhymes, which are related to labor. The riddle answers include animals, plants, Mother Nature, and everyday utensils, which are intimated using rhyming colloquial language."
+                    ]
+                  },
+                  {
+                    "name": "Stories",
+                    "info": [
+                      "Because Li Hsian-chang was overworked and fell ill several times while collecting the Taiwanese stories, most of the stories in Taiwanese Folk Literature Collection were a result of adaption by 14 contemporary writers from the stories they collected, namely Yi Hou, Wang Shih-lang, Chu Feng, Shou Yu, Lin Yueh-feng, Ping Fu, Huang Shih-hui, Huang Te-shih, Yeh Chao, Chou Tung, Lan Yun, Tien Jen, and Yu Wen as well as Li himself.",
+                      "With the exception of “Ku Bonsia”, which was circulated in China, all the stories recorded in this book are distinctly Taiwanese. Certain plots are similar to folktales from Quanzhou in Fujian, but the plots in the Taiwanese versions are richer and sometimes diverge entirely. The version of a story about Lin Tao-chien circulated in the Chikan area involves the plot of Lin sacrificing his own life for the making of a cannon. Some songs also contain versions with the same melodies but lyrics that differ according to each region.",
+                      "In her work Taiwanese New Intellectuals’ Cultural Creations in the 1930s Taiwan from the Viewpoint of “Taiwanese Folklore,” Prof. Noriko Toyoda of Meijo University categorizes the stories recorded in this book into four types, namely those related to historical figures (e.g., Zhu Yigui and Koxinga), righteous people (e.g., Stone Turtle, the 18 Martyrs, and the Salt Merchant), Taiwanese customs and spirits (e.g., Mazu’s abandoned relatives and the Lin Tou sister), and Taiwanese wisdom (e.g., “Hit The Monks When Broke” and “Ku Bonsia”)."
+                    ]
+                  }
+                ]
+              },
+              "NPCs": {
+                "title": "NPC",
+                "content": [
+                  {
+                    "name": "Magic Brush",
+                    "info": [
+                      "National Museum of Taiwan Literature features a mysterious special collections room, which houses collections of literary works. Only current and former curators, senior librarians, and Character Capturers know its whereabouts. Because all the collected works contain spirits, the room is overseen by the Magic Brush of Wenchang God. Ordinary people who wish to access the room must first be granted permission by the Magic Brush."
+                    ]
+                  },
+                  {
+                    "name": "Wooden statue of Mazu collected by Li Hsian-chang",
+                    "info": [
+                      "The first edition of Taiwanese Folk Literature Collection is actually the mysterious Book of Demons, which Character Capturers use to capture demons that wreak havoc across Taiwan. Most of these demons possess language and writing powers and are formed through the illusions created by songs, nursery rhymes, riddles, stories, and objects. Because the Character Capturers fear that the demons will appear and cause havoc again in the human world, they hid the Book of Demons inside a wooden statue of Mazu in the special collections room. This statue was collected by Li Hsian-chang, the first Character Capturer."
+                    ]
+                  }
+                ]
+              },
+              "monsters": {
+                "title": "Demons",
+                "content": [
+                  {
+                    "name": "Stone Turtle",
+                    "info": [
+                      "I can recite every Taiwanese story using my photographic memory!",
+                      "The Stone Turtle Demon is a giant turtle about 7 feet long and 4 feet wide that lives in the pond of the Dragon King Temple of Jhuluo. He transforms into a black horse or a giant snake to damage crops in farm fields and to steal water from ponds. The people carved a stone turtle statue in the style of Bixi to worship him, and Emperor Qianlong carved the Fu Kang-an Monument for the Stone Turtle Demon to carry, which he did obediently. The Stone Turtle Demon and Bixi became brothers because of their similar fates and appearances.",
+                      "The Stone Turtle Demon has lived for hundreds of years and knows all the stories across Taiwan. He became the head of all the demons in the Book of Demons after being captured by a Character Capturer. However, people have gradually forgotten the old stories and the Stone Turtle Demon. Therefore, the demon conspired with the other demons to escape from the book on a night. His first action was finding his long-lost brother in Jhuluo Park and airing his grievances.",
+                      ""
+                    ]
+                  },
+                  {
+                    "name": "The Riddler",
+                    "info": [
+                      "Hehe, do you know what it is?",
+                      "Li Hsian-chang collected many folk riddles, which are frequently found at lantern festivals. People’s language generates power, and laughter concentrates this power. Thus, the Riddlers are born out of these powerful riddles.",
+                      "They are small and enjoy laughing and joking in groups. They like to hide and watch humans get confused on the riddles they cannot solve. The Riddlers know all riddles and are kind-hearted, lively demons.",
+                      "Their first action after escaping from the Book of Demons was to run to a secret stone chamber in Fengshan County, where Taiwan’s first earth and stone walls were built. The chamber is not only home to most of the demons from the Book of Demons but is also one of the places where Li Hsian-chang collected riddles."
+                    ]
+                  },
+                  {
+                    "name": "Bamboo Demon",
+                    "info": [
+                      "According to Taiwan Custom Records by Iwao Kataoka, the Bamboo Demon is a tall, slender demon. In the legend that circulates in Wang’an, Penghu, the demon attacks people, aiming for their brain. When people walk the mountain path at night and see a bamboo stick blocking their way, they should not cross it, because the Bamboo Demon uses such tricks to catch victims. If you cross the bamboo stick, the stick will pop up and have you suspended in the air.",
+                      "The Bamboo Demon, who originally lived alone deep in the mountains, befriended the Nanxiao Spirit and the Bamboo Drum Spirit. When Character Capturers visited the Moonlight Bamboo Forest, they did not capture the Bamboo Demon because the unsociable demon avoids places with lots of people.",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "name": "Nanxiao Spirit (a Song Spirit)",
+                    "info": [
+                      "Nanxiao is a bamboo-made, six-hole, and whole-tone musical instrument. It is an exceptional sounding instrument created by an old master. After the master passed away, his heartbroken family hid the instrument in a storehouse, forgetting its existence over time. One hundred years later, the nanxiao transformed into a song spirit that was awakened after hearing someone singing a nursery rhyme outside the storehouse one day.",
+                      "The Nanxiao Spirit is kind-hearted but likes to sing nonstop day and night. He also enjoys playing with the Bamboo Demon and Bamboo Drum Spirit deep in the mountains. One day, he was caught and sealed in the Book of Demons by a Character Capturer at the request of fearful villagers.",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "name": "Bamboo Drum Spirit (a Song Spirit)",
+                    "info": [
+                      "At a time when supplies were scarce in Taiwan, bamboo was harvested to create drums as toys for children. Bamboo drums are also an indigenous Taiwanese percussion instrument. A survey by the Government-General of Taiwan in its early years of rule over the island revealed that the indigenous people played these drums through placing them on their legs.",
+                      "Most bamboo drums are made using a large piece of bamboo with nodal rings at both ends. They are used for festivals and dances as well as to scare away animals that eat crops.",
+                      "The Bamboo Drum Spirit emerged when several bamboo drums were stored and forgotten. He lived with the Bamboo Demon deep in the mountains. Later, he befriended the Nanxiao Spirit, and they played together day and night. Disturbed villagers asked a Character Capturer to seal him into the Book of Demons.",
+                      ""
+                    ]
+                  },
+                  {
+                    "name": "Hai-ang",
+                    "info": [
+                      "A Taiwanese demon believed to be a giant fish living in the sea. When it sleeps, it rests on the surface of the water for more than 100 years, growing trees on its back and eventually being mistaken for an island. Streets appear on its back, encouraging people to land on it and start a life there. When Hai-ang awakes, it dives into the sea, taking everything on its back along with it. Legend says that a strong wind moves in when Hai-ang appears.",
+                      "",
+                      "",
+                      ""
+                    ]
+                  },
+                  {
+                    "name": "Sea Spined Serpent",
+                    "info": [
+                      "A legendary sea monster was spotted off the coast of Taiwan by sailors aboard the “Sultan,” a British steamboat that was passing Hong Kong on its route from Singapore to Yokohama in 1909. According to the sailors, the monster had a row of spines on its back and resembled a reptile.",
+                      "This incident was recorded by Asahi Shimbun Tokyo on March 5, 1909.",
+                      "",
+                      ""
+                    ]
+                  }
+                ]
               },
               "screen": {
                 "title": "Screen Shots"
@@ -475,7 +606,7 @@
         },
         "eventRecord": {
           "title": "Event｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
-          "info": { "title": "Event" , "button": "Next Page" },
+          "info": { "title": "Event", "button": "Next Page" },
           "child": {
             "title": "A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
             "info": {}

@@ -91,7 +91,7 @@ function GetDate() {
     data.img = NPCImg.value[i];
     data.name = t("pages.home.child.achievement.child.hideWordsMan.NPCs.content[" + i + "].name");
 
-    for (let j = 0; j < 2; j++) {
+    for (let j = 0; j < 1; j++) {
       let word = t("pages.home.child.achievement.child.hideWordsMan.NPCs.content[" + i + "].info." + j);
       data.words.push(word);
     }

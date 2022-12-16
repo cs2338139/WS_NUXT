@@ -37,6 +37,10 @@ function SentData(datas, i) {
             {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.1") }}
             <br />
             {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.2") }}
+            <br />
+            {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.3") }}
+            <br />
+            {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.4") }}
           </template>
         </PartItem>
 
