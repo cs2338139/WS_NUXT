@@ -40,10 +40,10 @@ if (data.value?.posts) {
       year: "",
     };
 
-    dataCH.img = writers.nodes[i].literati.image.sourceUrl;
-    dataCH.sName = writers.nodes[i].literati.name;
-    dataCH.words.push(writers.nodes[i].literati.about);
-    dataCH.year = writers.nodes[i].literati.writeryear;
+    if (writers.nodes[i].literati.image != null) dataCH.img = writers.nodes[i].literati.image.sourceUrl;
+    if (writers.nodes[i].literati.name != null) dataCH.sName = writers.nodes[i].literati.name;
+    if (writers.nodes[i].literati.about != null) dataCH.words.push(writers.nodes[i].literati.about);
+    if (writers.nodes[i].literati.writeryear != null) dataCH.year = writers.nodes[i].literati.writeryear;
     dataCH.name = dataCH.sName + " （" + dataCH.year + "）";
 
     ch.push(dataCH);
@@ -56,10 +56,10 @@ if (data.value?.posts) {
       year: "",
     };
 
-    dataEN.img = writers.nodes[i].literati.image.sourceUrl;
-    dataEN.sName = writers.nodes[i].literati.enName;
-    dataEN.words.push(writers.nodes[i].literati.enAbout);
-    dataEN.year = writers.nodes[i].literati.writeryear;
+    if (writers.nodes[i].literati.image != null) dataEN.img = writers.nodes[i].literati.image.sourceUrl;
+    if (writers.nodes[i].literati.enName != null) dataEN.sName = writers.nodes[i].literati.enName;
+    if (writers.nodes[i].literati.enAbout != null) dataEN.words.push(writers.nodes[i].literati.enAbout);
+    if (writers.nodes[i].literati.writeryear != null) dataEN.year = writers.nodes[i].literati.writeryear;
     dataEN.name = dataEN.sName + " （" + dataEN.year + "）";
 
     en.push(dataEN);

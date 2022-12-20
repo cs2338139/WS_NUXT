@@ -65,11 +65,11 @@ if (data.value?.posts) {
         info: "",
       };
 
-      dataCH.title = events.nodes[i].eventRecord.title;
-      dataCH.date = events.nodes[i].eventRecord.date;
-      dataCH.place = events.nodes[i].eventRecord.place;
-      dataCH.about = events.nodes[i].eventRecord.about;
-      dataCH.info = events.nodes[i].eventRecord.info;
+      if (events.nodes[i].eventRecord.title != null) dataCH.title = events.nodes[i].eventRecord.title;
+      if (events.nodes[i].eventRecord.date != null) dataCH.date = events.nodes[i].eventRecord.date;
+      if (events.nodes[i].eventRecord.place != null) dataCH.place = events.nodes[i].eventRecord.place;
+      if (events.nodes[i].eventRecord.about != null) dataCH.about = events.nodes[i].eventRecord.about;
+      if (events.nodes[i].eventRecord.info != null) dataCH.info = events.nodes[i].eventRecord.info;
 
       let dataEN = {
         img: [],
@@ -80,11 +80,11 @@ if (data.value?.posts) {
         info: "",
       };
 
-      dataEN.title = events.nodes[i].eventRecord.enTitle;
-      dataEN.date = events.nodes[i].eventRecord.date;
-      dataEN.place = events.nodes[i].eventRecord.enPlace;
-      dataEN.about = events.nodes[i].eventRecord.about;
-      dataEN.info = events.nodes[i].eventRecord.enInfo;
+      if (events.nodes[i].eventRecord.enTitle != null) dataEN.title = events.nodes[i].eventRecord.enTitle;
+      if (events.nodes[i].eventRecord.date != null) dataEN.date = events.nodes[i].eventRecord.date;
+      if (events.nodes[i].eventRecord.enPlace != null) dataEN.place = events.nodes[i].eventRecord.enPlace;
+      if (events.nodes[i].eventRecord.about != null) dataEN.about = events.nodes[i].eventRecord.about;
+      if (events.nodes[i].eventRecord.enInfo != null) dataEN.info = events.nodes[i].eventRecord.enInfo;
 
       if (events.nodes[i].eventRecord.image1) {
         dataCH.img.push(events.nodes[i].eventRecord.image1.sourceUrl);
@@ -133,7 +133,7 @@ function CheckAbout(name) {
   return false;
 }
 
-const img = ref();
+const _img = ref();
 const imgButton = ref();
 const currentImgIndex = ref(0);
 
@@ -142,14 +142,14 @@ onMounted(() => {
 });
 function MoveImage(move) {
   if (move === "next") {
-    if (currentImgIndex.value + 1 >= img.value.length) {
+    if (currentImgIndex.value + 1 >= _img.value.length) {
       currentImgIndex.value = 0;
     } else {
       currentImgIndex.value++;
     }
   } else if (move === "prev") {
     if (currentImgIndex.value - 1 < 0) {
-      currentImgIndex.value = img.value.length - 1;
+      currentImgIndex.value = _img.value.length - 1;
     } else {
       currentImgIndex.value--;
     }
@@ -160,12 +160,12 @@ function MoveImage(move) {
 function ViewImage(j) {
   if (currentImgIndex.value != j) currentImgIndex.value = j;
 
-  for (let i = 0; i < img.value.length; i++) {
+  for (let i = 0; i < _img.value.length; i++) {
     if (i === j) {
-      img.value[i].style.display = "block";
+      _img.value[i].style.display = "block";
       imgButton.value[i].style.backgroundColor = "#000000";
     } else {
-      img.value[i].style.display = "none";
+      _img.value[i].style.display = "none";
       imgButton.value[i].style.backgroundColor = "#ffffff";
     }
   }
@@ -185,7 +185,7 @@ function ViewImage(j) {
           </button>
         </div>
 
-        <img v-for="img in current.img" :src="img" class="h-full" ref="img" />
+        <img v-for="img in current.img" :src="img" class="h-full" ref="_img" />
       </div>
 
       <div class="flex mb-14 justify-center" v-if="current.img.length > 1">

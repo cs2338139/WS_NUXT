@@ -57,6 +57,8 @@ function SetData(i) {
       more: popupDatas.list[i].more,
     };
   }
+  console.log(popupDatas.list[i].size);
+
 }
 
 function ClosePopupPanel() {
@@ -94,7 +96,7 @@ defineExpose({
 <template>
   <div>
     <div class="aspect-KV wrap-8 mb-14 w-full bg-gray-300">
-      <img :src="img" class="w-full">
+      <img :src="img" class="w-full" />
     </div>
 
     <div class="wrap-6 mb-10">
@@ -110,8 +112,7 @@ defineExpose({
       <template #size>{{ currentPopupInfo.data.size }}</template>
       <template #word>
         <template v-for="word in currentPopupInfo.data.words">
-          <div>{{ word }}</div>
-          <br />
+          <div class="mb-4">{{ word }}</div>
         </template>
       </template>
     </Popup>
@@ -120,6 +121,6 @@ defineExpose({
 
 <style scoped>
 .aspect-KV {
-    aspect-ratio: 1377 / 530;
+  aspect-ratio: 1377 / 530;
 }
 </style>

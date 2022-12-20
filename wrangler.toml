@@ -1,8 +1,0 @@
-
-name = "ws-nuxt"
-main = "./.output/server/index.mjs"
-workers_dev = true
-compatibility_date = "2022-12-09"
-
-[site]
-bucket = ".output/public"

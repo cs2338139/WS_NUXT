@@ -104,7 +104,7 @@ function SentData(datas, i) {
             >{{ $t("pages.home.child.achievement.child.islandOfBaku.info.download.title") }}
             <div class="mt-5 flex">
               <DownloadButton href="https://store.steampowered.com/app/1758360/Isles_of_Monsters/">Windows </DownloadButton>
-              <DownloadButton href="https://apps.apple.com/tw/app/%E5%A4%A2%E7%8D%B8%E4%B9%8B%E5%B3%B6/id1543158659"> iOS</DownloadButton>
+              <DownloadButton href="https://apps.apple.com/tw/app/%E5%A4%A2%E7%8D%B8%E4%B9%8B%E5%B3%B6/id1543158659"> 　iOS　</DownloadButton>
               <DownloadButton href="https://play.google.com/store/apps/details?id=com.Axis3d.WSNew_0514"> Android</DownloadButton>
             </div>
           </template>

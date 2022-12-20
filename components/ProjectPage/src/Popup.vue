@@ -4,6 +4,7 @@ const props = defineProps({
   link: String,
   more: String,
   moveEnable: Boolean,
+  size: String,
 });
 
 const isModel = ref(false);
@@ -33,7 +34,7 @@ if (props.link === undefined) {
         </button>
       </div>
 
-      <div class="z-50">
+      <div class="z-50 mt-40">
         <div>
           <iframe
             frameborder="0"
@@ -58,24 +59,23 @@ if (props.link === undefined) {
         </div>
       </div>
       <div class="mb-14 z-50 w-3/5 mt-8 text-justify">
-        <div class="mb-2 text-xl font-bold text-center">
+        <div class="mb-4 text-2xl font-bold text-center">
           <slot name="name" />
         </div>
-        <div class="z-50 -mt-2 text-xl font-bold text-center" v-if="isModel">
+        <div class="z-50 -mt-2 text-2xl font-bold text-center" v-if="isModel">
           <slot name="owner" />
         </div>
-        <div class="z-50 mb-2 text-lg text-center" v-if="isModel">
+        <div class="z-50 mb-2 text-xl text-center" v-if="isModel">
           {{ $t("pages.home.child.achievement.child.modelView.result.size") }}
           <slot name="size" />
         </div>
-        <div class="z-50 font-bold">
-          <slot name="word" />
+        <div class="h-80 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-rounded-xl scrollbar-thumb-rounded-xl scrollbar-track-gray-100 z-50 overflow-y-auto text-xl text-justify" :class="{ 'h-52': isModel }">
+          <div class="m-2"><slot name="word" /></div>
         </div>
-        <div class="z-50 text-center">
-          <NuxtLink :to="more" target="_blank" class="flex justify-center items-center" v-if="isModel">
-            <div class="text-xl font-bold tracking-wider border-b border-black mr-2">{{ $t("pages.home.child.achievement.child.modelView.result.more") }}</div>
+        <div class="z-50 h-12 text-center">
+          <NuxtLink :to="more" target="_blank" class="flex items-center justify-center" v-if="isModel && more">
+            <div class="mr-2 text-2xl font-bold tracking-wider border-b border-black">{{ $t("pages.home.child.achievement.child.modelView.result.more") }}</div>
             <div class="aspect-square w-12 bg-white border border-black rounded-full">
-              <!-- <ion-icon class="text-5xl flex justify-center items-center -rotate-45" name="arrow-forward-outline"></ion-icon> -->
               <img class="" src="~/public/Image/UI/Arrow2.svg" alt="" />
             </div>
           </NuxtLink>

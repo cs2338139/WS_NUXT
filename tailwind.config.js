@@ -143,10 +143,11 @@ module.exports = {
         "w100%": "100% auto",
         "h100%": "auto 100%",
         "wh100%": "100% 100%",
-      },aspectRatio: {
-        '1377/710': '1377/710',
+      },
+      aspectRatio: {
+        "1377/710": "1377/710",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
 };

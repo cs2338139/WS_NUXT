@@ -8,9 +8,8 @@
     "postinstall": "nuxt prepare",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d .output/public",
-    "wrangler-dev":"npx wrangler dev .output/server/index.mjs --site .output/public --local",
-    "wrangler-publish":"npx wrangler publish"
-
+    "wrangler-dev": "npx wrangler dev .output/server/index.mjs --site .output/public --local",
+    "wrangler-publish": "npx wrangler publish"
   },
   "devDependencies": {
     "@nuxt/postcss8": "^1.1.3",
@@ -21,6 +20,7 @@
     "gh-pages": "^4.0.0",
     "nuxt": "3.0.0-rc.11",
     "postcss": "^8.4.18",
+    "tailwind-scrollbar": "^2.0.1",
     "tailwindcss": "^3.2.0"
   },
   "dependencies": {

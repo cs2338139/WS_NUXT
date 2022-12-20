@@ -9,18 +9,20 @@
   }
   @font-face {
     font-family: "DFLiHei";
-    src: url("/assets/font/DFLiHei.ttc") format('ttc');
+    src: url("/assets/font/DFLiHei.ttc") format("ttc");
   }
   @font-face {
     font-family: "DFLiHei-300";
-    src: url("/assets/font/DFLiHei-300.ttc") format('ttc');
+    src: url("/assets/font/DFLiHei-300.ttc") format("ttc");
   }
   @font-face {
     font-family: "DFLiHei-700";
-    src: url("/assets/font/DFLiHei-700.ttc") format('ttc');
+    src: url("/assets/font/DFLiHei-700.ttc") format("ttc");
   }
   body {
     @apply p-0 m-0 font-DFLiHei tracking-wider;
+    background: linear-gradient(90deg, rgba(200, 200, 200, 0.2) 4%, transparent 0), linear-gradient(rgba(200, 200, 200, 0.2) 4%, transparent 0);
+    background-size: 30px 30px;
   }
 }
 

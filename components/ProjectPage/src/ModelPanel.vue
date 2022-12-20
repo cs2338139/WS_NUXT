@@ -76,14 +76,18 @@ function SetModelsCategories() {
           owner: "",
           more: "",
         };
-        dataCH.img = models.nodes[i].models.image.sourceUrl;
-        dataCH.name = models.nodes[i].models.name;
-        dataCH.words.push(models.nodes[i].models.about);
+        if (models.nodes[i].models.image != null) dataCH.img = models.nodes[i].models.image.sourceUrl;
+        if (models.nodes[i].models.name != null) dataCH.name = models.nodes[i].models.name;
+        if (models.nodes[i].models.about != null) dataCH.words.push(models.nodes[i].models.about);
         dataCH.year = categories.value[j];
-        dataCH.link = models.nodes[i].models.link;
-        dataCH.size = models.nodes[i].models.size;
-        dataCH.owner = models.nodes[i].models.owner;
-        dataCH.more = models.nodes[i].models.more;
+        if (models.nodes[i].models.link != null) dataCH.link = models.nodes[i].models.link;
+        if (models.nodes[i].models.size === null) {
+          dataCH.size = "--";
+        } else {
+          dataCH.size = models.nodes[i].models.size;
+        }
+        if (models.nodes[i].models.owner != null) dataCH.owner = models.nodes[i].models.owner;
+        if (models.nodes[i].models.more != null) dataCH.more = models.nodes[i].models.more;
 
         modelsCategories.value[0][j].push(dataCH);
 
@@ -97,14 +101,18 @@ function SetModelsCategories() {
           owner: "",
           more: "",
         };
-        dataEN.img = models.nodes[i].models.image.sourceUrl;
-        dataEN.name = models.nodes[i].models.enName;
-        dataEN.words.push(models.nodes[i].models.enAbout);
+        if (models.nodes[i].models.image != null) dataEN.img = models.nodes[i].models.image.sourceUrl;
+        if (models.nodes[i].models.enName != null) dataEN.name = models.nodes[i].models.enName;
+        if (models.nodes[i].models.enAbout != null) dataEN.words.push(models.nodes[i].models.enAbout);
         dataEN.year = categories.value[j];
-        dataEN.link = models.nodes[i].models.link;
-        dataEN.size = models.nodes[i].models.size;
-        dataEN.owner = models.nodes[i].models.enOwner;
-        dataEN.more = models.nodes[i].models.more;
+        if (models.nodes[i].models.link != null) dataEN.link = models.nodes[i].models.link;
+        if (models.nodes[i].models.size === null) {
+          dataEN.size = "--";
+        } else {
+          dataEN.size = models.nodes[i].models.size;
+        }
+        if (models.nodes[i].models.enOwner != null) dataEN.owner = models.nodes[i].models.enOwner;
+        if (models.nodes[i].models.more != null) dataEN.more = models.nodes[i].models.more;
 
         modelsCategories.value[1][j].push(dataEN);
       }

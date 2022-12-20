@@ -4,7 +4,7 @@
     "achievement": {
       "title": "計畫成果",
       "child": {
-        "modelView": "3D掃描藏品與建模計畫",
+        "modelView": "3D文學寶藏",
         "islandOfBaku": "夢獸之島",
         "game1940": "1940",
         "birdsOfLife": "生命之鳥",
@@ -30,7 +30,7 @@
         "title": "計畫成果",
         "content": [
           {
-            "title": "3D掃描藏品與建模計畫",
+            "title": "3D文學寶藏",
             "info": "",
             "year": "2018-2022"
           },
@@ -79,7 +79,7 @@
             "title": "計畫成果",
             "content": [
               {
-                "title": "3D掃描藏品與建模計畫",
+                "title": "3D文學寶藏",
                 "info": "",
                 "year": "2018-2022",
                 "words": ["透過3D掃描與建模， 讓館藏文物得以透過數位活化，進而達到推廣台灣文學。"]
@@ -112,9 +112,9 @@
           },
           "child": {
             "modelView": {
-              "title": "3D掃描藏品與建模計畫｜數位遊戲開發暨藏品3D掃描、建模計畫｜國立臺灣文學館",
+              "title": "3D文學寶藏｜數位遊戲開發暨藏品3D掃描、建模計畫｜國立臺灣文學館",
               "info": {
-                "title": "3D掃描藏品與建模計畫",
+                "title": "3D文學寶藏",
                 "about": {
                   "title": "關於計畫",
                   "content": [

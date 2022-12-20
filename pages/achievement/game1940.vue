@@ -12,6 +12,8 @@ const p1 = new URL("../../public/Image/Page_1940/Portrait/1940_Portrait01.jpg", 
 const p2 = new URL("../../public/Image/Page_1940/Portrait/1940_Portrait03.png", import.meta.url).href;
 const p3 = new URL("../../public/Image/Page_1940/Portrait/1940_Portrait02.png", import.meta.url).href;
 
+const audio_file = new URL("../../public/audio/01_1940.mp3", import.meta.url).href;
+
 const img = ref([]);
 
 const { locale, setLocale, t } = useI18n();
@@ -99,7 +101,7 @@ function SentData(datas, i) {
           <template #title
             >{{ $t("pages.home.child.achievement.child.game1940.info.music.title") }}
             <div class="mt-5">
-              <audio src="" loop controls class="w-full"></audio>
+              <audio :src="audio_file" loop controls class="w-full"></audio>
             </div>
           </template>
         </PartItemNull>
@@ -108,8 +110,8 @@ function SentData(datas, i) {
           <template #title
             >{{ $t("pages.home.child.achievement.child.game1940.info.download.title") }}
             <div class="mt-5 flex">
-              <DownloadButton href="https://store.steampowered.com/app/1798300/1940/">Windows </DownloadButton>
-              <DownloadButton href="https://apps.apple.com/tw/app/1940/id1546034482"> iOS</DownloadButton>
+              <DownloadButton href="https://store.steampowered.com/app/1798300/1940/">Windows</DownloadButton>
+              <DownloadButton href="https://apps.apple.com/tw/app/1940/id1546034482">　iOS　</DownloadButton>
               <DownloadButton href="https://play.google.com/store/apps/details?id=com.axis3d.ws_1940"> Android</DownloadButton>
             </div>
           </template>

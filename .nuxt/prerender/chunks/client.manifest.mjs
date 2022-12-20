@@ -5,18 +5,6 @@ const client_manifest = {
     "file": "LOGOsmall.49f63c50.svg",
     "src": "public/Image/UI/LOGOsmall.svg"
   },
-  "assets/font/jf-openhuninn-1.1.woff2": {
-    "resourceType": "font",
-    "mimeType": "font/woff2",
-    "file": "jf-openhuninn-1.1.38b47516.woff2",
-    "src": "assets/font/jf-openhuninn-1.1.woff2"
-  },
-  "public/Image/Page_3D/Cover/3D_Cover2.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "3D_Cover2.98af3c7f.png",
-    "src": "public/Image/Page_3D/Cover/3D_Cover2.png"
-  },
   "public/Image/Page_1940/Cover/1940_Cover.jpg": {
     "resourceType": "image",
     "mimeType": "image/jpeg",
@@ -28,6 +16,18 @@ const client_manifest = {
     "mimeType": "image/png",
     "file": "Bird_Cover.84804f4e.png",
     "src": "public/Image/Page_bird/Cover/Bird_Cover.png"
+  },
+  "public/Image/Page_3D/Cover/3D_Cover2.png": {
+    "resourceType": "image",
+    "mimeType": "image/png",
+    "file": "3D_Cover2.98af3c7f.png",
+    "src": "public/Image/Page_3D/Cover/3D_Cover2.png"
+  },
+  "assets/font/jf-openhuninn-1.1.woff2": {
+    "resourceType": "font",
+    "mimeType": "font/woff2",
+    "file": "jf-openhuninn-1.1.38b47516.woff2",
+    "src": "assets/font/jf-openhuninn-1.1.woff2"
   },
   "public/Image/Page_3D/Cover/3D_Cover.png": {
     "resourceType": "image",
@@ -41,25 +41,11 @@ const client_manifest = {
     "file": "DreamMonster_Cover01.78cba6e8.png",
     "src": "public/Image/Page_WS/Cover/DreamMonster_Cover01.png"
   },
-  "assets/font/DFLiHei-700.ttc": {
-    "file": "DFLiHei-700.0691972f.ttc",
-    "src": "assets/font/DFLiHei-700.ttc"
-  },
-  "assets/font/DFLiHei.ttc": {
-    "file": "DFLiHei.104dda93.ttc",
-    "src": "assets/font/DFLiHei.ttc"
-  },
   "public/Image/Page_hideWordsMan/Cover/KV1377_570.png": {
     "resourceType": "image",
     "mimeType": "image/png",
     "file": "KV1377_570.f927974a.png",
     "src": "public/Image/Page_hideWordsMan/Cover/KV1377_570.png"
-  },
-  "public/Image/Page_WS/Portrait/DreamMonster_Portrait02.jpg": {
-    "resourceType": "image",
-    "mimeType": "image/jpeg",
-    "file": "DreamMonster_Portrait02.65ca43c3.jpg",
-    "src": "public/Image/Page_WS/Portrait/DreamMonster_Portrait02.jpg"
   },
   "public/Image/Page_1940/Portrait/1940_Portrait01.jpg": {
     "resourceType": "image",
@@ -73,27 +59,31 @@ const client_manifest = {
     "file": "Bird_Portrait01.03f3d8a7.png",
     "src": "public/Image/Page_bird/Portrait/Bird_Portrait01.png"
   },
-  "assets/font/DFLiHei-300.ttc": {
-    "file": "DFLiHei-300.c3e9cb2b.ttc",
-    "src": "assets/font/DFLiHei-300.ttc"
+  "assets/font/DFLiHei.ttc": {
+    "file": "DFLiHei.104dda93.ttc",
+    "src": "assets/font/DFLiHei.ttc"
   },
-  "public/Image/Page_WS/Portrait/DreamMonster_Portrait05.jpg": {
+  "assets/font/DFLiHei-700.ttc": {
+    "file": "DFLiHei-700.0691972f.ttc",
+    "src": "assets/font/DFLiHei-700.ttc"
+  },
+  "public/Image/Page_WS/Portrait/DreamMonster_Portrait02.jpg": {
     "resourceType": "image",
     "mimeType": "image/jpeg",
-    "file": "DreamMonster_Portrait05.c3e3f38c.jpg",
-    "src": "public/Image/Page_WS/Portrait/DreamMonster_Portrait05.jpg"
-  },
-  "public/Image/Page_1940/Portrait/1940_Portrait03.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "1940_Portrait03.e8893f25.png",
-    "src": "public/Image/Page_1940/Portrait/1940_Portrait03.png"
+    "file": "DreamMonster_Portrait02.65ca43c3.jpg",
+    "src": "public/Image/Page_WS/Portrait/DreamMonster_Portrait02.jpg"
   },
   "public/Image/Page_hideWordsMan/Cover/KV1_1.png": {
     "resourceType": "image",
     "mimeType": "image/png",
     "file": "KV1_1.090d63ce.png",
     "src": "public/Image/Page_hideWordsMan/Cover/KV1_1.png"
+  },
+  "public/Image/Page_1940/Portrait/1940_Portrait03.png": {
+    "resourceType": "image",
+    "mimeType": "image/png",
+    "file": "1940_Portrait03.e8893f25.png",
+    "src": "public/Image/Page_1940/Portrait/1940_Portrait03.png"
   },
   "public/Image/Page_hideWordsMan/Portrait/P.png": {
     "resourceType": "image",
@@ -106,6 +96,34 @@ const client_manifest = {
     "mimeType": "image/png",
     "file": "Bird_Book01.94007fb2.png",
     "src": "public/Image/Page_bird/Portrait/Bird_Book01.png"
+  },
+  "assets/font/DFLiHei-300.ttc": {
+    "file": "DFLiHei-300.c3e9cb2b.ttc",
+    "src": "assets/font/DFLiHei-300.ttc"
+  },
+  "public/Image/Page_WS/Portrait/DreamMonster_Portrait05.jpg": {
+    "resourceType": "image",
+    "mimeType": "image/jpeg",
+    "file": "DreamMonster_Portrait05.c3e3f38c.jpg",
+    "src": "public/Image/Page_WS/Portrait/DreamMonster_Portrait05.jpg"
+  },
+  "public/Image/Page_1940/Portrait/1940_Portrait02.png": {
+    "resourceType": "image",
+    "mimeType": "image/png",
+    "file": "1940_Portrait02.de7be3f9.png",
+    "src": "public/Image/Page_1940/Portrait/1940_Portrait02.png"
+  },
+  "public/Image/Page_hideWordsMan/Portrait/M1.png": {
+    "resourceType": "image",
+    "mimeType": "image/png",
+    "file": "M1.411303cf.png",
+    "src": "public/Image/Page_hideWordsMan/Portrait/M1.png"
+  },
+  "public/Image/Page_WS/Portrait/DreamMonster_Portrait01.jpg": {
+    "resourceType": "image",
+    "mimeType": "image/jpeg",
+    "file": "DreamMonster_Portrait01.62d853dc.jpg",
+    "src": "public/Image/Page_WS/Portrait/DreamMonster_Portrait01.jpg"
   },
   "public/Image/UI/LOGOmidCH.svg": {
     "resourceType": "image",
@@ -125,35 +143,11 @@ const client_manifest = {
     "file": "KV_B.a5a15b10.svg",
     "src": "public/Image/UI/KV_B.svg"
   },
-  "public/Image/Page_WS/Portrait/DreamMonster_Portrait01.jpg": {
-    "resourceType": "image",
-    "mimeType": "image/jpeg",
-    "file": "DreamMonster_Portrait01.62d853dc.jpg",
-    "src": "public/Image/Page_WS/Portrait/DreamMonster_Portrait01.jpg"
-  },
-  "public/Image/Page_1940/Portrait/1940_Portrait02.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "1940_Portrait02.de7be3f9.png",
-    "src": "public/Image/Page_1940/Portrait/1940_Portrait02.png"
-  },
-  "public/Image/Page_hideWordsMan/Portrait/M1.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "M1.411303cf.png",
-    "src": "public/Image/Page_hideWordsMan/Portrait/M1.png"
-  },
   "public/Image/Page_bird/Cover/Bird_Cover2.png": {
     "resourceType": "image",
     "mimeType": "image/png",
     "file": "Bird_Cover2.d3bfd3ec.png",
     "src": "public/Image/Page_bird/Cover/Bird_Cover2.png"
-  },
-  "public/Image/Page_WS/Portrait/DreamMonster_Scene04.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "DreamMonster_Scene04.e26a4a86.png",
-    "src": "public/Image/Page_WS/Portrait/DreamMonster_Scene04.png"
   },
   "public/Image/Page_bird/Portrait/Bird_Book02.png": {
     "resourceType": "image",
@@ -161,17 +155,17 @@ const client_manifest = {
     "file": "Bird_Book02.f1c6def1.png",
     "src": "public/Image/Page_bird/Portrait/Bird_Book02.png"
   },
+  "public/Image/Page_WS/Portrait/DreamMonster_Scene04.png": {
+    "resourceType": "image",
+    "mimeType": "image/png",
+    "file": "DreamMonster_Scene04.e26a4a86.png",
+    "src": "public/Image/Page_WS/Portrait/DreamMonster_Scene04.png"
+  },
   "public/Image/Page_hideWordsMan/Portrait/M2.png": {
     "resourceType": "image",
     "mimeType": "image/png",
     "file": "M2.ee9b8216.png",
     "src": "public/Image/Page_hideWordsMan/Portrait/M2.png"
-  },
-  "public/Image/Page_WS/Portrait/DreamMonster_Portrait03.jpg": {
-    "resourceType": "image",
-    "mimeType": "image/jpeg",
-    "file": "DreamMonster_Portrait03.22d55711.jpg",
-    "src": "public/Image/Page_WS/Portrait/DreamMonster_Portrait03.jpg"
   },
   "public/Image/Page_1940/Cover/1940_Cover2.png": {
     "resourceType": "image",
@@ -185,6 +179,17 @@ const client_manifest = {
     "file": "Bird_Book03.853264d1.png",
     "src": "public/Image/Page_bird/Portrait/Bird_Book03.png"
   },
+  "public/audio/01_1940.mp3": {
+    "resourceType": "audio",
+    "file": "01_1940.a124e577.mp3",
+    "src": "public/audio/01_1940.mp3"
+  },
+  "public/Image/Page_WS/Portrait/DreamMonster_Portrait03.jpg": {
+    "resourceType": "image",
+    "mimeType": "image/jpeg",
+    "file": "DreamMonster_Portrait03.22d55711.jpg",
+    "src": "public/Image/Page_WS/Portrait/DreamMonster_Portrait03.jpg"
+  },
   "public/Image/Page_hideWordsMan/Portrait/M3.png": {
     "resourceType": "image",
     "mimeType": "image/png",
@@ -196,30 +201,6 @@ const client_manifest = {
     "mimeType": "image/png",
     "file": "Bird_Book04.87695c4c.png",
     "src": "public/Image/Page_bird/Portrait/Bird_Book04.png"
-  },
-  "public/Image/UI/Arrow2.svg": {
-    "resourceType": "image",
-    "mimeType": "image/svg+xml",
-    "file": "Arrow2.4fe68592.svg",
-    "src": "public/Image/UI/Arrow2.svg"
-  },
-  "public/Image/Page_1940/Scene/1940_Scene01.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "1940_Scene01.53ffa957.png",
-    "src": "public/Image/Page_1940/Scene/1940_Scene01.png"
-  },
-  "public/Image/Page_1940/Scene/1940_Scene03.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "1940_Scene03.e07c60a0.png",
-    "src": "public/Image/Page_1940/Scene/1940_Scene03.png"
-  },
-  "public/Image/Page_1940/Scene/1940_Scene06.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "1940_Scene06.d658a932.png",
-    "src": "public/Image/Page_1940/Scene/1940_Scene06.png"
   },
   "public/Image/Page_WS/Cover/DreamMonster_Cover02.png": {
     "resourceType": "image",
@@ -233,23 +214,11 @@ const client_manifest = {
     "file": "M4.23415394.png",
     "src": "public/Image/Page_hideWordsMan/Portrait/M4.png"
   },
-  "public/Image/UI/LOGOlargeCH.svg": {
+  "public/Image/UI/Arrow2.svg": {
     "resourceType": "image",
     "mimeType": "image/svg+xml",
-    "file": "LOGOlargeCH.04195c07.svg",
-    "src": "public/Image/UI/LOGOlargeCH.svg"
-  },
-  "public/Image/UI/LOGOlargeEN.svg": {
-    "resourceType": "image",
-    "mimeType": "image/svg+xml",
-    "file": "LOGOlargeEN.dc12d90b.svg",
-    "src": "public/Image/UI/LOGOlargeEN.svg"
-  },
-  "public/Image/UI/KV_Aen.svg": {
-    "resourceType": "image",
-    "mimeType": "image/svg+xml",
-    "file": "KV_Aen.2d4d932a.svg",
-    "src": "public/Image/UI/KV_Aen.svg"
+    "file": "Arrow2.4fe68592.svg",
+    "src": "public/Image/UI/Arrow2.svg"
   },
   "public/Image/UI/KV_A.svg": {
     "resourceType": "image",
@@ -263,23 +232,53 @@ const client_manifest = {
     "file": "Bird_Book05.0237c537.png",
     "src": "public/Image/Page_bird/Portrait/Bird_Book05.png"
   },
+  "public/Image/UI/KV_Aen.svg": {
+    "resourceType": "image",
+    "mimeType": "image/svg+xml",
+    "file": "KV_Aen.2d4d932a.svg",
+    "src": "public/Image/UI/KV_Aen.svg"
+  },
+  "public/Image/UI/LOGOlargeCH.svg": {
+    "resourceType": "image",
+    "mimeType": "image/svg+xml",
+    "file": "LOGOlargeCH.04195c07.svg",
+    "src": "public/Image/UI/LOGOlargeCH.svg"
+  },
+  "public/Image/UI/LOGOlargeEN.svg": {
+    "resourceType": "image",
+    "mimeType": "image/svg+xml",
+    "file": "LOGOlargeEN.dc12d90b.svg",
+    "src": "public/Image/UI/LOGOlargeEN.svg"
+  },
+  "public/Image/Page_1940/Scene/1940_Scene01.png": {
+    "resourceType": "image",
+    "mimeType": "image/png",
+    "file": "1940_Scene01.53ffa957.png",
+    "src": "public/Image/Page_1940/Scene/1940_Scene01.png"
+  },
   "public/Image/Page_hideWordsMan/Portrait/M5.png": {
     "resourceType": "image",
     "mimeType": "image/png",
     "file": "M5.76cf532c.png",
     "src": "public/Image/Page_hideWordsMan/Portrait/M5.png"
   },
-  "public/Image/Page_WS/Scene/DreamMonster_Scene05.png": {
+  "public/Image/Page_1940/Scene/1940_Scene06.png": {
     "resourceType": "image",
     "mimeType": "image/png",
-    "file": "DreamMonster_Scene05.7a2b8a95.png",
-    "src": "public/Image/Page_WS/Scene/DreamMonster_Scene05.png"
+    "file": "1940_Scene06.d658a932.png",
+    "src": "public/Image/Page_1940/Scene/1940_Scene06.png"
   },
-  "public/Image/Page_WS/Scene/DreamMonster_Scene02.png": {
+  "public/Image/Page_1940/Scene/1940_Scene03.png": {
     "resourceType": "image",
     "mimeType": "image/png",
-    "file": "DreamMonster_Scene02.d6b9d91a.png",
-    "src": "public/Image/Page_WS/Scene/DreamMonster_Scene02.png"
+    "file": "1940_Scene03.e07c60a0.png",
+    "src": "public/Image/Page_1940/Scene/1940_Scene03.png"
+  },
+  "public/Image/Page_bird/Portrait/Bird_Book06.png": {
+    "resourceType": "image",
+    "mimeType": "image/png",
+    "file": "Bird_Book06.a530f05b.png",
+    "src": "public/Image/Page_bird/Portrait/Bird_Book06.png"
   },
   "public/Image/Page_WS/Scene/DreamMonster_Scene03.png": {
     "resourceType": "image",
@@ -287,11 +286,17 @@ const client_manifest = {
     "file": "DreamMonster_Scene03.3d806d18.png",
     "src": "public/Image/Page_WS/Scene/DreamMonster_Scene03.png"
   },
-  "public/Image/Page_bird/Portrait/Bird_Book06.png": {
+  "public/Image/Page_WS/Scene/DreamMonster_Scene02.png": {
     "resourceType": "image",
     "mimeType": "image/png",
-    "file": "Bird_Book06.a530f05b.png",
-    "src": "public/Image/Page_bird/Portrait/Bird_Book06.png"
+    "file": "DreamMonster_Scene02.d6b9d91a.png",
+    "src": "public/Image/Page_WS/Scene/DreamMonster_Scene02.png"
+  },
+  "public/Image/Page_WS/Scene/DreamMonster_Scene05.png": {
+    "resourceType": "image",
+    "mimeType": "image/png",
+    "file": "DreamMonster_Scene05.7a2b8a95.png",
+    "src": "public/Image/Page_WS/Scene/DreamMonster_Scene05.png"
   },
   "public/Image/Page_hideWordsMan/Portrait/M6.png": {
     "resourceType": "image",
@@ -347,6 +352,12 @@ const client_manifest = {
     "file": "S2.173c9161.png",
     "src": "public/Image/Page_hideWordsMan/Portrait/S2.png"
   },
+  "public/Image/Page_hideWordsMan/Scene/game_image_02.png": {
+    "resourceType": "image",
+    "mimeType": "image/png",
+    "file": "game_image_02.a58c02c9.png",
+    "src": "public/Image/Page_hideWordsMan/Scene/game_image_02.png"
+  },
   "public/Image/Page_hideWordsMan/Scene/game_image_03.png": {
     "resourceType": "image",
     "mimeType": "image/png",
@@ -359,16 +370,10 @@ const client_manifest = {
     "file": "game_image_01.6ee97c15.png",
     "src": "public/Image/Page_hideWordsMan/Scene/game_image_01.png"
   },
-  "public/Image/Page_hideWordsMan/Scene/game_image_02.png": {
-    "resourceType": "image",
-    "mimeType": "image/png",
-    "file": "game_image_02.a58c02c9.png",
-    "src": "public/Image/Page_hideWordsMan/Scene/game_image_02.png"
-  },
   "node_modules/nuxt/dist/app/entry.mjs": {
     "resourceType": "script",
     "module": true,
-    "file": "entry.a24b1bd2.js",
+    "file": "entry.46a1ab5c.js",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -377,7 +382,7 @@ const client_manifest = {
       "virtual:nuxt:D:/Work/HTML/Project/WS_NUXTWordPress/.nuxt/error-component.mjs"
     ],
     "css": [
-      "entry.f1c73e79.css"
+      "entry.8d488f7a.css"
     ],
     "assets": [
       "LOGOlargeCH.04195c07.svg",
@@ -391,8 +396,8 @@ const client_manifest = {
       "DFLiHei-700.0691972f.ttc"
     ]
   },
-  "entry.f1c73e79.css": {
-    "file": "entry.f1c73e79.css",
+  "entry.8d488f7a.css": {
+    "file": "entry.8d488f7a.css",
     "resourceType": "style"
   },
   "LOGOlargeCH.04195c07.svg": {
@@ -437,7 +442,7 @@ const client_manifest = {
   "virtual:nuxt:D:/Work/HTML/Project/WS_NUXTWordPress/.nuxt/error-component.mjs": {
     "resourceType": "script",
     "module": true,
-    "file": "error-component.2709f978.js",
+    "file": "error-component.2f09889f.js",
     "src": "virtual:nuxt:D:/Work/HTML/Project/WS_NUXTWordPress/.nuxt/error-component.mjs",
     "isDynamicEntry": true,
     "imports": [
@@ -451,7 +456,7 @@ const client_manifest = {
   "pages/404.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "404.f8a0d0e1.js",
+    "file": "404.e68352b7.js",
     "src": "pages/404.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -461,13 +466,13 @@ const client_manifest = {
   "pages/about.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "about.bf527a7f.js",
+    "file": "about.b5d53ef4.js",
     "src": "pages/about.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_PartTitle.4aeeb952.js",
-      "_HrefBottom.521c9a6a.js",
+      "_PartTitle.63b80e07.js",
+      "_HrefBottom.325d7cf9.js",
       "_Arrow2.ea9cd5d2.js"
     ],
     "assets": [
@@ -479,18 +484,18 @@ const client_manifest = {
     "resourceType": "image",
     "mimeType": "image/svg+xml"
   },
-  "_PartTitle.4aeeb952.js": {
+  "_PartTitle.63b80e07.js": {
     "resourceType": "script",
     "module": true,
-    "file": "PartTitle.4aeeb952.js",
+    "file": "PartTitle.63b80e07.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
-  "_HrefBottom.521c9a6a.js": {
+  "_HrefBottom.325d7cf9.js": {
     "resourceType": "script",
     "module": true,
-    "file": "HrefBottom.521c9a6a.js",
+    "file": "HrefBottom.325d7cf9.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
       "_Arrow2.ea9cd5d2.js"
@@ -512,15 +517,15 @@ const client_manifest = {
   "pages/achievement/birdsOfLife.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "birdsOfLife.a26657bf.js",
+    "file": "birdsOfLife.8fe7edb2.js",
     "src": "pages/achievement/birdsOfLife.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_ProjectLayout.35dfd5ac.js",
-      "_PartItem.6b41ff2a.js",
-      "_Item.325b117d.js",
-      "_ScreenShots.6a3a1b91.js",
+      "_ProjectLayout.1e6578fd.js",
+      "_PartItem.75f2fd99.js",
+      "_Item.299b0f45.js",
+      "_ScreenShots.cc633ebe.js",
       "_Arrow2.ea9cd5d2.js"
     ],
     "assets": [
@@ -592,55 +597,55 @@ const client_manifest = {
     "resourceType": "image",
     "mimeType": "image/png"
   },
-  "_ProjectLayout.35dfd5ac.js": {
+  "_ProjectLayout.1e6578fd.js": {
     "resourceType": "script",
     "module": true,
-    "file": "ProjectLayout.35dfd5ac.js",
+    "file": "ProjectLayout.1e6578fd.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
       "_Arrow2.ea9cd5d2.js"
     ]
   },
-  "_PartItem.6b41ff2a.js": {
+  "_PartItem.75f2fd99.js": {
     "resourceType": "script",
     "module": true,
-    "file": "PartItem.6b41ff2a.js",
+    "file": "PartItem.75f2fd99.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
-  "_Item.325b117d.js": {
+  "_Item.299b0f45.js": {
     "resourceType": "script",
     "module": true,
-    "file": "Item.325b117d.js",
+    "file": "Item.299b0f45.js",
     "imports": [
-      "_PartItem.6b41ff2a.js",
+      "_PartItem.75f2fd99.js",
       "_Arrow2.ea9cd5d2.js",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
-  "_ScreenShots.6a3a1b91.js": {
+  "_ScreenShots.cc633ebe.js": {
     "resourceType": "script",
     "module": true,
-    "file": "ScreenShots.6a3a1b91.js",
+    "file": "ScreenShots.cc633ebe.js",
     "imports": [
-      "_PartItem.6b41ff2a.js",
+      "_PartItem.75f2fd99.js",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/achievement/game1940.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "game1940.728dd010.js",
+    "file": "game1940.8223e1a3.js",
     "src": "pages/achievement/game1940.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_ProjectLayout.35dfd5ac.js",
-      "_PartItem.6b41ff2a.js",
-      "_DownloadButton.ab7393d8.js",
-      "_Item2.bb76705e.js",
-      "_ScreenShots.6a3a1b91.js",
+      "_ProjectLayout.1e6578fd.js",
+      "_PartItem.75f2fd99.js",
+      "_DownloadButton.d3102291.js",
+      "_Item2.062d95ce.js",
+      "_ScreenShots.cc633ebe.js",
       "_Arrow2.ea9cd5d2.js"
     ],
     "assets": [
@@ -650,7 +655,8 @@ const client_manifest = {
       "1940_Cover.af659ebd.jpg",
       "1940_Portrait01.859cab76.jpg",
       "1940_Portrait03.e8893f25.png",
-      "1940_Portrait02.de7be3f9.png"
+      "1940_Portrait02.de7be3f9.png",
+      "01_1940.a124e577.mp3"
     ]
   },
   "1940_Scene01.53ffa957.png": {
@@ -688,18 +694,22 @@ const client_manifest = {
     "resourceType": "image",
     "mimeType": "image/png"
   },
-  "_DownloadButton.ab7393d8.js": {
+  "01_1940.a124e577.mp3": {
+    "file": "01_1940.a124e577.mp3",
+    "resourceType": "audio"
+  },
+  "_DownloadButton.d3102291.js": {
     "resourceType": "script",
     "module": true,
-    "file": "DownloadButton.ab7393d8.js",
+    "file": "DownloadButton.d3102291.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
-  "_Item2.bb76705e.js": {
+  "_Item2.062d95ce.js": {
     "resourceType": "script",
     "module": true,
-    "file": "Item2.bb76705e.js",
+    "file": "Item2.062d95ce.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
@@ -707,16 +717,16 @@ const client_manifest = {
   "pages/achievement/hideWordsMan.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "hideWordsMan.aeb69b07.js",
+    "file": "hideWordsMan.0a109455.js",
     "src": "pages/achievement/hideWordsMan.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_ProjectLayout.35dfd5ac.js",
-      "_PartItem.6b41ff2a.js",
-      "_Item.325b117d.js",
-      "_PartItem4.db037430.js",
-      "_ScreenShots.6a3a1b91.js",
+      "_ProjectLayout.1e6578fd.js",
+      "_PartItem.75f2fd99.js",
+      "_Item.299b0f45.js",
+      "_PartItem4.e646e053.js",
+      "_ScreenShots.cc633ebe.js",
       "_Arrow2.ea9cd5d2.js"
     ],
     "assets": [
@@ -818,24 +828,24 @@ const client_manifest = {
     "resourceType": "image",
     "mimeType": "image/png"
   },
-  "_PartItem4.db037430.js": {
+  "_PartItem4.e646e053.js": {
     "resourceType": "script",
     "module": true,
-    "file": "PartItem4.db037430.js",
+    "file": "PartItem4.e646e053.js",
     "imports": [
-      "_PartItem.6b41ff2a.js",
+      "_PartItem.75f2fd99.js",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/achievement/index.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "index.1d15c496.js",
+    "file": "index.d26dc605.js",
     "src": "pages/achievement/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_PartTitle.4aeeb952.js"
+      "_PartTitle.63b80e07.js"
     ],
     "assets": [
       "3D_Cover2.98af3c7f.png",
@@ -873,17 +883,17 @@ const client_manifest = {
   "pages/achievement/islandofBaku.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "islandofBaku.1f582e6d.js",
+    "file": "islandofBaku.a554c267.js",
     "src": "pages/achievement/islandofBaku.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_ProjectLayout.35dfd5ac.js",
-      "_PartItem.6b41ff2a.js",
-      "_DownloadButton.ab7393d8.js",
-      "_PartItem4.db037430.js",
-      "_Item2.bb76705e.js",
-      "_ScreenShots.6a3a1b91.js",
+      "_ProjectLayout.1e6578fd.js",
+      "_PartItem.75f2fd99.js",
+      "_DownloadButton.d3102291.js",
+      "_PartItem4.e646e053.js",
+      "_Item2.062d95ce.js",
+      "_ScreenShots.cc633ebe.js",
       "_Arrow2.ea9cd5d2.js"
     ],
     "assets": [
@@ -946,15 +956,15 @@ const client_manifest = {
   "pages/achievement/modelView.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "modelView.48572111.js",
+    "file": "modelView.012f53ac.js",
     "src": "pages/achievement/modelView.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_ProjectLayout.35dfd5ac.js",
-      "_PartItem.6b41ff2a.js",
-      "_index.6f0f2ff8.js",
-      "_Item2.bb76705e.js",
+      "_ProjectLayout.1e6578fd.js",
+      "_PartItem.75f2fd99.js",
+      "_index.25e7da33.js",
+      "_Item2.062d95ce.js",
       "_Arrow2.ea9cd5d2.js"
     ],
     "assets": [
@@ -966,10 +976,10 @@ const client_manifest = {
     "resourceType": "image",
     "mimeType": "image/png"
   },
-  "_index.6f0f2ff8.js": {
+  "_index.25e7da33.js": {
     "resourceType": "script",
     "module": true,
-    "file": "index.6f0f2ff8.js",
+    "file": "index.25e7da33.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
@@ -977,14 +987,14 @@ const client_manifest = {
   "pages/eventRecord/[id].vue": {
     "resourceType": "script",
     "module": true,
-    "file": "_id_.e6ef9926.js",
+    "file": "_id_.d2a7252f.js",
     "src": "pages/eventRecord/[id].vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_index.6f0f2ff8.js",
-      "_PartItem.6b41ff2a.js",
-      "_HrefBottom.521c9a6a.js",
+      "_index.25e7da33.js",
+      "_PartItem.75f2fd99.js",
+      "_HrefBottom.325d7cf9.js",
       "_Arrow2.ea9cd5d2.js"
     ],
     "assets": [
@@ -998,26 +1008,26 @@ const client_manifest = {
   "pages/eventRecord/index.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "index.63092bc1.js",
+    "file": "index.11bacb3d.js",
     "src": "pages/eventRecord/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_index.6f0f2ff8.js",
-      "_PartTitle.4aeeb952.js"
+      "_index.25e7da33.js",
+      "_PartTitle.63b80e07.js"
     ]
   },
   "pages/index.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "index.55d44923.js",
+    "file": "index.29d73775.js",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs",
-      "_index.6f0f2ff8.js",
-      "_PartTitle.4aeeb952.js",
-      "_HrefBottom.521c9a6a.js",
+      "_index.25e7da33.js",
+      "_PartTitle.63b80e07.js",
+      "_HrefBottom.325d7cf9.js",
       "_Arrow2.ea9cd5d2.js"
     ],
     "assets": [
@@ -1048,14 +1058,14 @@ const client_manifest = {
   "lang/zh.json": {
     "resourceType": "script",
     "module": true,
-    "file": "zh.da1a49a8.js",
+    "file": "zh.4f698f3c.js",
     "src": "lang/zh.json",
     "isDynamicEntry": true
   },
   "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "error-404.c2e4ec34.js",
+    "file": "error-404.a5cd63b6.js",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1072,7 +1082,7 @@ const client_manifest = {
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": {
     "resourceType": "script",
     "module": true,
-    "file": "error-500.5317df8a.js",
+    "file": "error-500.aae3e5a5.js",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1086,6 +1096,11 @@ const client_manifest = {
     "file": "error-500.e60962de.css",
     "resourceType": "style"
   },
+  "node_modules/nuxt/dist/app/entry.css": {
+    "resourceType": "style",
+    "file": "entry.8d488f7a.css",
+    "src": "node_modules/nuxt/dist/app/entry.css"
+  },
   "node_modules/@nuxt/ui-templates/dist/templates/error-500.css": {
     "resourceType": "style",
     "file": "error-500.e60962de.css",
@@ -1095,11 +1110,6 @@ const client_manifest = {
     "resourceType": "style",
     "file": "error-404.18ced855.css",
     "src": "node_modules/@nuxt/ui-templates/dist/templates/error-404.css"
-  },
-  "node_modules/nuxt/dist/app/entry.css": {
-    "resourceType": "style",
-    "file": "entry.f1c73e79.css",
-    "src": "node_modules/nuxt/dist/app/entry.css"
   }
 };
 
