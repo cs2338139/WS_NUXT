@@ -4,6 +4,7 @@ import PartItem from "~~/components/ProjectPage/src/PartItem.vue";
 import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue";
 import WriterPanel from "~~/components/ProjectPage/src/WriterPanel.vue";
 import ModelPanel from "~~/components/ProjectPage/src/ModelPanel.vue";
+import { useI18n } from "vue-i18n";
 
 const KV = new URL("../../public/Image/Page_3D/Cover/3D_Cover.png", import.meta.url).href;
 const { locale, setLocale, t } = useI18n();

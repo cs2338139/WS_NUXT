@@ -16,9 +16,9 @@ export default {
 <template>
   <NuxtLink :to="localePath(href)">
     <div class="relative">
-      <div class="parallel right-14 -top-4 bg-custom-0 absolute z-10 p-1 text-lg text-center border border-black" v-if="index < 2">NEW!</div>
-      <div class="rounded-3xl flex w-full h-32 border border-black">
-        <div class="rounded-l-3xl w-2/5 h-full bg-gray-300 overflow-hidden">
+      <div class="absolute z-10 p-1 text-lg text-center border border-black parallel right-14 -top-4 bg-custom-0" v-if="index < 2">NEW!</div>
+      <div class="flex w-full h-32 border border-black rounded-3xl">
+        <div class="w-2/5 h-full overflow-hidden bg-gray-300 rounded-l-3xl">
           <div class="flex items-center h-full">
             <img :src="img" alt="" class="" />
           </div>
@@ -30,13 +30,15 @@ export default {
               <slot name="name" />
             </div>
             <div class="">
-              <span class="text-sm">
+              <div class="inline text-sm md:block">
                 <slot name="place" />
-              </span>
-              /
-              <span class="text-sm">
+              </div>
+
+              <div class="inline text-sm md:hidden">/</div>
+
+              <div class="inline text-sm md:block">
                 <slot name="date" />
-              </span>
+              </div>
             </div>
           </div>
         </div>

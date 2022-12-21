@@ -1,6 +1,7 @@
 <script setup>
 import OpenButton from "~~/components/ProjectPage/src/OpenButton.vue";
 import Item2 from "~~/components/ProjectPage/src/Item2.vue";
+import { useI18n } from "vue-i18n";
 
 const { locale, setLocale, t } = useI18n();
 const emits = defineEmits(["open"]);

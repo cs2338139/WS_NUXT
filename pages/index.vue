@@ -83,11 +83,11 @@ if (locale.value === "en") {
 
 <template>
   <div>
-    <!-- <div class="aspect-video wrap-8 w-full mb-10 bg-gray-300"> </div> -->
-    <img src="~/public/Image/UI/KV_A.svg" class="aspect-video wrap-8 w-full mb-10" v-if="locale === 'zh'" />
-    <img src="~/public/Image/UI/KV_Aen.svg" class="aspect-video wrap-8 w-full mb-10" v-if="locale === 'en'" />
+    <!-- <div class="w-full mb-10 bg-gray-300 aspect-video wrap-8"> </div> -->
+    <img src="~/public/Image/UI/KV_A.svg" class="w-full mb-10 aspect-video wrap-8" v-if="locale === 'zh'" />
+    <img src="~/public/Image/UI/KV_Aen.svg" class="w-full mb-10 aspect-video wrap-8" v-if="locale === 'en'" />
 
-    <div class="wrap-6 mb-10">
+    <div class="mb-10 wrap-6">
       <PartTitle class="mt-0 mb-10 ml-0">
         <template #en>About the project</template>
         <template #title>{{ $t("pages.home.info.title") }}</template>
@@ -107,14 +107,14 @@ if (locale.value === "en") {
       </div>
     </div>
 
-    <div class="wrap-6 mb-32">
+    <div class="mb-32 wrap-6">
       <PartTitle class="mt-0 mb-5 ml-0">
         <template #en>Achievement</template>
         <template #title>{{ $t("pages.home.achievement.title") }}</template>
       </PartTitle>
 
-      <div class="inline-flex justify-between w-full mb-28">
-        <ProjectItem class="transform translate-y-32" href="/achievement/modelView" color="yellow" :img="ProjectItemImage1">
+      <div class="inline-flex justify-between w-full mb-28 2xl:overflow-x-auto 2xl:scrollbarCustom">
+        <ProjectItem class="transform translate-y-32 2xl:translate-y-0 2xl:mr-20" href="/achievement/modelView" color="yellow" :img="ProjectItemImage1">
           <template #name>
             {{ $t("pages.home.achievement.content.0.title") }}
           </template>
@@ -122,7 +122,7 @@ if (locale.value === "en") {
             {{ $t("pages.home.achievement.content.0.year") }}
           </template>
         </ProjectItem>
-        <ProjectItem class="transform translate-y-16" href="/achievement/hideWordsMan" color="blue" :img="ProjectItemImage2">
+        <ProjectItem class="transform translate-y-16 2xl:translate-y-0 2xl:mr-20" href="/achievement/hideWordsMan" color="blue" :img="ProjectItemImage2">
           <template #name>
             {{ $t("pages.home.achievement.content.4.title") }}
           </template>
@@ -145,7 +145,7 @@ if (locale.value === "en") {
           </template>
         </ProjectItem>
       </div>
-      <div class="text-right max-w-4xl mx-auto">
+      <div class="max-w-4xl mx-auto text-right">
         <HrefBottom href="/achievement/">{{ $t("pages.home.achievement.button") }}</HrefBottom>
       </div>
     </div>

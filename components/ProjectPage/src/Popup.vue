@@ -17,19 +17,19 @@ if (props.link === undefined) {
 </script>
 
 <template>
-  <div class="bg-custom-0 fixed bottom-0 left-0 z-30 w-full h-screen">
+  <div class="fixed bottom-0 left-0 z-30 w-full h-screen bg-custom-0">
     <div class="absolute right-0">
-      <button @click="$emit('close')" class="top-5 aspect-square flex items-center justify-center w-12 m-2 bg-white border border-black rounded-full">
+      <button @click="$emit('close')" class="flex items-center justify-center w-12 m-2 bg-white border border-black rounded-full top-5 aspect-square">
         <ion-icon name="close-outline" class="text-4xl"></ion-icon>
       </button>
     </div>
 
-    <div class="wrap-6 flex flex-col items-center justify-center h-full">
+    <div class="flex flex-col items-center justify-center h-full wrap-6">
       <div class="absolute flex items-center justify-between w-full h-full" v-if="moveEnable">
-        <button @click="$emit('previous')" class="aspect-square flex items-center justify-center w-12 m-2 bg-white border border-black">
+        <button @click="$emit('previous')" class="flex items-center justify-center w-12 m-2 bg-white border border-black aspect-square">
           <ion-icon name="arrow-back-outline" class="text-4xl"></ion-icon>
         </button>
-        <button @click="$emit('next')" class="aspect-square flex items-center justify-center w-12 m-2 bg-white border border-black">
+        <button @click="$emit('next')" class="flex items-center justify-center w-12 m-2 bg-white border border-black aspect-square">
           <ion-icon name="arrow-forward-outline" class="text-4xl"></ion-icon>
         </button>
       </div>
@@ -50,15 +50,15 @@ if (props.link === undefined) {
             height="350"
             :src="link"
             v-if="isModel"
-            class="rounded-2xl h-80 w-80 bg-white"
+            class="bg-white rounded-2xl h-80 w-80"
           >
           </iframe>
         </div>
-        <div class="aspect-square flex justify-center h-56 overflow-hidden border rounded-full" v-if="isModel === false">
+        <div class="flex justify-center h-56 overflow-hidden border rounded-full aspect-square" v-if="isModel === false">
           <img :v-if="img != ''" :src="img" class="h-full" />
         </div>
       </div>
-      <div class="mb-14 z-50 w-3/5 mt-8 text-justify">
+      <div class="z-50 w-3/5 mt-8 text-justify mb-14">
         <div class="mb-4 text-2xl font-bold text-center">
           <slot name="name" />
         </div>
@@ -69,13 +69,13 @@ if (props.link === undefined) {
           {{ $t("pages.home.child.achievement.child.modelView.result.size") }}
           <slot name="size" />
         </div>
-        <div class="h-80 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-rounded-xl scrollbar-thumb-rounded-xl scrollbar-track-gray-100 z-50 overflow-y-auto text-xl text-justify" :class="{ 'h-52': isModel }">
+        <div class="z-50 overflow-y-auto text-xl text-justify h-80 scrollbarCustom" :class="{ 'h-52': isModel }">
           <div class="m-2"><slot name="word" /></div>
         </div>
         <div class="z-50 h-12 text-center">
           <NuxtLink :to="more" target="_blank" class="flex items-center justify-center" v-if="isModel && more">
             <div class="mr-2 text-2xl font-bold tracking-wider border-b border-black">{{ $t("pages.home.child.achievement.child.modelView.result.more") }}</div>
-            <div class="aspect-square w-12 bg-white border border-black rounded-full">
+            <div class="w-12 bg-white border border-black rounded-full aspect-square">
               <img class="" src="~/public/Image/UI/Arrow2.svg" alt="" />
             </div>
           </NuxtLink>

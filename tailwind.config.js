@@ -3,24 +3,15 @@ module.exports = {
   content: ["./components/**/*.{js,vue,ts}", "./layouts/**/*.vue", "./pages/**/*.vue", "./plugins/**/*.{js,ts}", "app.vue"],
   theme: {
     screens: {
-      "4xl": { min: "1981px" },
-
-      "3xl": { max: "1900px" },
-
       "2xl": { max: "1440px" },
-      /*Extra large devices (large laptops and desktops, 1200px and up) */
 
-      xl: { max: "1279px" },
-      /* Large devices (laptops/desktops) */
+      xl: { max: "1199.98px" },
 
-      lg: { max: "1023px" },
-      /* Medium devices (landscape tablets) */
+      lg: { max: "991.98px" },
 
-      md: { max: "767px" },
-      /* small devices (portrait tablets and large phones) */
+      md: { max: "767.98px" },
 
-      sm: { max: "639px" },
-      /* Extra small devices (phones, 600px) */
+      sm: { max: "575.98px" },
     },
     extend: {
       spacing: {

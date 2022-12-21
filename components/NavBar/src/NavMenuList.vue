@@ -6,15 +6,14 @@ defineProps({
 </script>
 
 <template>
-  <li class="group text-center">
+  <li class="mx-1 text-center group">
     <NuxtLink :to="localePath(href)">
-      <div class="text-2xl px-4 py-3 text-center text-black">
+      <div class="px-4 py-3 text-2xl text-center text-black">
         <slot name="menuName"> </slot>
       </div>
     </NuxtLink>
-    <div class="group-hover:block hover:block absolute hidden h-40 p-0 mx-0 text-center"
-      :class="menuListOffset">
-      <ul class="hover:block p-3 mx-0 mt-5 text-center bg-custom-0 border border-black rounded-xl">
+    <div class="absolute hidden h-40 p-0 mx-0 text-center group-hover:block hover:block 2xl:group-hover:hidden 2xl:hover:hidden" :class="menuListOffset">
+      <ul class="p-3 mx-0 mt-5 text-center border border-black bg-custom-0 rounded-xl hover:block 2xl:hover:block">
         <slot></slot>
       </ul>
     </div>

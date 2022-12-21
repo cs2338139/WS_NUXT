@@ -12,6 +12,7 @@ const logoImage = new URL("../../public/Image/UI/LOGOsmall.svg", import.meta.url
 
 const navBar = ref();
 const narButton = ref();
+const { isWidth_3xl } = useGetWidth();
 
 function ChangeLang() {
   console.log(locale.value);
@@ -31,10 +32,14 @@ onMounted(() => {
 });
 
 function onScroll() {
-  if (window.top.scrollY > navBar.value.offsetHeight) {
-    narButton.value.style.display = "block";
+  if (isWidth_3xl.value) {
+    if (window.top.scrollY > navBar.value.offsetHeight) {
+      narButton.value.style.display = "block";
+    } else {
+      narButton.value.style.display = "none";
+    }
   } else {
-    narButton.value.style.display = "none";
+    //TODO TopButton
   }
 }
 
@@ -47,7 +52,7 @@ const popupEnable = ref(false);
 
 <template>
   <div>
-    <nav class="top-0 w-full bg-custom-0 h-32" ref="navBar">
+    <nav class="top-0 w-full h-32 bg-custom-0" ref="navBar">
       <NavMenu class="top-0">
         <template #logo>
           <Logo href="/" :img="logoImage" width="width:120px" />
@@ -65,15 +70,23 @@ const popupEnable = ref(false);
         </NavMenuList>
         <NavMenuItem href="/eventRecord"> {{ $t("nav.eventRecord") }}</NavMenuItem>
 
-        <button @click="ChangeLang()">
-          <li class="px-4 py-3 text-2xl font-bold text-center bg-white border-2 border-black">
+        <button @click="ChangeLang()" class="ml-1">
+          <li class="flex justify-center items-center aspect-square w-14 text-2xl font-bold text-center bg-white border-2 border-black">
             {{ $t("nav.lang") }}
           </li>
         </button>
       </NavMenu>
     </nav>
-    <button class="fixed right-5 top-5 w-14 aspect-square border-black border-2 rounded-full p-4 overflow-hidden bg-white hidden" ref="narButton" @click="OpenNavPopup">
-      <div class="flex-col flex justify-between w-full h-full">
+    <button class="fixed hidden p-4 overflow-hidden bg-white border-2 border-black rounded-full right-5 top-5 w-14 aspect-square" ref="narButton" @click="OpenNavPopup">
+      <div class="flex flex-col justify-between w-full h-full">
+        <hr class="border border-black" />
+        <hr class="border border-black" />
+        <hr class="border border-black" />
+      </div>
+    </button>
+
+    <button class="fixed hidden p-4 overflow-hidden bg-white border-2 border-black rounded-full right-5 top-5 w-14 aspect-square" ref="topButton" @click="OpenNavPopup">
+      <div class="flex flex-col justify-between w-full h-full">
         <hr class="border border-black" />
         <hr class="border border-black" />
         <hr class="border border-black" />

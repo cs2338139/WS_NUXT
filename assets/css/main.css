@@ -50,11 +50,11 @@
   }
 
   .wrap-8 {
-    @apply max-w-8xl relative mx-auto my-0;
+    @apply max-w-8xl relative mx-auto my-0 2xl:px-10;
   }
 
   .wrap-6 {
-    @apply relative max-w-6xl mx-auto my-0;
+    @apply relative max-w-6xl mx-auto my-0 xl:px-10;
   }
 
   .IsDisabled {
@@ -71,6 +71,10 @@
 
   .BlueBorder {
     @apply border-custom-0;
+  }
+
+  .scrollbarCustom {
+    @apply scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-rounded-xl scrollbar-thumb-rounded-xl scrollbar-track-gray-100;
   }
 }
 

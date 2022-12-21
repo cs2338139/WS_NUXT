@@ -2,6 +2,7 @@
 import OpenButton from "~~/components/ProjectPage/src/OpenButton.vue";
 import Item4 from "~~/components/ProjectPage/src/Item4.vue";
 import modelPanelCategories from "~~/components/ProjectPage/src/modelPanelCategories.vue";
+import { useI18n } from "vue-i18n";
 
 const { locale, setLocale, t } = useI18n();
 const emits = defineEmits(["open"]);

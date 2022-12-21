@@ -8,18 +8,18 @@ defineProps({
 
 <template>
   <NuxtLink :to="localePath(href)">
-    <div class="relative h-430px w-80 border border-black rounded-3xl">
+    <div class="relative mt-10 border border-black h-430px w-80 rounded-3xl">
       <div>
-        <div class="absolute parallel right-6 -z-10 -top-8 border border-black bg-custom-0" v-if="color === 'yellow'"></div>
-        <div class="absolute parallel right-6 -z-10 -top-8 border border-black bg-custom-1" v-if="color === 'red'"></div>
-        <div class="absolute parallel right-6 -z-10 -top-8 border border-black bg-custom-2" v-if="color === 'blue'"></div>
+        <div class="absolute border border-black parallel right-6 -z-10 -top-8 bg-custom-0" v-if="color === 'yellow'"></div>
+        <div class="absolute border border-black parallel right-6 -z-10 -top-8 bg-custom-1" v-if="color === 'red'"></div>
+        <div class="absolute border border-black parallel right-6 -z-10 -top-8 bg-custom-2" v-if="color === 'blue'"></div>
       </div>
-      <div class="h-3/4 w-full rounded-t-3xl bg-gray-300 overflow-hidden">
-        <div class="h-full w1/3 flex items-center">
+      <div class="w-full overflow-hidden bg-gray-300 h-3/4 rounded-t-3xl">
+        <div class="flex items-center h-full w1/3">
           <img :src="img" alt="" class="h-full" />
         </div>
       </div>
-      <div class="h-1/4 border-t border-black">
+      <div class="border-t border-black h-1/4">
         <div class="h-full flex-col justify-between flex p-3.5">
           <div class="text-xl">
             <slot name="name"></slot>
