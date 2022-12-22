@@ -8,13 +8,13 @@ defineProps({
 
 <template>
   <NuxtLink :to="localePath(href)">
-    <div class="relative mt-10 border border-black h-430px w-80 rounded-3xl">
+    <div class="relative mt-10 border border-black h-430px w-80 rounded-3xl" >
       <div>
         <div class="absolute border border-black parallel right-6 -z-10 -top-8 bg-custom-0" v-if="color === 'yellow'"></div>
         <div class="absolute border border-black parallel right-6 -z-10 -top-8 bg-custom-1" v-if="color === 'red'"></div>
         <div class="absolute border border-black parallel right-6 -z-10 -top-8 bg-custom-2" v-if="color === 'blue'"></div>
       </div>
-      <div class="w-full overflow-hidden bg-gray-300 h-3/4 rounded-t-3xl">
+      <div class="w-full overflow-hidden bg-gray-300 h-3/4 rounded-t-3xl"  v-show="img">
         <div class="flex items-center h-full">
           <img :src="img" alt="" class="h-full" />
         </div>
