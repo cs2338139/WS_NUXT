@@ -38,7 +38,7 @@ function Resize() {
       <template #title>{{ $t("pages.home.child.achievement.info.title") }}</template>
     </PartTitle>
 
-    <div class="flex flex-col justify-between mx-auto mb-10 dev-pink 2xl:justify-around 2xl:flex-row 2xl:flex-wrap">
+    <div class="flex flex-col justify-between mx-auto mb-10  2xl:justify-around 2xl:flex-row 2xl:flex-wrap">
       <component :is="itemComponent" href="/achievement/modelView" :img="p1" color="yellow" class="2xl:mb-10 2xl:mx-10">
         <template #name>{{ $t("pages.home.child.achievement.info.content.0.title") }}</template>
         <template #year>{{ $t("pages.home.child.achievement.info.content.0.year") }}</template>
@@ -62,7 +62,7 @@ function Resize() {
         <template #year>{{ $t("pages.home.child.achievement.info.content.2.year") }}</template>
         <template #word>{{ $t("pages.home.child.achievement.info.content.2.words.0") }}</template>
       </component>
-      <component :is="itemComponent" href="/achievement/islandofBaku" :img="p5" color="yellow" class="2xl:mb-10 2xl:mx-10 dev-pink">
+      <component :is="itemComponent" href="/achievement/islandofBaku" :img="p5" color="yellow" class="2xl:mb-10 2xl:mx-10 ">
         <template #name>{{ $t("pages.home.child.achievement.info.content.1.title") }}</template>
         <template #info>{{ $t("pages.home.child.achievement.info.content.1.info") }}</template>
         <template #year>{{ $t("pages.home.child.achievement.info.content.1.year") }}</template>
