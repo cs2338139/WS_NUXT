@@ -12,7 +12,8 @@ const logoImage = new URL("../../public/Image/UI/LOGOsmall.svg", import.meta.url
 
 const navBar = ref();
 const narButton = ref();
-const { isWidth_3xl } = useGetWidth();
+const topButton = ref();
+const getWidth = useGetWidth();
 
 function ChangeLang() {
   console.log(locale.value);
@@ -32,14 +33,18 @@ onMounted(() => {
 });
 
 function onScroll() {
-  if (isWidth_3xl.value) {
+  if (getWidth.value === "3xl") {
     if (window.top.scrollY > navBar.value.offsetHeight) {
       narButton.value.style.display = "block";
     } else {
       narButton.value.style.display = "none";
     }
   } else {
-    //TODO TopButton
+    if (window.top.scrollY > navBar.value.offsetHeight) {
+      topButton.value.style.display = "block";
+    } else {
+      topButton.value.style.display = "none";
+    }
   }
 }
 
@@ -47,6 +52,17 @@ function OpenNavPopup() {
   popupEnable.value = true;
   document.body.style.overflow = "hidden";
 }
+
+function ScrollToTop() {
+  // document.body.scrollTop = 0; // For Safari
+  // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+}
+
 const popupEnable = ref(false);
 </script>
 
@@ -85,12 +101,8 @@ const popupEnable = ref(false);
       </div>
     </button>
 
-    <button class="fixed hidden p-4 overflow-hidden bg-white border-2 border-black rounded-full right-5 top-5 w-14 aspect-square" ref="topButton" @click="OpenNavPopup">
-      <div class="flex flex-col justify-between w-full h-full">
-        <hr class="border border-black" />
-        <hr class="border border-black" />
-        <hr class="border border-black" />
-      </div>
+    <button class="fixed hidden right-5 bottom-20 w-14 aspect-square" ref="topButton" @click="ScrollToTop">
+      <img class="" src="~/public/Image/UI/ToTop.svg" alt="" />
     </button>
     <NavPopup @close="ClosePopupPanel" v-if="popupEnable" @function="ChangeLang()"> </NavPopup>
   </div>

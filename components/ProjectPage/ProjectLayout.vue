@@ -95,7 +95,7 @@ defineExpose({
 
 <template>
   <div>
-    <div class="aspect-KV wrap-8 mb-14 w-full bg-gray-300">
+    <div class="aspect-KV wrap-8 mb-14 w-full ">
       <img :src="img" class="w-full" />
     </div>
 

@@ -21,9 +21,6 @@ const { locale, setLocale } = useI18n();
         </div>
       </div>
     </div>
-    <!-- <div class="h-40 bg-custom-0">
-
-    </div> -->
   </footer>
 </template>
 

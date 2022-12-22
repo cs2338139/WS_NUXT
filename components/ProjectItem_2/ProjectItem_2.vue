@@ -2,11 +2,6 @@
 defineProps({
   href: String,
   img: String,
-
-  name: String,
-  info: String,
-  year: String,
-  word: String,
 });
 </script>
 

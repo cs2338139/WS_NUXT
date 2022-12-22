@@ -8,10 +8,10 @@
         "islandOfBaku": "Island of Baku",
         "game1940": "1940",
         "birdsOfLife": "Birds of Life",
-        "hideWordsMan": "Introduction of Demon-Hunting Character Capturers"
+        "hideWordsMan": "Introduction to Demon-Hunting Character Capturers"
       }
     },
-    "eventRecord": "Event Record",
+    "eventRecord": "Past Events",
     "lang": "中"
   },
   "pages": {
@@ -22,7 +22,7 @@
         "title2": "‘This project focuses on promoting the collections in the various museums in Taiwan by translating the collections into simple stories, making them more accessible to the public.’",
         "content": [
           "The purpose of this project, hosted by the National Museum of Taiwan Literature in response to the Culture and Technology Program by the Ministry of Culture, is to make literature more accessible to Taiwanese people through the interdisciplinary integration of literary collections with digital technology.",
-          "This project features the following five digital works: “3D Scanning and Modeling Project,” digital game “1940,” “Bird of Life,” “Island of Dreaming Beasts,” and “Demon-Hunting Character Capturers.”"
+          "This project features the following five digital works: “3D Scanning and Modeling Project,” digital game “1940,” “Bird of Life,” “Islands of Monsters,” and “Demon-Hunting Character Capturers.”"
         ],
         "button": "Read more"
       },
@@ -55,7 +55,7 @@
             "year": "2021-2022"
           }
         ],
-        "button": "Explore All Project"
+        "button": "Explore All Projects"
       },
       "Event": {
         "title": "Event",
@@ -68,9 +68,9 @@
             "title": "About the Project",
             "content": [
               "The purpose of this project, hosted by the National Museum of Taiwan Literature in response to the Culture and Technology Program by the Ministry of Culture, is to make literature more accessible to Taiwanese people through the interdisciplinary integration of literary collections with digital technology.",
-              "This project features the following five digital works: “3D Scanning and Modeling Project,” digital game “1940,” “Bird of Life,” “Island of Dreaming Beasts,” and “Demon-Hunting Character Capturers.”"
+              "This project features the following five digital works: “3D Scanning and Modeling Project,” digital game “1940,” “Bird of Life,” “Islands of Monsters,” and “Demon-Hunting Character Capturers.”"
             ],
-            "button": "Explore All Project"
+            "button": "Explore All Projects"
           }
         },
         "achievement": {
@@ -107,8 +107,8 @@
                 ]
               },
               {
-                "title": "Introduction of Demon-Hunting Character Capturers",
-                "info": "體感互動遊戲",
+                "title": "Introduction to Demon-Hunting Character Capturers",
+                "info": "A somatosensory interactive game",
                 "year": "2021-2022",
                 "words": ["This game is inspired by the wooden statue of Mazu created by Li Hsian-chang and uses Taiwanese Folk Literature Collection for the game context. "]
               }
@@ -436,9 +436,9 @@
               }
             },
             "hideWordsMan": {
-              "title": "Introduction of Demon-Hunting Character Capturers｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
+              "title": "Introduction to Demon-Hunting Character Capturers｜A Project of Game Development and 3D Scanning｜National Museum of Taiwan Literature",
               "info": {
-                "title": "Introduction of Demon-Hunting Character Capturers",
+                "title": "Introduction to Demon-Hunting Character Capturers",
                 "about": {
                   "title": "About the Game",
                   "content": [

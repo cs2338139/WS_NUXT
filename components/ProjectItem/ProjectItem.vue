@@ -15,7 +15,7 @@ defineProps({
         <div class="absolute border border-black parallel right-6 -z-10 -top-8 bg-custom-2" v-if="color === 'blue'"></div>
       </div>
       <div class="w-full overflow-hidden bg-gray-300 h-3/4 rounded-t-3xl">
-        <div class="flex items-center h-full w1/3">
+        <div class="flex items-center h-full">
           <img :src="img" alt="" class="h-full" />
         </div>
       </div>
