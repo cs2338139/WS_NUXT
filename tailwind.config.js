@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const fractionWidths = require("tailwindcss-fraction-widths");
+
 module.exports = {
   content: ["./components/**/*.{js,vue,ts}", "./layouts/**/*.vue", "./pages/**/*.vue", "./plugins/**/*.{js,ts}", "app.vue"],
   theme: {
@@ -14,6 +16,15 @@ module.exports = {
       sm: { max: "575.98px" },
     },
     extend: {
+      lineClamp: {
+        7: "7",
+        8: "8",
+        9: "9",
+        10: "10",
+      },
+      variants: {
+        lineClamp: ["responsive", "hover"],
+      },
       spacing: {
         footer: "450px",
         100: "25rem",
@@ -140,5 +151,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
+  plugins: [require("tailwind-scrollbar")({ nocompatible: true }), fractionWidths([16, 20]), require("@tailwindcss/line-clamp")],
 };

@@ -19,6 +19,9 @@ const { locale, setLocale, t } = useI18n();
 useHead({
   title: t("pages.home.child.achievement.child.islandOfBaku.title"),
 });
+const box = ref();
+const fakeElement = ref();
+const { fakeCount } = useSetFakeElement(box, fakeElement);
 
 const projectLayout = ref(null);
 
@@ -27,6 +30,7 @@ const literatiData = reactive([]);
 onMounted(() => {
   GetDate();
 });
+
 
 function GetDate() {
   img.value.push(p1);
@@ -112,7 +116,7 @@ function SentData(datas, i) {
 
         <PartItemNull>
           <template #title>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.title") }}</template>
-          <div class="flex flex-wrap justify-between">
+          <div class="flex flex-wrap justify-between" ref="box">
             <Item2 @open="SentData(literatiData, 0)" :img="p1">
               <template #name>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.0.name") }}</template>
               <template #year>（{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.0.year") }}）</template>
@@ -133,6 +137,8 @@ function SentData(datas, i) {
               <template #name>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.4.name") }}</template>
               <template #year>（{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.4.year") }}）</template>
             </Item2>
+
+            <Item2 v-for="index in fakeCount" ref="fakeElement"></Item2>
           </div>
         </PartItemNull>
 

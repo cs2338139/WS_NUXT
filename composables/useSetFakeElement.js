@@ -1,5 +1,4 @@
 export default function (box, fakeElement) {
-
   let firstSetFakeElement = setInterval(() => {
     if (box.value.offsetWidth != 0) {
       GetFakeCount(box, fakeElement);
@@ -19,10 +18,15 @@ export default function (box, fakeElement) {
     if (box.value) {
       let count = box.value.children.length - fatCurrentCount;
 
-      let countOfRows = Math.floor(box.value.offsetWidth / box.value.children[0].offsetWidth);
+      let countOfRows = Math.floor(box.value.offsetWidth / box.value.children[0].getBoundingClientRect().width);
       let rowsCount = Math.ceil(count / countOfRows);
       if (rowsCount > 0 && countOfRows > 0 && count > 0) {
         fakeCount.value = rowsCount * countOfRows - count;
+
+        console.log(box.value.offsetWidth +'  '+ box.value.children[0].getBoundingClientRect().width+'  '+box.value.offsetWidth / box.value.children[0].getBoundingClientRect().width+'   '+rowsCount + "   " + countOfRows + "  " + count);
+        // console.log(box.value.children[0].clientWidth);
+        // console.log(box.value.children[0].offsetWidth);
+        // console.log(box.value.children[0].getBoundingClientRect().width);
       }
     }
   }

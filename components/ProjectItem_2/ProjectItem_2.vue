@@ -3,14 +3,15 @@ defineProps({
   href: String,
   img: String,
 });
+const { locale, setLocale, t } = useI18n();
 </script>
 
 <template>
   <div class="px-16 pb-16">
-    <NuxtLink :to="localePath(href)" class="rounded-3xl h-80 flex w-full p-4 border border-black">
+    <NuxtLink :to="localePath(href)" class="rounded-3xl h-80 flex w-full p-4 border border-black " :class="{ 'h-96': locale === 'en' }">
       <div class="rounded-3xl w-1/3 h-full overflow-hidden bg-gray-300">
         <div class="flex items-center h-full">
-          <img :src="img" alt="" class="" />
+          <img :src="img" alt="" class="scale-110" />
         </div>
       </div>
 
@@ -25,7 +26,7 @@ defineProps({
 
           <div class="mt-1 mb-4 border-b border-black"></div>
 
-          <div class="text-xl"><slot name="word" /></div>
+          <div class="text-xl text-justify"><slot name="word" /></div>
         </div>
       </div>
     </NuxtLink>

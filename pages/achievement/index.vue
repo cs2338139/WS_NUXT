@@ -41,48 +41,48 @@ function Resize() {
       <template #title>{{ $t("pages.home.child.achievement.info.title") }}</template>
     </PartTitle>
 
-    <div class="flex flex-col justify-between mx-auto mb-10 2xl:justify-around 2xl:flex-row 2xl:flex-wrap" ref="box">
-      <div class=" 2xl:mb-10 2xl:mx-10 xl:mx-0">
-        <component :is="itemComponent" href="/achievement/modelView" :img="p1" color="yellow" class="">
+    <div class="flex flex-col justify-between mx-auto mb-10 2xl:justify-between xl:justify-around 2xl:flex-row 2xl:flex-wrap" ref="box">
+      <div>
+        <component :is="itemComponent" href="/achievement/modelView" :img="p1" color="yellow" class="2xl:mb-24 2xl:mx-5 lg: mx-0 lg:scale-90">
           <template #name>{{ $t("pages.home.child.achievement.info.content.0.title") }}</template>
           <template #year>{{ $t("pages.home.child.achievement.info.content.0.year") }}</template>
           <template #word>{{ $t("pages.home.child.achievement.info.content.0.words.0") }}</template>
         </component>
       </div>
-      <div class=" 2xl:mb-10 2xl:mx-10 xl:mx-0">
-        <component :is="itemComponent" href="/achievement/hideWordsMan" :img="p2" color="blue">
+      <div>
+        <component :is="itemComponent" href="/achievement/hideWordsMan" :img="p2" color="blue" class="2xl:mb-24 2xl:mx-5 lg: mx-0 lg:scale-90">
           <template #name>{{ $t("pages.home.child.achievement.info.content.4.title") }}</template>
           <template #info>{{ $t("pages.home.child.achievement.info.content.4.info") }}</template>
           <template #year>{{ $t("pages.home.child.achievement.info.content.4.year") }}</template>
           <template #word>{{ $t("pages.home.child.achievement.info.content.4.words.0") }}</template>
         </component>
       </div>
-      <div class="2xl:mb-10 2xl:mx-10">
-        <component :is="itemComponent" href="/achievement/birdsOfLife" :img="p3" color="red">
+      <div>
+        <component :is="itemComponent" href="/achievement/birdsOfLife" :img="p3" color="red" class="2xl:mb-24 2xl:mx-5 lg: mx-0 lg:scale-90">
           <template #name>{{ $t("pages.home.child.achievement.info.content.3.title") }}</template>
           <template #info>{{ $t("pages.home.child.achievement.info.content.3.info") }}</template>
           <template #year>{{ $t("pages.home.child.achievement.info.content.3.year") }}</template>
           <template #word>{{ $t("pages.home.child.achievement.info.content.3.words.0") }}</template>
         </component>
       </div>
-      <div class="2xl:mb-10 2xl:mx-10">
-        <component :is="itemComponent" href="/achievement/game1940" :img="p4" color="blue">
+      <div>
+        <component :is="itemComponent" href="/achievement/game1940" :img="p4" color="blue" class="2xl:mb-24 2xl:mx-5 lg: mx-0 lg:scale-90">
           <template #name>{{ $t("pages.home.child.achievement.info.content.2.title") }}</template>
           <template #info>{{ $t("pages.home.child.achievement.info.content.2.info") }}</template>
           <template #year>{{ $t("pages.home.child.achievement.info.content.2.year") }}</template>
           <template #word>{{ $t("pages.home.child.achievement.info.content.2.words.0") }}</template>
         </component>
       </div>
-      <div class="2xl:mb-10 2xl:mx-10">
-        <component :is="itemComponent" href="/achievement/islandofBaku" :img="p5" color="yellow">
+      <div>
+        <component :is="itemComponent" href="/achievement/islandofBaku" :img="p5" color="yellow" class="2xl:mb-24 2xl:mx-5 lg: mx-0 lg:scale-90">
           <template #name>{{ $t("pages.home.child.achievement.info.content.1.title") }}</template>
           <template #info>{{ $t("pages.home.child.achievement.info.content.1.info") }}</template>
           <template #year>{{ $t("pages.home.child.achievement.info.content.1.year") }}</template>
           <template #word>{{ $t("pages.home.child.achievement.info.content.1.words.0") }}</template>
         </component>
       </div>
-      <div v-for="index in fakeCount" ref="fakeElement" class="2xl:mb-10 2xl:mx-10">
-        <component :is="itemComponent"> </component>
+      <div v-for="index in fakeCount" ref="fakeElement">
+        <component :is="itemComponent" class="2xl:mb-24 2xl:mx-5 lg: mx-0 lg:scale-90"> </component>
       </div>
     </div>
   </div>

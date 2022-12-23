@@ -10,7 +10,7 @@ import PartItemNull from "~~/components/ProjectPage/src/PartItemNull.vue";
     <div class="mb-1 font-bold">
       <slot name="name" />
     </div>
-    <div class="">
+    <div class="text-justify">
       <slot name="word" />
     </div>
     <slot name="other" />

@@ -1,11 +1,11 @@
 <script setup></script>
 
 <template>
-  <div class="flex my-10">
-    <div class="text-xl font-bold w-1/5">
+  <div class="flex my-10 justify-between">
+    <div class="text-xl font-bold w-4/20 text">
       <slot name="name" />
     </div >
-    <div class="w-4/5"><slot name="info" /></div>
+    <div class="w-15/20 text-justify"><slot name="info" /></div>
   </div>
 </template>
 

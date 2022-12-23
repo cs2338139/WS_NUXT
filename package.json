@@ -16,6 +16,7 @@
     "@nuxtjs/apollo": "^5.0.0-alpha.2",
     "@nuxtjs/i18n": "^8.0.0-beta.2",
     "@nuxtjs/svg": "^0.4.0",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "autoprefixer": "^10.4.12",
     "gh-pages": "^4.0.0",
     "nuxt": "3.0.0-rc.11",
@@ -25,6 +26,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
-    "gsap": "^3.11.3"
+    "gsap": "^3.11.3",
+    "tailwindcss-fraction-widths": "^0.0.3"
   }
 }

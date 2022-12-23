@@ -12,6 +12,9 @@ const { locale, setLocale, t } = useI18n();
 useHead({
   title: t("pages.home.child.achievement.child.birdsOfLife.title"),
 });
+const box = ref();
+const fakeElement = ref();
+const { fakeCount } = useSetFakeElement(box, fakeElement);
 
 const m = new URL("../../public/Image/Page_bird/Portrait/Bird_Portrait01.png", import.meta.url).href;
 const p1 = new URL("../../public/Image/Page_bird/Portrait/Bird_Book01.png", import.meta.url).href;
@@ -31,6 +34,7 @@ const workData = reactive([]);
 onMounted(() => {
   GetDate();
 });
+
 
 function GetDate() {
   for (let i = 0; i < 1; i++) {
@@ -110,15 +114,14 @@ function SentData(datas, i) {
 
         <PartItemNull>
           <template #title>{{ $t("pages.home.child.achievement.child.birdsOfLife.works.title") }}</template>
-          <div class="flex flex-wrap justify-between">
+          <div class="flex flex-wrap justify-between xl:justify-around" ref="box">
             <Item color="yellow" @open="SentData(workData, 0)" :img="p1"> {{ $t("pages.home.child.achievement.child.birdsOfLife.works.content[0].name") }}</Item>
             <Item color="blue" @open="SentData(workData, 1)" :img="p2"> {{ $t("pages.home.child.achievement.child.birdsOfLife.works.content[1].name") }}</Item>
             <Item color="red" @open="SentData(workData, 2)" :img="p3"> {{ $t("pages.home.child.achievement.child.birdsOfLife.works.content[2].name") }}</Item>
             <Item color="yellow" @open="SentData(workData, 3)" :img="p4"> {{ $t("pages.home.child.achievement.child.birdsOfLife.works.content[3].name") }}</Item>
             <Item color="red" @open="SentData(workData, 4)" :img="p5"> {{ $t("pages.home.child.achievement.child.birdsOfLife.works.content[4].name") }}</Item>
             <Item color="blue" @open="SentData(workData, 5)" :img="p6"> {{ $t("pages.home.child.achievement.child.birdsOfLife.works.content[5].name") }}</Item>
-            <Item :enabled="false"></Item>
-            <Item :enabled="false"></Item>
+            <Item v-for="index in fakeCount" ref="fakeElement"></Item>
           </div>
         </PartItemNull>
 

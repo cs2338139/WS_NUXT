@@ -1,31 +1,33 @@
 <script setup>
-defineProps({
-  enabled: {
-    type: Boolean,
-    default: true,
-  },
+const props = defineProps({
   color: String,
   img: String,
 });
+const enabled = ref(true);
+if (props.img === undefined) {
+  enabled.value = false;
+}
 </script>
 
 <template>
-  <div class="mt-10 mb-4 w-60 relative">
-    <button @click="$emit('open')" class="w-full" v-if="enabled">
-      <div>
-        <div class="absolute parallel right-6 -z-10 -top-6 border-2 border-black bg-custom-0" v-if="color === 'yellow'"></div>
-        <div class="absolute parallel right-6 -z-10 -top-6 border-2 border-black bg-custom-1" v-if="color === 'red'"></div>
-        <div class="absolute parallel right-6 -z-10 -top-6 border-2 border-black bg-custom-2" v-if="color === 'blue'"></div>
-      </div>
-      <div>
-        <div :v-if="img === ''" class="aspect-square w-full bg-gray-300 border-2 border-black rounded-3xl overflow-hidden"><img :v-if="img != ''" :src="img" /></div>
-      </div>
-      <div class="text-center mt-2">
-        <div class="mb-3 text-xl">
-          <slot />
+  <div>
+    <div class="relative mt-10 mb-4 w-60 xl:mx-5 lg:scale-90 lg:mx-0">
+      <button @click="$emit('open')" class="w-full" v-if="enabled">
+        <div>
+          <div class="absolute border-2 border-black parallel right-6 -z-10 -top-6 bg-custom-0" v-if="color === 'yellow'"></div>
+          <div class="absolute border-2 border-black parallel right-6 -z-10 -top-6 bg-custom-1" v-if="color === 'red'"></div>
+          <div class="absolute border-2 border-black parallel right-6 -z-10 -top-6 bg-custom-2" v-if="color === 'blue'"></div>
         </div>
-      </div>
-    </button>
+        <div>
+          <div :v-if="img === ''" class="w-full overflow-hidden bg-gray-300 border-2 border-black aspect-square rounded-3xl"><img :v-if="img != ''" :src="img" /></div>
+        </div>
+        <div class="mt-2 text-center">
+          <div class="mb-3 text-xl">
+            <slot />
+          </div>
+        </div>
+      </button>
+    </div>
   </div>
 </template>
 

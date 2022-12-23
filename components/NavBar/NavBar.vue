@@ -33,18 +33,15 @@ onMounted(() => {
 });
 
 function onScroll() {
-  if (currentWidth.value === "3xl") {
-    if (window.top.scrollY > navBar.value.offsetHeight) {
+  if (window.top.scrollY > navBar.value.offsetHeight) {
+    if (currentWidth.value === "3xl") {
       narButton.value.style.display = "block";
     } else {
-      narButton.value.style.display = "none";
+      topButton.value.style.display = "block";
     }
   } else {
-    if (window.top.scrollY > navBar.value.offsetHeight) {
-      topButton.value.style.display = "block";
-    } else {
-      topButton.value.style.display = "none";
-    }
+    narButton.value.style.display = "none";
+    topButton.value.style.display = "none";
   }
 }
 

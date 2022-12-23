@@ -8,29 +8,31 @@ defineProps({
 </script>
 
 <template>
-  <PartItemNull>
+  <PartItemNull class="">
     <template #title>
       <slot name="title" />
     </template>
-    <div class="flex justify-between h-44">
+    <div class="flex justify-between mt-5 h-52">
       <div>
-        <div :v-if="img === ''" class="aspect-square h-full bg-gray-300 rounded-full border-2 border-black overflow-hidden flex items-center">
+        <div class="flex items-center h-full overflow-hidden bg-gray-300 border-2 border-black rounded-full aspect-square mr-10">
           <img :v-if="img != ''" :src="img" />
         </div>
       </div>
-      <di class="mb-14 w-4/5 flex items-center h-full">
-        <div>
-          <div class="mb-1 font-bold text-xl"><slot name="name" /> ( <slot name="year" />)</div>
-          <div class="">
+
+      <div class="max-w-4xl h-full">
+        <div class="mt-5">
+          <div class="mb-1 text-xl font-bold"><slot name="name" /> ( <slot name="year" />)</div>
+          <div class="text-justify line-clamp-6">
             <slot name="word" />
           </div>
-          <div class="text-right">
-            <FunctionButton @function="$emit('function')">
-              <slot name="bottom" />
-            </FunctionButton>
-          </div>
         </div>
-      </di>
+      </div>
+    </div>
+
+    <div class="text-right">
+      <FunctionButton @function="$emit('function')">
+        <slot name="bottom" />
+      </FunctionButton>
     </div>
   </PartItemNull>
 </template>

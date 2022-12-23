@@ -107,13 +107,13 @@ if (locale.value === "en") {
     </div>
 
     <div class="mb-32 wrap-6 2xl:mb-10">
-      <PartTitle class="mt-0 mb-5 2xl:-mb-5 ml-0">
+      <PartTitle class="mt-0 mb-5 ml-0 2xl:-mb-5">
         <template #en>Achievement</template>
         <template #title>{{ $t("pages.home.achievement.title") }}</template>
       </PartTitle>
 
       <div class="inline-flex justify-between w-full mb-28 2xl:mb-0 2xl:overflow-x-auto 2xl:scrollbar-none">
-        <ProjectItem class="transform translate-y-32 2xl:translate-y-0 2xl:scale-75 "  href="/achievement/modelView" color="yellow" :img="ProjectItemImage1">
+        <ProjectItem class="transform translate-y-32 2xl:translate-y-0 2xl:scale-75" href="/achievement/modelView" color="yellow" :img="ProjectItemImage1">
           <template #name>
             {{ $t("pages.home.achievement.content.0.title") }}
           </template>
@@ -121,7 +121,7 @@ if (locale.value === "en") {
             {{ $t("pages.home.achievement.content.0.year") }}
           </template>
         </ProjectItem>
-        <ProjectItem class="transform translate-y-16 2xl:translate-y-0 2xl:scale-75 " href="/achievement/hideWordsMan" color="blue" :img="ProjectItemImage2">
+        <ProjectItem class="transform translate-y-16 2xl:translate-y-0 2xl:scale-75" href="/achievement/hideWordsMan" color="blue" :img="ProjectItemImage2">
           <template #name>
             {{ $t("pages.home.achievement.content.4.title") }}
           </template>
@@ -132,7 +132,7 @@ if (locale.value === "en") {
             {{ $t("pages.home.achievement.content.4.year") }}
           </template>
         </ProjectItem>
-        <ProjectItem href="/achievement/birdsOfLife" class="2xl:scale-75 " color="red" :img="ProjectItemImage3">
+        <ProjectItem href="/achievement/birdsOfLife" class="2xl:scale-75" color="red" :img="ProjectItemImage3">
           <template #name>
             {{ $t("pages.home.achievement.content.3.title") }}
           </template>

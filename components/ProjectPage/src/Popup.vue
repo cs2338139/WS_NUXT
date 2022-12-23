@@ -18,14 +18,12 @@ if (props.link === undefined) {
 
 <template>
   <div class="fixed bottom-0 left-0 z-30 w-full h-screen bg-custom-0">
-    <div class="absolute right-0">
-      <button @click="$emit('close')" class="flex items-center justify-center w-12 m-2 bg-white border border-black rounded-full top-5 aspect-square">
-        <ion-icon name="close-outline" class="text-4xl"></ion-icon>
-      </button>
-    </div>
+    <button @click="$emit('close')" class="z-50 absolute right-0 flex items-center justify-center w-12 m-2 bg-white border border-black rounded-full top-5 aspect-square">
+      <ion-icon name="close-outline" class="text-4xl"></ion-icon>
+    </button>
 
-    <div class="flex flex-col items-center justify-center h-full wrap-6">
-      <div class="absolute flex items-center justify-between w-full h-full" v-if="moveEnable">
+    <div class="flex flex-col items-center justify-center h-full wrap-6 ">
+      <div class="absolute flex items-center justify-between w-full h-full xl:px-20" v-if="moveEnable">
         <button @click="$emit('previous')" class="flex items-center justify-center w-12 m-2 bg-white border border-black aspect-square">
           <ion-icon name="arrow-back-outline" class="text-4xl"></ion-icon>
         </button>
@@ -70,7 +68,7 @@ if (props.link === undefined) {
           <slot name="size" />
         </div>
         <div class="z-50 overflow-y-auto text-xl text-justify h-80 scrollbarCustom" :class="{ 'h-52': isModel }">
-          <div class="m-2"><slot name="word" /></div>
+          <div class="m-2 text-justify"><slot name="word" /></div>
         </div>
         <div class="z-50 h-12 text-center">
           <NuxtLink :to="more" target="_blank" class="flex items-center justify-center" v-if="isModel && more">
