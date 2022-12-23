@@ -4,7 +4,7 @@
     "achievement": {
       "title": "Achievement",
       "child": {
-        "modelView": "3D scanning and modeling",
+        "modelView": "3D Scanning and Modeling",
         "islandOfBaku": "Island of Baku",
         "game1940": "1940",
         "birdsOfLife": "Birds of Life",
@@ -30,7 +30,7 @@
         "title": "Achievement",
         "content": [
           {
-            "title": "3D scanning and modeling",
+            "title": "3D Scanning and Modeling",
             "info": "",
             "year": "2018-2022"
           },
@@ -79,10 +79,10 @@
             "title": "Achievement",
             "content": [
               {
-                "title": "3D scanning and modeling",
+                "title": "3D Scanning and Modeling",
                 "info": "",
                 "year": "2018-2021",
-                "words": ["Through 3D scanning and modeling of cultural relics, we hope to promote Taiwanese literature. "]
+                "words": ["Through 3D Scanning and Modeling of cultural relics, we hope to promote Taiwanese literature. "]
               },
               {
                 "title": "Island of Baku",
@@ -122,7 +122,7 @@
                 "about": {
                   "title": "About the Project",
                   "content": [
-                    "To digitally enliven the museum collections and promote Taiwanese literature, 3D scanning and modeling were employed. This project, which started in 2018, involves the 3D scanning and modeling of major Taiwanese writers’ collections in National Museum of Taiwan Literature in accordance with the Ministry of Culture’s Principles for Making 3D Models of Cultural Relics in Museum Collections.",
+                    "To digitally enliven the museum collections and promote Taiwanese literature, 3D Scanning and Modeling were employed. This project, which started in 2018, involves the 3D Scanning and Modeling of major Taiwanese writers’ collections in National Museum of Taiwan Literature in accordance with the Ministry of Culture’s Principles for Making 3D Models of Cultural Relics in Museum Collections.",
                     "In the first (2018), second (2019), third (2020), fourth (2021), and fifth (2022) years of the project, 51, 30, 20, 12, and 12 historical texts, respectively, from 37 major Taiwanese writers were scanned."
                   ]
                 },

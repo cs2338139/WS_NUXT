@@ -13,7 +13,7 @@ const logoImage = new URL("../../public/Image/UI/LOGOsmall.svg", import.meta.url
 const navBar = ref();
 const narButton = ref();
 const topButton = ref();
-const getWidth = useGetWidth();
+const { currentWidth } = useGetWidthLevel();
 
 function ChangeLang() {
   console.log(locale.value);
@@ -33,7 +33,7 @@ onMounted(() => {
 });
 
 function onScroll() {
-  if (getWidth.value === "3xl") {
+  if (currentWidth.value === "3xl") {
     if (window.top.scrollY > navBar.value.offsetHeight) {
       narButton.value.style.display = "block";
     } else {
@@ -54,8 +54,6 @@ function OpenNavPopup() {
 }
 
 function ScrollToTop() {
-  // document.body.scrollTop = 0; // For Safari
-  // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
   window.scrollTo({
     top: 0,
     left: 0,

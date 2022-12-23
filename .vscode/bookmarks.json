@@ -11,16 +11,6 @@
 			]
 		},
 		{
-			"path": "lang/en.json",
-			"bookmarks": [
-				{
-					"line": 606,
-					"column": 24,
-					"label": ""
-				}
-			]
-		},
-		{
 			"path": "components/ProjectItem_4/ProjectItem_4.vue",
 			"bookmarks": [
 				{
