@@ -16,6 +16,10 @@ module.exports = {
       sm: { max: "575.98px" },
     },
     extend: {
+      scale: {
+        '80': '0.8',
+        '85': '0.85',
+      },
       lineClamp: {
         7: "7",
         8: "8",

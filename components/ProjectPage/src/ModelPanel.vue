@@ -205,6 +205,10 @@ function SentData(i, index) {
   console.log(i, index);
   emits("open", current[i], index);
 }
+
+const box = ref();
+const fakeElement = ref();
+const { fakeCount:fakeCount } = useSetFakeElement(box, fakeElement);
 </script>
 
 <template>

@@ -65,10 +65,6 @@ if (data.value?.posts) {
 
     en.push(dataEN);
   }
-  for (let i = 0; i < 2; i++) {
-    ch.push(data);
-    en.push(data);
-  }
 }
 
 if (locale.value === "en") {
@@ -81,7 +77,10 @@ function SentData(i) {
   emits("open", current, i);
 }
 
-const items = ref([]);
+const box = ref();
+const fakeElement = ref();
+const { fakeCount, countOfRows, isFirstFakeCheck } = useSetFakeElement(box, fakeElement);
+
 const viewMode = reactive({
   data: {
     buttonWord: t("pages.home.child.achievement.child.modelView.literati.button.1"),
@@ -91,7 +90,10 @@ const viewMode = reactive({
 });
 
 onMounted(() => {
-  ViewSwitch();
+  watch(isFirstFakeCheck, () => {
+    console.log(isFirstFakeCheck.value);
+    ViewSwitch();
+  });
 });
 
 function ViewSwitch() {
@@ -99,29 +101,38 @@ function ViewSwitch() {
     viewMode.data.viewMore = false;
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.literati.button.0");
     viewMode.data.buttonIcon = "+";
-    for (let i = 5; i < items.value.length; i++) {
-      items.value[i].View(false);
-    }
   } else {
     viewMode.data.viewMore = true;
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.literati.button.1");
     viewMode.data.buttonIcon = "-";
-    for (let i = 0; i < items.value.length; i++) {
-      items.value[i].View(true);
-    }
+  }
+  ControlViewBoxHeight(viewMode.data.viewMore);
+}
+
+function ControlViewBoxHeight(enabled) {
+  console.log(box.value.children[0].getBoundingClientRect().height);
+  if (enabled) {
+    box.value.style.height = "auto";
+  } else {
+    box.value.style.height = box.value.children[0].getBoundingClientRect().height + "px";
   }
 }
 </script>
 
 <template>
   <div>
-    <div class="flex flex-wrap justify-between">
-      <Item2 v-for="(writer, index) in current" ref="items" :img="writer.img" @open="SentData(index)">
-        <template #name>{{ writer.sName }}</template>
-        <template #year>（{{ writer.year }}）</template>
-      </Item2>
+    <div class="flex flex-wrap justify-between overflow-hidden" ref="box">
+      <div v-for="(writer, index) in current" class="lg:scale-90 lg:-mx-5">
+        <Item2 :img="writer.img" @open="SentData(index)">
+          <template #name>{{ writer.sName }}</template>
+          <template #year>（{{ writer.year }}）</template>
+        </Item2>
+      </div>
+      <div v-for="index in fakeCount">
+        <Item2 ref="fakeElement"></Item2>
+      </div>
     </div>
-    <div class="text-right mt-16">
+    <div class="mt-16 text-right">
       <OpenButton @function="ViewSwitch()"
         >{{ viewMode.data.buttonWord }} <template #icon>{{ viewMode.data.buttonIcon }}</template></OpenButton
       >

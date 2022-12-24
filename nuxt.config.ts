@@ -43,6 +43,7 @@ export default defineNuxtConfig({
     clients: {
       default: {
         httpEndpoint: "https://wp.nmtl-ws.com/graphql",
+        // httpEndpoint: "http://3.37.2.217/graphql",
       },
     },
   },

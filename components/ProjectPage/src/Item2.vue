@@ -4,40 +4,27 @@ const props = defineProps({
 });
 
 const enabled = ref(true);
-const view = ref(true);
 if (props.img === undefined) {
   enabled.value = false;
 }
-
-function View(_enabled) {
-  view.value = _enabled;
-}
-
-defineExpose({
-  View,
-});
 </script>
 
 <template>
-  <div class="mt-10 mb-4 w-40 mx-5 relative" v-show="view">
-    <button @click="$emit('open')" class="w-full" v-if="enabled">
-      <div>
-        <div class="aspect-square h-full rounded-full overflow-hidden border flex items-center justify-center"><img :v-if="img != ''" :src="img" class="h-full" /></div>
-      </div>
-      <div class="text-center mt-2">
-        <div class="mb-3 text-xl font-bold">
-          <slot name="name" />
+  <div class="">
+    <div class="relative w-40 mx-5 mt-10 mb-4">
+      <button @click="$emit('open')" class="w-full" v-if="enabled">
+        <div>
+          <div class="flex items-center justify-center h-full overflow-hidden border rounded-full aspect-square bg-gray-300"><img :v-if="img != ''" :src="img" class="h-full" /></div>
         </div>
-        <div><slot name="year" /></div>
-      </div>
-    </button>
+        <div class="mt-2 text-center">
+          <div class="mb-3 text-xl font-bold">
+            <slot name="name" />
+          </div>
+          <div><slot name="year" /></div>
+        </div>
+      </button>
+    </div>
   </div>
 </template>
 
-<style scoped>
-.parallel {
-  width: 40px;
-  height: 60px;
-  transform: skew(0, -20deg);
-}
-</style>
+<style scoped></style>
