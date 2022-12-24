@@ -8,7 +8,7 @@ defineProps({
 
 <template>
   <div class="relative px-40 mb-12 2xl:px-10">
-    <div class="absolute p-1 text-lg text-center border border-black parallel right-52 -top-4 bg-custom-0" v-if="index < 2">NEW!</div>
+    <div class="absolute p-1 text-lg text-center border border-black parallel right-52 -top-4 bg-custom-0 2xl:right-28" v-if="index < 2">NEW!</div>
 
     <NuxtLink :to="localePath(href)" class="flex w-full p-4 border border-black rounded-3xl h-52">
       <div class="w-1/4 h-full overflow-hidden bg-gray-300 rounded-3xl">
