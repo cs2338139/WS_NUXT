@@ -110,7 +110,6 @@ function ViewSwitch() {
 }
 
 function ControlViewBoxHeight(enabled) {
-  // console.log(box.value.children[0].getBoundingClientRect().height);
   if (enabled) {
     box.value.style.height = "auto";
   } else {
@@ -122,13 +121,13 @@ function ControlViewBoxHeight(enabled) {
 <template>
   <div>
     <div class="flex flex-wrap justify-between overflow-hidden" ref="box">
-      <div v-for="(writer, index) in current" class="lg:scale-90 lg:-mx-5">
-        <Item2 :img="writer.img" @open="SentData(index)">
+      <div v-for="(writer, index) in current" class="lg:scale-90">
+        <Item2 :img="writer.img" @open="SentData(index)" :isWriter="true">
           <template #name>{{ writer.sName }}</template>
           <template #year>（{{ writer.year }}）</template>
         </Item2>
       </div>
-      <div v-for="index in fakeCount">
+      <div v-for="index in fakeCount" class="lg:scale-90">
         <Item2 ref="fakeElement"></Item2>
       </div>
     </div>

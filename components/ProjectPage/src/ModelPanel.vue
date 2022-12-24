@@ -2,6 +2,7 @@
 import OpenButton from "~~/components/ProjectPage/src/OpenButton.vue";
 import Item4 from "~~/components/ProjectPage/src/Item4.vue";
 import modelPanelCategories from "~~/components/ProjectPage/src/modelPanelCategories.vue";
+import modelPanelOfYear from "~~/components/ProjectPage/src/modelPanelOfYear.vue";
 import { useI18n } from "vue-i18n";
 
 const { locale, setLocale, t } = useI18n();
@@ -140,10 +141,8 @@ if (locale.value === "en") {
 
 const yearButton = ref();
 const years = ref([]);
-const box = ref();
-const fakeElement = ref();
 const currentYear = ref(0);
-const { isFirstFakeCheck, fakeCount, count, rowCount, countOfRows, GetFakeCount } = useSetFakeElement(box, fakeElement);
+const modelPanelOfYearElement = ref();
 
 const viewMode = reactive({
   data: {
@@ -160,63 +159,38 @@ function SetCurrentYear(i) {
 function SwitchYear() {
   for (let j = 0; j < years.value.length; j++) {
     if (j != currentYear.value) {
-      // years.value[j].style.display = "none";
+      years.value[j].style.display = "none";
     } else {
       years.value[j].style.display = "flex";
-      box.value = years.value[j];
-      GetFakeCount();
+      ControlViewBoxHeight(currentYear.value, viewMode.data.viewMore);
     }
   }
 }
 
 onMounted(() => {
-  yearButton.value.click(0);
-  // SetItemOfYear();
-  // ViewSwitch();
-
-  watch(isFirstFakeCheck, () => {
-    // yearButton.value.click(0);
-    // ViewSwitch();
-  });
+  yearButton.value.click(currentYear.value);
+  ViewSwitch();
 
   watchEffect(() => {
     SwitchYear();
   });
 });
 
-// function SetItemOfYear() {
-//   let x = 0;
-//   for (let i = 0; i < years.value.length; i++) {
-//     itemsOfYear.value.push([]);
-//     for (let j = 0; j < modelsCategories.value[1][i].length; j++) {
-//       itemsOfYear.value[i].push(items.value[x]);
-//       x++;
-//     }
-//   }
-// }
-
 function ViewSwitch() {
   if (viewMode.data.viewMore) {
     viewMode.data.viewMore = false;
     viewMode.data.buttonIcon = "+";
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.result.button.0");
-
-    for (let i = 0; i < itemsOfYear.value.length; i++) {
-      for (let j = 10; j < itemsOfYear.value[i].length; j++) {
-        itemsOfYear.value[i][j].View(false);
-      }
-    }
   } else {
     viewMode.data.viewMore = true;
     viewMode.data.buttonIcon = "-";
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.result.button.1");
-
-    for (let i = 0; i < itemsOfYear.value.length; i++) {
-      for (let j = 0; j < itemsOfYear.value[i].length; j++) {
-        itemsOfYear.value[i][j].View(true);
-      }
-    }
   }
+  ControlViewBoxHeight(currentYear.value, viewMode.data.viewMore);
+}
+
+function ControlViewBoxHeight(index, enabled) {
+  modelPanelOfYearElement.value[index].ControlViewBoxHeight(enabled);
 }
 
 function SentData(i, index) {
@@ -231,21 +205,13 @@ function SentData(i, index) {
   </div>
 
   <div>
-    <div class="flex flex-wrap justify-between dev-black" v-for="(year, i) in current" ref="years">
-      <div v-for="(model, index) in year" class="dev-green">
-        <Item4 :img="model.img" @function="SentData(i, index)">
-          <template #name>{{ model.name }}</template>
-          <template #owner>{{ model.owner }}</template>
-        </Item4>
-      </div>
-      <div v-for="index in fakeCount">
-        <Item4 ref="fakeElement"></Item4>
-      </div>
+    <div v-for="(yearModels, i) in current" ref="years">
+      <modelPanelOfYear :models="yearModels" :year="i" @function="SentData" ref="modelPanelOfYearElement"></modelPanelOfYear>
     </div>
     <div class="text-right mt-16">
-      <OpenButton @function="ViewSwitch()"
-        >{{ viewMode.data.buttonWord }} <template #icon>{{ viewMode.data.buttonIcon }}</template></OpenButton
-      >
+      <OpenButton @function="ViewSwitch()">
+        {{ viewMode.data.buttonWord }} <template #icon>{{ viewMode.data.buttonIcon }}</template>
+      </OpenButton>
     </div>
   </div>
 </template>
