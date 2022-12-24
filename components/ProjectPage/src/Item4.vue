@@ -4,37 +4,30 @@ const props = defineProps({
 });
 
 const enabled = ref(true);
-const view = ref(true);
 if (props.img === undefined) {
   enabled.value = false;
 }
 
-function View(_enabled) {
-  view.value = _enabled;
-}
-
-defineExpose({
-  View,
-});
 </script>
 
 <template>
-    <div class="mt-10 mb-4 w-48 relative" v-show="view">
-        <button @click="$emit('function')" class="w-full" v-if="enabled">
-            <div>
-                <div class="aspect-square w-full rounded-3xl overflow-hidden"><img :v-if="img != ''" :src="img" /></div>
-            </div>
-            <div class="text-center mt-2">
-                <div class="text-xl font-bold">
-                    <slot name="name"/>
-                </div>
-                <div class="text-xl">
-                    <slot name="owner"/>
-                </div>
-            </div>
-        </button>
+  <div class="dev-blue">
+    <div class="relative w-48 mt-10 mb-4 dev-pink">
+      <button @click="$emit('function')" class="w-full" v-if="enabled">
+        <div>
+          <div class="w-full overflow-hidden aspect-square rounded-3xl"><img :v-if="img != ''" :src="img" /></div>
+        </div>
+        <div class="mt-2 text-center">
+          <div class="text-xl font-bold line-clamp-1">
+            <slot name="name" />
+          </div>
+          <div class="text-xl">
+            <slot name="owner" />
+          </div>
+        </div>
+      </button>
     </div>
+  </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

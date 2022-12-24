@@ -2,29 +2,30 @@ export default function (box, fakeElement) {
   let firstSetFakeElement = setInterval(() => {
     if (box.value) {
       if (box.value.offsetWidth != 0) {
-        GetFakeCount(box, fakeElement);
+        GetFakeCount();
         clearInterval(firstSetFakeElement);
       }
     }
   }, 0);
 
-  window.addEventListener("resize", () => GetFakeCount(box, fakeElement));
+
+  window.addEventListener("resize", () => GetFakeCount());
 
   const isFirstFakeCheck = ref(false);
   const fakeCount = ref(0);
   const count = ref(0);
   const rowCount = ref(0);
   const countOfRows = ref(0);
-  // const notWorkCount = ref(0);
 
-  function GetFakeCount(box, fakeElement) {
-    // notWorkCount.value = 0;
-    let fatCurrentCount = 0;
+  function GetFakeCount() {
+    let fakeCurrentCount = 0;
     if (fakeElement.value && fakeElement.value.length > 0) {
-      fatCurrentCount = fakeElement.value.length;
+      fakeCurrentCount = fakeElement.value.length;
     }
     if (box.value) {
-      count.value = box.value.children.length - fatCurrentCount;
+      count.value = box.value.children.length - fakeCurrentCount;
+      console.log(box.value.children.length+' '+fakeCurrentCount);
+      // console.log(fakeCurrentCount);
 
       countOfRows.value = Math.floor(box.value.offsetWidth / box.value.children[0].getBoundingClientRect().width);
       rowCount.value = Math.ceil(count.value / countOfRows.value);
@@ -34,6 +35,7 @@ export default function (box, fakeElement) {
       }
     }
   }
+
 
   return { isFirstFakeCheck, fakeCount, count, rowCount, countOfRows, GetFakeCount };
 }

@@ -91,7 +91,7 @@ const viewMode = reactive({
 
 onMounted(() => {
   watch(isFirstFakeCheck, () => {
-    console.log(isFirstFakeCheck.value);
+    // console.log(isFirstFakeCheck.value);
     ViewSwitch();
   });
 });
@@ -110,7 +110,7 @@ function ViewSwitch() {
 }
 
 function ControlViewBoxHeight(enabled) {
-  console.log(box.value.children[0].getBoundingClientRect().height);
+  // console.log(box.value.children[0].getBoundingClientRect().height);
   if (enabled) {
     box.value.style.height = "auto";
   } else {

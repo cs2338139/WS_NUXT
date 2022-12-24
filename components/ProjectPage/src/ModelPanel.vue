@@ -119,17 +119,17 @@ function SetModelsCategories() {
       }
     }
   }
-  for (let j = 0; j < categories.value.length; j++) {
-    if (modelsCategories.value[0][j].length % 5 != 0) {
-      let count = 5 - (modelsCategories.value[0][j].length % 5);
-      for (let i = 0; i < count; i++) {
-        modelsCategories.value[0][j].push(data);
-        modelsCategories.value[1][j].push(data);
-      }
-    }
-  }
+  // for (let j = 0; j < categories.value.length; j++) {
+  //   if (modelsCategories.value[0][j].length % 5 != 0) {
+  //     let count = 5 - (modelsCategories.value[0][j].length % 5);
+  //     for (let i = 0; i < count; i++) {
+  //       modelsCategories.value[0][j].push(data);
+  //       modelsCategories.value[1][j].push(data);
+  //     }
+  //   }
+  // }
 
-  console.log(modelsCategories.value);
+  // console.log(modelsCategories.value);
 }
 
 if (locale.value === "en") {
@@ -140,8 +140,11 @@ if (locale.value === "en") {
 
 const yearButton = ref();
 const years = ref([]);
-const items = ref([]);
-const itemsOfYear = ref([]);
+const box = ref();
+const fakeElement = ref();
+const currentYear = ref(0);
+const { isFirstFakeCheck, fakeCount, count, rowCount, countOfRows, GetFakeCount } = useSetFakeElement(box, fakeElement);
+
 const viewMode = reactive({
   data: {
     buttonWord: t("pages.home.child.achievement.child.modelView.result.button.1"),
@@ -150,32 +153,47 @@ const viewMode = reactive({
   },
 });
 
-function SwitchYear(i) {
+function SetCurrentYear(i) {
+  currentYear.value = i;
+}
+
+function SwitchYear() {
   for (let j = 0; j < years.value.length; j++) {
-    if (j != i) {
-      years.value[j].style.display = "none";
+    if (j != currentYear.value) {
+      // years.value[j].style.display = "none";
     } else {
-      years.value[j].style.display = "block";
+      years.value[j].style.display = "flex";
+      box.value = years.value[j];
+      GetFakeCount();
     }
   }
 }
 
 onMounted(() => {
   yearButton.value.click(0);
-  SetItemOfYear();
-  ViewSwitch();
+  // SetItemOfYear();
+  // ViewSwitch();
+
+  watch(isFirstFakeCheck, () => {
+    // yearButton.value.click(0);
+    // ViewSwitch();
+  });
+
+  watchEffect(() => {
+    SwitchYear();
+  });
 });
 
-function SetItemOfYear() {
-  let x = 0;
-  for (let i = 0; i < years.value.length; i++) {
-    itemsOfYear.value.push([]);
-    for (let j = 0; j < modelsCategories.value[1][i].length; j++) {
-      itemsOfYear.value[i].push(items.value[x]);
-      x++;
-    }
-  }
-}
+// function SetItemOfYear() {
+//   let x = 0;
+//   for (let i = 0; i < years.value.length; i++) {
+//     itemsOfYear.value.push([]);
+//     for (let j = 0; j < modelsCategories.value[1][i].length; j++) {
+//       itemsOfYear.value[i].push(items.value[x]);
+//       x++;
+//     }
+//   }
+// }
 
 function ViewSwitch() {
   if (viewMode.data.viewMore) {
@@ -205,24 +223,23 @@ function SentData(i, index) {
   console.log(i, index);
   emits("open", current[i], index);
 }
-
-const box = ref();
-const fakeElement = ref();
-const { fakeCount:fakeCount } = useSetFakeElement(box, fakeElement);
 </script>
 
 <template>
   <div>
-    <modelPanelCategories :categories="categories" @function="SwitchYear" ref="yearButton"> </modelPanelCategories>
+    <modelPanelCategories :categories="categories" @function="SetCurrentYear" ref="yearButton"> </modelPanelCategories>
   </div>
 
   <div>
-    <div v-for="(year, i) in current" ref="years">
-      <div class="flex flex-wrap justify-between">
-        <Item4 v-for="(model, index) in year" ref="items" :img="model.img" @function="SentData(i, index)">
+    <div class="flex flex-wrap justify-between dev-black" v-for="(year, i) in current" ref="years">
+      <div v-for="(model, index) in year" class="dev-green">
+        <Item4 :img="model.img" @function="SentData(i, index)">
           <template #name>{{ model.name }}</template>
           <template #owner>{{ model.owner }}</template>
         </Item4>
+      </div>
+      <div v-for="index in fakeCount">
+        <Item4 ref="fakeElement"></Item4>
       </div>
     </div>
     <div class="text-right mt-16">
