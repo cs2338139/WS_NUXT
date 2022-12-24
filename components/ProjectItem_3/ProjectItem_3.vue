@@ -1,6 +1,4 @@
 <script setup>
-import { number } from "@intlify/core-base";
-
 defineProps({
   index: Number,
   href: String,
@@ -9,12 +7,12 @@ defineProps({
 </script>
 
 <template>
-  <div class="px-40 relative mb-12">
-    <div class="parallel right-52 -top-4 bg-custom-0 absolute p-1 text-lg text-center border border-black" v-if="index <2">NEW!</div>
+  <div class="relative px-40 mb-12 2xl:px-10">
+    <div class="absolute p-1 text-lg text-center border border-black parallel right-52 -top-4 bg-custom-0" v-if="index < 2">NEW!</div>
 
-    <NuxtLink :to="localePath(href)" class="rounded-3xl h-52 flex w-full p-4 border border-black">
-      <div class="rounded-3xl w-1/4 h-full overflow-hidden bg-gray-300">
-        <div class="flex items-center h-full">
+    <NuxtLink :to="localePath(href)" class="flex w-full p-4 border border-black rounded-3xl h-52">
+      <div class="w-1/4 h-full overflow-hidden bg-gray-300 rounded-3xl">
+        <div class="flex items-center justify-center h-full">
           <img :src="img" alt="" class="" />
         </div>
       </div>

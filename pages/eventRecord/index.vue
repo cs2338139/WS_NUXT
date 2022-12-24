@@ -76,27 +76,6 @@ if (locale.value === "en") {
   Object.assign(current, ch);
 }
 
-// const items = ref([]);
-// const currentPage = ref(0);
-
-// onMounted(() => {
-//   ViewSwitch();
-// });
-
-// function ViewSwitch() {
-//   let start = currentPage.value * 5;
-//   let end = currentPage.value * 5 + 5;
-
-//   console.log(start);
-//   console.log(end);
-//   for (let i = 0; i < items.value.length; i++) {
-//     if (i >= start && i < end) {
-//       items.value[i].style.display = "block";
-//     } else {
-//       items.value[i].style.display = "none";
-//     }
-//   }
-// }
 </script>
 
 <template>

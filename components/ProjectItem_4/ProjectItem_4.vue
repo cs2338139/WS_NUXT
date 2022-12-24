@@ -12,10 +12,10 @@ defineProps({
 
 <template>
   <div class="px-12 pb-8">
-    <NuxtLink :to="localePath(href)" class="rounded-3xl h-52 flex w-full p-4 border border-black">
+    <NuxtLink :to="localePath(href)" class="rounded-3xl h-52 flex w-full p-4 border border-black lg:h-32 lg:p-3">
       <div class="rounded-3xl w-1/4 h-full overflow-hidden bg-gray-300">
         <div class="flex items-center h-full">
-          <img :src="img" alt="" class="" />
+          <img :src="img" alt="" class="scale-110" />
         </div>
       </div>
 

@@ -175,8 +175,8 @@ function ViewImage(j) {
 <template>
   <div class="wrap-6">
     <div>
-      <div class="aspect-video w-full bg-black mb-5 flex justify-center items-center">
-        <div class="absolute flex items-center justify-between w-full" v-if="current.img.length > 1">
+      <div class="relative aspect-video w-full bg-black mb-5 flex justify-center items-center">
+        <div class="absolute flex items-center justify-between w-full xl:h-full" v-if="current.img.length > 1">
           <button @click="MoveImage('prev')" class="aspect-square flex items-center justify-center w-12 m-2 bg-white border border-black">
             <ion-icon name="arrow-back-outline" class="text-4xl"></ion-icon>
           </button>
