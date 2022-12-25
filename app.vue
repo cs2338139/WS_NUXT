@@ -15,7 +15,7 @@ import { gsap } from "gsap";
     <NavBar />
   </div>
 
-  <div class="relative min-h-screen md:mt-44 pb-footer">
+  <div class="relative min-h-screen md:mt-44  sm:mt-36 pb-footer">
     <NuxtPage />
   </div>
 

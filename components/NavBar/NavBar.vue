@@ -64,10 +64,10 @@ const popupEnable = ref(false);
 
 <template>
   <div>
-    <nav class="top-0 w-full h-32 bg-custom-0 md:fixed" ref="navBar">
+    <nav class="top-0 w-full h-32 bg-custom-0 md:fixed sm:h-20" ref="navBar">
       <NavMenu class="top-0 md:hidden">
         <template #logo>
-          <Logo href="/" :img="logoImage" width="width:120px" />
+          <Logo href="/" :img="logoImage" class="w-32" />
         </template>
 
         <NavMenuItem href="/about"> {{ $t("nav.about") }}</NavMenuItem>
@@ -91,7 +91,7 @@ const popupEnable = ref(false);
 
       <NavMenuPhone class="hidden md:block" @function="OpenNavPopup">
         <template #logo>
-          <Logo href="/" :img="logoImage" width="width:120px" />
+          <Logo href="/" :img="logoImage" class="w-32 sm:w-20" />
         </template>
       </NavMenuPhone>
     </nav>
