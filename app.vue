@@ -2,12 +2,7 @@
 import NavBar from "./components/NavBar/NavBar.vue";
 import FootBar from "./components/FootBar/FootBar.vue";
 import { gsap } from "gsap";
-// import { useI18n } from 'vue-i18n'
-// const { locale, getLocaleCookie } = useI18n()
 
-// const defaultLocaleCode = locale.value
-
-// locale.value = getLocaleCookie() ?? defaultLocaleCode
 </script>
 
 <template>
