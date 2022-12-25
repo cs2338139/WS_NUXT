@@ -4,6 +4,7 @@ import MenuListItem from "./src/MenuListItem.vue";
 import NavMenuList from "./src/NavMenuList.vue";
 import NavMenuItem from "./src/NavMenuItem.vue";
 import NavMenu from "./src/NavMenu.vue";
+import NavMenuPhone from "./src/NavMenuPhone.vue";
 import NavPopup from "./src/NavPopup.vue";
 import { useI18n } from "vue-i18n";
 
@@ -63,8 +64,8 @@ const popupEnable = ref(false);
 
 <template>
   <div>
-    <nav class="top-0 w-full h-32 bg-custom-0" ref="navBar">
-      <NavMenu class="top-0">
+    <nav class="top-0 w-full h-32 bg-custom-0 md:fixed" ref="navBar">
+      <NavMenu class="top-0 md:hidden">
         <template #logo>
           <Logo href="/" :img="logoImage" width="width:120px" />
         </template>
@@ -82,12 +83,19 @@ const popupEnable = ref(false);
         <NavMenuItem href="/eventRecord"> {{ $t("nav.eventRecord") }}</NavMenuItem>
 
         <button @click="ChangeLang()" class="ml-1">
-          <li class="flex justify-center items-center aspect-square w-14 text-2xl font-bold text-center bg-white border-2 border-black">
+          <li class="flex items-center justify-center text-2xl font-bold text-center bg-white border-2 border-black aspect-square w-14">
             {{ $t("nav.lang") }}
           </li>
         </button>
       </NavMenu>
+
+      <NavMenuPhone class="hidden md:block" @function="OpenNavPopup">
+        <template #logo>
+          <Logo href="/" :img="logoImage" width="width:120px" />
+        </template>
+      </NavMenuPhone>
     </nav>
+
     <button class="fixed hidden p-4 overflow-hidden bg-white border-2 border-black rounded-full right-5 top-5 w-14 aspect-square" ref="narButton" @click="OpenNavPopup">
       <div class="flex flex-col justify-between w-full h-full">
         <hr class="border border-black" />

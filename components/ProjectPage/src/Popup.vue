@@ -18,12 +18,14 @@ if (props.link === undefined) {
 
 <template>
   <div class="fixed bottom-0 left-0 z-30 w-full h-screen bg-custom-0">
-    <button @click="$emit('close')" class="z-50 absolute right-0 flex items-center justify-center w-12 m-2 bg-white border border-black rounded-full top-5 aspect-square">
-      <ion-icon name="close-outline" class="text-4xl"></ion-icon>
-    </button>
+    <div class="absolute z-50 right-5 top-5">
+      <button @click="$emit('close')" class="flex items-center justify-center w-12 m-2 bg-white border border-black rounded-full aspect-square">
+        <ion-icon name="close-outline" class="text-4xl"></ion-icon>
+      </button>
+    </div>
 
-    <div class="flex flex-col items-center justify-center h-full wrap-6 ">
-      <div class="absolute flex items-center justify-between w-full h-full xl:px-20" v-if="moveEnable">
+    <div class="flex flex-col items-center justify-center h-full wrap-6">
+      <div class="absolute flex items-center justify-between w-full h-full xl:px-20 md:px-10" v-if="moveEnable">
         <button @click="$emit('previous')" class="flex items-center justify-center w-12 m-2 bg-white border border-black aspect-square">
           <ion-icon name="arrow-back-outline" class="text-4xl"></ion-icon>
         </button>
@@ -56,7 +58,7 @@ if (props.link === undefined) {
           <img :v-if="img != ''" :src="img" class="h-full" />
         </div>
       </div>
-      <div class="z-50 w-3/5 mt-8 text-justify mb-14">
+      <div class="z-50 w-3/5 mt-8 text-justify mb-14 h-2/5 md:w-3/4">
         <div class="mb-4 text-2xl font-bold text-center">
           <slot name="name" />
         </div>
@@ -67,7 +69,7 @@ if (props.link === undefined) {
           {{ $t("pages.home.child.achievement.child.modelView.result.size") }}
           <slot name="size" />
         </div>
-        <div class="z-50 overflow-y-auto text-xl text-justify h-80 scrollbarCustom" :class="{ 'h-52': isModel }">
+        <div class="z-50 overflow-y-auto text-xl text-justify h-5/6 scrollbarCustom" :class="{ 'h-1/2': isModel }">
           <div class="m-2 text-justify"><slot name="word" /></div>
         </div>
         <div class="z-50 h-12 text-center">

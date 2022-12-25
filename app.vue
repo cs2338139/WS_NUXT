@@ -11,11 +11,11 @@ import { gsap } from "gsap";
 </script>
 
 <template>
-  <div class="relative z-10 mb-10">
+  <div class="relative z-10 mb-10 ">
     <NavBar />
   </div>
 
-  <div class="relative min-h-screen pb-footer">
+  <div class="relative min-h-screen md:mt-44 pb-footer">
     <NuxtPage />
   </div>
 

@@ -19,8 +19,14 @@
     font-family: "DFLiHei-700";
     src: url("/assets/font/DFLiHei-700.ttc") format("ttc");
   }
+  html {
+    /* font-size: 16px; */
+    @apply body-base;
+    @apply md:body-md;
+    @apply sm:body-sm;
+  }
   body {
-    @apply p-0 m-0 font-DFLiHei ;
+    @apply p-0 m-0 font-DFLiHei;
     background: linear-gradient(90deg, rgba(200, 200, 200, 0.2) 4%, transparent 0), linear-gradient(rgba(200, 200, 200, 0.2) 4%, transparent 0);
     background-size: 30px 30px;
   }
@@ -53,6 +59,10 @@
     @apply max-w-8xl relative mx-auto my-0 2xl:px-10;
   }
 
+  .wrap-8-image {
+    @apply max-w-8xl relative mx-auto my-0 2xl:px-5;
+  }
+
   .wrap-6 {
     @apply relative max-w-6xl mx-auto my-0 xl:px-10;
   }
@@ -79,9 +89,22 @@
 }
 
 @layer utilities {
+  .body-base {
+    font-size: 16px;
+  }
+
+  .body-md {
+    font-size: 15px;
+  }
+
+  .body-sm {
+    font-size: 14px;
+  }
+
   .w-1\/15 {
     width: 6.6666667%;
   }
+
   .max-w-8xl {
     max-width: 1440px;
   }

@@ -28,8 +28,8 @@ export default {
 <template>
   <div>
     <div class="hidden 2xl:block">
-      <img src="~/public/Image/UI/KV_A.svg" class="w-full mb-10 aspect-video wrap-8" v-if="locale === 'zh'" />
-      <img src="~/public/Image/UI/KV_Aen.svg" class="w-full mb-10 aspect-video wrap-8" v-if="locale === 'en'" />
+      <img src="~/public/Image/UI/KV_A.svg" class="w-full mb-10 wrap-8-image" v-if="locale === 'zh'" />
+      <img src="~/public/Image/UI/KV_Aen.svg" class="w-full mb-10 wrap-8-image" v-if="locale === 'en'" />
     </div>
     <div class="wrap-6 flex justify-between">
       <div class="w-5/12 2xl:w-full">

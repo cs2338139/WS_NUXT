@@ -5,20 +5,20 @@ const { locale, setLocale } = useI18n();
 </script>
 
 <template>
-  <div class="bg-custom-0 fixed bottom-0 left-0 z-30 w-full h-screen">
-    {{ imageUrl}}
-    <div class="absolute right-0">
-      <button @click="$emit('close')" class="top-5 aspect-square w-12 m-2 flex items-center justify-center bg-white border border-black rounded-full">
+  <div class="fixed bottom-0 left-0 z-30 w-full h-screen bg-custom-0">
+    <div class="absolute right-5 top-5">
+      <button @click="$emit('close')" class="flex items-center justify-center w-12 m-2 bg-white border border-black rounded-full  aspect-square">
         <ion-icon name="close-outline" class="text-4xl"></ion-icon>
       </button>
     </div>
     <div class="flex items-center justify-center w-full h-full">
-      <div class="h-4/5 flex justify-between w-3/5">
-        <!-- <div class="h-72 w-96 bg-gray-300 border-2 border-black"></div> -->
-        <img src="~/public/Image/UI/LOGOlargeCH.svg" style="width:400px" class="h-72 w-full" v-if="locale === 'zh'" />
-        <img src="~/public/Image/UI/LOGOlargeEN.svg" style="width:400px" class="h-72 w-full" v-if="locale === 'en'" />
-        <div class="h-142 w-120 self-end">
-          <div class="h-100 flex flex-col items-start justify-between">
+      <div class="flex justify-between max-w-5xl w-full h-4/5 md:flex-col md:max-w-xl">
+        <div class="w-100  md:w-120">
+          <img src="~/public/Image/UI/LOGOlargeCH.svg" v-if="locale === 'zh'" />
+          <img src="~/public/Image/UI/LOGOlargeEN.svg" v-if="locale === 'en'" />
+        </div>
+        <div class="self-end h-142 w-100 md:self-start md:h-112">
+          <div class="flex flex-col items-start justify-between h-100">
             <HrefButton href="/about" @click="$emit('close')">
               <template #en>About the project</template>
               {{ $t("nav.about") }}
@@ -31,7 +31,7 @@ const { locale, setLocale } = useI18n();
               <template #en>Event</template>
               {{ $t("nav.eventRecord") }}
             </HrefButton>
-            <button @click="$emit('function')" class="px-3 py-2 text-xl font-bold text-center bg-white border-2 border-black">
+            <button @click="$emit('function')" class="px-3 py-2 text-xl font-bold text-center bg-white border-2 border-black aspect-square md:text-4xl">
               {{ $t("nav.lang") }}
             </button>
           </div>
