@@ -17,8 +17,11 @@ module.exports = {
     },
     extend: {
       scale: {
-        '80': '0.8',
-        '85': '0.85',
+        60: "0.6",
+        65: "0.65",
+        70: "0.7",
+        80: "0.8",
+        85: "0.85",
       },
       lineClamp: {
         7: "7",
@@ -30,7 +33,6 @@ module.exports = {
         lineClamp: ["responsive", "hover"],
       },
       spacing: {
-        footer: "450px",
         100: "25rem",
         104: "26rem",
         108: "27rem",

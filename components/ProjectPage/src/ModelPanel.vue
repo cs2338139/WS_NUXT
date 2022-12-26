@@ -120,17 +120,6 @@ function SetModelsCategories() {
       }
     }
   }
-  // for (let j = 0; j < categories.value.length; j++) {
-  //   if (modelsCategories.value[0][j].length % 5 != 0) {
-  //     let count = 5 - (modelsCategories.value[0][j].length % 5);
-  //     for (let i = 0; i < count; i++) {
-  //       modelsCategories.value[0][j].push(data);
-  //       modelsCategories.value[1][j].push(data);
-  //     }
-  //   }
-  // }
-
-  // console.log(modelsCategories.value);
 }
 
 if (locale.value === "en") {
@@ -168,12 +157,12 @@ function SwitchYear() {
 }
 
 onMounted(() => {
+  console.log(currentYear.value);
   yearButton.value.click(currentYear.value);
-  ViewSwitch();
-
   watchEffect(() => {
     SwitchYear();
   });
+  ViewSwitch();
 });
 
 function ViewSwitch() {

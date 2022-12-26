@@ -10,8 +10,8 @@ if (props.img === undefined) {
 </script>
 
 <template>
-  <div>
-    <div class="relative mt-10 mb-4 w-60 xl:mx-5 lg:scale-90 lg:mx-0">
+  <div class="">
+    <div class="relative mt-10 mb-4 w-60 xl:mx-5 lg:scale-90 lg:mx-0 sm:scale-60 sm:-mx-8 sm:-my-8">
       <button @click="$emit('open')" class="w-full" v-if="enabled">
         <div>
           <div class="absolute border-2 border-black parallel right-6 -z-10 -top-6 bg-custom-0" v-if="color === 'yellow'"></div>

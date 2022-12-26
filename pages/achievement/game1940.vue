@@ -109,7 +109,7 @@ function SentData(datas, i) {
         <PartItemNull>
           <template #title
             >{{ $t("pages.home.child.achievement.child.game1940.info.download.title") }}
-            <div class="mt-5 flex">
+            <div class="mt-5 flex flex-wrap sm:justify-between last:sm: -mb-10">
               <DownloadButton href="https://store.steampowered.com/app/1798300/1940/">Windows</DownloadButton>
               <DownloadButton href="https://apps.apple.com/tw/app/1940/id1546034482">　iOS　</DownloadButton>
               <DownloadButton href="https://play.google.com/store/apps/details?id=com.axis3d.ws_1940"> Android</DownloadButton>
@@ -119,12 +119,12 @@ function SentData(datas, i) {
 
         <PartItemNull>
           <template #title>{{ $t("pages.home.child.achievement.child.game1940.characters.title") }}</template>
-          <div class="flex flex-wrap justify-start">
-            <Item2 @open="SentData(charactersData, 0)" class="mr-16" :img="p1">
+          <div class="flex flex-wrap justify-start sm:justify-between">
+            <Item2 @open="SentData(charactersData, 0)" class="mr-16 sm:mr-0" :img="p1">
               <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.0.name") }}</template>
               <template #year>（{{ $t("pages.home.child.achievement.child.game1940.characters.content.0.year") }}）</template>
             </Item2>
-            <Item2 @open="SentData(charactersData, 1)" class="mr-16" :img="p2">
+            <Item2 @open="SentData(charactersData, 1)" class="mr-16 sm:mr-0" :img="p2">
               <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.1.name") }}</template>
               <template #year>（{{ $t("pages.home.child.achievement.child.game1940.characters.content.1.year") }}）</template>
             </Item2>

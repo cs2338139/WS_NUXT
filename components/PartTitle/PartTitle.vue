@@ -11,7 +11,7 @@ const { locale, setLocale, t } = useI18n();
             </span>
             <br>
         </template>
-        <span class="text-3xl font-bold" :class="({ 'tracking-custom-0' :locale === 'zh' })">
+        <span class="text-3xl font-bold sm:text-2xl" :class="({ 'tracking-custom-0' :locale === 'zh' })">
             <slot name="title"></slot>
         </span>
     </div>

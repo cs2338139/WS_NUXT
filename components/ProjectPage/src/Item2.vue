@@ -15,7 +15,7 @@ if (props.img === undefined) {
 
 <template>
   <div class="">
-    <div class="relative w-40 mx-5 mt-10 mb-4" :class="{ 'lg:mx-0': isWriter }">
+    <div class="relative w-40 mx-5 mt-10 mb-4 md:mx-0 "  :class="{ 'lg:mx-0': isWriter }">
       <button @click="$emit('open')" class="w-full" v-if="enabled">
         <div>
           <div class="flex items-center justify-center h-full overflow-hidden bg-gray-300 border rounded-full aspect-square"><img :v-if="img != ''" :src="img" class="h-full" /></div>

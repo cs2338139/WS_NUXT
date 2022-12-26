@@ -75,7 +75,25 @@ if (locale.value === "en") {
 } else if (locale.value === "zh") {
   Object.assign(current, ch);
 }
+const { currentWidth } = useGetWidthLevel();
 
+const itemComponent = ref();
+const ProjectItem_3_Object = resolveComponent("ProjectItem_3");
+const EventItem_Object = resolveComponent("EventItem");
+
+onMounted(() => {
+  watchEffect(() => {
+    ReSize();
+  });
+});
+
+function ReSize() {
+  if (currentWidth.value === "sm") {
+    itemComponent.value = EventItem_Object;
+  } else {
+    itemComponent.value = ProjectItem_3_Object;
+  }
+}
 </script>
 
 <template>
@@ -87,11 +105,11 @@ if (locale.value === "en") {
 
     <div class="flex flex-col justify-between mx-auto mb-10">
       <div ref="items" v-for="(event, index) in current">
-        <ProjectItem_3 :href="'/eventRecord/' + event.slug" :img="event.img" :index="index">
+        <component :is="itemComponent" :href="'/eventRecord/' + event.slug" :img="event.img" :index="index">
           <template #name>{{ event.title }}</template>
           <template #date>{{ event.date }}</template>
           <template #place>{{ event.place }}</template>
-        </ProjectItem_3>
+        </component>
       </div>
     </div>
 

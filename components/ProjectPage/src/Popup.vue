@@ -6,6 +6,7 @@ const props = defineProps({
   moveEnable: Boolean,
   size: String,
 });
+const { currentWidth } = useGetWidthLevel();
 
 const isModel = ref(false);
 
@@ -15,14 +16,17 @@ if (props.link === undefined) {
   isModel.value = true;
 }
 
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+const vh = ref();
+function CheckVhView() {
+  vh.value = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh.value}px`);
+}
 
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+CheckVhView();
+let timeoutID = window.setInterval(() => CheckVhView(), 100);
+window.addEventListener("resize", () => {
+  CheckVhView();
 });
-
 </script>
 
 <template>
@@ -34,7 +38,7 @@ window.addEventListener('resize', () => {
     </div>
 
     <div class="flex flex-col items-center justify-center h-full wrap-6">
-      <div class="absolute flex items-center justify-between w-full h-full xl:px-20 md:px-10" v-if="moveEnable">
+      <div class="absolute flex items-center justify-between w-full h-full xl:px-20 md:px-10 sm:px-2 sm:mt-80" v-if="moveEnable">
         <button @click="$emit('previous')" class="flex items-center justify-center w-12 m-2 bg-white border border-black aspect-square">
           <ion-icon name="arrow-back-outline" class="text-4xl"></ion-icon>
         </button>
@@ -43,7 +47,7 @@ window.addEventListener('resize', () => {
         </button>
       </div>
 
-      <div class="z-50 mt-40">
+      <div class="z-50 mt-32">
         <div>
           <iframe
             frameborder="0"
@@ -67,24 +71,22 @@ window.addEventListener('resize', () => {
           <img :v-if="img != ''" :src="img" class="h-full" />
         </div>
       </div>
-      <div class="z-50 w-3/5 mt-8 text-justify mb-14 h-2/5 md:w-3/4">
-        <div class="mb-4 text-2xl font-bold text-center">
-          <slot name="name" />
-        </div>
-        <div class="z-50 -mt-2 text-2xl font-bold text-center" v-if="isModel">
+      <div class="flex flex-col z-50 w-3/5 mt-3 text-justify mb-14 h-2/5 md:w-3/4 sm:w-4/5">
+        <div class="flex items-center justify-center text-center h-20 mb-4 text-2xl font-bold sm:mb-2 sm:text-xl"><slot name="name" /></div>
+        <div class="z-50 -mt-2 text-2xl font-bold text-center sm:text-xl" v-if="isModel">
           <slot name="owner" />
         </div>
-        <div class="z-50 mb-2 text-xl text-center" v-if="isModel">
+        <div class="z-50 mb-2 text-xl text-center sm:text-lg sm:mb-0" v-if="isModel">
           {{ $t("pages.home.child.achievement.child.modelView.result.size") }}
           <slot name="size" />
         </div>
-        <div class="z-50 overflow-y-auto text-xl text-justify h-5/6 scrollbarCustom" :class="{ 'h-1/2': isModel }">
-          <div class="m-2 text-justify"><slot name="word" /></div>
+        <div class="z-50 overflow-y-auto text-xl text-justify h-5/6 scrollbarCustom sm:text-lg" :class="{ 'h-1/2 sm:h-32': isModel }">
+          <slot name="word" />
         </div>
-        <div class="z-50 h-12 text-center">
+        <div class="z-50 h-12 text-center sm:h-8 mt-2">
           <NuxtLink :to="more" target="_blank" class="flex items-center justify-center" v-if="isModel && more">
-            <div class="mr-2 text-2xl font-bold tracking-wider border-b border-black">{{ $t("pages.home.child.achievement.child.modelView.result.more") }}</div>
-            <div class="w-12 bg-white border border-black rounded-full aspect-square">
+            <div class="mr-2 text-2xl font-bold tracking-wider border-b border-black sm:text-xl">{{ $t("pages.home.child.achievement.child.modelView.result.more") }}</div>
+            <div class="w-12 bg-white border border-black rounded-full aspect-square sm:w-7">
               <img class="" src="~/public/Image/UI/Arrow2.svg" alt="" />
             </div>
           </NuxtLink>

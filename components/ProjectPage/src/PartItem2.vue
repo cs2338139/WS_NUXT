@@ -12,9 +12,9 @@ defineProps({
     <template #title>
       <slot name="title" />
     </template>
-    <div class="flex justify-between mt-5 h-52">
-      <div>
-        <div class="flex items-center h-full overflow-hidden bg-gray-300 border-2 border-black rounded-full aspect-square mr-10">
+    <div class="flex justify-between mt-5 h-52 w-full">
+      <div class="">
+        <div class="flex items-center h-full overflow-hidden bg-gray-300 border-2 border-black rounded-full aspect-square mr-10 sm:h-3/5 sm:mr-5">
           <img :v-if="img != ''" :src="img" />
         </div>
       </div>

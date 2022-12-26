@@ -4,9 +4,16 @@ import EventItem from ".././components/EventItem/EventItem.vue";
 import PartTitle from "~~/components/PartTitle/PartTitle.vue";
 import HrefBottom from "~~/components/HrefBottom/HrefBottom.vue";
 const { locale, setLocale, t } = useI18n();
-const ProjectItemImage1 = new URL("../public/Image/Page_3D/Cover/3D_Cover2.png", import.meta.url).href;
-const ProjectItemImage2 = new URL("../public/Image/Page_hideWordsMan/Cover/KV1_1.png", import.meta.url).href;
-const ProjectItemImage3 = new URL("../public/Image/Page_bird/Cover/Bird_Cover2.png", import.meta.url).href;
+const lgProjectItemImage1 = new URL("../public/Image/Page_3D/Cover/3D_Cover2.png", import.meta.url).href;
+const lgProjectItemImage2 = new URL("../public/Image/Page_hideWordsMan/Cover/KV1_1.png", import.meta.url).href;
+const lgProjectItemImage3 = new URL("../public/Image/Page_bird/Cover/Bird_Cover2.png", import.meta.url).href;
+const smProjectItemImage1 = new URL("../public/Image/Page_3D/Cover/3D_Cover.png", import.meta.url).href;
+const smProjectItemImage2 = new URL("../public/Image/Page_hideWordsMan/Cover/KV1377_570.png", import.meta.url).href;
+const smProjectItemImage3 = new URL("../public/Image/Page_bird/Cover/Bird_Cover.png", import.meta.url).href;
+const ProjectItemImage1 = ref();
+const ProjectItemImage2 = ref();
+const ProjectItemImage3 = ref();
+const { currentWidth } = useGetWidthLevel();
 
 useHead({
   title: t("pages.home.title"),
@@ -74,10 +81,28 @@ if (data.value?.posts) {
   }
 }
 
+onMounted(() => {
+  watchEffect(() => {
+    ReSize();
+  });
+});
+
 if (locale.value === "en") {
   Object.assign(current, en);
 } else if (locale.value === "zh") {
   Object.assign(current, ch);
+}
+
+function ReSize() {
+  if (currentWidth.value === "sm") {
+    ProjectItemImage1.value = smProjectItemImage1;
+    ProjectItemImage2.value = smProjectItemImage2;
+    ProjectItemImage3.value = smProjectItemImage3;
+  } else {
+    ProjectItemImage1.value = lgProjectItemImage1;
+    ProjectItemImage2.value = lgProjectItemImage2;
+    ProjectItemImage3.value = lgProjectItemImage3;
+  }
 }
 </script>
 
@@ -93,7 +118,7 @@ if (locale.value === "en") {
       </PartTitle>
 
       <div class="relative max-w-4xl mx-auto my-0">
-        <div class="mb-10 text-3xl text-blue-400">
+        <div class="mb-10 text-3xl sm:text-xl text-blue-400">
           {{ $t("pages.home.info.title2") }}
         </div>
         <div class="mb-3">
@@ -107,13 +132,12 @@ if (locale.value === "en") {
     </div>
 
     <div class="mb-32 wrap-6 2xl:mb-10">
-      <PartTitle class="mt-0 mb-5 ml-0 2xl:-mb-5">
+      <PartTitle class="mt-0 mb-5 ml-0 2xl:-mb-5 sm:mb-5">
         <template #en>Achievement</template>
         <template #title>{{ $t("pages.home.achievement.title") }}</template>
       </PartTitle>
-
-      <div class="inline-flex justify-between w-full mb-28 2xl:mb-0 2xl:overflow-x-auto 2xl:scrollbar-none">
-        <ProjectItem class="transform translate-y-32 2xl:translate-y-0 2xl:scale-75" href="/achievement/modelView" color="yellow" :img="ProjectItemImage1">
+      <div class="inline-flex justify-between w-full mb-28 2xl:mb-0 2xl:overflow-x-auto 2xl:scrollbar-none sm:flex sm:flex-col sm:overflow-visible">
+        <ProjectItem class="transform translate-y-32 2xl:translate-y-0 2xl:scale-75 sm:scale-100 sm:mb-16" href="/achievement/modelView" color="yellow" :img="ProjectItemImage1">
           <template #name>
             {{ $t("pages.home.achievement.content.0.title") }}
           </template>
@@ -121,7 +145,7 @@ if (locale.value === "en") {
             {{ $t("pages.home.achievement.content.0.year") }}
           </template>
         </ProjectItem>
-        <ProjectItem class="transform translate-y-16 2xl:translate-y-0 2xl:scale-75" href="/achievement/hideWordsMan" color="blue" :img="ProjectItemImage2">
+        <ProjectItem class="transform translate-y-16 2xl:translate-y-0 2xl:scale-75 sm:scale-100 sm:mb-16" href="/achievement/hideWordsMan" color="blue" :img="ProjectItemImage2">
           <template #name>
             {{ $t("pages.home.achievement.content.4.title") }}
           </template>
@@ -132,7 +156,7 @@ if (locale.value === "en") {
             {{ $t("pages.home.achievement.content.4.year") }}
           </template>
         </ProjectItem>
-        <ProjectItem href="/achievement/birdsOfLife" class="2xl:scale-75" color="red" :img="ProjectItemImage3">
+        <ProjectItem href="/achievement/birdsOfLife" class="2xl:scale-75 sm:scale-100 sm:mb-16" color="red" :img="ProjectItemImage3">
           <template #name>
             {{ $t("pages.home.achievement.content.3.title") }}
           </template>

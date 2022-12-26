@@ -4,10 +4,10 @@ defineProps({});
 
 <template>
   <div class="top-0 w-full h-full">
-    <div class="relative flex items-center h-full justify-between px-10 mx-auto my-0 wrap-8">
+    <div class="relative flex items-center h-full justify-between px-10 mx-auto my-0 wrap-8 ">
       <slot name="logo"></slot>
 
-      <button class="w-16 py-4 px-3 bg-white border-2 border-black right-5 top-5 aspect-square sm:w-12" ref="narButton" @click="$emit('function')">
+      <button class="w-16 py-4 px-3 bg-white border-2 border-black right-5 top-5 aspect-square sm:w-12 sm:h-12" ref="narButton" @click="$emit('function')">
         <div class="flex flex-col justify-between w-full h-full">
           <hr class="border border-black" />
           <hr class="border border-black" />

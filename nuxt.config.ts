@@ -25,7 +25,7 @@ export default defineNuxtConfig({
           body: true,
         },
       ],
-      viewport: "width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no",
+      viewport: "width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0",
       meta: [
         { charset: "utf-8" }
         // , { "http-equiv": "Content-Security-Policy", content: "upgrade-insecure-requests" }

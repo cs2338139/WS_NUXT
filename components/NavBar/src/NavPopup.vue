@@ -2,15 +2,19 @@
 import HrefButton from "~~/components/NavBar/src/HrefButton.vue";
 import { useI18n } from "vue-i18n";
 const { locale, setLocale } = useI18n();
+const { currentWidth } = useGetWidthLevel();
 
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+const vh = ref();
+function CheckVhView() {
+  vh.value = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh.value}px`);
+}
 
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+CheckVhView();
+let timeoutID = window.setInterval(() => CheckVhView(), 100);
+window.addEventListener("resize", () => {
+  CheckVhView();
 });
-
 </script>
 
 <template>
@@ -21,13 +25,17 @@ window.addEventListener('resize', () => {
       </button>
     </div>
     <div class="flex items-center justify-center w-full h-full">
-      <div class="flex justify-between max-w-5xl w-full h-4/5 md:flex-col md:max-w-xl">
-        <div class="w-100 md:w-120">
+      <div class="flex justify-between max-w-5xl w-full h-4/5 md:flex-col md:max-w-xl sm:px-10">
+        <div class="w-2/5 md:w-4/5 sm:w-4/5" v-if="(currentWidth === '3xl')||(currentWidth === '2xl')||(currentWidth === 'xl')||(currentWidth === 'lg')">
           <img src="~/public/Image/UI/LOGOlargeCH.svg" v-if="locale === 'zh'" />
           <img src="~/public/Image/UI/LOGOlargeEN.svg" v-if="locale === 'en'" />
         </div>
-        <div class="self-end h-142 w-100 md:self-start md:h-112">
-          <div class="flex flex-col items-start justify-between h-100">
+        <div class="w-2/5 md:w-4/5 sm:w-4/5" v-if="(currentWidth === 'md')||(currentWidth === 'sm')">
+          <img src="~/public/Image/UI/LOGOlargeCH.svg" v-if="locale === 'zh'" />
+          <img src="~/public/Image/UI/LOGOlargeEN.svg" v-if="locale === 'en'" />
+        </div>
+        <div class="self-end h-3/4 w-2/5 md:w-full md:self-start md:h-3/5">
+          <div class="flex flex-col items-start justify-between h-full">
             <HrefButton href="/about" @click="$emit('close')">
               <template #en>About the project</template>
               {{ $t("nav.about") }}
@@ -40,7 +48,7 @@ window.addEventListener('resize', () => {
               <template #en>Event</template>
               {{ $t("nav.eventRecord") }}
             </HrefButton>
-            <button @click="$emit('function')" class="px-3 py-2 text-xl font-bold text-center bg-white border-2 border-black aspect-square md:text-4xl">
+            <button @click="$emit('function')" class="px-3 py-2 text-xl font-bold text-center bg-white border-2 border-black aspect-square">
               {{ $t("nav.lang") }}
             </button>
           </div>

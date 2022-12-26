@@ -60,11 +60,11 @@
   }
 
   .wrap-8-image {
-    @apply max-w-8xl relative mx-auto my-0 2xl:px-5;
+    @apply max-w-8xl relative mx-auto my-0 2xl:px-5 sm:px-2;
   }
 
   .wrap-6 {
-    @apply relative max-w-6xl mx-auto my-0 xl:px-10;
+    @apply relative max-w-6xl mx-auto my-0 xl:px-10 sm:px-6;
   }
 
   .IsDisabled {
