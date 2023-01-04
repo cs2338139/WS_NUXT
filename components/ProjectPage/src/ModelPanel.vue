@@ -168,11 +168,11 @@ onMounted(() => {
 function ViewSwitch() {
   if (viewMode.data.viewMore) {
     viewMode.data.viewMore = false;
-    viewMode.data.buttonIcon = "+";
+    viewMode.data.buttonIcon = "＋";
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.result.button.0");
   } else {
     viewMode.data.viewMore = true;
-    viewMode.data.buttonIcon = "-";
+    viewMode.data.buttonIcon = "－";
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.result.button.1");
   }
   ControlViewBoxHeight(currentYear.value, viewMode.data.viewMore);

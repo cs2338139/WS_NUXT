@@ -100,11 +100,11 @@ function ViewSwitch() {
   if (viewMode.data.viewMore) {
     viewMode.data.viewMore = false;
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.literati.button.0");
-    viewMode.data.buttonIcon = "+";
+    viewMode.data.buttonIcon = "＋";
   } else {
     viewMode.data.viewMore = true;
     viewMode.data.buttonWord = t("pages.home.child.achievement.child.modelView.literati.button.1");
-    viewMode.data.buttonIcon = "-";
+    viewMode.data.buttonIcon = "－";
   }
   ControlViewBoxHeight(viewMode.data.viewMore);
 }

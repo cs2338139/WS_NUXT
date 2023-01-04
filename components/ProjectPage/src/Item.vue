@@ -7,6 +7,28 @@ const enabled = ref(true);
 if (props.img === undefined) {
   enabled.value = false;
 }
+
+const aspectTarget = ref();
+
+onMounted(() => {
+  FirstSetAspectValue();
+  window.addEventListener("resize", ReSetAspectValue);
+});
+
+function FirstSetAspectValue() {
+  let CheckAspect = setInterval(() => {
+    if (aspectTarget.value) {
+      if (aspectTarget.value.offsetWidth != 0) {
+        ReSetAspectValue();
+        clearInterval(CheckAspect);
+      }
+    }
+  }, 0);
+}
+
+function ReSetAspectValue() {
+  if (aspectTarget.value) aspectTarget.value.style.height = aspectTarget.value.offsetWidth + "px";
+}
 </script>
 
 <template>
@@ -19,7 +41,7 @@ if (props.img === undefined) {
           <div class="absolute border-2 border-black parallel right-6 -z-10 -top-6 bg-custom-2" v-if="color === 'blue'"></div>
         </div>
         <div>
-          <div :v-if="img === ''" class="w-full overflow-hidden bg-gray-300 border-2 border-black aspect-square rounded-3xl"><img :v-if="img != ''" :src="img" /></div>
+          <div :v-if="img === ''" class="w-full overflow-hidden bg-gray-300 border-2 border-black rounded-3xl" ref="aspectTarget"><img :v-if="img != ''" :src="img" /></div>
         </div>
         <div class="mt-2 text-center">
           <div class="mb-3 text-xl">

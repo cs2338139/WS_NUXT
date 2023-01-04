@@ -10,8 +10,9 @@ defineProps({
     <template #title>
       <slot name="title" />
     </template>
-    <iframe v-if="url != ''" :src="url" class="aspect-video mb-14 relative w-full" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
+    <div v-if="url != ''" class="mb-14 h-0 w-full relative pb-[56.25%]">
+      <iframe :src="url" class="absolute top-0 left-0 w-full h-full" allowfullscreen> </iframe>
+    </div>
     <slot />
   </PartItemNull>
 </template>
