@@ -84,7 +84,7 @@ const { fakeCount, countOfRows, isFirstFakeCheck } = useSetFakeElement(box, fake
 const viewMode = reactive({
   data: {
     buttonWord: t("pages.home.child.achievement.child.modelView.literati.button.1"),
-    buttonIcon: "-",
+    buttonIcon: "－",
     viewMore: true,
   },
 });

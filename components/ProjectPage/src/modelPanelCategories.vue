@@ -28,7 +28,6 @@ function click(index) {
   } else {
     // emits("function", index);
     select.value.value = index;
-    console.log(index);
   }
 }
 

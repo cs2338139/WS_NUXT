@@ -34,7 +34,5 @@ const { locale, setLocale, t } = useI18n();
 </template>
 
 <style scoped>
-.size {
-  aspect-ratio: 1377/570;
-}
+
 </style>

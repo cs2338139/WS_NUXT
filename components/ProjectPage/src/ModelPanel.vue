@@ -136,7 +136,7 @@ const modelPanelOfYearElement = ref();
 const viewMode = reactive({
   data: {
     buttonWord: t("pages.home.child.achievement.child.modelView.result.button.1"),
-    buttonIcon: "-",
+    buttonIcon: "－",
     viewMore: true,
   },
 });
@@ -157,12 +157,13 @@ function SwitchYear() {
 }
 
 onMounted(() => {
-  console.log(currentYear.value);
   yearButton.value.click(currentYear.value);
   watchEffect(() => {
     SwitchYear();
   });
-  ViewSwitch();
+  setTimeout(() => {
+    ViewSwitch();
+  }, 0.05);
 });
 
 function ViewSwitch() {
@@ -183,7 +184,6 @@ function ControlViewBoxHeight(index, enabled) {
 }
 
 function SentData(i, index) {
-  console.log(i, index);
   emits("open", current[i], index);
 }
 </script>

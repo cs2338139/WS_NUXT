@@ -5,6 +5,27 @@ import FunctionButton from "~~/components/ProjectPage/src/FunctionButton.vue";
 defineProps({
   img: String,
 });
+const aspectTarget = ref();
+
+onMounted(() => {
+  FirstSetAspectValue();
+  window.addEventListener("resize", ReSetAspectValue);
+});
+
+function FirstSetAspectValue() {
+  let CheckAspect = setInterval(() => {
+    if (aspectTarget.value) {
+      if (aspectTarget.value.offsetHeight > 10) {
+        ReSetAspectValue();
+        clearInterval(CheckAspect);
+      }
+    }
+  }, 0);
+}
+
+function ReSetAspectValue() {
+  if (aspectTarget.value && aspectTarget.value.offsetHeight > 10) aspectTarget.value.style.width = aspectTarget.value.offsetHeight + "px";
+}
 </script>
 
 <template>
@@ -14,7 +35,7 @@ defineProps({
     </template>
     <div class="flex justify-between mt-5 h-52 w-full">
       <div class="">
-        <div class="flex items-center h-full overflow-hidden bg-gray-300 border-2 border-black rounded-full aspect-square mr-10 sm:h-3/5 sm:mr-5">
+        <div class="flex items-center h-full overflow-hidden bg-gray-300 border-2 border-black rounded-full mr-10 sm:h-3/5 sm:mr-5" ref="aspectTarget">
           <img :v-if="img != ''" :src="img" />
         </div>
       </div>

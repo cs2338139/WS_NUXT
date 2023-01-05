@@ -12,12 +12,13 @@ const { locale, setLocale } = useI18n();
 const logoImage = new URL("../../public/Image/UI/LOGOsmall.svg", import.meta.url).href;
 
 const navBar = ref();
-const narButton = ref();
+const navButton = ref();
 const topButton = ref();
+const aspectTarget = ref();
+
 const { currentWidth } = useGetWidthLevel();
 
 function ChangeLang() {
-  console.log(locale.value);
   if (locale.value === "en") {
     setLocale("zh");
   } else if (locale.value === "zh") {
@@ -36,12 +37,12 @@ onMounted(() => {
 function onScroll() {
   if (window.top.scrollY > navBar.value.offsetHeight) {
     if (currentWidth.value === "3xl") {
-      narButton.value.style.display = "block";
+      navButton.value.style.display = "block";
     } else {
       topButton.value.style.display = "block";
     }
   } else {
-    narButton.value.style.display = "none";
+    navButton.value.style.display = "none";
     topButton.value.style.display = "none";
   }
 }
@@ -60,6 +61,58 @@ function ScrollToTop() {
 }
 
 const popupEnable = ref(false);
+
+onMounted(() => {
+  FirstSetAspectValue();
+  window.addEventListener("resize", ReSetAspectValue);
+  window.addEventListener("resize", ReSetNavButton);
+  window.addEventListener("resize", ReSetTopButton);
+});
+
+function FirstSetAspectValue() {
+  let CheckAspect = setInterval(() => {
+    if (aspectTarget.value) {
+      if (aspectTarget.value.offsetWidth > 10) {
+        ReSetAspectValue();
+        clearInterval(CheckAspect);
+      }
+    }
+  }, 0);
+
+  let CheckNavButton = setInterval(() => {
+    if (navButton.value) {
+      if (navButton.value.offsetWidth > 10) {
+        ReSetNavButton();
+        clearInterval(CheckNavButton);
+      }
+    }
+  }, 0);
+
+  let CheckTopButton = setInterval(() => {
+    if (topButton.value) {
+      if (topButton.value.offsetWidth > 10) {
+        ReSetTopButton();
+        clearInterval(CheckTopButton);
+      }
+    }
+  }, 0);
+}
+
+function ReSetAspectValue() {
+  if (aspectTarget.value && aspectTarget.value.offsetWidth > 10) {
+    aspectTarget.value.style.height = aspectTarget.value.offsetWidth + "px";
+  }
+}
+function ReSetNavButton() {
+  if (navButton.value && navButton.value.offsetWidth > 10) {
+    navButton.value.style.height = navButton.value.offsetWidth + "px";
+  }
+}
+function ReSetTopButton() {
+  if (topButton.value && topButton.value.offsetWidth > 10) {
+    topButton.value.style.height = topButton.value.offsetWidth + "px";
+  }
+}
 </script>
 
 <template>
@@ -83,7 +136,7 @@ const popupEnable = ref(false);
         <NavMenuItem href="/eventRecord"> {{ $t("nav.eventRecord") }}</NavMenuItem>
 
         <button @click="ChangeLang()" class="ml-1">
-          <li class="flex items-center justify-center text-2xl font-bold text-center bg-white border-2 border-black aspect-square w-14">
+          <li class="flex items-center justify-center text-2xl font-bold text-center bg-white border-2 border-black w-14" ref="aspectTarget">
             {{ $t("nav.lang") }}
           </li>
         </button>
@@ -96,7 +149,7 @@ const popupEnable = ref(false);
       </NavMenuPhone>
     </nav>
 
-    <button class="fixed hidden p-4 overflow-hidden bg-white border-2 border-black rounded-full right-5 top-5 w-14 aspect-square" ref="narButton" @click="OpenNavPopup">
+    <button class="fixed hidden p-4 overflow-hidden bg-white border-2 border-black rounded-full right-5 top-5 w-14" ref="navButton" @click="OpenNavPopup">
       <div class="flex flex-col justify-between w-full h-full">
         <hr class="border border-black" />
         <hr class="border border-black" />
@@ -104,7 +157,7 @@ const popupEnable = ref(false);
       </div>
     </button>
 
-    <button class="fixed hidden right-5 bottom-20 w-14 aspect-square" ref="topButton" @click="ScrollToTop">
+    <button class="fixed hidden right-5 bottom-20 w-14" ref="topButton" @click="ScrollToTop">
       <img class="" src="~/public/Image/UI/ToTop.svg" alt="" />
     </button>
     <NavPopup @close="ClosePopupPanel" v-if="popupEnable" @function="ChangeLang()"> </NavPopup>

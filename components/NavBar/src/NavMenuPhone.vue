@@ -8,7 +8,7 @@ onMounted(() => {
 function FirstSetAspectValue() {
   let CheckAspect = setInterval(() => {
     if (aspectTarget.value) {
-      if (aspectTarget.value.offsetWidth != 0) {
+      if (aspectTarget.value.offsetWidth > 10) {
         ReSetAspectValue();
         clearInterval(CheckAspect);
       }
@@ -17,13 +17,13 @@ function FirstSetAspectValue() {
 }
 
 function ReSetAspectValue() {
-  if (aspectTarget.value) aspectTarget.value.style.height = aspectTarget.value.offsetWidth + "px";
+  if (aspectTarget.value && aspectTarget.value.offsetWidth > 10) aspectTarget.value.style.height = aspectTarget.value.offsetWidth + "px";
 }
 </script>
 
 <template>
   <div class="top-0 w-full h-full">
-    <div class="relative flex items-center h-full justify-between px-10 mx-auto my-0 wrap-8 ">
+    <div class="relative flex items-center h-full justify-between px-10 mx-auto my-0 wrap-8">
       <slot name="logo"></slot>
 
       <button class="w-16 py-4 px-3 bg-white border-2 border-black right-5 top-5 sm:w-12" ref="aspectTarget" @click="$emit('function')">

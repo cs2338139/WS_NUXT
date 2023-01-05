@@ -57,8 +57,6 @@ function SetData(i) {
       more: popupDatas.list[i].more,
     };
   }
-  console.log(popupDatas.list[i].size);
-
 }
 
 function ClosePopupPanel() {
@@ -91,11 +89,35 @@ function PreviousData() {
 defineExpose({
   OpenPopupPanel,
 });
+
+const aspectTarget = ref();
+
+onMounted(() => {
+  FirstSetAspectValue();
+  window.addEventListener("resize", ReSetAspectValue);
+});
+
+function FirstSetAspectValue() {
+  let CheckAspect = setInterval(() => {
+    if (aspectTarget.value) {
+      if (aspectTarget.value.offsetWidth > 10) {
+        ReSetAspectValue();
+        clearInterval(CheckAspect);
+      }
+    }
+  }, 0);
+}
+
+function ReSetAspectValue() {
+  if (aspectTarget.value && aspectTarget.value.offsetWidth > 10) {
+    aspectTarget.value.style.height = (aspectTarget.value.offsetWidth / 1377) * 530 + "px";
+  }
+}
 </script>
 
 <template>
   <div>
-    <div class="aspect-KV wrap-8-image mb-14 w-full">
+    <div class="wrap-8-image mb-14 w-full" ref="aspectTarget">
       <img :src="img" class="w-full" />
     </div>
 
@@ -120,7 +142,4 @@ defineExpose({
 </template>
 
 <style scoped>
-.aspect-KV {
-  aspect-ratio: 1377 / 530;
-}
 </style>

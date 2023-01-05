@@ -170,17 +170,88 @@ function ViewImage(j) {
     }
   }
 }
+
+const aspectTarget1 = ref();
+const aspectTarget2 = ref();
+const aspectTarget3 = ref();
+
+onMounted(() => {
+  FirstSetAspectValue();
+  window.addEventListener("resize", ReSetAspectValue1);
+  window.addEventListener("resize", ReSetAspectValue2);
+  window.addEventListener("resize", ReSetAspectValue3);
+  window.addEventListener("resize", ReSetImageButton);
+});
+
+function FirstSetAspectValue() {
+  let CheckAspect1 = setInterval(() => {
+    if (aspectTarget1.value) {
+      if (aspectTarget1.value.offsetWidth > 10) {
+        ReSetAspectValue1();
+        clearInterval(CheckAspect1);
+      }
+    }
+  }, 0);
+  let CheckAspect2 = setInterval(() => {
+    if (aspectTarget2.value) {
+      if (aspectTarget2.value.offsetWidth > 10) {
+        ReSetAspectValue2();
+        clearInterval(CheckAspect2);
+      }
+    }
+  }, 0);
+  let CheckAspect3 = setInterval(() => {
+    if (aspectTarget3.value) {
+      if (aspectTarget3.value.offsetHeight > 10) {
+        ReSetAspectValue3();
+        clearInterval(CheckAspect3);
+      }
+    }
+  }, 0);
+  let CheckImageButton = setInterval(() => {
+    if (imgButton.value) {
+      if (imgButton.value.offsetWidth > 10) {
+        ReSetImageButton();
+        clearInterval(CheckImageButton);
+      }
+    }
+  }, 0);
+}
+
+function ReSetAspectValue1() {
+  if (aspectTarget1.value && aspectTarget1.value.offsetWidth > 10) {
+    aspectTarget1.value.style.height = (aspectTarget1.value.offsetWidth / 16) * 9 + "px";
+  }
+}
+
+function ReSetAspectValue2() {
+  if (aspectTarget2.value && aspectTarget2.value.offsetWidth > 10) {
+    aspectTarget2.value.style.height = aspectTarget2.value.offsetWidth + "px";
+  }
+}
+
+function ReSetAspectValue3() {
+  if (aspectTarget3.value && aspectTarget3.value.offsetHeight > 10) {
+    aspectTarget3.value.style.width = aspectTarget3.value.offsetHeight + "px";
+  }
+}
+
+function ReSetImageButton() {
+  if (imgButton.value && imgButton.value.offsetWidth > 10) {
+    imgButton.value.style.height = imgButton.value.offsetWidth + "px";
+  }
+}
 </script>
 
 <template>
   <div class="wrap-6">
     <div>
-      <div class="relative aspect-video w-full bg-black mb-5 flex justify-center items-center">
+      <div class="relative flex items-center justify-center w-full mb-5 bg-black" ref="aspectTarget1">
         <div class="absolute flex items-center justify-between w-full xl:h-full" v-if="current.img.length > 1">
-          <button @click="MoveImage('prev')" class="aspect-square flex items-center justify-center w-12 m-2 bg-white border border-black">
+          <button @click="MoveImage('prev')" class="flex items-center justify-center w-12 m-2 bg-white border border-black" ref="aspectTarget2">
             <ion-icon name="arrow-back-outline" class="text-4xl"></ion-icon>
           </button>
-          <button @click="MoveImage('next')" class="aspect-square flex items-center justify-center w-12 m-2 bg-white border border-black">
+          <button @click="MoveImage('next')" class="flex items-center justify-center w-12 m-2 bg-white border border-black" ref="aspectTarget3">
             <ion-icon name="arrow-forward-outline" class="text-4xl"></ion-icon>
           </button>
         </div>
@@ -188,8 +259,8 @@ function ViewImage(j) {
         <img v-for="img in current.img" :src="img" class="h-full" ref="_img" />
       </div>
 
-      <div class="flex mb-14 justify-center" v-if="current.img.length > 1">
-        <button class="w-3 border aspect-square border-black rounded-full mx-1" ref="imgButton" @click="ViewImage(index)" v-for="(img, index) in current.img"></button>
+      <div class="flex justify-center mb-14" v-if="current.img.length > 1">
+        <button class="w-3 mx-1 border border-black rounded-full" ref="imgButton" @click="ViewImage(index)" v-for="(img, index) in current.img"></button>
       </div>
     </div>
 

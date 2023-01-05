@@ -15,22 +15,62 @@ let timeoutID = window.setInterval(() => CheckVhView(), 100);
 window.addEventListener("resize", () => {
   CheckVhView();
 });
+
+const aspectTarget1 = ref();
+const aspectTarget2 = ref();
+
+onMounted(() => {
+  FirstSetAspectValue();
+  window.addEventListener("resize", ReSetAspectValue1);
+  window.addEventListener("resize", ReSetAspectValue2);
+});
+
+function FirstSetAspectValue() {
+  let CheckAspect1 = setInterval(() => {
+    if (aspectTarget1.value) {
+      if (aspectTarget1.value.offsetWidth > 10) {
+        ReSetAspectValue1();
+        clearInterval(CheckAspect1);
+      }
+    }
+  }, 0);
+  let CheckAspect2 = setInterval(() => {
+    if (aspectTarget2.value) {
+      if (aspectTarget2.value.offsetWidth > 10) {
+        ReSetAspectValue2();
+        clearInterval(CheckAspect2);
+      }
+    }
+  }, 0);
+}
+
+function ReSetAspectValue1() {
+  if (aspectTarget1.value && aspectTarget1.value.offsetWidth > 10) {
+    aspectTarget1.value.style.height = aspectTarget1.value.offsetWidth + "px";
+  }
+}
+
+function ReSetAspectValue2() {
+  if (aspectTarget2.value && aspectTarget2.value.offsetWidth > 10) {
+    aspectTarget2.value.style.height = aspectTarget2.value.offsetWidth + "px";
+  }
+}
 </script>
 
 <template>
   <div class="fixed bottom-0 left-0 z-30 w-full panel bg-custom-0">
     <div class="absolute right-5 top-5">
-      <button @click="$emit('close')" class="flex items-center justify-center w-12 m-2 bg-white border border-black rounded-full aspect-square">
+      <button @click="$emit('close')" class="flex items-center justify-center w-12 m-2 bg-white border border-black rounded-full" ref="aspectTarget1">
         <ion-icon name="close-outline" class="text-4xl"></ion-icon>
       </button>
     </div>
     <div class="flex items-center justify-center w-full h-full">
       <div class="flex justify-between max-w-5xl w-full h-4/5 md:flex-col md:max-w-xl sm:px-10">
-        <div class="w-2/5 md:w-4/5 sm:w-4/5" v-if="(currentWidth === '3xl')||(currentWidth === '2xl')||(currentWidth === 'xl')||(currentWidth === 'lg')">
+        <div class="w-2/5 md:w-4/5 sm:w-4/5" v-if="currentWidth === '3xl' || currentWidth === '2xl' || currentWidth === 'xl' || currentWidth === 'lg'">
           <img src="~/public/Image/UI/LOGOlargeCH.svg" v-if="locale === 'zh'" />
           <img src="~/public/Image/UI/LOGOlargeEN.svg" v-if="locale === 'en'" />
         </div>
-        <div class="w-2/5 md:w-4/5 sm:w-4/5" v-if="(currentWidth === 'md')||(currentWidth === 'sm')">
+        <div class="w-2/5 md:w-4/5 sm:w-4/5" v-if="currentWidth === 'md' || currentWidth === 'sm'">
           <img src="~/public/Image/UI/LOGOlargeCH.svg" v-if="locale === 'zh'" />
           <img src="~/public/Image/UI/LOGOlargeEN.svg" v-if="locale === 'en'" />
         </div>
@@ -48,7 +88,7 @@ window.addEventListener("resize", () => {
               <template #en>Event</template>
               {{ $t("nav.eventRecord") }}
             </HrefButton>
-            <button @click="$emit('function')" class="px-3 py-2 text-xl font-bold text-center bg-white border-2 border-black aspect-square">
+            <button @click="$emit('function')" class="px-3 py-2 text-xl font-bold text-center bg-white border-2 border-black" ref="aspectTarget2">
               {{ $t("nav.lang") }}
             </button>
           </div>

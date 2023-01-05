@@ -15,7 +15,7 @@ onMounted(() => {
 function FirstSetAspectValue() {
   let CheckAspect = setInterval(() => {
     if (aspectTarget.value) {
-      if (aspectTarget.value.offsetHeight != 0) {
+      if (aspectTarget.value.offsetHeight > 10) {
         ReSetAspectValue();
         clearInterval(CheckAspect);
       }
@@ -24,7 +24,7 @@ function FirstSetAspectValue() {
 }
 
 function ReSetAspectValue() {
-  if (aspectTarget.value) {
+  if (aspectTarget.value && aspectTarget.value.offsetHeight > 10) {
     if (currentWidth.value === "sm") {
       aspectTarget.value.style.width = aspectTarget.value.offsetHeight + "px";
     } else {
