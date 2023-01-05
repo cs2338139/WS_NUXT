@@ -39,9 +39,9 @@ function ReSetAspectValue() {
 </script>
 
 <template>
-  <div class="px-12 pb-8 sm:px-0">
-    <NuxtLink :to="localePath(href)" class="rounded-3xl h-52 flex w-full p-4 border border-black lg:h-32 lg:p-3 bg-white">
-      <div class="rounded-3xl w-1/4 h-full overflow-hidden sm:w-auto bg-gray-300" ref="aspectTarget">
+  <div class="px-52 pb-8 sm:px-0">
+    <NuxtLink :to="localePath(href)" class="rounded-3xl h-40 flex w-full p-4 border border-black lg:h-32 lg:p-3 bg-white">
+      <div class="rounded-3xl w-3/4 h-full overflow-hidden sm:w-auto bg-gray-300" ref="aspectTarget">
         <div class="flex items-center h-full">
           <img :src="img" alt="" class="scale-110 object-cover sm:scale-125" />
         </div>

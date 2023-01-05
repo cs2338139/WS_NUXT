@@ -34,13 +34,13 @@ useHead({
 
 const box = ref();
 const fakeElement = ref();
-const { fakeCount:fakeCount_1 } = useSetFakeElement(box, fakeElement);
+const { fakeCount: fakeCount_1 } = useSetFakeElement(box, fakeElement);
 const box2 = ref();
 const fakeElement2 = ref();
-const { fakeCount:fakeCount_2} = useSetFakeElement(box2, fakeElement2);
+const { fakeCount: fakeCount_2 } = useSetFakeElement(box2, fakeElement2);
 const box3 = ref();
 const fakeElement3 = ref();
-const { fakeCount:fakeCount_3 } = useSetFakeElement(box3, fakeElement3);
+const { fakeCount: fakeCount_3 } = useSetFakeElement(box3, fakeElement3);
 
 const projectLayout = ref(null);
 
@@ -176,27 +176,27 @@ function SentData(datas, i) {
           <template #bottom>{{ $t("pages.home.child.achievement.child.hideWordsMan.author.bottom") }}</template>
         </PartItem2>
 
-        <PartItemNull>
+        <PartItemNull class="mb-5">
           <template #title>{{ $t("pages.home.child.achievement.child.hideWordsMan.works.title") }}</template>
-          <div class="flex flex-wrap justify-between xl:justify-around" ref="box">
+          <div class="flex flex-wrap justify-between xl:justify-around -mt-2" ref="box">
             <Item color="yellow" @open="SentData(workData, 0)" :img="s1"> {{ $t("pages.home.child.achievement.child.hideWordsMan.works.content[0].name") }}</Item>
             <Item color="blue" @open="SentData(workData, 1)" :img="s2"> {{ $t("pages.home.child.achievement.child.hideWordsMan.works.content[1].name") }}</Item>
             <Item v-for="index in fakeCount_1" ref="fakeElement"></Item>
           </div>
         </PartItemNull>
 
-        <PartItemNull>
+        <PartItemNull class="mb-5">
           <template #title>{{ $t("pages.home.child.achievement.child.hideWordsMan.NPCs.title") }}</template>
-          <div class="flex flex-wrap justify-between xl:justify-around" ref="box2">
+          <div class="flex flex-wrap justify-between xl:justify-around -mt-2" ref="box2">
             <Item color="yellow" @open="SentData(NPCData, 0)" :img="NPC1"> {{ $t("pages.home.child.achievement.child.hideWordsMan.NPCs.content[0].name") }}</Item>
             <Item color="red" @open="SentData(NPCData, 1)" :img="NPC2"> {{ $t("pages.home.child.achievement.child.hideWordsMan.NPCs.content[1].name") }}</Item>
             <Item v-for="index in fakeCount_2" ref="fakeElement2"></Item>
           </div>
         </PartItemNull>
 
-        <PartItemNull>
+        <PartItemNull class="mb-5">
           <template #title>{{ $t("pages.home.child.achievement.child.hideWordsMan.monsters.title") }}</template>
-          <div class="flex flex-wrap justify-between xl:justify-around" ref="box3">
+          <div class="flex flex-wrap justify-between xl:justify-around -mt-2" ref="box3">
             <Item color="yellow" @open="SentData(monsterData, 0)" :img="m1"> {{ $t("pages.home.child.achievement.child.hideWordsMan.monsters.content[0].name") }}</Item>
             <Item color="blue" @open="SentData(monsterData, 1)" :img="m2"> {{ $t("pages.home.child.achievement.child.hideWordsMan.monsters.content[1].name") }}</Item>
             <Item color="red" @open="SentData(monsterData, 2)" :img="m3"> {{ $t("pages.home.child.achievement.child.hideWordsMan.monsters.content[2].name") }}</Item>

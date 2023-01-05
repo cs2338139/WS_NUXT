@@ -24,9 +24,9 @@ function ReSetAspectValue() {
 
 <template>
   <div class="mb-14 flex justify-between items-start">
-    <div class="bg-custom-0 rounded-full w-8 m-1 mr-3" ref="aspectTarget"></div>
+    <div class="bg-custom-0 rounded-full w-6 m-1 mr-3 mt-[0.4rem]" ref="aspectTarget"></div>
     <div class="w-400">
-      <div class="font-bold text-2xl mb-3">
+      <div class="font-bold text-[1.3rem] mb-3">
         <slot name="title" />
       </div>
       <slot />

@@ -3,6 +3,7 @@ import ProjectItem from ".././components/ProjectItem/ProjectItem.vue";
 import EventItem from ".././components/EventItem/EventItem.vue";
 import PartTitle from "~~/components/PartTitle/PartTitle.vue";
 import HrefBottom from "~~/components/HrefBottom/HrefBottom.vue";
+
 const { locale, setLocale, t } = useI18n();
 const lgProjectItemImage1 = new URL("../public/Image/Page_3D/Cover/3D_Cover2.png", import.meta.url).href;
 const lgProjectItemImage2 = new URL("../public/Image/Page_hideWordsMan/Cover/KV1_1.png", import.meta.url).href;
@@ -118,12 +119,12 @@ function ReSize() {
       </PartTitle>
 
       <div class="relative max-w-4xl mx-auto my-0">
-        <div class="mb-10 text-3xl sm:text-xl text-blue-400">
+        <div class="mb-10 text-3xl font-bold leading-[40px] tracking-widest sm:text-xl text-blue-400">
           {{ $t("pages.home.info.title2") }}
         </div>
-        <div class="mb-3">
-          {{ $t("pages.home.info.content.0") }}<br /><br />
-          {{ $t("pages.home.info.content.1") }}<br />
+        <div class="mb-10 text-xl font-bold tracking-wide">
+          <div class="mb-3">{{ $t("pages.home.info.content.0") }}</div>
+          <div>{{ $t("pages.home.info.content.1") }}<br /></div>
         </div>
         <div class="text-right">
           <HrefBottom href="/about">{{ $t("pages.home.info.button") }}</HrefBottom>

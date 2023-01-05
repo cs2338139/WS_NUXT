@@ -24,7 +24,7 @@ defineProps({
           </div>
           <div class="h-40 border-t sm:h-1/4 border-black ">
             <div class="h-full flex-col flex justify-around p-3.5">
-              <div class="text-xl">
+              <div class="text-2xl font-bold">
                 <slot name="name"></slot>
               </div>
               <div class="-mt-6 text-sm sm:mt-0 sm:-mb-5">

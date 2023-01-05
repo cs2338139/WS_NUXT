@@ -17,7 +17,6 @@ const projectLayout = ref(null);
 function SentData(datas, i) {
   projectLayout.value.OpenPopupPanel(datas, i);
 }
-
 </script>
 
 <template>
@@ -33,15 +32,11 @@ function SentData(datas, i) {
         <PartItem>
           <template #title>{{ $t("pages.home.child.achievement.child.modelView.info.introduction.title") }}</template>
           <template #word>
-            {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.0") }}
-            <br />
-            {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.1") }}
-            <br />
-            {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.2") }}
-            <br />
-            {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.3") }}
-            <br />
-            {{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.4") }}
+            <div class="mb-3">{{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.0") }}</div>
+            <div class="mb-3">{{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.1") }}</div>
+            <div class="mb-3">{{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.2") }}</div>
+            <div class="mb-3">{{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.3") }}</div>
+            <div class="mb-3">{{ $t("pages.home.child.achievement.child.modelView.info.introduction.content.4") }}</div>
           </template>
         </PartItem>
 

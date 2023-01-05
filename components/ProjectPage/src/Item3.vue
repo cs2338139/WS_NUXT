@@ -5,7 +5,7 @@
     <div class="text-xl font-bold w-4/20 sm:w-full">
       <slot name="name" />
     </div>
-    <div class="text-justify w-15/20 sm:w-full"><slot name="info" /></div>
+    <div class="text-justify w-17/20 sm:w-full"><slot name="info" /></div>
   </div>
 </template>
 

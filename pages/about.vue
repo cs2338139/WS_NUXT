@@ -1,6 +1,6 @@
 <script setup>
 import PartTitle from "~~/components/PartTitle/PartTitle.vue";
-import HrefBottom from "~~/components/HrefBottom/HrefBottom.vue";
+import HrefBottom2 from "~~/components/HrefBottom2/HrefBottom2.vue";
 const { locale, setLocale, t } = useI18n();
 useHead({
   title: t("pages.home.child.about.title"),
@@ -32,13 +32,13 @@ export default {
       <img src="~/public/Image/UI/KV_Aen.svg" class="w-full mb-10 wrap-8-image" v-if="locale === 'en'" />
     </div>
     <div class="wrap-6 flex justify-between">
-      <div class="w-5/12 2xl:w-full">
+      <div class="w-5/12 self-center mb-52 2xl:w-full">
         <PartTitle class="mt-0 mb-10 ml-0">
           <template #en>About the project</template>
           <template #title>{{ $t("pages.home.child.about.info.title") }}</template>
         </PartTitle>
 
-        <div class="mb-5">
+        <div class="mb-5 text-xl font-normal tracking-wide">
           {{ $t("pages.home.child.about.info.content.0") }}
           <br />
           <br />
@@ -46,7 +46,7 @@ export default {
         </div>
 
         <template v-if="locale === 'zh'">
-          <div class="mb-10 text-gray-500">
+          <div class="mb-10 text-gray-500 text-lg font-normal tracking-wide leading-6">
             The purpose of this project, hosted by the National Museum of Taiwan Literature in response to the Culture and Technology Program by the Ministry of Culture, is to make literature more accessible to Taiwanese people through the
             interdisciplinary integration of literary collections with digital technology.",
             <br />
@@ -56,11 +56,11 @@ export default {
         </template>
 
         <div class="text-right">
-          <HrefBottom href="/achievement/">{{ $t("pages.home.achievement.button") }}</HrefBottom>
+          <HrefBottom2 href="/achievement/">{{ $t("pages.home.achievement.button") }}</HrefBottom2>
         </div>
       </div>
 
-      <img class="w-5/12 h-162 2xl:hidden" src="~/public/Image/UI/KV_B.svg" />
+      <img class="w-[45.8%] h-202 -mt-10 2xl:hidden" src="~/public/Image/UI/KV_B.svg" />
     </div>
   </div>
 </template>

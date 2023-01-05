@@ -119,7 +119,7 @@ function SentData(datas, i) {
 
         <PartItemNull>
           <template #title>{{ $t("pages.home.child.achievement.child.game1940.characters.title") }}</template>
-          <div class="flex flex-wrap justify-start sm:justify-between">
+          <div class="flex flex-wrap  -mt-6 justify-start sm:justify-between">
             <Item2 @open="SentData(charactersData, 0)" class="mr-16 sm:mr-0" :img="p1">
               <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.0.name") }}</template>
               <template #year>（{{ $t("pages.home.child.achievement.child.game1940.characters.content.0.year") }}）</template>

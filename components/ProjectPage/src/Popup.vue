@@ -99,8 +99,8 @@ function ReSetAspectValue2() {
 }
 
 function ReSetAspectValue3() {
-  if (aspectTarget3.value && aspectTarget3.value.offsetHeight > 10) {
-    aspectTarget3.value.style.width = aspectTarget3.value.offsetHeight + "px";
+  if (aspectTarget3.value && aspectTarget3.value.offsetHeightoffsetWidth > 10) {
+    aspectTarget3.value.style.width = aspectTarget3.value.offsetHeightoffsetWidth + "px";
   }
 }
 
@@ -131,7 +131,7 @@ function ReSetAspectValue5() {
         <button @click="$emit('previous')" class="flex items-center justify-center w-12 m-2 bg-white border border-black" ref="aspectTarget2">
           <ion-icon name="arrow-back-outline" class="text-4xl"></ion-icon>
         </button>
-        <button @click="$emit('next')" class="flex items-center justify-center w-12 m-2 bg-white border border-black" ref="aspectTarget3">
+        <button @click="$emit('next')" class="flex items-center justify-center w-12 m-2 bg-white border border-black" ref="aspectTarget4">
           <ion-icon name="arrow-forward-outline" class="text-4xl"></ion-icon>
         </button>
       </div>
@@ -156,26 +156,26 @@ function ReSetAspectValue5() {
           >
           </iframe>
         </div>
-        <div class="flex justify-center h-56 overflow-hidden border rounded-full" ref="aspectTarget4" v-if="isModel === false">
+        <div class="flex justify-center h-56 overflow-hidden border rounded-full" ref="aspectTarget3" v-if="isModel === false">
           <img :v-if="img != ''" :src="img" class="h-full" />
         </div>
       </div>
       <div class="flex flex-col z-50 w-3/5 mt-3 text-justify mb-14 h-2/5 md:w-3/4 sm:w-4/5">
-        <div class="flex items-center justify-center text-center h-20 mb-4 text-2xl font-bold sm:mb-2 sm:text-xl"><slot name="name" /></div>
-        <div class="z-50 -mt-2 text-2xl font-bold text-center sm:text-xl" v-if="isModel">
+        <div class="flex items-center justify-center text-center h-20 mb-4 text-2xl font-bold sm:mb-2 sm:text-xl "><slot name="name" /></div>
+        <div class="z-50 -mt-2 text-xl font-bold text-center sm:text-lg  " v-if="isModel">
           <slot name="owner" />
         </div>
-        <div class="z-50 mb-2 text-xl text-center sm:text-lg sm:mb-0" v-if="isModel">
+        <div class="z-50 mb-2 text-lg text-center sm:text-xl sm:mb-0  " v-if="isModel">
           {{ $t("pages.home.child.achievement.child.modelView.result.size") }}
           <slot name="size" />
         </div>
-        <div class="z-50 overflow-y-auto text-xl text-justify h-5/6 scrollbarCustom sm:text-lg" :class="{ 'h-1/2 sm:h-32': isModel }">
+        <div class="z-50 overflow-y-auto text-xl text-justify h-5/6 scrollbarCustom sm:text-lg  " :class="{ 'h-1/2 sm:h-32': isModel }">
           <slot name="word" />
         </div>
-        <div class="z-50 h-12 text-center sm:h-8 mt-2">
+        <div class="z-50 h-12 text-center sm:h-8 mt-2  ">
           <NuxtLink :to="more" target="_blank" class="flex items-center justify-center" v-if="isModel && more">
-            <div class="mr-2 text-2xl font-bold tracking-wider border-b border-black sm:text-xl">{{ $t("pages.home.child.achievement.child.modelView.result.more") }}</div>
-            <div class="w-12 bg-white border border-black rounded-full sm:w-7" ref="aspectTarget5">
+            <div class="mr-2 text-xl font-bold tracking-wider border-b border-black sm:text-xl">{{ $t("pages.home.child.achievement.child.modelView.result.more") }}</div>
+            <div class="w-8 bg-white border border-black rounded-full sm:w-7" ref="aspectTarget5">
               <img class="" src="~/public/Image/UI/Arrow2.svg" alt="" />
             </div>
           </NuxtLink>

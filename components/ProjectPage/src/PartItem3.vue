@@ -8,7 +8,7 @@
       <div class="mb-1">
         <slot name="name" />
       </div>
-      <div class="text-justify">
+      <div class="text-justify font-bold text-lg">
         <slot name="word" />
       </div>
     </div>

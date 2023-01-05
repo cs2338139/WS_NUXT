@@ -163,7 +163,7 @@ onMounted(() => {
   });
   setTimeout(() => {
     ViewSwitch();
-  }, 0.05);
+  }, 0.1);
 });
 
 function ViewSwitch() {

@@ -74,7 +74,7 @@ function ReSetAspectValue2() {
           <img src="~/public/Image/UI/LOGOlargeCH.svg" v-if="locale === 'zh'" />
           <img src="~/public/Image/UI/LOGOlargeEN.svg" v-if="locale === 'en'" />
         </div>
-        <div class="self-end h-3/4 w-2/5 md:w-full md:self-start md:h-3/5">
+        <div class="self-end h-1/2 w-2/5 mb-20 md:w-full md:self-start md:h-3/5">
           <div class="flex flex-col items-start justify-between h-full">
             <HrefButton href="/about" @click="$emit('close')">
               <template #en>About the project</template>

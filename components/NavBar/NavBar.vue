@@ -135,8 +135,8 @@ function ReSetTopButton() {
         </NavMenuList>
         <NavMenuItem href="/eventRecord"> {{ $t("nav.eventRecord") }}</NavMenuItem>
 
-        <button @click="ChangeLang()" class="ml-1">
-          <li class="flex items-center justify-center text-2xl font-bold text-center bg-white border-2 border-black w-14" ref="aspectTarget">
+        <button @click="ChangeLang()" class="ml-1 mb-1">
+          <li class="flex items-center justify-center text-lg font-bold text-center bg-white border border-black w-10" ref="aspectTarget">
             {{ $t("nav.lang") }}
           </li>
         </button>

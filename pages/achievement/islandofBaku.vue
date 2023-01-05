@@ -105,17 +105,17 @@ function SentData(datas, i) {
         <PartItemNull>
           <template #title
             >{{ $t("pages.home.child.achievement.child.islandOfBaku.info.download.title") }}
-            <div class="mt-5 flex">
+          </template>
+            <div class="mt-5 flex font-bold -mb-7">
               <DownloadButton href="https://store.steampowered.com/app/1758360/Isles_of_Monsters/">Windows </DownloadButton>
               <DownloadButton href="https://apps.apple.com/tw/app/%E5%A4%A2%E7%8D%B8%E4%B9%8B%E5%B3%B6/id1543158659"> 　iOS　</DownloadButton>
               <DownloadButton href="https://play.google.com/store/apps/details?id=com.Axis3d.WSNew_0514"> Android</DownloadButton>
             </div>
-          </template>
         </PartItemNull>
 
         <PartItemNull>
           <template #title>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.title") }}</template>
-          <div class="flex flex-wrap justify-between" ref="box">
+          <div class="flex flex-wrap justify-between -mt-6" ref="box">
             <Item2 @open="SentData(literatiData, 0)" :img="p1">
               <template #name>{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.0.name") }}</template>
               <template #year>（{{ $t("pages.home.child.achievement.child.islandOfBaku.literati.content.0.year") }}）</template>

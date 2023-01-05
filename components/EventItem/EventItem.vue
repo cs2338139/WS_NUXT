@@ -47,15 +47,15 @@ function ReSetAspectValue() {
 
         <div class="flex items-center justify-center w-3/5 h-full border-l border-black sm:border-0 sm:w-auto sm:px-2 sm:ml-1">
           <div class="flex flex-col w-4/5 sm:w-full sm:px-2">
-            <div class="text-xl sm:text-lg sm:font-bold">
+            <div class="text-xl font-bold sm:text-lg sm:font-bold">
               <slot name="name" />
             </div>
             <div class="">
-              <div class="inline text-sm md:block">
+              <div class="inline text-sm mr-2 md:block">
                 <slot name="place" />
               </div>
 
-              <div class="inline text-sm md:hidden">/</div>
+              <div class="inline text-sm mr-2 md:hidden">/</div>
 
               <div class="inline text-sm md:block">
                 <slot name="date" />

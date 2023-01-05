@@ -210,7 +210,7 @@ function FirstSetAspectValue() {
   }, 0);
   let CheckImageButton = setInterval(() => {
     if (imgButton.value) {
-      if (imgButton.value.offsetWidth > 10) {
+      if (imgButton.value[0].offsetWidth > 1) {
         ReSetImageButton();
         clearInterval(CheckImageButton);
       }
@@ -237,8 +237,11 @@ function ReSetAspectValue3() {
 }
 
 function ReSetImageButton() {
-  if (imgButton.value && imgButton.value.offsetWidth > 10) {
-    imgButton.value.style.height = imgButton.value.offsetWidth + "px";
+  console.log(imgButton.value[0].offsetWidth);
+  if (imgButton.value && imgButton.value[0].offsetWidth > 1) {
+    for (let i = 0; i < imgButton.value.length; i++) {
+      imgButton.value[i].style.height = imgButton.value[i].offsetWidth + "px";
+    }
   }
 }
 </script>

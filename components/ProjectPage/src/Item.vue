@@ -44,7 +44,7 @@ function ReSetAspectValue() {
           <div :v-if="img === ''" class="w-full overflow-hidden bg-gray-300 border-2 border-black rounded-3xl" ref="aspectTarget"><img :v-if="img != ''" :src="img" /></div>
         </div>
         <div class="mt-2 text-center">
-          <div class="mb-3 text-xl">
+          <div class="mb-3 text-lg font-bold">
             <slot />
           </div>
         </div>

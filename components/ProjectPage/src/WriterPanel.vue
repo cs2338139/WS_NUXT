@@ -91,8 +91,9 @@ const viewMode = reactive({
 
 onMounted(() => {
   watch(isFirstFakeCheck, () => {
-    // console.log(isFirstFakeCheck.value);
-    ViewSwitch();
+    setTimeout(() => {
+      ViewSwitch();
+    }, 0.1);
   });
 });
 

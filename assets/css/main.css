@@ -64,7 +64,7 @@
   }
 
   .wrap-6 {
-    @apply relative max-w-6xl mx-auto my-0 xl:px-10 sm:px-6;
+    @apply relative max-w-6xl mx-auto my-0 xl:px-20 sm:px-6;
   }
 
   .IsDisabled {

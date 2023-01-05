@@ -1,4 +1,8 @@
 <script setup>
+defineProps({
+  href: String,
+});
+
 const aspectTarget = ref();
 
 onMounted(() => {
@@ -23,14 +27,14 @@ function ReSetAspectValue() {
 </script>
 
 <template>
-  <div>
-    <button @click="$emit('function')">
-      <div class="flex items-center justify-center">
-        <div class="mr-2 text-xl font-bold tracking-wider border-b border-black sm:text-base"><slot /></div>
-        <div class="flex items-center justify-center w-8 text-3xl rounded-full bg-custom-0 sm:w-6 sm:text-xl" ref="aspectTarget">
-          <slot name="icon" />
+  <span>
+    <NuxtLink :to="localePath(href)">
+      <div class="inline-flex items-center">
+        <div class="text-lg font-bold tracking-wide border-b border-black mr-2 sm:text-base"><slot /></div>
+        <div class="w-8 bg-custom-0 rounded-full sm:w-8" ref="aspectTarget">
+          <img class="" src="~/public/Image/UI/Arrow2.svg" alt="" />
         </div>
       </div>
-    </button>
-  </div>
+    </NuxtLink>
+  </span>
 </template>

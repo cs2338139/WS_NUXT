@@ -8,7 +8,7 @@ defineProps({
 <template>
   <li class="mx-1 text-center group">
     <NuxtLink :to="localePath(href)">
-      <div class="px-4 py-3 text-2xl text-center text-black">
+      <div class="px-4 py-3 text-2xl text-center text-black font-bold">
         <slot name="menuName"> </slot>
       </div>
     </NuxtLink>

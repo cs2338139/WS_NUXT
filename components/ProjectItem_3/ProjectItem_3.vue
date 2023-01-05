@@ -21,7 +21,7 @@ defineProps({
         <div class="flex flex-col w-full font-bold">
           <div class="mb-2 text-2xl tracking-widest"><slot name="name" /></div>
           <div class="mt-1 mb-4 border-b border-black"></div>
-          <div><slot name="date" />／<slot name="place" /></div>
+          <div class="font-normal"><slot name="place" />／<slot name="date" /></div>
         </div>
       </div>
     </NuxtLink>

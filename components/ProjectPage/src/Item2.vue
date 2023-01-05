@@ -46,7 +46,7 @@ function ReSetAspectValue() {
           </div>
         </div>
         <div class="mt-2 text-center">
-          <div class="mb-3 text-xl font-bold">
+          <div class="text-xl font-bold">
             <slot name="name" />
           </div>
           <div><slot name="year" /></div>

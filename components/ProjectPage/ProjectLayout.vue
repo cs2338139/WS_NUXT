@@ -117,7 +117,7 @@ function ReSetAspectValue() {
 
 <template>
   <div>
-    <div class="wrap-8-image mb-14 w-full" ref="aspectTarget">
+    <div class="wrap-8-image mb-20 w-full" ref="aspectTarget">
       <img :src="img" class="w-full" />
     </div>
 
