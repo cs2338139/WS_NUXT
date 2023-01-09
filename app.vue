@@ -9,7 +9,7 @@ import { gsap } from "gsap";
 
 <template>
 
-  <LoadingAnimation></LoadingAnimation>
+  <!-- <LoadingAnimation></LoadingAnimation> -->
   <div class="relative z-10 mb-10 ">
     <NavBar />
   </div>

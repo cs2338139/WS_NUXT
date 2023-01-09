@@ -128,18 +128,27 @@ function ReSetAspectValue() {
       <slot name="info"></slot>
     </div>
 
-    <Popup @close="ClosePopupPanel" @previous="PreviousData" @next="NextData" :moveEnable="popupDatas.list.length > 1" :more="currentPopupInfo.data.more" :link="currentPopupInfo.data.link" :img="currentPopupInfo.data.img" v-if="popupEnable">
+    <Popup
+      @close="ClosePopupPanel"
+      @previous="PreviousData"
+      @next="NextData"
+      :moveEnable="popupDatas.list.length > 1"
+      :more="currentPopupInfo.data.more"
+      :size="currentPopupInfo.data.size"
+      :link="currentPopupInfo.data.link"
+      :img="currentPopupInfo.data.img"
+      v-if="popupEnable"
+    >
       <template #name>{{ currentPopupInfo.data.name }}</template>
       <template #owner>{{ currentPopupInfo.data.owner }}</template>
       <template #size>{{ currentPopupInfo.data.size }}</template>
       <template #word>
         <template v-for="word in currentPopupInfo.data.words">
-          <div class="mb-4">{{ word }}</div>
+          <div class="">{{ word }}</div>
         </template>
       </template>
     </Popup>
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

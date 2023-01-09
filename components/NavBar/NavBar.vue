@@ -125,13 +125,13 @@ function ReSetTopButton() {
 
         <NavMenuItem href="/about"> {{ $t("nav.about") }}</NavMenuItem>
 
-        <NavMenuList href="/achievement" menuListOffset="-translate-x-20">
+        <NavMenuList href="/achievement">
           <template #menuName> {{ $t("nav.achievement.title") }}</template>
           <MenuListItem href="/achievement/modelView">{{ $t("nav.achievement.child.modelView") }}</MenuListItem>
-          <MenuListItem href="/achievement/islandOfBaku">{{ $t("nav.achievement.child.islandOfBaku") }}</MenuListItem>
-          <MenuListItem href="/achievement/game1940">{{ $t("nav.achievement.child.game1940") }}</MenuListItem>
-          <MenuListItem href="/achievement/birdsOfLife">{{ $t("nav.achievement.child.birdsOfLife") }}</MenuListItem>
           <MenuListItem href="/achievement/hideWordsMan">{{ $t("nav.achievement.child.hideWordsMan") }}</MenuListItem>
+          <MenuListItem href="/achievement/birdsOfLife">{{ $t("nav.achievement.child.birdsOfLife") }}</MenuListItem>
+          <MenuListItem href="/achievement/game1940">{{ $t("nav.achievement.child.game1940") }}</MenuListItem>
+          <MenuListItem href="/achievement/islandOfBaku">{{ $t("nav.achievement.child.islandOfBaku") }}</MenuListItem>
         </NavMenuList>
         <NavMenuItem href="/eventRecord"> {{ $t("nav.eventRecord") }}</NavMenuItem>
 

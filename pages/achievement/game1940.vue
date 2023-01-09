@@ -130,6 +130,7 @@ function SentData(datas, i) {
             </Item2>
             <Item2 @open="SentData(charactersData, 2)" :img="p3">
               <template #name>{{ $t("pages.home.child.achievement.child.game1940.characters.content.2.name") }}</template>
+              <template #year>（{{ $t("pages.home.child.achievement.child.game1940.characters.content.1.year") }}）</template>
             </Item2>
           </div>
         </PartItemNull>
