@@ -3,8 +3,6 @@ import NavBar from "./components/NavBar/NavBar.vue";
 import FootBar from "./components/FootBar/FootBar.vue";
 import LoadingAnimation from "~~/components/AnimationComponents/LoadingAnimation.vue";
 
-import { gsap } from "gsap";
-
 </script>
 
 <template>
