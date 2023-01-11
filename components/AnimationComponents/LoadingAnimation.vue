@@ -5,19 +5,19 @@ const pages = ref();
 const onePageTime = ref(0.1);
 onMounted(() => {
   var tl = gsap.timeline({ repeat: -1, repeatDelay: 0.5, yoyo: true });
-  for (let i = 1; i < 7; i++) {
-    tl.fromTo(
-      pages.value.children[i],
-      { opacity: 0 },
-      {
-        keyframes: [
-          { duration: onePageTime.value / 2, opacity: (1 / 6) * i },
-          { duration: onePageTime.value / 2, opacity: 0, delay: 0.01},
-        ]
-      }
-    );
-  }
-  tl.fromTo(pages.value.children[7], { opacity: 0 }, { duration: onePageTime.value, opacity: 1 });
+  // for (let i = 1; i < 7; i++) {
+  //   tl.fromTo(
+  //     pages.value.children[i],
+  //     { opacity: 0 },
+  //     {
+  //       keyframes: [
+  //         { duration: onePageTime.value / 2/2, opacity: (1 / 6) * i },
+  //         { duration: onePageTime.value / 2/2, opacity: 0, delay: 0.01},
+  //       ]
+  //     }
+  //   );
+  // }
+  // tl.fromTo(pages.value.children[7], { opacity: 0 }, { duration: onePageTime.value, opacity: 1 });
 
   for (let i = 1; i < 7; i++) {
     tl.fromTo(
@@ -33,7 +33,7 @@ onMounted(() => {
 
 <template>
   <div class="fixed z-50 flex items-center justify-center w-screen h-screen bg-custom-0">
-    <div class="w-10/20">
+    <div class="w-3/20">
       <svg ref="pages" id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.35 96.13">
         <g>
           <rect x="0.39" y="0.39" width="94.56" height="50.81" />
