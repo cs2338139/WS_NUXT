@@ -3,24 +3,60 @@ import { gsap } from "gsap";
 
 const pages = ref();
 const onePageTime = ref(0.1);
-onMounted(() => {
-  var tl = gsap.timeline({ repeat: -1, repeatDelay: 0.5, yoyo: true });
-  // for (let i = 1; i < 7; i++) {
-  //   tl.fromTo(
-  //     pages.value.children[i],
-  //     { opacity: 0 },
-  //     {
-  //       keyframes: [
-  //         { duration: onePageTime.value / 2/2, opacity: (1 / 6) * i },
-  //         { duration: onePageTime.value / 2/2, opacity: 0, delay: 0.01},
-  //       ]
-  //     }
-  //   );
-  // }
-  // tl.fromTo(pages.value.children[7], { opacity: 0 }, { duration: onePageTime.value, opacity: 1 });
+const background = ref();
+// const screenSize = reactive({
+//   size: { width: window.innerWidth, height: window.innerHeight },
+// });
+const screenSize = ref();
+const isLoadingEnd = ref(false);
 
-  for (let i = 1; i < 7; i++) {
-    tl.fromTo(
+onMounted(() => {
+  ScrollControl(false);
+  SetSize();
+  AnimationMain();
+
+  document.body.addEventListener("click", () => (isLoadingEnd.value = true));
+});
+
+function ScrollControl(value) {
+  if (value) {
+    document.body.style.overflow = "scroll";
+  } else {
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function SetSize() {
+  if (window.innerWidth > window.innerHeight) {
+    screenSize.value = window.innerWidth;
+  } else if (window.innerWidth < window.innerHeight) {
+    screenSize.value = window.innerHeight;
+  } else {
+    screenSize.value = window.innerHeight;
+  }
+  background.value.style.width = screenSize.value + "px";
+  background.value.style.height = screenSize.value + "px";
+}
+
+function AnimationMain() {
+  let tlMain = gsap.timeline({});
+
+  tlMain.add(TimelineLoading());
+
+  watchEffect(() => {
+    if (isLoadingEnd.value) {
+      let currentTime = tlMain.time();
+      tlMain.add(TimelineLoadingEnd(), currentTime);
+    }
+  });
+}
+
+function TimelineLoading() {
+  let tl = gsap.timeline({ repeat: -1, repeatDelay: 0.5 });
+
+  let ctl_1 = gsap.timeline({ repeat: 1, repeatDelay: 0.5, yoyo: true });
+  for (let i = 1; i < 8; i++) {
+    ctl_1.fromTo(
       pages.value.children[i],
       { opacity: 0 },
       {
@@ -28,13 +64,35 @@ onMounted(() => {
       }
     );
   }
-});
+
+  let ctl_2 = gsap.timeline({});
+  ctl_2.to(pages.value, { duration: 1, rotate: 360 });
+
+  tl.add(ctl_1);
+  tl.add(ctl_2);
+
+  return tl;
+}
+
+function TimelineLoadingEnd() {
+  let tl = gsap.timeline({
+    onComplete: () => {
+      ScrollControl(true);
+    },
+  });
+  tl.fromTo(background.value, { scale: "1", "border-radius": "0px", opacity: 1 }, { duration: 1, delay: 1, "border-radius": "9999px", scale: "0", opacity: 0 });
+  tl.fromTo(pages.value, { opacity: 1 }, { duration: 0.5, opacity: 0 }, "-=0.5");
+  return tl;
+}
 </script>
 
 <template>
-  <div class="fixed z-50 flex items-center justify-center w-screen h-screen bg-custom-0">
-    <div class="w-3/20">
-      <svg ref="pages" id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.35 96.13">
+  <div class="fixed z-50 flex items-center justify-center w-screen h-screen">
+    <div ref="background" class="origin-center rounded-none bg-custom-0"></div>
+  </div>
+  <div class="fixed z-50 flex items-center justify-center w-screen h-screen">
+    <div class="w-2/20">
+      <svg ref="pages" class="origin-[40%_27%]" id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.35 96.13">
         <g>
           <rect x="0.39" y="0.39" width="94.56" height="50.81" />
           <path d="M95,51.59H.39L0,51.2V.39L.39,0H95l.39.39V51.2ZM.78,50.81H94.56V.78H.78Z" />
