@@ -92,7 +92,7 @@ function TimelineLoadingEnd() {
   </div>
   <div class="fixed z-50 flex items-center justify-center w-screen h-screen">
     <div class="w-2/20">
-      <svg ref="pages" class="origin-[38%_27%]" id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.35 96.13">
+      <svg ref="pages" class="origin-[38%_28%]" id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.35 96.13">
         <g>
           <rect x="0.39" y="0.39" width="94.56" height="50.81" />
           <path d="M95,51.59H.39L0,51.2V.39L.39,0H95l.39.39V51.2ZM.78,50.81H94.56V.78H.78Z" />
